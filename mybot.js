@@ -14,21 +14,11 @@ client.on("message", (message) => {
 
   if (command === "den")
   {
-    if (args[0] > 99 || args[0] < 0)
-      message.channel.send("Please enter a den number to list.");
+    if ((args[0] > 93 || args[0] < 1) || args[0].length == 0)
+      message.channel.send("Please enter a den number within the range of 1-93.");
     
     message.reply(`Den ${args[0]} has the following pokemon: `, {files: [`./dens/den${args[0]}.png`]});
   }
-
-  /*
-  switch (command)
-  {
-    case "den": 
-      message.channel.send("what den?");
-      break;
-    default: 
-  }
-  */
 });
 
 client.login(config.token);
