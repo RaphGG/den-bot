@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const config = require("./config.json");
 const fs = require("fs");
-const Enmap = require("enmap");
+//const Enmap = require("enmap");
 
 const client = new Discord.Client();
 client.config = config;
@@ -51,10 +51,12 @@ client.on("message", (message) => {
     if (args.length == 0 || (args[0] > 93 || args[0] < 1))
     {
       message.channel.send("Please enter a den number within the range of 1-93.");
+      message.delete();
       return;
     }
 
     message.reply(`Den ${args[0]} has the following pokemon: `, {files: [`./dens/den${args[0]}.png`]});
+    message.delete();
   }
 });
 
