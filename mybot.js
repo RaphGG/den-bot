@@ -20,6 +20,7 @@ client.on("message", (message) => {
     message.reply(`Den ${args[0]} has the following pokemon: `, {files: [`./dens/den${args[0]}.png`]});
   }
 
+  /*
   switch (command)
   {
     case "den": 
@@ -27,6 +28,7 @@ client.on("message", (message) => {
       break;
     default: 
   }
+  */
 });
 
 client.login(config.token);
