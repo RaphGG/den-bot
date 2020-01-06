@@ -14,28 +14,16 @@ client.on("message", (message) => {
 
   if (command === "den")
   {
-    switch (args[0])
-    {
-      case "65":
-        
-      
-      default:
-
-    }
-
+    if (args[0] > 99 || args[0] < 0)
+      message.channel.send("Please enter a den number to list.");
+    
+    message.reply(`Den ${args[0]} has the following pokemon: `, {files: [`./dens/den${args[0]}.png`]});
   }
 
   switch (command)
   {
     case "den": 
       message.channel.send("what den?");
-      break;
-    case "foo": 
-      message.channel.send("bar!");
-      break;
-    case "asl":
-      let [age, sex, loc] = args;
-      message.reply(`Hello ${message.author.username}! I see you're an ${age}yo, ${sex}, living in ${loc}.`);
       break;
     default: 
   }
