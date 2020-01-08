@@ -1,3 +1,4 @@
+if (Number(process.version.slice(1).split(".")[0]) < 8) throw new Error("Node 8.0.0 or higher is required. Update Node on your system.");
 const Discord = require("discord.js");
 const config = require("./config.json");
 const fs = require("fs");
@@ -79,6 +80,26 @@ client.on("message", (message) => {
     message.channel.send(`${myRole}`).then(() => {
       myRole.setMentionable(false, "Role has been Pinged.")});
     return;
+  }
+
+  else if (command === "catch")
+  {
+    let calc = require("./modules/calcular.js");
+    if (args.length == 0)
+    {
+      message.channel.send("Please enter a Pokémon to catch followed by a ball of your choice.");
+      return;
+    }
+
+    else if (args.length == 1)
+    {
+
+    }
+  }
+
+  else
+  {
+
   }
 });
 
