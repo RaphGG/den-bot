@@ -1,0 +1,91 @@
+Pokeball
+1
+-
+
+GreatBall
+1.5
+-
+
+UltraBall
+2
+-
+
+MasterBall
+-
+-
+
+FastBall
+4
+Assuming the pokemon has a base speed >= 100.
+
+LevelBall
+4
+Assuming your pokemon's level is more than double that of the opposing pokemon.
+
+LureBall
+5
+Assuming you're fishing.
+
+HeavyBall
+Calculated
+Assuming pokemon's weight.
+
+LoveBall
+8
+Assuming your pokemon is the same species and opposite gender of the opposing pokemon.
+
+FriendBall
+1
+-
+
+MoonBall
+4
+Assuming the the pokemon can evolve with a moon stone.
+
+NetBall
+3.5
+Assuming the pokemon is water and/or bug type.
+
+NestBall
+Calculated
+Assuming pokemon is between levels 1-29.
+
+RepeatBall
+3.5
+Assuming you've caught this pokemon before.
+
+TimerBall
+3.3
+Assuming 10 turns have passed.
+
+LuxuryBall
+1
+-
+
+PremierBall
+1
+-
+
+DiveBall
+3.5
+Assuming your are surfing or fishing.
+
+DuskBall
+3
+Assuming it is night time.
+
+HealBall
+1
+-
+
+QuickBall
+5
+Assuming it is the first turn.
+
+DreamBall
+4
+Assuming the pokemon is asleep.
+
+BeastBall
+0.1
+-

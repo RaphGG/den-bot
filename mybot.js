@@ -1,40 +1,49 @@
-if (Number(process.version.slice(1).split(".")[0]) < 8) throw new Error("Node 8.0.0 or higher is required. Update Node on your system.");
 const Discord = require("discord.js");
 const config = require("./config.json");
 const fs = require("fs");
-//const Enmap = require("enmap");
 
-
-const output = fs.readFileSync("./batch/Batch Pokemon.txt", "utf8");
-const tokens = output.split(/ +/g);
-//console.log(tokens);
-
-const pk = tokens.filter((token) => {return !token.match(/^[0-9]+$/)});
-console.log(pk);
-
-const testput = fs.readFileSync("./batch/Batch Catch Rate.txt", "utf8");
-const testkens = testput.split(/ +/g);
-let pokemon = new Array();
-pk.forEach(poke => {
-  let mon = {
-    name:poke
-  }
-  pokemon.push(mon);
-});
-
-pokemon.forEach(mon => {
-  console.log(mon.name);
-});
-
-/*
-testkens.forEach(testken => {
-
-});
-*/
 const client = new Discord.Client();
 client.config = config;
+let allPkmn = new Array();
+
+
+let output = fs.readFileSync("./batch/Batch Pokemon.txt", "utf8");
+let tokens = output.split(/ +/g);
+
+const availablePkmn = tokens.filter((token) => {return !token.match(/^[0-9]+$/)});
+
+output = fs.readFileSync("./batch/Batch Catch Rate.txt", "utf8");
+tokens = output.split(/ +/g);
+tokens.forEach((token, i) => {
+  if (i % 3 == 2)
+  {
+    let poke = {
+      id:tokens[i-2],
+      name:tokens[i-1],
+      catchRate:token
+    }
+    allPkmn.push(poke);
+  }
+});
+
+let pokemon = allPkmn.filter((mon) => {return availablePkmn.includes(mon.name)});
+
+console.log(pokemon);
+
+const calculator = (pkmn) => {
+  let ballList = new Array();
+  let ball = {
+    name:"",
+    catchRate:""
+  }
+  
+  return ballList;
+}
+
+
 
 /*
+const Enmap = require("enmap");
 fs.readdir("./events/", (err, files) => {
   if (err) return console.log(err);
   
@@ -111,7 +120,7 @@ client.on("message", (message) => {
 
   else if (command === "catch")
   {
-    let calc = require("./modules/calcular.js");
+    let calc = require("./modules/calculator.js");
     if (args.length == 0)
     {
       message.channel.send("Please enter a Pokémon to catch followed by a ball of your choice.");
@@ -120,7 +129,8 @@ client.on("message", (message) => {
 
     else if (args.length == 1)
     {
-
+      let mon = pokemon.find((pk) => {return pk.name.toLowerCase() == args[0].toLowerCase()});
+      console.log(mon);
     }
   }
 
