@@ -4,6 +4,33 @@ const config = require("./config.json");
 const fs = require("fs");
 //const Enmap = require("enmap");
 
+
+const output = fs.readFileSync("./batch/Batch Pokemon.txt", "utf8");
+const tokens = output.split(/ +/g);
+//console.log(tokens);
+
+const pk = tokens.filter((token) => {return !token.match(/^[0-9]+$/)});
+console.log(pk);
+
+const testput = fs.readFileSync("./batch/Batch Catch Rate.txt", "utf8");
+const testkens = testput.split(/ +/g);
+let pokemon = new Array();
+pk.forEach(poke => {
+  let mon = {
+    name:poke
+  }
+  pokemon.push(mon);
+});
+
+pokemon.forEach(mon => {
+  console.log(mon.name);
+});
+
+/*
+testkens.forEach(testken => {
+
+});
+*/
 const client = new Discord.Client();
 client.config = config;
 
