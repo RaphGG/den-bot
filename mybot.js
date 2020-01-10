@@ -18,9 +18,9 @@ tokens.forEach((token, i) => {
   if (i % 3 == 2)
   {
     let poke = {
-      id:tokens[i-2],
+      id:Number.parseInt(tokens[i-2]),
       name:tokens[i-1],
-      catchRate:token
+      catchRate:Number.parseInt(token)
     }
     allPkmn.push(poke);
   }
@@ -30,15 +30,18 @@ let pokemon = allPkmn.filter((mon) => {return availablePkmn.includes(mon.name)})
 
 console.log(pokemon);
 
-const calculator = (pkmn) => {
+const calculator = (pkmn, ball) => {
+
+  
   let ballList = new Array();
   let ball = {
     name:"",
     catchRate:""
   }
-  
+
   return ballList;
 }
+
 
 
 
