@@ -1,0 +1,8464 @@
+{
+  "ID": 001,
+
+"Name": "Bulbasaur",
+
+"HP": 45,
+
+"Attack": 49,
+
+"Defense": 49,
+
+"Special Attack": 65,
+
+"Special Defense": 65,
+
+"Speed": 45,
+
+"TOT": 318,
+
+"AVG": 53
+
+},
+{
+  "ID": 002,
+
+"Name": "Ivysaur",
+
+"HP": 60,
+
+"Attack": 62,
+
+"Defense": 63,
+
+"Special Attack": 80,
+
+"Special Defense": 80,
+
+"Speed": 60,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 003,
+
+
+
+"Name": "Venusaur",
+
+"HP": 80,
+
+"Attack": 82,
+
+"Defense": 83,
+
+"Special Attack": 100,
+
+"Special Defense": 100,
+
+"Speed": 80,
+
+"TOT": 525,
+
+"AVG": 87.5
+
+},
+{
+  "ID": 003,
+
+
+
+"Name": "Venusaur Alt Form",
+
+"HP": 80,
+
+"Attack": 100,
+
+"Defense": 123,
+
+"Special Attack": 122,
+
+"Special Defense": 120,
+
+"Speed": 80,
+
+"TOT": 625,
+
+"AVG": 104.17
+
+},
+{
+  "ID": 004,
+
+
+
+"Name": "Charmander",
+
+"HP": 39,
+
+"Attack": 52,
+
+"Defense": 43,
+
+"Special Attack": 60,
+
+"Special Defense": 50,
+
+"Speed": 65,
+
+"TOT": 309,
+
+"AVG": 51.5
+
+},
+{
+  "ID": 005,
+
+
+
+"Name": "Charmeleon",
+
+"HP": 58,
+
+"Attack": 64,
+
+"Defense": 58,
+
+"Special Attack": 80,
+
+"Special Defense": 65,
+
+"Speed": 80,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 006,
+
+
+
+"Name": "Charizard",
+
+"HP": 78,
+
+"Attack": 84,
+
+"Defense": 78,
+
+"Special Attack": 109,
+
+"Special Defense": 85,
+
+"Speed": 100,
+
+"TOT": 534,
+
+"AVG": 89
+
+},
+{
+  "ID": 006,
+
+
+
+"Name": "Charizard Alt Form",
+
+"HP": 78,
+
+"Attack": 130,
+
+"Defense": 111,
+
+"Special Attack": 130,
+
+"Special Defense": 85,
+
+"Speed": 100,
+
+"TOT": 634,
+
+"AVG": 105.67
+
+},
+{
+  "ID": 006,
+
+
+
+"Name": "Charizard Alt Form",
+
+"HP": 78,
+
+"Attack": 104,
+
+"Defense": 78,
+
+"Special Attack": 159,
+
+"Special Defense": 115,
+
+"Speed": 100,
+
+"TOT": 634,
+
+"AVG": 105.67
+
+},
+{
+  "ID": 007,
+
+
+
+"Name": "Squirtle",
+
+"HP": 44,
+
+"Attack": 48,
+
+"Defense": 65,
+
+"Special Attack": 50,
+
+"Special Defense": 64,
+
+"Speed": 43,
+
+"TOT": 314,
+
+"AVG": 52.33
+
+},
+{
+  "ID": 008,
+
+
+
+"Name": "Wartortle",
+
+"HP": 59,
+
+"Attack": 63,
+
+"Defense": 80,
+
+"Special Attack": 65,
+
+"Special Defense": 80,
+
+"Speed": 58,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 009,
+
+
+
+"Name": "Blastoise",
+
+"HP": 79,
+
+"Attack": 83,
+
+"Defense": 100,
+
+"Special Attack": 85,
+
+"Special Defense": 105,
+
+"Speed": 78,
+
+"TOT": 530,
+
+"AVG": 88.33
+
+},
+{
+  "ID": 009,
+
+
+
+"Name": "Blastoise Alt Form",
+
+"HP": 79,
+
+"Attack": 103,
+
+"Defense": 120,
+
+"Special Attack": 135,
+
+"Special Defense": 115,
+
+"Speed": 78,
+
+"TOT": 630,
+
+"AVG": 105
+
+},
+{
+  "ID": 010,
+
+
+
+"Name": "Caterpie",
+
+"HP": 45,
+
+"Attack": 30,
+
+"Defense": 35,
+
+"Special Attack": 20,
+
+"Special Defense": 20,
+
+"Speed": 45,
+
+"TOT": 195,
+
+"AVG": 32.5
+
+},
+{
+  "ID": 011,
+
+
+
+"Name": "Metapod",
+
+"HP": 50,
+
+"Attack": 20,
+
+"Defense": 55,
+
+"Special Attack": 25,
+
+"Special Defense": 25,
+
+"Speed": 30,
+
+"TOT": 205,
+
+"AVG": 34.17
+
+},
+{
+  "ID": 012,
+
+
+
+"Name": "Butterfree",
+
+"HP": 60,
+
+"Attack": 45,
+
+"Defense": 50,
+
+"Special Attack": 90,
+
+"Special Defense": 80,
+
+"Speed": 70,
+
+"TOT": 395,
+
+"AVG": 65.83
+
+},
+{
+  "ID": 013,
+
+
+
+"Name": "Weedle",
+
+"HP": 40,
+
+"Attack": 35,
+
+"Defense": 30,
+
+"Special Attack": 20,
+
+"Special Defense": 20,
+
+"Speed": 50,
+
+"TOT": 195,
+
+"AVG": 32.5
+
+},
+{
+  "ID": 014,
+
+
+
+"Name": "Kakuna",
+
+"HP": 45,
+
+"Attack": 25,
+
+"Defense": 50,
+
+"Special Attack": 25,
+
+"Special Defense": 25,
+
+"Speed": 35,
+
+"TOT": 205,
+
+"AVG": 34.17
+
+},
+{
+  "ID": 015,
+
+
+
+"Name": "Beedrill",
+
+"HP": 65,
+
+"Attack": 90,
+
+"Defense": 40,
+
+"Special Attack": 45,
+
+"Special Defense": 80,
+
+"Speed": 75,
+
+"TOT": 395,
+
+"AVG": 65.83
+
+},
+{
+  "ID": 015,
+
+
+
+"Name": "Beedrill Alt Form",
+
+"HP": 65,
+
+"Attack": 150,
+
+"Defense": 40,
+
+"Special Attack": 15,
+
+"Special Defense": 80,
+
+"Speed": 145,
+
+"TOT": 495,
+
+"AVG": 82.5
+
+},
+{
+  "ID": 016,
+
+
+
+"Name": "Pidgey",
+
+"HP": 40,
+
+"Attack": 45,
+
+"Defense": 40,
+
+"Special Attack": 35,
+
+"Special Defense": 35,
+
+"Speed": 56,
+
+"TOT": 251,
+
+"AVG": 41.83
+
+},
+{
+  "ID": 017,
+
+
+
+"Name": "Pidgeotto",
+
+"HP": 63,
+
+"Attack": 60,
+
+"Defense": 55,
+
+"Special Attack": 50,
+
+"Special Defense": 50,
+
+"Speed": 71,
+
+"TOT": 349,
+
+"AVG": 58.17
+
+},
+{
+  "ID": 018,
+
+
+
+"Name": "Pidgeot",
+
+"HP": 83,
+
+"Attack": 80,
+
+"Defense": 75,
+
+"Special Attack": 70,
+
+"Special Defense": 70,
+
+"Speed": 101,
+
+"TOT": 479,
+
+"AVG": 79.83
+
+},
+{
+  "ID": 018,
+
+
+
+"Name": "Pidgeot Alt Form",
+
+"HP": 83,
+
+"Attack": 80,
+
+"Defense": 80,
+
+"Special Attack": 135,
+
+"Special Defense": 80,
+
+"Speed": 121,
+
+"TOT": 579,
+
+"AVG": 96.5
+
+},
+{
+  "ID": 019,
+
+
+
+"Name": "Rattata",
+
+"HP": 30,
+
+"Attack": 56,
+
+"Defense": 35,
+
+"Special Attack": 25,
+
+"Special Defense": 35,
+
+"Speed": 72,
+
+"TOT": 253,
+
+"AVG": 42.17
+
+},
+{
+  "ID": 019,
+
+
+
+"Name": "Rattata Alt Form",
+
+"HP": 30,
+
+"Attack": 56,
+
+"Defense": 35,
+
+"Special Attack": 25,
+
+"Special Defense": 35,
+
+"Speed": 72,
+
+"TOT": 253,
+
+"AVG": 42.17
+
+},
+{
+  "ID": 020,
+
+
+
+"Name": "Raticate",
+
+"HP": 55,
+
+"Attack": 81,
+
+"Defense": 60,
+
+"Special Attack": 50,
+
+"Special Defense": 70,
+
+"Speed": 97,
+
+"TOT": 413,
+
+"AVG": 68.83
+
+},
+{
+  "ID": 020,
+
+
+
+"Name": "Raticate Alt Form",
+
+"HP": 75,
+
+"Attack": 71,
+
+"Defense": 70,
+
+"Special Attack": 40,
+
+"Special Defense": 80,
+
+"Speed": 77,
+
+"TOT": 413,
+
+"AVG": 68.83
+
+},
+{
+  "ID": 021,
+
+
+
+"Name": "Spearow",
+
+"HP": 40,
+
+"Attack": 60,
+
+"Defense": 30,
+
+"Special Attack": 31,
+
+"Special Defense": 31,
+
+"Speed": 70,
+
+"TOT": 262,
+
+"AVG": 43.67
+
+},
+{
+  "ID": 022,
+
+
+
+"Name": "Fearow",
+
+"HP": 65,
+
+"Attack": 90,
+
+"Defense": 65,
+
+"Special Attack": 61,
+
+"Special Defense": 61,
+
+"Speed": 100,
+
+"TOT": 442,
+
+"AVG": 73.67
+
+},
+{
+  "ID": 023,
+
+
+
+"Name": "Ekans",
+
+"HP": 35,
+
+"Attack": 60,
+
+"Defense": 44,
+
+"Special Attack": 40,
+
+"Special Defense": 54,
+
+"Speed": 55,
+
+"TOT": 288,
+
+"AVG": 48
+
+},
+{
+  "ID": 024,
+
+
+
+"Name": "Arbok",
+
+"HP": 60,
+
+"Attack": 95,
+
+"Defense": 69,
+
+"Special Attack": 65,
+
+"Special Defense": 79,
+
+"Speed": 80,
+
+"TOT": 448,
+
+"AVG": 74.67
+
+},
+{
+  "ID": 025,
+
+
+
+"Name": "Pikachu",
+
+"HP": 35,
+
+"Attack": 55,
+
+"Defense": 40,
+
+"Special Attack": 50,
+
+"Special Defense": 50,
+
+"Speed": 90,
+
+"TOT": 320,
+
+"AVG": 53.33
+
+},
+{
+  "ID": 025,
+
+
+
+"Name": "Pikachu Alt Form",
+
+"HP": 45,
+
+"Attack": 80,
+
+"Defense": 50,
+
+"Special Attack": 75,
+
+"Special Defense": 60,
+
+"Speed": 120,
+
+"TOT": 430,
+
+"AVG": 71.67
+
+},
+{
+  "ID": 026,
+
+
+
+"Name": "Raichu",
+
+"HP": 60,
+
+"Attack": 90,
+
+"Defense": 55,
+
+"Special Attack": 90,
+
+"Special Defense": 80,
+
+"Speed": 110,
+
+"TOT": 485,
+
+"AVG": 80.83
+
+},
+{
+  "ID": 026,
+
+
+
+"Name": "Raichu Alt Form",
+
+"HP": 60,
+
+"Attack": 85,
+
+"Defense": 50,
+
+"Special Attack": 95,
+
+"Special Defense": 85,
+
+"Speed": 110,
+
+"TOT": 485,
+
+"AVG": 80.83
+
+},
+{
+  "ID": 027,
+
+
+
+"Name": "Sandshrew",
+
+"HP": 50,
+
+"Attack": 75,
+
+"Defense": 85,
+
+"Special Attack": 20,
+
+"Special Defense": 30,
+
+"Speed": 40,
+
+"TOT": 300,
+
+"AVG": 50
+
+},
+{
+  "ID": 027,
+
+
+
+"Name": "Sandshrew Alt Form",
+
+"HP": 50,
+
+"Attack": 75,
+
+"Defense": 90,
+
+"Special Attack": 10,
+
+"Special Defense": 35,
+
+"Speed": 40,
+
+"TOT": 300,
+
+"AVG": 50
+
+},
+{
+  "ID": 028,
+
+
+
+"Name": "Sandslash",
+
+"HP": 75,
+
+"Attack": 100,
+
+"Defense": 110,
+
+"Special Attack": 45,
+
+"Special Defense": 55,
+
+"Speed": 65,
+
+"TOT": 450,
+
+"AVG": 75
+
+},
+{
+  "ID": 028,
+
+
+
+"Name": "Sandslash Alt Form",
+
+"HP": 75,
+
+"Attack": 100,
+
+"Defense": 120,
+
+"Special Attack": 25,
+
+"Special Defense": 65,
+
+"Speed": 65,
+
+"TOT": 450,
+
+"AVG": 75
+
+},
+{
+  "ID": 029,
+
+"Name": "Nidoran♀ ",
+
+"HP": 55,
+
+"Attack": 47,
+
+"Defense": 52,
+
+"Special Attack": 40,
+
+"Special Defense": 40,
+
+"Speed": 41,
+
+"TOT": 275,
+
+"AVG": 45.83
+
+},
+{
+  "ID": 030,
+
+
+
+"Name": "Nidorina",
+
+"HP": 70,
+
+"Attack": 62,
+
+"Defense": 67,
+
+"Special Attack": 55,
+
+"Special Defense": 55,
+
+"Speed": 56,
+
+"TOT": 365,
+
+"AVG": 60.83
+
+},
+{
+  "ID": 031,
+
+
+
+"Name": "Nidoqueen",
+
+"HP": 90,
+
+"Attack": 92,
+
+"Defense": 87,
+
+"Special Attack": 75,
+
+"Special Defense": 85,
+
+"Speed": 76,
+
+"TOT": 505,
+
+"AVG": 84.17
+
+},
+{
+  "ID": 032,
+
+
+"Name": "Nidoran♂ ",
+
+"HP": 46,
+
+"Attack": 57,
+
+"Defense": 40,
+
+"Special Attack": 40,
+
+"Special Defense": 40,
+
+"Speed": 50,
+
+"TOT": 273,
+
+"AVG": 45.5
+
+},
+{
+  "ID": 033,
+
+
+
+"Name": "Nidorino",
+
+"HP": 61,
+
+"Attack": 72,
+
+"Defense": 57,
+
+"Special Attack": 55,
+
+"Special Defense": 55,
+
+"Speed": 65,
+
+"TOT": 365,
+
+"AVG": 60.83
+
+},
+{
+  "ID": 034,
+
+
+
+"Name": "Nidoking",
+
+"HP": 81,
+
+"Attack": 102,
+
+"Defense": 77,
+
+"Special Attack": 85,
+
+"Special Defense": 75,
+
+"Speed": 85,
+
+"TOT": 505,
+
+"AVG": 84.17
+
+},
+{
+  "ID": 035,
+
+
+
+"Name": "Clefairy",
+
+"HP": 70,
+
+"Attack": 45,
+
+"Defense": 48,
+
+"Special Attack": 60,
+
+"Special Defense": 65,
+
+"Speed": 35,
+
+"TOT": 323,
+
+"AVG": 53.83
+
+},
+{
+  "ID": 036,
+
+
+
+"Name": "Clefable",
+
+"HP": 95,
+
+"Attack": 70,
+
+"Defense": 73,
+
+"Special Attack": 95,
+
+"Special Defense": 90,
+
+"Speed": 60,
+
+"TOT": 483,
+
+"AVG": 80.5
+
+},
+{
+  "ID": 037,
+
+
+
+"Name": "Vulpix",
+
+"HP": 38,
+
+"Attack": 41,
+
+"Defense": 40,
+
+"Special Attack": 50,
+
+"Special Defense": 65,
+
+"Speed": 65,
+
+"TOT": 299,
+
+"AVG": 49.83
+
+},
+{
+  "ID": 037,
+
+
+
+"Name": "Vulpix Alt Form",
+
+"HP": 38,
+
+"Attack": 41,
+
+"Defense": 40,
+
+"Special Attack": 50,
+
+"Special Defense": 65,
+
+"Speed": 65,
+
+"TOT": 299,
+
+"AVG": 49.83
+
+},
+{
+  "ID": 038,
+
+
+
+"Name": "Ninetales",
+
+"HP": 73,
+
+"Attack": 76,
+
+"Defense": 75,
+
+"Special Attack": 81,
+
+"Special Defense": 100,
+
+"Speed": 100,
+
+"TOT": 505,
+
+"AVG": 84.17
+
+},
+{
+  "ID": 038,
+
+
+
+"Name": "Ninetales Alt Form",
+
+"HP": 73,
+
+"Attack": 67,
+
+"Defense": 75,
+
+"Special Attack": 81,
+
+"Special Defense": 100,
+
+"Speed": 109,
+
+"TOT": 505,
+
+"AVG": 84.17
+
+},
+{
+  "ID": 039,
+
+
+
+"Name": "Jigglypuff",
+
+"HP": 115,
+
+"Attack": 45,
+
+"Defense": 20,
+
+"Special Attack": 45,
+
+"Special Defense": 25,
+
+"Speed": 20,
+
+"TOT": 270,
+
+"AVG": 45
+
+},
+{
+  "ID": 040,
+
+
+
+"Name": "Wigglytuff",
+
+"HP": 140,
+
+"Attack": 70,
+
+"Defense": 45,
+
+"Special Attack": 85,
+
+"Special Defense": 50,
+
+"Speed": 45,
+
+"TOT": 435,
+
+"AVG": 72.5
+
+},
+{
+  "ID": 041,
+
+
+
+"Name": "Zubat",
+
+"HP": 40,
+
+"Attack": 45,
+
+"Defense": 35,
+
+"Special Attack": 30,
+
+"Special Defense": 40,
+
+"Speed": 55,
+
+"TOT": 245,
+
+"AVG": 40.83
+
+},
+{
+  "ID": 042,
+
+
+
+"Name": "Golbat",
+
+"HP": 75,
+
+"Attack": 80,
+
+"Defense": 70,
+
+"Special Attack": 65,
+
+"Special Defense": 75,
+
+"Speed": 90,
+
+"TOT": 455,
+
+"AVG": 75.83
+
+},
+{
+  "ID": 043,
+
+
+
+"Name": "Oddish",
+
+"HP": 45,
+
+"Attack": 50,
+
+"Defense": 55,
+
+"Special Attack": 75,
+
+"Special Defense": 65,
+
+"Speed": 30,
+
+"TOT": 320,
+
+"AVG": 53.33
+
+},
+{
+  "ID": 044,
+
+
+
+"Name": "Gloom",
+
+"HP": 60,
+
+"Attack": 65,
+
+"Defense": 70,
+
+"Special Attack": 85,
+
+"Special Defense": 75,
+
+"Speed": 40,
+
+"TOT": 395,
+
+"AVG": 65.83
+
+},
+{
+  "ID": 045,
+
+
+
+"Name": "Vileplume",
+
+"HP": 75,
+
+"Attack": 80,
+
+"Defense": 85,
+
+"Special Attack": 110,
+
+"Special Defense": 90,
+
+"Speed": 50,
+
+"TOT": 490,
+
+"AVG": 81.67
+
+},
+{
+  "ID": 046,
+
+
+
+"Name": "Paras",
+
+"HP": 35,
+
+"Attack": 70,
+
+"Defense": 55,
+
+"Special Attack": 45,
+
+"Special Defense": 55,
+
+"Speed": 25,
+
+"TOT": 285,
+
+"AVG": 47.5
+
+},
+{
+  "ID": 047,
+
+
+
+"Name": "Parasect",
+
+"HP": 60,
+
+"Attack": 95,
+
+"Defense": 80,
+
+"Special Attack": 60,
+
+"Special Defense": 80,
+
+"Speed": 30,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 048,
+
+
+
+"Name": "Venonat",
+
+"HP": 60,
+
+"Attack": 55,
+
+"Defense": 50,
+
+"Special Attack": 40,
+
+"Special Defense": 55,
+
+"Speed": 45,
+
+"TOT": 305,
+
+"AVG": 50.83
+
+},
+{
+  "ID": 049,
+
+
+
+"Name": "Venomoth",
+
+"HP": 70,
+
+"Attack": 65,
+
+"Defense": 60,
+
+"Special Attack": 90,
+
+"Special Defense": 75,
+
+"Speed": 90,
+
+"TOT": 450,
+
+"AVG": 75
+
+},
+{
+  "ID": 050,
+
+
+
+"Name": "Diglett",
+
+"HP": 10,
+
+"Attack": 55,
+
+"Defense": 25,
+
+"Special Attack": 35,
+
+"Special Defense": 45,
+
+"Speed": 95,
+
+"TOT": 265,
+
+"AVG": 44.17
+
+},
+{
+  "ID": 050,
+
+
+
+"Name": "Diglett Alt Form",
+
+"HP": 10,
+
+"Attack": 55,
+
+"Defense": 30,
+
+"Special Attack": 35,
+
+"Special Defense": 45,
+
+"Speed": 90,
+
+"TOT": 265,
+
+"AVG": 44.17
+
+},
+{
+  "ID": 051,
+
+
+
+"Name": "Dugtrio",
+
+"HP": 35,
+
+"Attack": 100,
+
+"Defense": 50,
+
+"Special Attack": 50,
+
+"Special Defense": 70,
+
+"Speed": 120,
+
+"TOT": 425,
+
+"AVG": 70.83
+
+},
+{
+  "ID": 051,
+
+
+
+"Name": "Dugtrio Alt Form",
+
+"HP": 35,
+
+"Attack": 100,
+
+"Defense": 60,
+
+"Special Attack": 50,
+
+"Special Defense": 70,
+
+"Speed": 110,
+
+"TOT": 425,
+
+"AVG": 70.83
+
+},
+{
+  "ID": 052,
+
+
+
+"Name": "Meowth",
+
+"HP": 40,
+
+"Attack": 45,
+
+"Defense": 35,
+
+"Special Attack": 40,
+
+"Special Defense": 40,
+
+"Speed": 90,
+
+"TOT": 290,
+
+"AVG": 48.33
+
+},
+{
+  "ID": 052,
+
+
+
+"Name": "Meowth Alt Form",
+
+"HP": 40,
+
+"Attack": 35,
+
+"Defense": 35,
+
+"Special Attack": 50,
+
+"Special Defense": 40,
+
+"Speed": 90,
+
+"TOT": 290,
+
+"AVG": 48.33
+
+},
+{
+  "ID": 052,
+
+
+
+"Name": "Meowth Alt Form",
+
+"HP": 50,
+
+"Attack": 65,
+
+"Defense": 55,
+
+"Special Attack": 40,
+
+"Special Defense": 40,
+
+"Speed": 40,
+
+"TOT": 290,
+
+"AVG": 48.33
+
+},
+{
+  "ID": 053,
+
+
+
+"Name": "Persian",
+
+"HP": 65,
+
+"Attack": 70,
+
+"Defense": 60,
+
+"Special Attack": 65,
+
+"Special Defense": 65,
+
+"Speed": 115,
+
+"TOT": 440,
+
+"AVG": 73.33
+
+},
+{
+  "ID": 053,
+
+
+
+"Name": "Persian Alt Form",
+
+"HP": 65,
+
+"Attack": 60,
+
+"Defense": 60,
+
+"Special Attack": 75,
+
+"Special Defense": 65,
+
+"Speed": 115,
+
+"TOT": 440,
+
+"AVG": 73.33
+
+},
+{
+  "ID": 054,
+
+
+
+"Name": "Psyduck",
+
+"HP": 50,
+
+"Attack": 52,
+
+"Defense": 48,
+
+"Special Attack": 65,
+
+"Special Defense": 50,
+
+"Speed": 55,
+
+"TOT": 320,
+
+"AVG": 53.33
+
+},
+{
+  "ID": 055,
+
+
+
+"Name": "Golduck",
+
+"HP": 80,
+
+"Attack": 82,
+
+"Defense": 78,
+
+"Special Attack": 95,
+
+"Special Defense": 80,
+
+"Speed": 85,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 056,
+
+
+
+"Name": "Mankey",
+
+"HP": 40,
+
+"Attack": 80,
+
+"Defense": 35,
+
+"Special Attack": 35,
+
+"Special Defense": 45,
+
+"Speed": 70,
+
+"TOT": 305,
+
+"AVG": 50.83
+
+},
+{
+  "ID": 057,
+
+
+
+"Name": "Primeape",
+
+"HP": 65,
+
+"Attack": 105,
+
+"Defense": 60,
+
+"Special Attack": 60,
+
+"Special Defense": 70,
+
+"Speed": 95,
+
+"TOT": 455,
+
+"AVG": 75.83
+
+},
+{
+  "ID": 058,
+
+
+
+"Name": "Growlithe",
+
+"HP": 55,
+
+"Attack": 70,
+
+"Defense": 45,
+
+"Special Attack": 70,
+
+"Special Defense": 50,
+
+"Speed": 60,
+
+"TOT": 350,
+
+"AVG": 58.33
+
+},
+{
+  "ID": 059,
+
+
+
+"Name": "Arcanine",
+
+"HP": 90,
+
+"Attack": 110,
+
+"Defense": 80,
+
+"Special Attack": 100,
+
+"Special Defense": 80,
+
+"Speed": 95,
+
+"TOT": 555,
+
+"AVG": 92.5
+
+},
+{
+  "ID": 060,
+
+
+
+"Name": "Poliwag",
+
+"HP": 40,
+
+"Attack": 50,
+
+"Defense": 40,
+
+"Special Attack": 40,
+
+"Special Defense": 40,
+
+"Speed": 90,
+
+"TOT": 300,
+
+"AVG": 50
+
+},
+{
+  "ID": 061,
+
+
+
+"Name": "Poliwhirl",
+
+"HP": 65,
+
+"Attack": 65,
+
+"Defense": 65,
+
+"Special Attack": 50,
+
+"Special Defense": 50,
+
+"Speed": 90,
+
+"TOT": 385,
+
+"AVG": 64.17
+
+},
+{
+  "ID": 062,
+
+
+
+"Name": "Poliwrath",
+
+"HP": 90,
+
+"Attack": 95,
+
+"Defense": 95,
+
+"Special Attack": 70,
+
+"Special Defense": 90,
+
+"Speed": 70,
+
+"TOT": 510,
+
+"AVG": 85
+
+},
+{
+  "ID": 063,
+
+
+
+"Name": "Abra",
+
+"HP": 25,
+
+"Attack": 20,
+
+"Defense": 15,
+
+"Special Attack": 105,
+
+"Special Defense": 55,
+
+"Speed": 90,
+
+"TOT": 310,
+
+"AVG": 51.67
+
+},
+{
+  "ID": 064,
+
+
+
+"Name": "Kadabra",
+
+"HP": 40,
+
+"Attack": 35,
+
+"Defense": 30,
+
+"Special Attack": 120,
+
+"Special Defense": 70,
+
+"Speed": 105,
+
+"TOT": 400,
+
+"AVG": 66.67
+
+},
+{
+  "ID": 065,
+
+
+
+"Name": "Alakazam",
+
+"HP": 55,
+
+"Attack": 50,
+
+"Defense": 45,
+
+"Special Attack": 135,
+
+"Special Defense": 95,
+
+"Speed": 120,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 065,
+
+
+
+"Name": "Alakazam Alt Form",
+
+"HP": 55,
+
+"Attack": 50,
+
+"Defense": 65,
+
+"Special Attack": 175,
+
+"Special Defense": 105,
+
+"Speed": 150,
+
+"TOT": 600,
+
+"AVG": 100
+
+},
+{
+  "ID": 066,
+
+
+
+"Name": "Machop",
+
+"HP": 70,
+
+"Attack": 80,
+
+"Defense": 50,
+
+"Special Attack": 35,
+
+"Special Defense": 35,
+
+"Speed": 35,
+
+"TOT": 305,
+
+"AVG": 50.83
+
+},
+{
+  "ID": 067,
+
+
+
+"Name": "Machoke",
+
+"HP": 80,
+
+"Attack": 100,
+
+"Defense": 70,
+
+"Special Attack": 50,
+
+"Special Defense": 60,
+
+"Speed": 45,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 068,
+
+
+
+"Name": "Machamp",
+
+"HP": 90,
+
+"Attack": 130,
+
+"Defense": 80,
+
+"Special Attack": 65,
+
+"Special Defense": 85,
+
+"Speed": 55,
+
+"TOT": 505,
+
+"AVG": 84.17
+
+},
+{
+  "ID": 069,
+
+
+
+"Name": "Bellsprout",
+
+"HP": 50,
+
+"Attack": 75,
+
+"Defense": 35,
+
+"Special Attack": 70,
+
+"Special Defense": 30,
+
+"Speed": 40,
+
+"TOT": 300,
+
+"AVG": 50
+
+},
+{
+  "ID": 070,
+
+
+
+"Name": "Weepinbell",
+
+"HP": 65,
+
+"Attack": 90,
+
+"Defense": 50,
+
+"Special Attack": 85,
+
+"Special Defense": 45,
+
+"Speed": 55,
+
+"TOT": 390,
+
+"AVG": 65
+
+},
+{
+  "ID": 071,
+
+
+
+"Name": "Victreebel",
+
+"HP": 80,
+
+"Attack": 105,
+
+"Defense": 65,
+
+"Special Attack": 100,
+
+"Special Defense": 70,
+
+"Speed": 70,
+
+"TOT": 490,
+
+"AVG": 81.67
+
+},
+{
+  "ID": 072,
+
+
+
+"Name": "Tentacool",
+
+"HP": 40,
+
+"Attack": 40,
+
+"Defense": 35,
+
+"Special Attack": 50,
+
+"Special Defense": 100,
+
+"Speed": 70,
+
+"TOT": 335,
+
+"AVG": 55.83
+
+},
+{
+  "ID": 073,
+
+
+
+"Name": "Tentacruel",
+
+"HP": 80,
+
+"Attack": 70,
+
+"Defense": 65,
+
+"Special Attack": 80,
+
+"Special Defense": 120,
+
+"Speed": 100,
+
+"TOT": 515,
+
+"AVG": 85.83
+
+},
+{
+  "ID": 074,
+
+
+
+"Name": "Geodude",
+
+"HP": 40,
+
+"Attack": 80,
+
+"Defense": 100,
+
+"Special Attack": 30,
+
+"Special Defense": 30,
+
+"Speed": 20,
+
+"TOT": 300,
+
+"AVG": 50
+
+},
+{
+  "ID": 074,
+
+
+
+"Name": "Geodude Alt Form",
+
+"HP": 40,
+
+"Attack": 80,
+
+"Defense": 100,
+
+"Special Attack": 30,
+
+"Special Defense": 30,
+
+"Speed": 20,
+
+"TOT": 300,
+
+"AVG": 50
+
+},
+{
+  "ID": 075,
+
+
+
+"Name": "Graveler",
+
+"HP": 55,
+
+"Attack": 95,
+
+"Defense": 115,
+
+"Special Attack": 45,
+
+"Special Defense": 45,
+
+"Speed": 35,
+
+"TOT": 390,
+
+"AVG": 65
+
+},
+{
+  "ID": 075,
+
+
+
+"Name": "Graveler Alt Form",
+
+"HP": 55,
+
+"Attack": 95,
+
+"Defense": 115,
+
+"Special Attack": 45,
+
+"Special Defense": 45,
+
+"Speed": 35,
+
+"TOT": 390,
+
+"AVG": 65
+
+},
+{
+  "ID": 076,
+
+
+
+"Name": "Golem",
+
+"HP": 80,
+
+"Attack": 120,
+
+"Defense": 130,
+
+"Special Attack": 55,
+
+"Special Defense": 65,
+
+"Speed": 45,
+
+"TOT": 495,
+
+"AVG": 82.5
+
+},
+{
+  "ID": 076,
+
+
+
+"Name": "Golem Alt Form",
+
+"HP": 80,
+
+"Attack": 120,
+
+"Defense": 130,
+
+"Special Attack": 55,
+
+"Special Defense": 65,
+
+"Speed": 45,
+
+"TOT": 495,
+
+"AVG": 82.5
+
+},
+{
+  "ID": 077,
+
+
+
+"Name": "Ponyta",
+
+"HP": 50,
+
+"Attack": 85,
+
+"Defense": 55,
+
+"Special Attack": 65,
+
+"Special Defense": 65,
+
+"Speed": 90,
+
+"TOT": 410,
+
+"AVG": 68.33
+
+},
+{
+  "ID": 077,
+
+
+
+"Name": "Ponyta Alt Form",
+
+"HP": 50,
+
+"Attack": 85,
+
+"Defense": 55,
+
+"Special Attack": 65,
+
+"Special Defense": 65,
+
+"Speed": 90,
+
+"TOT": 410,
+
+"AVG": 68.33
+
+},
+{
+  "ID": 078,
+
+
+
+"Name": "Rapidash",
+
+"HP": 65,
+
+"Attack": 100,
+
+"Defense": 70,
+
+"Special Attack": 80,
+
+"Special Defense": 80,
+
+"Speed": 105,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 078,
+
+
+
+"Name": "Rapidash Alt Form",
+
+"HP": 65,
+
+"Attack": 100,
+
+"Defense": 70,
+
+"Special Attack": 80,
+
+"Special Defense": 80,
+
+"Speed": 105,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 079,
+
+
+
+"Name": "Slowpoke",
+
+"HP": 90,
+
+"Attack": 65,
+
+"Defense": 65,
+
+"Special Attack": 40,
+
+"Special Defense": 40,
+
+"Speed": 15,
+
+"TOT": 315,
+
+"AVG": 52.5
+
+},
+{
+  "ID": 080,
+
+
+
+"Name": "Slowbro",
+
+"HP": 95,
+
+"Attack": 75,
+
+"Defense": 110,
+
+"Special Attack": 100,
+
+"Special Defense": 80,
+
+"Speed": 30,
+
+"TOT": 490,
+
+"AVG": 81.67
+
+},
+{
+  "ID": 080,
+
+
+
+"Name": "Slowbro Alt Form",
+
+"HP": 95,
+
+"Attack": 75,
+
+"Defense": 180,
+
+"Special Attack": 130,
+
+"Special Defense": 80,
+
+"Speed": 30,
+
+"TOT": 590,
+
+"AVG": 98.33
+
+},
+{
+  "ID": 081,
+
+
+
+"Name": "Magnemite",
+
+"HP": 25,
+
+"Attack": 35,
+
+"Defense": 70,
+
+"Special Attack": 95,
+
+"Special Defense": 55,
+
+"Speed": 45,
+
+"TOT": 325,
+
+"AVG": 54.17
+
+},
+{
+  "ID": 082,
+
+
+
+"Name": "Magneton",
+
+"HP": 50,
+
+"Attack": 60,
+
+"Defense": 95,
+
+"Special Attack": 120,
+
+"Special Defense": 70,
+
+"Speed": 70,
+
+"TOT": 465,
+
+"AVG": 77.5
+
+},
+{
+  "ID": 083,
+
+
+
+"Name": "d", "Farfetch'd
+
+"HP": 52,
+
+"Attack": 90,
+
+"Defense": 55,
+
+"Special Attack": 58,
+
+"Special Defense": 62,
+
+"Speed": 60,
+
+"TOT": 377,
+
+"AVG": 62.83
+
+},
+{
+  "ID": 083,
+
+
+
+"Name": "Farfetch'd Alt Form",
+
+"HP": 52,
+
+"Attack": 95,
+
+"Defense": 55,
+
+"Special Attack": 58,
+
+"Special Defense": 62,
+
+"Speed": 55,
+
+"TOT": 377,
+
+"AVG": 62.83
+
+},
+{
+  "ID": 084,
+
+
+
+"Name": "Doduo",
+
+"HP": 35,
+
+"Attack": 85,
+
+"Defense": 45,
+
+"Special Attack": 35,
+
+"Special Defense": 35,
+
+"Speed": 75,
+
+"TOT": 310,
+
+"AVG": 51.67
+
+},
+{
+  "ID": 085,
+
+
+
+"Name": "Dodrio",
+
+"HP": 60,
+
+"Attack": 110,
+
+"Defense": 70,
+
+"Special Attack": 60,
+
+"Special Defense": 60,
+
+"Speed": 110,
+
+"TOT": 470,
+
+"AVG": 78.33
+
+},
+{
+  "ID": 086,
+
+
+
+"Name": "Seel",
+
+"HP": 65,
+
+"Attack": 45,
+
+"Defense": 55,
+
+"Special Attack": 45,
+
+"Special Defense": 70,
+
+"Speed": 45,
+
+"TOT": 325,
+
+"AVG": 54.17
+
+},
+{
+  "ID": 087,
+
+
+
+"Name": "Dewgong",
+
+"HP": 90,
+
+"Attack": 70,
+
+"Defense": 80,
+
+"Special Attack": 70,
+
+"Special Defense": 95,
+
+"Speed": 70,
+
+"TOT": 475,
+
+"AVG": 79.17
+
+},
+{
+  "ID": 088,
+
+
+
+"Name": "Grimer",
+
+"HP": 80,
+
+"Attack": 80,
+
+"Defense": 50,
+
+"Special Attack": 40,
+
+"Special Defense": 50,
+
+"Speed": 25,
+
+"TOT": 325,
+
+"AVG": 54.17
+
+},
+{
+  "ID": 088,
+
+
+
+"Name": "Grimer Alt Form",
+
+"HP": 80,
+
+"Attack": 80,
+
+"Defense": 50,
+
+"Special Attack": 40,
+
+"Special Defense": 50,
+
+"Speed": 25,
+
+"TOT": 325,
+
+"AVG": 54.17
+
+},
+{
+  "ID": 089,
+
+
+
+"Name": "Muk",
+
+"HP": 105,
+
+"Attack": 105,
+
+"Defense": 75,
+
+"Special Attack": 65,
+
+"Special Defense": 100,
+
+"Speed": 50,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 089,
+
+
+
+"Name": "Muk Alt Form",
+
+"HP": 105,
+
+"Attack": 105,
+
+"Defense": 75,
+
+"Special Attack": 65,
+
+"Special Defense": 100,
+
+"Speed": 50,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 090,
+
+
+
+"Name": "Shellder",
+
+"HP": 30,
+
+"Attack": 65,
+
+"Defense": 100,
+
+"Special Attack": 45,
+
+"Special Defense": 25,
+
+"Speed": 40,
+
+"TOT": 305,
+
+"AVG": 50.83
+
+},
+{
+  "ID": 091,
+
+
+
+"Name": "Cloyster",
+
+"HP": 50,
+
+"Attack": 95,
+
+"Defense": 180,
+
+"Special Attack": 85,
+
+"Special Defense": 45,
+
+"Speed": 70,
+
+"TOT": 525,
+
+"AVG": 87.5
+
+},
+{
+  "ID": 092,
+
+
+
+"Name": "Gastly",
+
+"HP": 30,
+
+"Attack": 35,
+
+"Defense": 30,
+
+"Special Attack": 100,
+
+"Special Defense": 35,
+
+"Speed": 80,
+
+"TOT": 310,
+
+"AVG": 51.67
+
+},
+{
+  "ID": 093,
+
+
+
+"Name": "Haunter",
+
+"HP": 45,
+
+"Attack": 50,
+
+"Defense": 45,
+
+"Special Attack": 115,
+
+"Special Defense": 55,
+
+"Speed": 95,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 094,
+
+
+
+"Name": "Gengar",
+
+"HP": 60,
+
+"Attack": 65,
+
+"Defense": 60,
+
+"Special Attack": 130,
+
+"Special Defense": 75,
+
+"Speed": 110,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 094,
+
+
+
+"Name": "Gengar Alt Form",
+
+"HP": 60,
+
+"Attack": 65,
+
+"Defense": 80,
+
+"Special Attack": 170,
+
+"Special Defense": 95,
+
+"Speed": 130,
+
+"TOT": 600,
+
+"AVG": 100
+
+},
+{
+  "ID": 095,
+
+
+
+"Name": "Onix",
+
+"HP": 35,
+
+"Attack": 45,
+
+"Defense": 160,
+
+"Special Attack": 30,
+
+"Special Defense": 45,
+
+"Speed": 70,
+
+"TOT": 385,
+
+"AVG": 64.17
+
+},
+{
+  "ID": 096,
+
+
+
+"Name": "Drowzee",
+
+"HP": 60,
+
+"Attack": 48,
+
+"Defense": 45,
+
+"Special Attack": 43,
+
+"Special Defense": 90,
+
+"Speed": 42,
+
+"TOT": 328,
+
+"AVG": 54.67
+
+},
+{
+  "ID": 097,
+
+
+
+"Name": "Hypno",
+
+"HP": 85,
+
+"Attack": 73,
+
+"Defense": 70,
+
+"Special Attack": 73,
+
+"Special Defense": 115,
+
+"Speed": 67,
+
+"TOT": 483,
+
+"AVG": 80.5
+
+},
+{
+  "ID": 098,
+
+
+
+"Name": "Krabby",
+
+"HP": 30,
+
+"Attack": 105,
+
+"Defense": 90,
+
+"Special Attack": 25,
+
+"Special Defense": 25,
+
+"Speed": 50,
+
+"TOT": 325,
+
+"AVG": 54.17
+
+},
+{
+  "ID": 099,
+
+
+
+"Name": "Kingler",
+
+"HP": 55,
+
+"Attack": 130,
+
+"Defense": 115,
+
+"Special Attack": 50,
+
+"Special Defense": 50,
+
+"Speed": 75,
+
+"TOT": 475,
+
+"AVG": 79.17
+
+},
+{
+  "ID": 100,
+
+
+
+"Name": "Voltorb",
+
+"HP": 40,
+
+"Attack": 30,
+
+"Defense": 50,
+
+"Special Attack": 55,
+
+"Special Defense": 55,
+
+"Speed": 100,
+
+"TOT": 330,
+
+"AVG": 55
+
+},
+{
+  "ID": 101,
+
+
+
+"Name": "Electrode",
+
+"HP": 60,
+
+"Attack": 50,
+
+"Defense": 70,
+
+"Special Attack": 80,
+
+"Special Defense": 80,
+
+"Speed": 150,
+
+"TOT": 490,
+
+"AVG": 81.67
+
+},
+{
+  "ID": 102,
+
+
+
+"Name": "Exeggcute",
+
+"HP": 60,
+
+"Attack": 40,
+
+"Defense": 80,
+
+"Special Attack": 60,
+
+"Special Defense": 45,
+
+"Speed": 40,
+
+"TOT": 325,
+
+"AVG": 54.17
+
+},
+{
+  "ID": 103,
+
+
+
+"Name": "Exeggutor",
+
+"HP": 95,
+
+"Attack": 95,
+
+"Defense": 85,
+
+"Special Attack": 125,
+
+"Special Defense": 75,
+
+"Speed": 55,
+
+"TOT": 530,
+
+"AVG": 88.33
+
+},
+{
+  "ID": 103,
+
+
+
+"Name": "Exeggutor Alt Form",
+
+"HP": 95,
+
+"Attack": 105,
+
+"Defense": 85,
+
+"Special Attack": 125,
+
+"Special Defense": 75,
+
+"Speed": 45,
+
+"TOT": 530,
+
+"AVG": 88.33
+
+},
+{
+  "ID": 104,
+
+
+
+"Name": "Cubone",
+
+"HP": 50,
+
+"Attack": 50,
+
+"Defense": 95,
+
+"Special Attack": 40,
+
+"Special Defense": 50,
+
+"Speed": 35,
+
+"TOT": 320,
+
+"AVG": 53.33
+
+},
+{
+  "ID": 105,
+
+
+
+"Name": "Marowak",
+
+"HP": 60,
+
+"Attack": 80,
+
+"Defense": 110,
+
+"Special Attack": 50,
+
+"Special Defense": 80,
+
+"Speed": 45,
+
+"TOT": 425,
+
+"AVG": 70.83
+
+},
+{
+  "ID": 105,
+
+
+
+"Name": "Marowak Alt Form",
+
+"HP": 60,
+
+"Attack": 80,
+
+"Defense": 110,
+
+"Special Attack": 50,
+
+"Special Defense": 80,
+
+"Speed": 45,
+
+"TOT": 425,
+
+"AVG": 70.83
+
+},
+{
+  "ID": 106,
+
+
+
+"Name": "Hitmonlee",
+
+"HP": 50,
+
+"Attack": 120,
+
+"Defense": 53,
+
+"Special Attack": 35,
+
+"Special Defense": 110,
+
+"Speed": 87,
+
+"TOT": 455,
+
+"AVG": 75.83
+
+},
+{
+  "ID": 107,
+
+
+
+"Name": "Hitmonchan",
+
+"HP": 50,
+
+"Attack": 105,
+
+"Defense": 79,
+
+"Special Attack": 35,
+
+"Special Defense": 110,
+
+"Speed": 76,
+
+"TOT": 455,
+
+"AVG": 75.83
+
+},
+{
+  "ID": 108,
+
+
+
+"Name": "Lickitung",
+
+"HP": 90,
+
+"Attack": 55,
+
+"Defense": 75,
+
+"Special Attack": 60,
+
+"Special Defense": 75,
+
+"Speed": 30,
+
+"TOT": 385,
+
+"AVG": 64.17
+
+},
+{
+  "ID": 109,
+
+
+
+"Name": "Koffing",
+
+"HP": 40,
+
+"Attack": 65,
+
+"Defense": 95,
+
+"Special Attack": 60,
+
+"Special Defense": 45,
+
+"Speed": 35,
+
+"TOT": 340,
+
+"AVG": 56.67
+
+},
+{
+  "ID": 110,
+
+
+
+"Name": "Weezing",
+
+"HP": 65,
+
+"Attack": 90,
+
+"Defense": 120,
+
+"Special Attack": 85,
+
+"Special Defense": 70,
+
+"Speed": 60,
+
+"TOT": 490,
+
+"AVG": 81.67
+
+},
+{
+  "ID": 110,
+
+
+
+"Name": "Weezing Alt Form",
+
+"HP": 65,
+
+"Attack": 90,
+
+"Defense": 120,
+
+"Special Attack": 85,
+
+"Special Defense": 70,
+
+"Speed": 60,
+
+"TOT": 490,
+
+"AVG": 81.67
+
+},
+{
+  "ID": 111,
+
+
+
+"Name": "Rhyhorn",
+
+"HP": 80,
+
+"Attack": 85,
+
+"Defense": 95,
+
+"Special Attack": 30,
+
+"Special Defense": 30,
+
+"Speed": 25,
+
+"TOT": 345,
+
+"AVG": 57.5
+
+},
+{
+  "ID": 112,
+
+
+
+"Name": "Rhydon",
+
+"HP": 105,
+
+"Attack": 130,
+
+"Defense": 120,
+
+"Special Attack": 45,
+
+"Special Defense": 45,
+
+"Speed": 40,
+
+"TOT": 485,
+
+"AVG": 80.83
+
+},
+{
+  "ID": 113,
+
+
+
+"Name": "Chansey",
+
+"HP": 250,
+
+"Attack": 5,
+
+"Defense": 5,
+
+"Special Attack": 35,
+
+"Special Defense": 105,
+
+"Speed": 50,
+
+"TOT": 450,
+
+"AVG": 75
+
+},
+{
+  "ID": 114,
+
+
+
+"Name": "Tangela",
+
+"HP": 65,
+
+"Attack": 55,
+
+"Defense": 115,
+
+"Special Attack": 100,
+
+"Special Defense": 40,
+
+"Speed": 60,
+
+"TOT": 435,
+
+"AVG": 72.5
+
+},
+{
+  "ID": 115,
+
+
+
+"Name": "Kangaskhan",
+
+"HP": 105,
+
+"Attack": 95,
+
+"Defense": 80,
+
+"Special Attack": 40,
+
+"Special Defense": 80,
+
+"Speed": 90,
+
+"TOT": 490,
+
+"AVG": 81.67
+
+},
+{
+  "ID": 115,
+
+
+
+"Name": "Kangaskhan Alt Form",
+
+"HP": 105,
+
+"Attack": 125,
+
+"Defense": 100,
+
+"Special Attack": 60,
+
+"Special Defense": 100,
+
+"Speed": 100,
+
+"TOT": 590,
+
+"AVG": 98.33
+
+},
+{
+  "ID": 116,
+
+
+
+"Name": "Horsea",
+
+"HP": 30,
+
+"Attack": 40,
+
+"Defense": 70,
+
+"Special Attack": 70,
+
+"Special Defense": 25,
+
+"Speed": 60,
+
+"TOT": 295,
+
+"AVG": 49.17
+
+},
+{
+  "ID": 117,
+
+
+
+"Name": "Seadra",
+
+"HP": 55,
+
+"Attack": 65,
+
+"Defense": 95,
+
+"Special Attack": 95,
+
+"Special Defense": 45,
+
+"Speed": 85,
+
+"TOT": 440,
+
+"AVG": 73.33
+
+},
+{
+  "ID": 118,
+
+
+
+"Name": "Goldeen",
+
+"HP": 45,
+
+"Attack": 67,
+
+"Defense": 60,
+
+"Special Attack": 35,
+
+"Special Defense": 50,
+
+"Speed": 63,
+
+"TOT": 320,
+
+"AVG": 53.33
+
+},
+{
+  "ID": 119,
+
+
+
+"Name": "Seaking",
+
+"HP": 80,
+
+"Attack": 92,
+
+"Defense": 65,
+
+"Special Attack": 65,
+
+"Special Defense": 80,
+
+"Speed": 68,
+
+"TOT": 450,
+
+"AVG": 75
+
+},
+{
+  "ID": 120,
+
+
+
+"Name": "Staryu",
+
+"HP": 30,
+
+"Attack": 45,
+
+"Defense": 55,
+
+"Special Attack": 70,
+
+"Special Defense": 55,
+
+"Speed": 85,
+
+"TOT": 340,
+
+"AVG": 56.67
+
+},
+{
+  "ID": 121,
+
+
+
+"Name": "Starmie",
+
+"HP": 60,
+
+"Attack": 75,
+
+"Defense": 85,
+
+"Special Attack": 100,
+
+"Special Defense": 85,
+
+"Speed": 115,
+
+"TOT": 520,
+
+"AVG": 86.67
+
+},
+{
+  "ID": 122,
+
+
+
+"Name": "Mr. Mime",
+
+"HP": 40,
+
+"Attack": 45,
+
+"Defense": 65,
+
+"Special Attack": 100,
+
+"Special Defense": 120,
+
+"Speed": 90,
+
+"TOT": 460,
+
+"AVG": 76.67
+
+},
+{
+  "ID": 122,
+
+
+
+"Name": "Mr. Mime (Galarian Form)",
+
+"HP": 50,
+
+"Attack": 65,
+
+"Defense": 65,
+
+"Special Attack": 90,
+
+"Special Defense": 90,
+
+"Speed": 100,
+
+"TOT": 460,
+
+"AVG": 76.67
+
+},
+{
+  "ID": 123,
+
+
+
+"Name": "Scyther",
+
+"HP": 70,
+
+"Attack": 110,
+
+"Defense": 80,
+
+"Special Attack": 55,
+
+"Special Defense": 80,
+
+"Speed": 105,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 124,
+
+
+
+"Name": "Jynx",
+
+"HP": 65,
+
+"Attack": 50,
+
+"Defense": 35,
+
+"Special Attack": 115,
+
+"Special Defense": 95,
+
+"Speed": 95,
+
+"TOT": 455,
+
+"AVG": 75.83
+
+},
+{
+  "ID": 125,
+
+
+
+"Name": "Electabuzz",
+
+"HP": 65,
+
+"Attack": 83,
+
+"Defense": 57,
+
+"Special Attack": 95,
+
+"Special Defense": 85,
+
+"Speed": 105,
+
+"TOT": 490,
+
+"AVG": 81.67
+
+},
+{
+  "ID": 126,
+
+
+
+"Name": "Magmar",
+
+"HP": 65,
+
+"Attack": 95,
+
+"Defense": 57,
+
+"Special Attack": 100,
+
+"Special Defense": 85,
+
+"Speed": 93,
+
+"TOT": 495,
+
+"AVG": 82.5
+
+},
+{
+  "ID": 127,
+
+
+
+"Name": "Pinsir",
+
+"HP": 65,
+
+"Attack": 125,
+
+"Defense": 100,
+
+"Special Attack": 55,
+
+"Special Defense": 70,
+
+"Speed": 85,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 127,
+
+
+
+"Name": "Pinsir Alt Form",
+
+"HP": 65,
+
+"Attack": 155,
+
+"Defense": 120,
+
+"Special Attack": 65,
+
+"Special Defense": 90,
+
+"Speed": 105,
+
+"TOT": 600,
+
+"AVG": 100
+
+},
+{
+  "ID": 128,
+
+
+
+"Name": "Tauros",
+
+"HP": 75,
+
+"Attack": 100,
+
+"Defense": 95,
+
+"Special Attack": 40,
+
+"Special Defense": 70,
+
+"Speed": 110,
+
+"TOT": 490,
+
+"AVG": 81.67
+
+},
+{
+  "ID": 129,
+
+
+
+"Name": "Magikarp",
+
+"HP": 20,
+
+"Attack": 10,
+
+"Defense": 55,
+
+"Special Attack": 15,
+
+"Special Defense": 20,
+
+"Speed": 80,
+
+"TOT": 200,
+
+"AVG": 33.33
+
+},
+{
+  "ID": 130,
+
+
+
+"Name": "Gyarados",
+
+"HP": 95,
+
+"Attack": 125,
+
+"Defense": 79,
+
+"Special Attack": 60,
+
+"Special Defense": 100,
+
+"Speed": 81,
+
+"TOT": 540,
+
+"AVG": 90
+
+},
+{
+  "ID": 130,
+
+
+
+"Name": "Gyarados Alt Form",
+
+"HP": 95,
+
+"Attack": 155,
+
+"Defense": 109,
+
+"Special Attack": 70,
+
+"Special Defense": 130,
+
+"Speed": 81,
+
+"TOT": 640,
+
+"AVG": 106.67
+
+},
+{
+  "ID": 131,
+
+
+
+"Name": "Lapras",
+
+"HP": 130,
+
+"Attack": 85,
+
+"Defense": 80,
+
+"Special Attack": 85,
+
+"Special Defense": 95,
+
+"Speed": 60,
+
+"TOT": 535,
+
+"AVG": 89.17
+
+},
+{
+  "ID": 132,
+
+
+
+"Name": "Ditto",
+
+"HP": 48,
+
+"Attack": 48,
+
+"Defense": 48,
+
+"Special Attack": 48,
+
+"Special Defense": 48,
+
+"Speed": 48,
+
+"TOT": 288,
+
+"AVG": 48
+
+},
+{
+  "ID": 133,
+
+
+
+"Name": "Eevee",
+
+"HP": 55,
+
+"Attack": 55,
+
+"Defense": 50,
+
+"Special Attack": 45,
+
+"Special Defense": 65,
+
+"Speed": 55,
+
+"TOT": 325,
+
+"AVG": 54.17
+
+},
+{
+  "ID": 133,
+
+
+
+"Name": "Eevee Alt Form",
+
+"HP": 65,
+
+"Attack": 75,
+
+"Defense": 70,
+
+"Special Attack": 65,
+
+"Special Defense": 85,
+
+"Speed": 75,
+
+"TOT": 435,
+
+"AVG": 72.5
+
+},
+{
+  "ID": 134,
+
+
+
+"Name": "Vaporeon",
+
+"HP": 130,
+
+"Attack": 65,
+
+"Defense": 60,
+
+"Special Attack": 110,
+
+"Special Defense": 95,
+
+"Speed": 65,
+
+"TOT": 525,
+
+"AVG": 87.5
+
+},
+{
+  "ID": 135,
+
+
+
+"Name": "Jolteon",
+
+"HP": 65,
+
+"Attack": 65,
+
+"Defense": 60,
+
+"Special Attack": 110,
+
+"Special Defense": 95,
+
+"Speed": 130,
+
+"TOT": 525,
+
+"AVG": 87.5
+
+},
+{
+  "ID": 136,
+
+
+
+"Name": "Flareon",
+
+"HP": 65,
+
+"Attack": 130,
+
+"Defense": 60,
+
+"Special Attack": 95,
+
+"Special Defense": 110,
+
+"Speed": 65,
+
+"TOT": 525,
+
+"AVG": 87.5
+
+},
+{
+  "ID": 137,
+
+
+
+"Name": "Porygon",
+
+"HP": 65,
+
+"Attack": 60,
+
+"Defense": 70,
+
+"Special Attack": 85,
+
+"Special Defense": 75,
+
+"Speed": 40,
+
+"TOT": 395,
+
+"AVG": 65.83
+
+},
+{
+  "ID": 138,
+
+
+
+"Name": "Omanyte",
+
+"HP": 35,
+
+"Attack": 40,
+
+"Defense": 100,
+
+"Special Attack": 90,
+
+"Special Defense": 55,
+
+"Speed": 35,
+
+"TOT": 355,
+
+"AVG": 59.17
+
+},
+{
+  "ID": 139,
+
+
+
+"Name": "Omastar",
+
+"HP": 70,
+
+"Attack": 60,
+
+"Defense": 125,
+
+"Special Attack": 115,
+
+"Special Defense": 70,
+
+"Speed": 55,
+
+"TOT": 495,
+
+"AVG": 82.5
+
+},
+{
+  "ID": 140,
+
+
+
+"Name": "Kabuto",
+
+"HP": 30,
+
+"Attack": 80,
+
+"Defense": 90,
+
+"Special Attack": 55,
+
+"Special Defense": 45,
+
+"Speed": 55,
+
+"TOT": 355,
+
+"AVG": 59.17
+
+},
+{
+  "ID": 141,
+
+
+
+"Name": "Kabutops",
+
+"HP": 60,
+
+"Attack": 115,
+
+"Defense": 105,
+
+"Special Attack": 65,
+
+"Special Defense": 70,
+
+"Speed": 80,
+
+"TOT": 495,
+
+"AVG": 82.5
+
+},
+{
+  "ID": 142,
+
+
+
+"Name": "Aerodactyl",
+
+"HP": 80,
+
+"Attack": 105,
+
+"Defense": 65,
+
+"Special Attack": 60,
+
+"Special Defense": 75,
+
+"Speed": 130,
+
+"TOT": 515,
+
+"AVG": 85.83
+
+},
+{
+  "ID": 142,
+
+
+
+"Name": "Aerodactyl Alt Form",
+
+"HP": 80,
+
+"Attack": 135,
+
+"Defense": 85,
+
+"Special Attack": 70,
+
+"Special Defense": 95,
+
+"Speed": 150,
+
+"TOT": 615,
+
+"AVG": 102.5
+
+},
+{
+  "ID": 143,
+
+
+
+"Name": "Snorlax",
+
+"HP": 160,
+
+"Attack": 110,
+
+"Defense": 65,
+
+"Special Attack": 65,
+
+"Special Defense": 110,
+
+"Speed": 30,
+
+"TOT": 540,
+
+"AVG": 90
+
+},
+{
+  "ID": 144,
+
+
+
+"Name": "Articuno",
+
+"HP": 90,
+
+"Attack": 85,
+
+"Defense": 100,
+
+"Special Attack": 95,
+
+"Special Defense": 125,
+
+"Speed": 85,
+
+"TOT": 580,
+
+"AVG": 96.67
+
+},
+{
+  "ID": 145,
+
+
+
+"Name": "Zapdos",
+
+"HP": 90,
+
+"Attack": 90,
+
+"Defense": 85,
+
+"Special Attack": 125,
+
+"Special Defense": 90,
+
+"Speed": 100,
+
+"TOT": 580,
+
+"AVG": 96.67
+
+},
+{
+  "ID": 146,
+
+
+
+"Name": "Moltres",
+
+"HP": 90,
+
+"Attack": 100,
+
+"Defense": 90,
+
+"Special Attack": 125,
+
+"Special Defense": 85,
+
+"Speed": 90,
+
+"TOT": 580,
+
+"AVG": 96.67
+
+},
+{
+  "ID": 147,
+
+
+
+"Name": "Dratini",
+
+"HP": 41,
+
+"Attack": 64,
+
+"Defense": 45,
+
+"Special Attack": 50,
+
+"Special Defense": 50,
+
+"Speed": 50,
+
+"TOT": 300,
+
+"AVG": 50
+
+},
+{
+  "ID": 148,
+
+
+
+"Name": "Dragonair",
+
+"HP": 61,
+
+"Attack": 84,
+
+"Defense": 65,
+
+"Special Attack": 70,
+
+"Special Defense": 70,
+
+"Speed": 70,
+
+"TOT": 420,
+
+"AVG": 70
+
+},
+{
+  "ID": 149,
+
+
+
+"Name": "Dragonite",
+
+"HP": 91,
+
+"Attack": 134,
+
+"Defense": 95,
+
+"Special Attack": 100,
+
+"Special Defense": 100,
+
+"Speed": 80,
+
+"TOT": 600,
+
+"AVG": 100
+
+},
+{
+  "ID": 150,
+
+
+
+"Name": "Mewtwo",
+
+"HP": 106,
+
+"Attack": 110,
+
+"Defense": 90,
+
+"Special Attack": 154,
+
+"Special Defense": 90,
+
+"Speed": 130,
+
+"TOT": 680,
+
+"AVG": 113.33
+
+},
+{
+  "ID": 150,
+
+
+
+"Name": "Mewtwo Alt Form",
+
+"HP": 106,
+
+"Attack": 190,
+
+"Defense": 100,
+
+"Special Attack": 154,
+
+"Special Defense": 100,
+
+"Speed": 130,
+
+"TOT": 780,
+
+"AVG": 130
+
+},
+{
+  "ID": 150,
+
+
+
+"Name": "Mewtwo Alt Form",
+
+"HP": 106,
+
+"Attack": 150,
+
+"Defense": 70,
+
+"Special Attack": 194,
+
+"Special Defense": 120,
+
+"Speed": 140,
+
+"TOT": 780,
+
+"AVG": 130
+
+},
+{
+  "ID": 151,
+
+
+
+"Name": "Mew",
+
+"HP": 100,
+
+"Attack": 100,
+
+"Defense": 100,
+
+"Special Attack": 100,
+
+"Special Defense": 100,
+
+"Speed": 100,
+
+"TOT": 600,
+
+"AVG": 100
+
+},
+{
+  "ID": 152,
+
+
+
+"Name": "Chikorita",
+
+"HP": 45,
+
+"Attack": 49,
+
+"Defense": 65,
+
+"Special Attack": 49,
+
+"Special Defense": 65,
+
+"Speed": 45,
+
+"TOT": 318,
+
+"AVG": 53
+
+},
+{
+  "ID": 153,
+
+
+
+"Name": "Bayleef",
+
+"HP": 60,
+
+"Attack": 62,
+
+"Defense": 80,
+
+"Special Attack": 63,
+
+"Special Defense": 80,
+
+"Speed": 60,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 154,
+
+
+
+"Name": "Meganium",
+
+"HP": 80,
+
+"Attack": 82,
+
+"Defense": 100,
+
+"Special Attack": 83,
+
+"Special Defense": 100,
+
+"Speed": 80,
+
+"TOT": 525,
+
+"AVG": 87.5
+
+},
+{
+  "ID": 155,
+
+
+
+"Name": "Cyndaquil",
+
+"HP": 39,
+
+"Attack": 52,
+
+"Defense": 43,
+
+"Special Attack": 60,
+
+"Special Defense": 50,
+
+"Speed": 65,
+
+"TOT": 309,
+
+"AVG": 51.5
+
+},
+{
+  "ID": 156,
+
+
+
+"Name": "Quilava",
+
+"HP": 58,
+
+"Attack": 64,
+
+"Defense": 58,
+
+"Special Attack": 80,
+
+"Special Defense": 65,
+
+"Speed": 80,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 157,
+
+
+
+"Name": "Typhlosion",
+
+"HP": 78,
+
+"Attack": 84,
+
+"Defense": 78,
+
+"Special Attack": 109,
+
+"Special Defense": 85,
+
+"Speed": 100,
+
+"TOT": 534,
+
+"AVG": 89
+
+},
+{
+  "ID": 158,
+
+
+
+"Name": "Totodile",
+
+"HP": 50,
+
+"Attack": 65,
+
+"Defense": 64,
+
+"Special Attack": 44,
+
+"Special Defense": 48,
+
+"Speed": 43,
+
+"TOT": 314,
+
+"AVG": 52.33
+
+},
+{
+  "ID": 159,
+
+
+
+"Name": "Croconaw",
+
+"HP": 65,
+
+"Attack": 80,
+
+"Defense": 80,
+
+"Special Attack": 59,
+
+"Special Defense": 63,
+
+"Speed": 58,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 160,
+
+
+
+"Name": "Feraligatr",
+
+"HP": 85,
+
+"Attack": 105,
+
+"Defense": 100,
+
+"Special Attack": 79,
+
+"Special Defense": 83,
+
+"Speed": 78,
+
+"TOT": 530,
+
+"AVG": 88.33
+
+},
+{
+  "ID": 161,
+
+
+
+"Name": "Sentret",
+
+"HP": 35,
+
+"Attack": 46,
+
+"Defense": 34,
+
+"Special Attack": 35,
+
+"Special Defense": 45,
+
+"Speed": 20,
+
+"TOT": 215,
+
+"AVG": 35.83
+
+},
+{
+  "ID": 162,
+
+
+
+"Name": "Furret",
+
+"HP": 85,
+
+"Attack": 76,
+
+"Defense": 64,
+
+"Special Attack": 45,
+
+"Special Defense": 55,
+
+"Speed": 90,
+
+"TOT": 415,
+
+"AVG": 69.17
+
+},
+{
+  "ID": 163,
+
+
+
+"Name": "Hoothoot",
+
+"HP": 60,
+
+"Attack": 30,
+
+"Defense": 30,
+
+"Special Attack": 36,
+
+"Special Defense": 56,
+
+"Speed": 50,
+
+"TOT": 262,
+
+"AVG": 43.67
+
+},
+{
+  "ID": 164,
+
+
+
+"Name": "Noctowl",
+
+"HP": 100,
+
+"Attack": 50,
+
+"Defense": 50,
+
+"Special Attack": 86,
+
+"Special Defense": 96,
+
+"Speed": 70,
+
+"TOT": 452,
+
+"AVG": 75.33
+
+},
+{
+  "ID": 165,
+
+
+
+"Name": "Ledyba",
+
+"HP": 40,
+
+"Attack": 20,
+
+"Defense": 30,
+
+"Special Attack": 40,
+
+"Special Defense": 80,
+
+"Speed": 55,
+
+"TOT": 265,
+
+"AVG": 44.17
+
+},
+{
+  "ID": 166,
+
+
+
+"Name": "Ledian",
+
+"HP": 55,
+
+"Attack": 35,
+
+"Defense": 50,
+
+"Special Attack": 55,
+
+"Special Defense": 110,
+
+"Speed": 85,
+
+"TOT": 390,
+
+"AVG": 65
+
+},
+{
+  "ID": 167,
+
+
+
+"Name": "Spinarak",
+
+"HP": 40,
+
+"Attack": 60,
+
+"Defense": 40,
+
+"Special Attack": 40,
+
+"Special Defense": 40,
+
+"Speed": 30,
+
+"TOT": 250,
+
+"AVG": 41.67
+
+},
+{
+  "ID": 168,
+
+
+
+"Name": "Ariados",
+
+"HP": 70,
+
+"Attack": 90,
+
+"Defense": 70,
+
+"Special Attack": 60,
+
+"Special Defense": 70,
+
+"Speed": 40,
+
+"TOT": 400,
+
+"AVG": 66.67
+
+},
+{
+  "ID": 169,
+
+
+
+"Name": "Crobat",
+
+"HP": 85,
+
+"Attack": 90,
+
+"Defense": 80,
+
+"Special Attack": 70,
+
+"Special Defense": 80,
+
+"Speed": 130,
+
+"TOT": 535,
+
+"AVG": 89.17
+
+},
+{
+  "ID": 170,
+
+
+
+"Name": "Chinchou",
+
+"HP": 75,
+
+"Attack": 38,
+
+"Defense": 38,
+
+"Special Attack": 56,
+
+"Special Defense": 56,
+
+"Speed": 67,
+
+"TOT": 330,
+
+"AVG": 55
+
+},
+{
+  "ID": 171,
+
+
+
+"Name": "Lanturn",
+
+"HP": 125,
+
+"Attack": 58,
+
+"Defense": 58,
+
+"Special Attack": 76,
+
+"Special Defense": 76,
+
+"Speed": 67,
+
+"TOT": 460,
+
+"AVG": 76.67
+
+},
+{
+  "ID": 172,
+
+
+
+"Name": "Pichu",
+
+"HP": 20,
+
+"Attack": 40,
+
+"Defense": 15,
+
+"Special Attack": 35,
+
+"Special Defense": 35,
+
+"Speed": 60,
+
+"TOT": 205,
+
+"AVG": 34.17
+
+},
+{
+  "ID": 173,
+
+
+
+"Name": "Cleffa",
+
+"HP": 50,
+
+"Attack": 25,
+
+"Defense": 28,
+
+"Special Attack": 45,
+
+"Special Defense": 55,
+
+"Speed": 15,
+
+"TOT": 218,
+
+"AVG": 36.33
+
+},
+{
+  "ID": 174,
+
+
+
+"Name": "Igglybuff",
+
+"HP": 90,
+
+"Attack": 30,
+
+"Defense": 15,
+
+"Special Attack": 40,
+
+"Special Defense": 20,
+
+"Speed": 15,
+
+"TOT": 210,
+
+"AVG": 35
+
+},
+{
+  "ID": 175,
+
+
+
+"Name": "Togepi",
+
+"HP": 35,
+
+"Attack": 20,
+
+"Defense": 65,
+
+"Special Attack": 40,
+
+"Special Defense": 65,
+
+"Speed": 20,
+
+"TOT": 245,
+
+"AVG": 40.83
+
+},
+{
+  "ID": 176,
+
+
+
+"Name": "Togetic",
+
+"HP": 55,
+
+"Attack": 40,
+
+"Defense": 85,
+
+"Special Attack": 80,
+
+"Special Defense": 105,
+
+"Speed": 40,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 177,
+
+
+
+"Name": "Natu",
+
+"HP": 40,
+
+"Attack": 50,
+
+"Defense": 45,
+
+"Special Attack": 70,
+
+"Special Defense": 45,
+
+"Speed": 70,
+
+"TOT": 320,
+
+"AVG": 53.33
+
+},
+{
+  "ID": 178,
+
+
+
+"Name": "Xatu",
+
+"HP": 65,
+
+"Attack": 75,
+
+"Defense": 70,
+
+"Special Attack": 95,
+
+"Special Defense": 70,
+
+"Speed": 95,
+
+"TOT": 470,
+
+"AVG": 78.33
+
+},
+{
+  "ID": 179,
+
+
+
+"Name": "Mareep",
+
+"HP": 55,
+
+"Attack": 40,
+
+"Defense": 40,
+
+"Special Attack": 65,
+
+"Special Defense": 45,
+
+"Speed": 35,
+
+"TOT": 280,
+
+"AVG": 46.67
+
+},
+{
+  "ID": 180,
+
+
+
+"Name": "Flaaffy",
+
+"HP": 70,
+
+"Attack": 55,
+
+"Defense": 55,
+
+"Special Attack": 80,
+
+"Special Defense": 60,
+
+"Speed": 45,
+
+"TOT": 365,
+
+"AVG": 60.83
+
+},
+{
+  "ID": 181,
+
+
+
+"Name": "Ampharos",
+
+"HP": 90,
+
+"Attack": 75,
+
+"Defense": 85,
+
+"Special Attack": 115,
+
+"Special Defense": 90,
+
+"Speed": 55,
+
+"TOT": 510,
+
+"AVG": 85
+
+},
+{
+  "ID": 181,
+
+
+
+"Name": "Ampharos Alt Form",
+
+"HP": 90,
+
+"Attack": 95,
+
+"Defense": 105,
+
+"Special Attack": 165,
+
+"Special Defense": 110,
+
+"Speed": 45,
+
+"TOT": 610,
+
+"AVG": 101.67
+
+},
+{
+  "ID": 182,
+
+
+
+"Name": "Bellossom",
+
+"HP": 75,
+
+"Attack": 80,
+
+"Defense": 95,
+
+"Special Attack": 90,
+
+"Special Defense": 100,
+
+"Speed": 50,
+
+"TOT": 490,
+
+"AVG": 81.67
+
+},
+{
+  "ID": 183,
+
+
+
+"Name": "Marill",
+
+"HP": 70,
+
+"Attack": 20,
+
+"Defense": 50,
+
+"Special Attack": 20,
+
+"Special Defense": 50,
+
+"Speed": 40,
+
+"TOT": 250,
+
+"AVG": 41.67
+
+},
+{
+  "ID": 184,
+
+
+
+"Name": "Azumarill",
+
+"HP": 100,
+
+"Attack": 50,
+
+"Defense": 80,
+
+"Special Attack": 60,
+
+"Special Defense": 80,
+
+"Speed": 50,
+
+"TOT": 420,
+
+"AVG": 70
+
+},
+{
+  "ID": 185,
+
+
+
+"Name": "Sudowoodo",
+
+"HP": 70,
+
+"Attack": 100,
+
+"Defense": 115,
+
+"Special Attack": 30,
+
+"Special Defense": 65,
+
+"Speed": 30,
+
+"TOT": 410,
+
+"AVG": 68.33
+
+},
+{
+  "ID": 186,
+
+
+
+"Name": "Politoed",
+
+"HP": 90,
+
+"Attack": 75,
+
+"Defense": 75,
+
+"Special Attack": 90,
+
+"Special Defense": 100,
+
+"Speed": 70,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 187,
+
+
+
+"Name": "Hoppip",
+
+"HP": 35,
+
+"Attack": 35,
+
+"Defense": 40,
+
+"Special Attack": 35,
+
+"Special Defense": 55,
+
+"Speed": 50,
+
+"TOT": 250,
+
+"AVG": 41.67
+
+},
+{
+  "ID": 188,
+
+
+
+"Name": "Skiploom",
+
+"HP": 55,
+
+"Attack": 45,
+
+"Defense": 50,
+
+"Special Attack": 45,
+
+"Special Defense": 65,
+
+"Speed": 80,
+
+"TOT": 340,
+
+"AVG": 56.67
+
+},
+{
+  "ID": 189,
+
+
+
+"Name": "Jumpluff",
+
+"HP": 75,
+
+"Attack": 55,
+
+"Defense": 70,
+
+"Special Attack": 55,
+
+"Special Defense": 95,
+
+"Speed": 110,
+
+"TOT": 460,
+
+"AVG": 76.67
+
+},
+{
+  "ID": 190,
+
+
+
+"Name": "Aipom",
+
+"HP": 55,
+
+"Attack": 70,
+
+"Defense": 55,
+
+"Special Attack": 40,
+
+"Special Defense": 55,
+
+"Speed": 85,
+
+"TOT": 360,
+
+"AVG": 60
+
+},
+{
+  "ID": 191,
+
+
+
+"Name": "Sunkern",
+
+"HP": 30,
+
+"Attack": 30,
+
+"Defense": 30,
+
+"Special Attack": 30,
+
+"Special Defense": 30,
+
+"Speed": 30,
+
+"TOT": 180,
+
+"AVG": 30
+
+},
+{
+  "ID": 192,
+
+
+
+"Name": "Sunflora",
+
+"HP": 75,
+
+"Attack": 75,
+
+"Defense": 55,
+
+"Special Attack": 105,
+
+"Special Defense": 85,
+
+"Speed": 30,
+
+"TOT": 425,
+
+"AVG": 70.83
+
+},
+{
+  "ID": 193,
+
+
+
+"Name": "Yanma",
+
+"HP": 65,
+
+"Attack": 65,
+
+"Defense": 45,
+
+"Special Attack": 75,
+
+"Special Defense": 45,
+
+"Speed": 95,
+
+"TOT": 390,
+
+"AVG": 65
+
+},
+{
+  "ID": 194,
+
+
+
+"Name": "Wooper",
+
+"HP": 55,
+
+"Attack": 45,
+
+"Defense": 45,
+
+"Special Attack": 25,
+
+"Special Defense": 25,
+
+"Speed": 15,
+
+"TOT": 210,
+
+"AVG": 35
+
+},
+{
+  "ID": 195,
+
+
+
+"Name": "Quagsire",
+
+"HP": 95,
+
+"Attack": 85,
+
+"Defense": 85,
+
+"Special Attack": 65,
+
+"Special Defense": 65,
+
+"Speed": 35,
+
+"TOT": 430,
+
+"AVG": 71.67
+
+},
+{
+  "ID": 196,
+
+
+
+"Name": "Espeon",
+
+"HP": 65,
+
+"Attack": 65,
+
+"Defense": 60,
+
+"Special Attack": 130,
+
+"Special Defense": 95,
+
+"Speed": 110,
+
+"TOT": 525,
+
+"AVG": 87.5
+
+},
+{
+  "ID": 197,
+
+
+
+"Name": "Umbreon",
+
+"HP": 95,
+
+"Attack": 65,
+
+"Defense": 110,
+
+"Special Attack": 60,
+
+"Special Defense": 130,
+
+"Speed": 65,
+
+"TOT": 525,
+
+"AVG": 87.5
+
+},
+{
+  "ID": 198,
+
+
+
+"Name": "Murkrow",
+
+"HP": 60,
+
+"Attack": 85,
+
+"Defense": 42,
+
+"Special Attack": 85,
+
+"Special Defense": 42,
+
+"Speed": 91,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 199,
+
+
+
+"Name": "Slowking",
+
+"HP": 95,
+
+"Attack": 75,
+
+"Defense": 80,
+
+"Special Attack": 100,
+
+"Special Defense": 110,
+
+"Speed": 30,
+
+"TOT": 490,
+
+"AVG": 81.67
+
+},
+{
+  "ID": 200,
+
+
+
+"Name": "Misdreavus",
+
+"HP": 60,
+
+"Attack": 60,
+
+"Defense": 60,
+
+"Special Attack": 85,
+
+"Special Defense": 85,
+
+"Speed": 85,
+
+"TOT": 435,
+
+"AVG": 72.5
+
+},
+{
+  "ID": 201,
+
+
+
+"Name": "Unown",
+
+"HP": 48,
+
+"Attack": 72,
+
+"Defense": 48,
+
+"Special Attack": 72,
+
+"Special Defense": 48,
+
+"Speed": 48,
+
+"TOT": 336,
+
+"AVG": 56
+
+},
+{
+  "ID": 202,
+
+
+
+"Name": "Wobbuffet",
+
+"HP": 190,
+
+"Attack": 33,
+
+"Defense": 58,
+
+"Special Attack": 33,
+
+"Special Defense": 58,
+
+"Speed": 33,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 203,
+
+
+
+"Name": "Girafarig",
+
+"HP": 70,
+
+"Attack": 80,
+
+"Defense": 65,
+
+"Special Attack": 90,
+
+"Special Defense": 65,
+
+"Speed": 85,
+
+"TOT": 455,
+
+"AVG": 75.83
+
+},
+{
+  "ID": 204,
+
+
+
+"Name": "Pineco",
+
+"HP": 50,
+
+"Attack": 65,
+
+"Defense": 90,
+
+"Special Attack": 35,
+
+"Special Defense": 35,
+
+"Speed": 15,
+
+"TOT": 290,
+
+"AVG": 48.33
+
+},
+{
+  "ID": 205,
+
+
+
+"Name": "Forretress",
+
+"HP": 75,
+
+"Attack": 90,
+
+"Defense": 140,
+
+"Special Attack": 60,
+
+"Special Defense": 60,
+
+"Speed": 40,
+
+"TOT": 465,
+
+"AVG": 77.5
+
+},
+{
+  "ID": 206,
+
+
+
+"Name": "Dunsparce",
+
+"HP": 100,
+
+"Attack": 70,
+
+"Defense": 70,
+
+"Special Attack": 65,
+
+"Special Defense": 65,
+
+"Speed": 45,
+
+"TOT": 415,
+
+"AVG": 69.17
+
+},
+{
+  "ID": 207,
+
+
+
+"Name": "Gligar",
+
+"HP": 65,
+
+"Attack": 75,
+
+"Defense": 105,
+
+"Special Attack": 35,
+
+"Special Defense": 65,
+
+"Speed": 85,
+
+"TOT": 430,
+
+"AVG": 71.67
+
+},
+{
+  "ID": 208,
+
+
+
+"Name": "Steelix",
+
+"HP": 75,
+
+"Attack": 85,
+
+"Defense": 200,
+
+"Special Attack": 55,
+
+"Special Defense": 65,
+
+"Speed": 30,
+
+"TOT": 510,
+
+"AVG": 85
+
+},
+{
+  "ID": 208,
+
+
+
+"Name": "Steelix Alt Form",
+
+"HP": 75,
+
+"Attack": 125,
+
+"Defense": 230,
+
+"Special Attack": 55,
+
+"Special Defense": 95,
+
+"Speed": 30,
+
+"TOT": 610,
+
+"AVG": 101.67
+
+},
+{
+  "ID": 209,
+
+
+
+"Name": "Snubbull",
+
+"HP": 60,
+
+"Attack": 80,
+
+"Defense": 50,
+
+"Special Attack": 40,
+
+"Special Defense": 40,
+
+"Speed": 30,
+
+"TOT": 300,
+
+"AVG": 50
+
+},
+{
+  "ID": 210,
+
+
+
+"Name": "Granbull",
+
+"HP": 90,
+
+"Attack": 120,
+
+"Defense": 75,
+
+"Special Attack": 60,
+
+"Special Defense": 60,
+
+"Speed": 45,
+
+"TOT": 450,
+
+"AVG": 75
+
+},
+{
+  "ID": 211,
+
+
+
+"Name": "Qwilfish",
+
+"HP": 65,
+
+"Attack": 95,
+
+"Defense": 85,
+
+"Special Attack": 55,
+
+"Special Defense": 55,
+
+"Speed": 85,
+
+"TOT": 440,
+
+"AVG": 73.33
+
+},
+{
+  "ID": 212,
+
+
+
+"Name": "Scizor",
+
+"HP": 70,
+
+"Attack": 130,
+
+"Defense": 100,
+
+"Special Attack": 55,
+
+"Special Defense": 80,
+
+"Speed": 65,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 212,
+
+
+
+"Name": "Scizor Alt Form",
+
+"HP": 70,
+
+"Attack": 150,
+
+"Defense": 140,
+
+"Special Attack": 65,
+
+"Special Defense": 100,
+
+"Speed": 75,
+
+"TOT": 600,
+
+"AVG": 100
+
+},
+{
+  "ID": 213,
+
+
+
+"Name": "Shuckle",
+
+"HP": 20,
+
+"Attack": 10,
+
+"Defense": 230,
+
+"Special Attack": 10,
+
+"Special Defense": 230,
+
+"Speed": 5,
+
+"TOT": 505,
+
+"AVG": 84.17
+
+},
+{
+  "ID": 214,
+
+
+
+"Name": "Heracross",
+
+"HP": 80,
+
+"Attack": 125,
+
+"Defense": 75,
+
+"Special Attack": 40,
+
+"Special Defense": 95,
+
+"Speed": 85,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 214,
+
+
+
+"Name": "Heracross Alt Form",
+
+"HP": 80,
+
+"Attack": 185,
+
+"Defense": 115,
+
+"Special Attack": 40,
+
+"Special Defense": 105,
+
+"Speed": 75,
+
+"TOT": 600,
+
+"AVG": 100
+
+},
+{
+  "ID": 215,
+
+
+
+"Name": "Sneasel",
+
+"HP": 55,
+
+"Attack": 95,
+
+"Defense": 55,
+
+"Special Attack": 35,
+
+"Special Defense": 75,
+
+"Speed": 115,
+
+"TOT": 430,
+
+"AVG": 71.67
+
+},
+{
+  "ID": 216,
+
+
+
+"Name": "Teddiursa",
+
+"HP": 60,
+
+"Attack": 80,
+
+"Defense": 50,
+
+"Special Attack": 50,
+
+"Special Defense": 50,
+
+"Speed": 40,
+
+"TOT": 330,
+
+"AVG": 55
+
+},
+{
+  "ID": 217,
+
+
+
+"Name": "Ursaring",
+
+"HP": 90,
+
+"Attack": 130,
+
+"Defense": 75,
+
+"Special Attack": 75,
+
+"Special Defense": 75,
+
+"Speed": 55,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 218,
+
+
+
+"Name": "Slugma",
+
+"HP": 40,
+
+"Attack": 40,
+
+"Defense": 40,
+
+"Special Attack": 70,
+
+"Special Defense": 40,
+
+"Speed": 20,
+
+"TOT": 250,
+
+"AVG": 41.67
+
+},
+{
+  "ID": 219,
+
+
+
+"Name": "Magcargo",
+
+"HP": 60,
+
+"Attack": 50,
+
+"Defense": 120,
+
+"Special Attack": 90,
+
+"Special Defense": 80,
+
+"Speed": 30,
+
+"TOT": 430,
+
+"AVG": 71.67
+
+},
+{
+  "ID": 220,
+
+
+
+"Name": "Swinub",
+
+"HP": 50,
+
+"Attack": 50,
+
+"Defense": 40,
+
+"Special Attack": 30,
+
+"Special Defense": 30,
+
+"Speed": 50,
+
+"TOT": 250,
+
+"AVG": 41.67
+
+},
+{
+  "ID": 221,
+
+
+
+"Name": "Piloswine",
+
+"HP": 100,
+
+"Attack": 100,
+
+"Defense": 80,
+
+"Special Attack": 60,
+
+"Special Defense": 60,
+
+"Speed": 50,
+
+"TOT": 450,
+
+"AVG": 75
+
+},
+{
+  "ID": 222,
+
+
+
+"Name": "Corsola",
+
+"HP": 65,
+
+"Attack": 55,
+
+"Defense": 95,
+
+"Special Attack": 65,
+
+"Special Defense": 95,
+
+"Speed": 35,
+
+"TOT": 410,
+
+"AVG": 68.33
+
+},
+{
+  "ID": 222,
+
+
+
+"Name": "Corsola Alt Form",
+
+"HP": 60,
+
+"Attack": 55,
+
+"Defense": 100,
+
+"Special Attack": 65,
+
+"Special Defense": 100,
+
+"Speed": 30,
+
+"TOT": 410,
+
+"AVG": 68.33
+
+},
+{
+  "ID": 223,
+
+
+
+"Name": "Remoraid",
+
+"HP": 35,
+
+"Attack": 65,
+
+"Defense": 35,
+
+"Special Attack": 65,
+
+"Special Defense": 35,
+
+"Speed": 65,
+
+"TOT": 300,
+
+"AVG": 50
+
+},
+{
+  "ID": 224,
+
+
+
+"Name": "Octillery",
+
+"HP": 75,
+
+"Attack": 105,
+
+"Defense": 75,
+
+"Special Attack": 105,
+
+"Special Defense": 75,
+
+"Speed": 45,
+
+"TOT": 480,
+
+"AVG": 80
+
+},
+{
+  "ID": 225,
+
+
+
+"Name": "Delibird",
+
+"HP": 45,
+
+"Attack": 55,
+
+"Defense": 45,
+
+"Special Attack": 65,
+
+"Special Defense": 45,
+
+"Speed": 75,
+
+"TOT": 330,
+
+"AVG": 55
+
+},
+{
+  "ID": 226,
+
+
+
+"Name": "Mantine",
+
+"HP": 85,
+
+"Attack": 40,
+
+"Defense": 70,
+
+"Special Attack": 80,
+
+"Special Defense": 140,
+
+"Speed": 70,
+
+"TOT": 485,
+
+"AVG": 80.83
+
+},
+{
+  "ID": 227,
+
+
+
+"Name": "Skarmory",
+
+"HP": 65,
+
+"Attack": 80,
+
+"Defense": 140,
+
+"Special Attack": 40,
+
+"Special Defense": 70,
+
+"Speed": 70,
+
+"TOT": 465,
+
+"AVG": 77.5
+
+},
+{
+  "ID": 228,
+
+
+
+"Name": "Houndour",
+
+"HP": 45,
+
+"Attack": 60,
+
+"Defense": 30,
+
+"Special Attack": 80,
+
+"Special Defense": 50,
+
+"Speed": 65,
+
+"TOT": 330,
+
+"AVG": 55
+
+},
+{
+  "ID": 229,
+
+
+
+"Name": "Houndoom",
+
+"HP": 75,
+
+"Attack": 90,
+
+"Defense": 50,
+
+"Special Attack": 110,
+
+"Special Defense": 80,
+
+"Speed": 95,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 229,
+
+
+
+"Name": "Houndoom Alt Form",
+
+"HP": 75,
+
+"Attack": 90,
+
+"Defense": 90,
+
+"Special Attack": 140,
+
+"Special Defense": 90,
+
+"Speed": 115,
+
+"TOT": 600,
+
+"AVG": 100
+
+},
+{
+  "ID": 230,
+
+
+
+"Name": "Kingdra",
+
+"HP": 75,
+
+"Attack": 95,
+
+"Defense": 95,
+
+"Special Attack": 95,
+
+"Special Defense": 95,
+
+"Speed": 85,
+
+"TOT": 540,
+
+"AVG": 90
+
+},
+{
+  "ID": 231,
+
+
+
+"Name": "Phanpy",
+
+"HP": 90,
+
+"Attack": 60,
+
+"Defense": 60,
+
+"Special Attack": 40,
+
+"Special Defense": 40,
+
+"Speed": 40,
+
+"TOT": 330,
+
+"AVG": 55
+
+},
+{
+  "ID": 232,
+
+
+
+"Name": "Donphan",
+
+"HP": 90,
+
+"Attack": 120,
+
+"Defense": 120,
+
+"Special Attack": 60,
+
+"Special Defense": 60,
+
+"Speed": 50,
+
+"TOT": 500,
+
+"AVG": 83.33
+
+},
+{
+  "ID": 233,
+
+
+
+"Name": "Porygon2",
+
+"HP": 85,
+
+"Attack": 80,
+
+"Defense": 90,
+
+"Special Attack": 105,
+
+"Special Defense": 95,
+
+"Speed": 60,
+
+"TOT": 515,
+
+"AVG": 85.83
+
+},
+{
+  "ID": 234,
+
+
+
+"Name": "Stantler",
+
+"HP": 73,
+
+"Attack": 95,
+
+"Defense": 62,
+
+"Special Attack": 85,
+
+"Special Defense": 65,
+
+"Speed": 85,
+
+"TOT": 465,
+
+"AVG": 77.5
+
+},
+{
+  "ID": 235,
+
+
+
+"Name": "Smeargle",
+
+"HP": 55,
+
+"Attack": 20,
+
+"Defense": 35,
+
+"Special Attack": 20,
+
+"Special Defense": 45,
+
+"Speed": 75,
+
+"TOT": 250,
+
+"AVG": 41.67
+
+},
+{
+  "ID": 236,
+
+
+
+"Name": "Tyrogue",
+
+"HP": 35,
+
+"Attack": 35,
+
+"Defense": 35,
+
+"Special Attack": 35,
+
+"Special Defense": 35,
+
+"Speed": 35,
+
+"TOT": 210,
+
+"AVG": 35
+
+},
+{
+  "ID": 237,
+
+
+
+"Name": "Hitmontop",
+
+"HP": 50,
+
+"Attack": 95,
+
+"Defense": 95,
+
+"Special Attack": 35,
+
+"Special Defense": 110,
+
+"Speed": 70,
+
+"TOT": 455,
+
+"AVG": 75.83
+
+},
+{
+  "ID": 238,
+
+
+
+"Name": "Smoochum",
+
+"HP": 45,
+
+"Attack": 30,
+
+"Defense": 15,
+
+"Special Attack": 85,
+
+"Special Defense": 65,
+
+"Speed": 65,
+
+"TOT": 305,
+
+"AVG": 50.83
+
+},
+{
+  "ID": 239,
+
+
+
+"Name": "Elekid",
+
+"HP": 45,
+
+"Attack": 63,
+
+"Defense": 37,
+
+"Special Attack": 65,
+
+"Special Defense": 55,
+
+"Speed": 95,
+
+"TOT": 360,
+
+"AVG": 60
+
+},
+{
+  "ID": 240,
+
+
+
+"Name": "Magby",
+
+"HP": 45,
+
+"Attack": 75,
+
+"Defense": 37,
+
+"Special Attack": 70,
+
+"Special Defense": 55,
+
+"Speed": 83,
+
+"TOT": 365,
+
+"AVG": 60.83
+
+},
+{
+  "ID": 241,
+
+
+
+"Name": "Miltank",
+
+"HP": 95,
+
+"Attack": 80,
+
+"Defense": 105,
+
+"Special Attack": 40,
+
+"Special Defense": 70,
+
+"Speed": 100,
+
+"TOT": 490,
+
+"AVG": 81.67
+
+},
+{
+  "ID": 242,
+
+
+
+"Name": "Blissey",
+
+"HP": 255,
+
+"Attack": 10,
+
+"Defense": 10,
+
+"Special Attack": 75,
+
+"Special Defense": 135,
+
+"Speed": 55,
+
+"TOT": 540,
+
+"AVG": 90
+
+},
+{
+  "ID": 243,
+
+
+
+"Name": "Raikou",
+
+"HP": 90,
+
+"Attack": 85,
+
+"Defense": 75,
+
+"Special Attack": 115,
+
+"Special Defense": 100,
+
+"Speed": 115,
+
+"TOT": 580,
+
+"AVG": 96.67
+
+},
+{
+  "ID": 244,
+
+
+
+"Name": "Entei",
+
+"HP": 115,
+
+"Attack": 115,
+
+"Defense": 85,
+
+"Special Attack": 90,
+
+"Special Defense": 75,
+
+"Speed": 100,
+
+"TOT": 580,
+
+"AVG": 96.67
+
+},
+{
+  "ID": 245,
+
+
+
+"Name": "Suicune",
+
+"HP": 100,
+
+"Attack": 75,
+
+"Defense": 115,
+
+"Special Attack": 90,
+
+"Special Defense": 115,
+
+"Speed": 85,
+
+"TOT": 580,
+
+"AVG": 96.67
+
+},
+{
+  "ID": 246,
+
+
+
+"Name": "Larvitar",
+
+"HP": 50,
+
+"Attack": 64,
+
+"Defense": 50,
+
+"Special Attack": 45,
+
+"Special Defense": 50,
+
+"Speed": 41,
+
+"TOT": 300,
+
+"AVG": 50
+
+},
+{
+  "ID": 247,
+
+
+
+"Name": "Pupitar",
+
+"HP": 70,
+
+"Attack": 84,
+
+"Defense": 70,
+
+"Special Attack": 65,
+
+"Special Defense": 70,
+
+"Speed": 51,
+
+"TOT": 410,
+
+"AVG": 68.33
+
+},
+{
+  "ID": 248,
+
+
+
+"Name": "Tyranitar",
+
+"HP": 100,
+
+"Attack": 134,
+
+"Defense": 110,
+
+"Special Attack": 95,
+
+"Special Defense": 100,
+
+"Speed": 61,
+
+"TOT": 600,
+
+"AVG": 100
+
+},
+{
+  "ID": 248,
+
+
+
+"Name": "Tyranitar Alt Form",
+
+"HP": 100,
+
+"Attack": 164,
+
+"Defense": 150,
+
+"Special Attack": 95,
+
+"Special Defense": 120,
+
+"Speed": 71,
+
+"TOT": 700,
+
+"AVG": 116.67
+
+},
+{
+  "ID": 249,
+
+
+
+"Name": "Lugia",
+
+"HP": 106,
+
+"Attack": 90,
+
+"Defense": 130,
+
+"Special Attack": 90,
+
+"Special Defense": 154,
+
+"Speed": 110,
+
+"TOT": 680,
+
+"AVG": 113.33
+
+},
+{
+  "ID": 250,
+
+
+
+"Name": "Oh", "Ho-Oh
+
+"HP": 106,
+
+"Attack": 130,
+
+"Defense": 90,
+
+"Special Attack": 110,
+
+"Special Defense": 154,
+
+"Speed": 90,
+
+"TOT": 680,
+
+"AVG": 113.33
+
+},
+{
+  "ID": 251,
+
+
+
+"Name": "Celebi",
+
+"HP": 100,
+
+"Attack": 100,
+
+"Defense": 100,
+
+"Special Attack": 100,
+
+"Special Defense": 100,
+
+"Speed": 100,
+
+"TOT": 600,
+
+"AVG": 100
+
+},
+{
+  "ID": 252,
+
+
+
+"Name": "Treecko",
+
+"HP": 40,
+
+"Attack": 45,
+
+"Defense": 35,
+
+"Special Attack": 65,
+
+"Special Defense": 55,
+
+"Speed": 70,
+
+"TOT": 310,
+
+"AVG": 51.67
+
+},
+{
+  "ID": 253,
+
+
+
+"Name": "Grovyle",
+
+"HP": 50,
+
+"Attack": 65,
+
+"Defense": 45,
+
+"Special Attack": 85,
+
+"Special Defense": 65,
+
+"Speed": 95,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 254,
+
+
+
+"Name": "Sceptile",
+
+"HP": 70,
+
+"Attack": 85,
+
+"Defense": 65,
+
+"Special Attack": 105,
+
+"Special Defense": 85,
+
+"Speed": 120,
+
+"TOT": 530,
+
+"AVG": 88.33
+
+},
+{
+  "ID": 254,
+
+
+
+"Name": "Sceptile Alt Form",
+
+"HP": 70,
+
+"Attack": 110,
+
+"Defense": 75,
+
+"Special Attack": 145,
+
+"Special Defense": 85,
+
+"Speed": 145,
+
+"TOT": 630,
+
+"AVG": 105
+
+},
+{
+  "ID": 255,
+
+
+
+"Name": "Torchic",
+
+"HP": 45,
+
+"Attack": 60,
+
+"Defense": 40,
+
+"Special Attack": 70,
+
+"Special Defense": 50,
+
+"Speed": 45,
+
+"TOT": 310,
+
+"AVG": 51.67
+
+},
+{
+  "ID": 256,
+
+
+
+"Name": "Combusken",
+
+"HP": 60,
+
+"Attack": 85,
+
+"Defense": 60,
+
+"Special Attack": 85,
+
+"Special Defense": 60,
+
+"Speed": 55,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 257,
+
+
+
+"Name": "Blaziken",
+
+"HP": 80,
+
+"Attack": 120,
+
+"Defense": 70,
+
+"Special Attack": 110,
+
+"Special Defense": 70,
+
+"Speed": 80,
+
+"TOT": 530,
+
+"AVG": 88.33
+
+},
+{
+  "ID": 257,
+
+
+
+"Name": "Blaziken Alt Form",
+
+"HP": 80,
+
+"Attack": 160,
+
+"Defense": 80,
+
+"Special Attack": 130,
+
+"Special Defense": 80,
+
+"Speed": 100,
+
+"TOT": 630,
+
+"AVG": 105
+
+},
+{
+  "ID": 258,
+
+
+
+"Name": "Mudkip",
+
+"HP": 50,
+
+"Attack": 70,
+
+"Defense": 50,
+
+"Special Attack": 50,
+
+"Special Defense": 50,
+
+"Speed": 40,
+
+"TOT": 310,
+
+"AVG": 51.67
+
+},
+{
+  "ID": 259,
+
+
+
+"Name": "Marshtomp",
+
+"HP": 70,
+
+"Attack": 85,
+
+"Defense": 70,
+
+"Special Attack": 60,
+
+"Special Defense": 70,
+
+"Speed": 50,
+
+"TOT": 405,
+
+"AVG": 67.5
+
+},
+{
+  "ID": 260,
+
+
+
+"Name": "Swampert",
+
+"HP": 100,
+
+"Attack": 110,
+
+"Defense": 90,
+
+"Special Attack": 85,
+
+"Special Defense": 90,
+
+"Speed": 60,
+
+"TOT": 535,
+
+"AVG": 89.17
+
+},
+{
+  "ID": 260,
+
+
+
+"Name": "Swampert Alt Form",
+
+"HP": 100,
+
+"Attack": 150,
+
+"Defense": 110,
+
+"Special Attack": 95,
+
+"Special Defense": 110,
+
+"Speed": 70,
+
+"TOT": 635,
+
+"AVG": 105.83
+
+},
+{
+  "ID": 261,
+
+
+
+"Name": "Poochyena",
+
+"HP": 35,
+
+"Attack": 55,
+
+"Defense": 35,
+
+"Special Attack": 30,
+
+"Special Defense": 30,
+
+"Speed": 35,
+
+"TOT": 220,
+
+"AVG": 36.67
+
+},
+{
+  "ID": 262,
+
+
+
+"Name": "Mightyena",
+
+"HP": 70,
+
+"Attack": 90,
+
+"Defense": 70,
+
+"Special Attack": 60,
+
+"Special Defense": 60,
+
+"Speed": 70,
+
+"TOT": 420,
+
+"AVG": 70
+
+},
+{
+  "ID": 263,
+
+
+
+"Name": "Zigzagoon",
+
+"HP": 38,
+
+"Attack": 30,
+
+"Defense": 41,
+
+"Special Attack": 30,
+
+"Special Defense": 41,
+
+"Speed": 60,
+
+"TOT": 240,
+
+"AVG": 40
+
+},
+{
+  "ID": 263,
+
+
+
+"Name": "Zigzagoon Alt Form",
+
+"HP": 38,
+
+"Attack": 30,
+
+"Defense": 41,
+
+"Special Attack": 30,
+
+"Special Defense": 41,
+
+"Speed": 60,
+
+"TOT": 240,
+
+"AVG": 40
+
+},
+{
+  "ID": 264,
+
+
+
+"Name": "Linoone",
+
+"HP": 78,
+
+"Attack": 70,
+
+"Defense": 61,
+
+"Special Attack": 50,
+
+"Special Defense": 61,
+
+"Speed": 100,
+
+"TOT": 420,
+
+"AVG": 70
+
+},
+{
+  "ID": 264,
+
+
+
+"Name": "Linoone Alt Form",
+
+"HP": 78,
+
+"Attack": 70,
+
+"Defense": 61,
+
+"Special Attack": 50,
+
+"Special Defense": 61,
+
+"Speed": 100,
+
+"TOT": 420,
+
+"AVG": 70
+
+},
+{
+  "ID": 265,
+
+
+
+"Name": "Wurmple",
+
+"HP": 45,
+
+"Attack": 45,
+
+"Defense": 35,
+
+"Special Attack": 20,
+
+"Special Defense": 30,
+
+"Speed": 20,
+
+"TOT": 195,
+
+"AVG": 32.5
+
+},
+{
+  "ID": 266,
+
+
+
+"Name": "Silcoon",
+
+"HP": 50,
+
+"Attack": 35,
+
+"Defense": 55,
+
+"Special Attack": 25,
+
+"Special Defense": 25,
+
+"Speed": 15,
+
+"TOT": 205,
+
+"AVG": 34.17
+
+},
+{
+  "ID": 267,
+
+
+
+"Name": "Beautifly",
+
+"HP": 60,
+
+"Attack": 70,
+
+"Defense": 50,
+
+"Special Attack": 100,
+
+"Special Defense": 50,
+
+"Speed": 65,
+
+"TOT": 395,
+
+"AVG": 65.83
+
+},
+{
+  "ID": 268,
+
+
+
+"Name": "Cascoon",
+
+"HP": 50,
+
+"Attack": 35,
+
+"Defense": 55,
+
+"Special Attack": 25,
+
+"Special Defense": 25,
+
+"Speed": 15,
+
+"TOT": 205,
+
+"AVG": 34.17
+
+},
+{
+  "ID": 269,
+
+
+
+"Name": "Dustox",
+
+"HP": 60,
+
+"Attack": 50,
+
+"Defense": 70,
+
+"Special Attack": 50,
+
+"Special Defense": 90,
+
+"Speed": 65,
+
+"TOT": 385,
+
+"AVG": 64.17
+
+},
+{
+  "ID": 270,
+
+
+
+"Name": "Lotad",
+
+"HP": 40,
+
+"Attack": 30,
+
+"Defense": 30,
+
+"Special Attack": 40,
+
+"Special Defense": 50,
+
+"Speed": 30,
+
+"TOT": 220,
+
+"AVG": 36.67
+
+},
+{
+  "ID": 271,
+
+
+
+"Name": "Lombre",
+
+"HP": 60,
+
+"Attack": 50,
+
+"Defense": 50,
+
+"Special Attack": 60,
+
+"Special Defense": 70,
+
+"Speed": 50,
+
+"TOT": 340,
+
+"AVG": 56.67
+
+},
+{
+  "ID": 272,
+
+
+
+"Name": "Ludicolo",
+
+"HP": 80,
+
+"Attack": 70,
+
+"Defense": 70,
+
+"Special Attack": 90,
+
+"Special Defense": 100,
+
+"Speed": 70,
+
+"TOT": 480,
+
+"AVG": 80
+
+},
+{
+  "ID": 273,
+
+
+
+"Name": "Seedot",
+
+"HP": 40,
+
+"Attack": 40,
+
+"Defense": 50,
+
+"Special Attack": 30,
+
+"Special Defense": 30,
+
+"Speed": 30,
+
+"TOT": 220,
+
+"AVG": 36.67
+
+},
+{
+  "ID": 274,
+
+
+
+"Name": "Nuzleaf",
+
+"HP": 70,
+
+"Attack": 70,
+
+"Defense": 40,
+
+"Special Attack": 60,
+
+"Special Defense": 40,
+
+"Speed": 60,
+
+"TOT": 340,
+
+"AVG": 56.67
+
+},
+{
+  "ID": 275,
+
+
+
+"Name": "Shiftry",
+
+"HP": 90,
+
+"Attack": 100,
+
+"Defense": 60,
+
+"Special Attack": 90,
+
+"Special Defense": 60,
+
+"Speed": 80,
+
+"TOT": 480,
+
+"AVG": 80
+
+},
+{
+  "ID": 276,
+
+
+
+"Name": "Taillow",
+
+"HP": 40,
+
+"Attack": 55,
+
+"Defense": 30,
+
+"Special Attack": 30,
+
+"Special Defense": 30,
+
+"Speed": 85,
+
+"TOT": 270,
+
+"AVG": 45
+
+},
+{
+  "ID": 277,
+
+
+
+"Name": "Swellow",
+
+"HP": 60,
+
+"Attack": 85,
+
+"Defense": 60,
+
+"Special Attack": 75,
+
+"Special Defense": 50,
+
+"Speed": 125,
+
+"TOT": 455,
+
+"AVG": 75.83
+
+},
+{
+  "ID": 278,
+
+
+
+"Name": "Wingull",
+
+"HP": 40,
+
+"Attack": 30,
+
+"Defense": 30,
+
+"Special Attack": 55,
+
+"Special Defense": 30,
+
+"Speed": 85,
+
+"TOT": 270,
+
+"AVG": 45
+
+},
+{
+  "ID": 279,
+
+
+
+"Name": "Pelipper",
+
+"HP": 60,
+
+"Attack": 50,
+
+"Defense": 100,
+
+"Special Attack": 95,
+
+"Special Defense": 70,
+
+"Speed": 65,
+
+"TOT": 440,
+
+"AVG": 73.33
+
+},
+{
+  "ID": 280,
+
+
+
+"Name": "Ralts",
+
+"HP": 28,
+
+"Attack": 25,
+
+"Defense": 25,
+
+"Special Attack": 45,
+
+"Special Defense": 35,
+
+"Speed": 40,
+
+"TOT": 198,
+
+"AVG": 33
+
+},
+{
+  "ID": 281,
+
+
+
+"Name": "Kirlia",
+
+"HP": 38,
+
+"Attack": 35,
+
+"Defense": 35,
+
+"Special Attack": 65,
+
+"Special Defense": 55,
+
+"Speed": 50,
+
+"TOT": 278,
+
+"AVG": 46.33
+
+},
+{
+  "ID": 282,
+
+
+
+"Name": "Gardevoir",
+
+"HP": 68,
+
+"Attack": 65,
+
+"Defense": 65,
+
+"Special Attack": 125,
+
+"Special Defense": 115,
+
+"Speed": 80,
+
+"TOT": 518,
+
+"AVG": 86.33
+
+},
+{
+  "ID": 282,
+
+
+
+"Name": "Gardevoir Alt Form",
+
+"HP": 68,
+
+"Attack": 85,
+
+"Defense": 65,
+
+"Special Attack": 165,
+
+"Special Defense": 135,
+
+"Speed": 100,
+
+"TOT": 618,
+
+"AVG": 103
+
+},
+{
+  "ID": 283,
+
+
+
+"Name": "Surskit",
+
+"HP": 40,
+
+"Attack": 30,
+
+"Defense": 32,
+
+"Special Attack": 50,
+
+"Special Defense": 52,
+
+"Speed": 65,
+
+"TOT": 269,
+
+"AVG": 44.83
+
+},
+{
+  "ID": 284,
+
+
+
+"Name": "Masquerain",
+
+"HP": 70,
+
+"Attack": 60,
+
+"Defense": 62,
+
+"Special Attack": 100,
+
+"Special Defense": 82,
+
+"Speed": 80,
+
+"TOT": 454,
+
+"AVG": 75.67
+
+},
+{
+  "ID": 285,
+
+
+
+"Name": "Shroomish",
+
+"HP": 60,
+
+"Attack": 40,
+
+"Defense": 60,
+
+"Special Attack": 40,
+
+"Special Defense": 60,
+
+"Speed": 35,
+
+"TOT": 295,
+
+"AVG": 49.17
+
+},
+{
+  "ID": 286,
+
+
+
+"Name": "Breloom",
+
+"HP": 60,
+
+"Attack": 130,
+
+"Defense": 80,
+
+"Special Attack": 60,
+
+"Special Defense": 60,
+
+"Speed": 70,
+
+"TOT": 460,
+
+"AVG": 76.67
+
+},
+{
+  "ID": 287,
+
+
+
+"Name": "Slakoth",
+
+"HP": 60,
+
+"Attack": 60,
+
+"Defense": 60,
+
+"Special Attack": 35,
+
+"Special Defense": 35,
+
+"Speed": 30,
+
+"TOT": 280,
+
+"AVG": 46.67
+
+},
+{
+  "ID": 288,
+
+
+
+"Name": "Vigoroth",
+
+"HP": 80,
+
+"Attack": 80,
+
+"Defense": 80,
+
+"Special Attack": 55,
+
+"Special Defense": 55,
+
+"Speed": 90,
+
+"TOT": 440,
+
+"AVG": 73.33
+
+},
+{
+  "ID": 289,
+
+
+
+"Name": "Slaking",
+
+"HP": 150,
+
+"Attack": 160,
+
+"Defense": 100,
+
+"Special Attack": 95,
+
+"Special Defense": 65,
+
+"Speed": 100,
+
+"TOT": 670,
+
+"AVG": 111.67
+
+},
+{
+  "ID": 290,
+
+
+
+"Name": "Nincada",
+
+"HP": 31,
+
+"Attack": 45,
+
+"Defense": 90,
+
+"Special Attack": 30,
+
+"Special Defense": 30,
+
+"Speed": 40,
+
+"TOT": 266,
+
+"AVG": 44.33
+
+},
+{
+  "ID": 291,
+
+
+
+"Name": "Ninjask",
+
+"HP": 61,
+
+"Attack": 90,
+
+"Defense": 45,
+
+"Special Attack": 50,
+
+"Special Defense": 50,
+
+"Speed": 160,
+
+"TOT": 456,
+
+"AVG": 76
+
+},
+{
+  "ID": 292,
+
+
+
+"Name": "Shedinja",
+
+"HP": 1,
+
+"Attack": 90,
+
+"Defense": 45,
+
+"Special Attack": 30,
+
+"Special Defense": 30,
+
+"Speed": 40,
+
+"TOT": 236,
+
+"AVG": 39.33
+
+},
+{
+  "ID": 293,
+
+
+
+"Name": "Whismur",
+
+"HP": 64,
+
+"Attack": 51,
+
+"Defense": 23,
+
+"Special Attack": 51,
+
+"Special Defense": 23,
+
+"Speed": 28,
+
+"TOT": 240,
+
+"AVG": 40
+
+},
+{
+  "ID": 294,
+
+
+
+"Name": "Loudred",
+
+"HP": 84,
+
+"Attack": 71,
+
+"Defense": 43,
+
+"Special Attack": 71,
+
+"Special Defense": 43,
+
+"Speed": 48,
+
+"TOT": 360,
+
+"AVG": 60
+
+},
+{
+  "ID": 295,
+
+
+
+"Name": "Exploud",
+
+"HP": 104,
+
+"Attack": 91,
+
+"Defense": 63,
+
+"Special Attack": 91,
+
+"Special Defense": 73,
+
+"Speed": 68,
+
+"TOT": 490,
+
+"AVG": 81.67
+
+},
+{
+  "ID": 296,
+
+
+
+"Name": "Makuhita",
+
+"HP": 72,
+
+"Attack": 60,
+
+"Defense": 30,
+
+"Special Attack": 20,
+
+"Special Defense": 30,
+
+"Speed": 25,
+
+"TOT": 237,
+
+"AVG": 39.5
+
+},
+{
+  "ID": 297,
+
+
+
+"Name": "Hariyama",
+
+"HP": 144,
+
+"Attack": 120,
+
+"Defense": 60,
+
+"Special Attack": 40,
+
+"Special Defense": 60,
+
+"Speed": 50,
+
+"TOT": 474,
+
+"AVG": 79
+
+},
+{
+  "ID": 298,
+
+
+
+"Name": "Azurill",
+
+"HP": 50,
+
+"Attack": 20,
+
+"Defense": 40,
+
+"Special Attack": 20,
+
+"Special Defense": 40,
+
+"Speed": 20,
+
+"TOT": 190,
+
+"AVG": 31.67
+
+},
+{
+  "ID": 299,
+
+
+
+"Name": "Nosepass",
+
+"HP": 30,
+
+"Attack": 45,
+
+"Defense": 135,
+
+"Special Attack": 45,
+
+"Special Defense": 90,
+
+"Speed": 30,
+
+"TOT": 375,
+
+"AVG": 62.5
+}

@@ -4,77 +4,39 @@ const fs = require("fs");
 
 const client = new Discord.Client();
 client.config = config;
-let allPkmn = new Array();
 
+let data = fs.readFileSync("./batch/pokemondata.json");
+let pokeSON = JSON.parse(data);
 
-let output = fs.readFileSync("./batch/Batch Pokemon.txt", "utf8");
-let tokens = output.split(/ +/g);
+var pokemon = pokeSON.pokemon;
 
-const availablePkmn = tokens.filter((token) => {return !token.match(/^[0-9]+$/)});
+data = fs.readFileSync("./batch/availablepokemon.json");
+let availablepokemon = JSON.parse(data);
 
-output = fs.readFileSync("./batch/Batch Catch Rate.txt", "utf8");
-tokens = output.split(/ +/g);
-tokens.forEach((token, i) => {
-  if (i % 3 == 2)
-  {
-    let poke = {
-      id:Number.parseInt(tokens[i-2]),
-      name:tokens[i-1],
-      catchRate:Number.parseInt(token)
-    }
-    allPkmn.push(poke);
-  }
+data = fs.readFileSync("./batch/balldata.json");
+var balls = JSON.parse(data);
+
+var ingamePkmn = pokemon.filter(x => {
+  return availablepokemon.includes(x.Name);
 });
 
-let pokemon = allPkmn.filter((mon) => {return availablePkmn.includes(mon.name)});
-
-console.log(pokemon);
-
-const calculator = (pkmn, ball) => {
-
-  
-  let ballList = new Array();
-  let ball = {
-    name:"",
-    catchRate:""
-  }
-
-  return ballList;
+const baseStatCalc = (stat, iv, level) => {
+  let x = ((2 * stat) + iv ) * level;
+  return Math.floor(x) + level + 10;
 }
 
+const catchValue = (hp, catchRate, ballMod) => {
+  return ((3*hp - 2) * (catchRate * ballMod)) / (3*hp);
+}
 
+const catchPercent = (catchValue) => {
+  let x = 1048560;
+  let y = 16711680;
 
+  let z = Math.sqrt(Math.sqrt(y/catchValue));
 
-/*
-const Enmap = require("enmap");
-fs.readdir("./events/", (err, files) => {
-  if (err) return console.log(err);
-  
-  files.forEach(file => {
-    if (!file.endsWith("js")) return;
-
-    const event = require(`./events/${file}`);
-    let eventName = file.split(".")[0];
-    client.on(eventName, event.bind(null, client));
-  });
-});
-
-client.commands = new Enmap();
-
-fs.readdir("./commands/", (err, files) => {
-  if (err) return console.log(err);
-
-  files.forEach(file => {
-    if (!file.endsWith("js")) return;
-
-    let props = require(`./commands/${file}`);
-    let commandName = file.split(".")[0];
-    console.log(`Attempting to load command: ${commandName}`);
-    client.commands.set(commandName, props);
-  });
-});
-*/
-
+  return (x / z);
+}
 
 client.on("ready", () => { console.log("I am ready!"); });
 
@@ -123,7 +85,6 @@ client.on("message", (message) => {
 
   else if (command === "catch")
   {
-    let calc = require("./modules/calculator.js");
     if (args.length == 0)
     {
       message.channel.send("Please enter a Pokémon to catch followed by a ball of your choice.");
@@ -132,12 +93,21 @@ client.on("message", (message) => {
 
     else if (args.length == 1)
     {
-      let mon = pokemon.find((pk) => {return pk.name.toLowerCase() == args[0].toLowerCase()});
-      console.log(mon);
+      let pkmn = ingamePkmn.find(x => {return x.Name.toLowerCase() == args[0].toLowerCase()});
+      if (pkmn == null)
+      {
+        message.channel.send("This Pokémon is not available in current dens.");
+        return;
+      }
+      let cv = catchValue(pkmn.HP, pkmn.CatchRate, balls.find(x => x.name == "Poke Ball").modifier);
+
+
+      message.channel.send(`Percent chance to catch ${pkmn.Name} with a pokeball is ${catchPercent(cv)}%`);
+      console.log(pkmn);
     }
   }
 
-  else
+  else if (args.length == 2)
   {
 
   }
