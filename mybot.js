@@ -21,21 +21,24 @@ var ingamePkmn = pokemon.filter(x => {
 });
 
 const baseStatCalc = (stat, iv, level) => {
-  let x = ((2 * stat) + iv ) * level;
+  let x = ( ( (2 * stat) + iv ) * level) / 100;
   return Math.floor(x) + level + 10;
 }
 
-const catchValue = (hp, catchRate, ballMod) => {
-  return ((3*hp - 2) * (catchRate * ballMod)) / (3*hp);
+const CatchRateCalc = (maxhp, currhp, catchRate, ballMod) => {
+  return ((3*maxhp - 2*currhp) * (catchRate * ballMod)) / (3*maxhp);
 }
 
-const catchPercent = (catchValue) => {
-  let x = 1048560;
-  let y = 16711680;
+const shakeProbCalc = (catchRate) => {
+  let b = 65536 / Math.pow((255/catchRate), 0.1875)
+  return Math.floor(b);
+}
 
-  let z = Math.sqrt(Math.sqrt(y/catchValue));
+const capProbCalc = (shakeProb, modCatchRate) => {
+  if (modCatchRate >= 100 || shakeProb >= 65536)
+    return 100;
 
-  return (x / z);
+  return (Math.pow( (shakeProb/65535), 4) * 100);
 }
 
 client.on("ready", () => { console.log("I am ready!"); });
@@ -99,16 +102,71 @@ client.on("message", (message) => {
         message.channel.send("This Pokémon is not available in current dens.");
         return;
       }
-      let cv = catchValue(pkmn.HP, pkmn.CatchRate, balls.find(x => x.name == "Poke Ball").modifier);
+
+      let maxhp0 = baseStatCalc(pkmn.HP, 0, 30);
+      let maxhp31 = baseStatCalc(pkmn.HP, 31, 70);
+
+      let bestBalls = balls.filter(x => {return x.modifier >= 3.5});
+      bestBalls.sort((x, y) => y.modifier > x.modifier);
+
+      let messageToSend = `The top 8 balls for catching ${pkmn.Name} are:`
+
+      bestBalls.forEach(ball => {
+        let modCatchRate0 = CatchRateCalc(maxhp0, 1, pkmn.CatchRate, ball.modifier);
+
+        let modCatchRate31 = CatchRateCalc(maxhp31, 1, pkmn.CatchRate, ball.modifier);
+
+        let shakeProb0 = shakeProbCalc(modCatchRate0);
+        let shakeProb31 = shakeProbCalc(modCatchRate31);
+
+        catchProb0 = capProbCalc(shakeProb0, modCatchRate0).toFixed(2);
+
+        catchProb31 = capProbCalc(shakeProb31, modCatchRate31).toFixed(2);
+
+        ball.catchProb = `${catchProb0}% ~ ${catchProb31}%`;
+
+        messageToSend = messageToSend.concat(`\n${ball.name}: ${ball.catchProb}`);
+
+        /*
+        console.log(`Everything:\nBall: ${ball.name}\nmodCatchRate0: ${modCatchRate0}\nmodCatchRate31: ${modCatchRate31}\nshakeProb0: ${shakeProb0}\nshakeProb31: ${shakeProb31}\n`);
+        */
+      });
+
+      message.channel.send(messageToSend);
+
+      /*
+      let ballModifier = balls.find(x => x.name == "Poke Ball").modifier;
+      console.log(`Ball Modifier for Pokeball is: ${ballModifier}`);
+
+      let maxhp0 = baseStatCalc(pkmn.HP, 0, 30);
+      console.log(`Max HP at iv 0, level 30 is: ${maxhp0}`);
+      
+      let maxhp31 = baseStatCalc(pkmn.HP, 31, 70);
+
+      let mCR = modCatchRate(maxhp0, pkmn.CatchRate, ballModifier);
+
+      let sp = shakeProb(mCR);
+
+      console.log(`Mod Catch Rate for pkmn with max hp: ${maxhp0}, catch rate: ${pkmn.CatchRate}, and ball modifier: ${ballModifier}, is ${mCR}, with shake prob: ${sp}`);
 
 
-      message.channel.send(`Percent chance to catch ${pkmn.Name} with a pokeball is ${catchPercent(cv)}%`);
+      message.channel.send(`Percent chance to catch ${pkmn.Name} with a pokeball is ${capProb(sp, mCR)}%`);
       console.log(pkmn);
+      */
     }
   }
 
   else if (args.length == 2)
   {
+    let pkmn = ingamePkmn.find(x => {return x.Name.toLowerCase() == args[0].toLowerCase()});
+
+    //let ball = balls.find(x => ) rethink this.
+    if (pkmn == null)
+    {
+      message.channel.send("This Pokémon is not available in current dens.");
+      return;
+    }
+
 
   }
 });
