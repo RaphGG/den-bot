@@ -91,7 +91,28 @@ fs.readdir("./commands/", (err, files) => {
 });
 */
 
+/*
+console.log(`Everything:\nBall: ${ball.name}\nmodCatchRate0: ${modCatchRate0}\nmodCatchRate31: ${modCatchRate31}\nshakeProb0: ${shakeProb0}\nshakeProb31: ${shakeProb31}\n`);
 
+let ballModifier = balls.find(x => x.name == "Poke Ball").modifier;
+console.log(`Ball Modifier for Pokeball is: ${ballModifier}`);
+
+let maxhp0 = baseStatCalc(pkmn.HP, 0, 30);
+console.log(`Max HP at iv 0, level 30 is: ${maxhp0}`);
+
+let maxhp31 = baseStatCalc(pkmn.HP, 31, 70);
+
+let mCR = modCatchRate(maxhp0, pkmn.CatchRate, ballModifier);
+
+let sp = shakeProb(mCR);
+
+console.log(`Mod Catch Rate for pkmn with max hp: ${maxhp0}, catch rate: ${pkmn.CatchRate}, and ball modifier: ${ballModifier}, is ${mCR}, with shake prob: ${sp}`);
+
+
+message.channel.send(`Percent chance to catch ${pkmn.Name} with a pokeball is ${capProb(sp, mCR)}%`);
+console.log(pkmn);
+*/
+/*
 client.on("ready", () => { console.log("I am ready!"); });
 
 client.on("message", (message) => {
@@ -160,3 +181,5 @@ client.on("message", (message) => {
 });
 
 client.login(config.token);
+*/
+
