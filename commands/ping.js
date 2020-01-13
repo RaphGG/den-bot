@@ -1,3 +1,4 @@
+/*
 else if (command === "ping")
 {
   let isAdmin = message.member.roles.some(role => {
@@ -33,3 +34,4 @@ else if (command === "ping")
     }
   }
 }
+*/
