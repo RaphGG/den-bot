@@ -183,3 +183,104 @@ client.on("message", (message) => {
 client.login(config.token);
 */
 
+/*
+let possiblePkmnName = (args[0] + " " + args[1]).toLowerCase();
+let possiblePkmn = ingamePkmn.find(x => {
+  return x.Name.toLowerCase() == possiblePkmnName
+});
+
+let ballName = ballNames.find(name => {
+  return name.toLowerCase() == args[1].toLowerCase();
+});
+
+if (gigaKeywords.includes(args[0].toLowerCase()))
+{
+  let pkmn = ingamePkmn.find(x => {return x.Name.toLowerCase() == args[1].toLowerCase()});
+  if (pkmn == null)
+  {
+    message.channel.send(pkmnNotFound);
+    return;
+  }
+
+  let messageToSend = bestBallsCalc(pkmn, true);
+
+  message.channel.send(messageToSend);
+  return;
+}
+
+else if (possiblePkmn != null)
+{
+  let messageToSend = bestBallsCalc(possiblePkmn, false);
+  message.channel.send(messageToSend);
+  return;
+}
+
+else if (ballName != null)
+{
+  let pkmn = ingamePkmn.find(x => {
+    return x.Name.toLowerCase() == args[0].toLowerCase();
+  });
+
+  let ball = ballFinder(ballName);
+
+  if (pkmn == null)
+  {
+    message.channel.send(pkmnNotFound);
+    return;
+  }
+
+  let messageToSend = bestBallCalc(pkmn, ball, false);
+
+  message.channel.send(messageToSend);
+}
+
+else
+{
+  message.channel.send(notFound);
+}
+*/
+
+/*
+if (gigaKeywords.includes(args[0].toLowerCase()))
+{
+  let possiblePkmnName = (args[1] + " " + args[2]).toLowerCase();
+  let possiblePkmn = ingamePkmn.find(x => {
+    return x.Name.toLowerCase() == possiblePkmnName
+  });
+  let pkmn = ingamePkmn.find(x => {
+    return x.Name.toLowerCase() == args[1].toLowerCase();
+  });
+
+  if (pkmn == null && possiblePkmn == null)
+  {
+    message.channel.send(pkmnNotFound);
+    return;
+  }
+
+  else if (pkmn)
+  {
+    let ballName = ballNames.find(name => {
+      return name.toLowerCase() == args[2].toLowerCase();
+    });
+
+    if (ballName == null)
+    {
+      message.channel.send(ballNotFound);
+      return;
+    }
+
+    let ball = ballFinder(ballName);
+
+    let messageToSend = bestBallCalc(pkmn, ball, true);
+
+    message.channel.send(messageToSend);
+  }
+
+  else
+  {
+    let messageToSend = bestBallsCalc(possiblePkmn, true);
+    message.channel.send(messageToSend);
+    return;
+  }
+}
+*/
