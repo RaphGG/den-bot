@@ -1,3 +1,4 @@
+/*
 else if (command === "catch")
 {
   if (args.length == 0)
@@ -186,3 +187,4 @@ else if (command === "catch")
   }
 }
 });
+*/
