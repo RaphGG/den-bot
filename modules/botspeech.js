@@ -1,0 +1,10 @@
+var pkmnNotFound = "The Pokémon requested was either not found or not available in current dens.";
+var ballNotFound = "The Poké-Ball requested was not found.";
+var commandNotFound = "The requested command was not found.";
+var argNotFound = "The requested command with the inputted arguments was not found.";
+var gigaKeywords = ["g", "-g", "g-", "giga", "gigantamax", "gmax"];
+var enterPing = "Please enter a role to ping";
+var permNotFound = "You do not have the permissions to use this command.";
+var roleNotFound = "The requested role was not found.";
+var pingableRoles = "Only Shiny Raid Pings and Giveaway Pings may be pinged.";
+var adminRoles = ["Fattest Cake", "Gym Leaders"];

@@ -46,7 +46,12 @@ var ballNotFound = "The Poké-Ball requested was not found.";
 var commandNotFound = "The requested command was not found.";
 var argNotFound = "The requested command with the inputted arguments was not found.";
 var gigaKeywords = ["g", "-g", "g-", "giga", "gigantamax", "gmax"];
-var rolePing = "Please enter a role to ping";
+var enterPing = "Please enter a role to ping";
+var permNotFound = "You do not have the permissions to use this command.";
+var roleNotFound = "The requested role was not found.";
+var pingableRoles = "Only Shiny Raid Pings and Giveaway Pings may be pinged.";
+var adminRoles = ["Fattest Cake", "Gym Leaders"];
+
 
 const baseStatCalc = (stat, iv, level) => {
   let x = ( ( (2 * stat) + iv ) * level) / 100;
@@ -166,21 +171,38 @@ client.on("message", (message) => {
 
   else if (command === "ping")
   {
-    let adminRole = message.guild.roles.find(role => role.name == "Admin");
-    if (!message.member.roles.has(adminRole.id))
+    let isAdmin = message.member.roles.some(role => {
+      return adminRoles.includes(role.name);
+    });
+
+    if (!isAdmin)
+      return message.reply(permNotFound);
+
+    else if (args.length == 0)
+      return message.channel.send(enterPing);
+
+    else
     {
-      console.log("Admin?");
-      return;
+      let findRole = args[0].toLowerCase();
+
+      let rolePing = message.guild.roles.find(role => {
+        return role.name.toLowerCase().startsWith(findRole);
+      });
+
+      if (!rolePing)
+        return message.channel.send(roleNotFound);
+
+      else if (!rolePing.name.startsWith("Shiny") && !rolePing.name.startsWith("Giveaway"))
+        return message.channel.send(pingableRoles);
+
+      else
+      {
+        rolePing.setMentionable(true, "Role to be pinged.");
+        return message.channel.send(`${rolePing}`).then(() => {
+          rolePing.setMentionable(false, "Role has been pinged.")
+        });
+      }
     }
-
-    if (args.length == 0)
-      return message.channel.send(rolePing);
-
-    let myRole = message.guild.roles.find(role => role.name == args[0]);
-    myRole.setMentionable(true, "Role to be pinged.");
-    message.channel.send(`${myRole}`).then(() => {
-      myRole.setMentionable(false, "Role has been Pinged.")});
-    return;
   }
 
   else if (command === "catch")
