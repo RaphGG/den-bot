@@ -1,15 +1,15 @@
-/*
-else if (command === "ping")
-{
+const botspeech = require("../modules/botspeech.js");
+
+exports.run = (client, message, args) => {
   let isAdmin = message.member.roles.some(role => {
-    return adminRoles.includes(role.name);
+    return botspeech.adminRoles.includes(role.name);
   });
 
   if (!isAdmin)
-    return message.reply(permNotFound);
+    return message.reply(botspeech.permNotFound);
 
   else if (args.length == 0)
-    return message.channel.send(enterPing);
+    return message.channel.send(botspeech.pingNoArg);
 
   else
   {
@@ -20,10 +20,10 @@ else if (command === "ping")
     });
 
     if (!rolePing)
-      return message.channel.send(roleNotFound);
+      return message.channel.send(botspeech.roleNotFound);
 
     else if (!rolePing.name.startsWith("Shiny") && !rolePing.name.startsWith("Giveaway"))
-      return message.channel.send(pingableRoles);
+      return message.channel.send(botspeech.pingableRoles);
 
     else
     {
@@ -34,4 +34,3 @@ else if (command === "ping")
     }
   }
 }
-*/

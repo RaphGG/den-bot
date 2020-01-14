@@ -35,3 +35,7 @@ balls.forEach(ball => {
   ballNames.push(ballNameFull);
   ballNames.push(ballNameAbbr);
 });
+
+exports.pokemon = ingamePkmn;
+exports.balls = balls;
+exports.ballNames = ballNames;

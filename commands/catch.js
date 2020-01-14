@@ -1,19 +1,21 @@
-/*
-else if (command === "catch")
-{
+const calc = require("../modules/calculator.js");
+const botspeech = require("../modules/botspeech.js");
+const pokedata = require("../modules/pokedata.js");
+
+exports.run = (client, message, args) => {
   if (args.length == 0)
-  {
-    return message.channel.send("Please enter a Pokémon to catch followed by a ball of your choice.");
-  }
+    return message.channel.send(botspeech.catchNoArg);
 
   else if (args.length == 1)
   {
-    let pkmn = ingamePkmn.find(x => {return x.Name.toLowerCase() == args[0].toLowerCase()});
+    let pkmn = pokedata.pokemon.find(x => {
+      return x.Name.toLowerCase() == args[0].toLowerCase();
+    });
 
     if (pkmn == null)
-      return message.channel.send(pkmnNotFound);
+      return message.channel.send(botspeech.pkmnNotFound);
 
-    return message.channel.send( bestBallsCalc(pkmn, false) );
+    return message.channel.send( calc.bestBallsMsg(pkmn, false) );
   }
 
   else if (args.length == 2)
@@ -21,33 +23,34 @@ else if (command === "catch")
     let pkmnName = args[0].toLowerCase();
     let pkmnName2 = (args[0] + " " + args[1]).toLowerCase();
 
-    let pkmn = ingamePkmn.find(x => {
+    let pkmn = pokedata.pokemon.find(x => {
       return x.Name.toLowerCase() == pkmnName
     });
 
-    let pkmn2 = ingamePkmn.find(x => {
+    let pkmn2 = pokedata.pokemon.find(x => {
       return x.Name.toLowerCase() == pkmnName2
     });
 
     if (pkmn)
     {
-      let ball = ballFinder( args[1].toLowerCase() );
+      let arg1 = args[1].toLowerCase();
+      let ball = calc.ballFinder( arg1 );
 
-      if (gigaKeywords.includes(args[1].toLowerCase()))
-        return message.channel.send( bestBallsCalc(pkmn, true) );
+      if (botspeech.gigaKeywords.includes(arg1))
+        return message.channel.send( calc.bestBallsMsg(pkmn, true) );
 
       else if (ball)
-        return message.channel.send( bestBallCalc( pkmn, ball, false) );
+        return message.channel.send( calc.bestBallMsg(pkmn, ball, false) );
 
       else
-        return message.channel.send(argNotFound);
+        return message.channel.send(botspeech.argNotFound);
     }
 
     else if (pkmn2)
-      return message.channel.send( bestBallsCalc(pkmn2, false) );
+      return message.channel.send( calc.bestBallsMsg(pkmn2, false) );
 
     else
-      return message.channel.send(pkmnNotFound);
+      return message.channel.send(botspeech.pkmnNotFound);
   }
 
   else if (args.length == 3)
@@ -55,11 +58,11 @@ else if (command === "catch")
     let pkmnName = args[0].toLowerCase();
     let pkmnName2 = (args[0] + " " + args[1]).toLowerCase();
 
-    let pkmn = ingamePkmn.find(x => {
+    let pkmn = pokedata.pokemon.find(x => {
       return x.Name.toLowerCase() == pkmnName
     });
 
-    let pkmn2 = ingamePkmn.find(x => {
+    let pkmn2 = pokedata.pokemon.find(x => {
       return x.Name.toLowerCase() == pkmnName2
     });
 
@@ -68,42 +71,42 @@ else if (command === "catch")
       let ballName = args[1].toLowerCase();
       let ballName2 = (args[1] + " " + args[2]).toLowerCase();
 
-      let ball = ballFinder(ballName);
-      let ball2 = ballFinder(ballName2);
+      let ball = calc.ballFinder(ballName);
+      let ball2 = calc.ballFinder(ballName2);
 
       if (ball2)
-        return message.channel.send( bestBallCalc(pkmn, ball2, false) );
+        return message.channel.send( calc.bestBallMsg(pkmn, ball2, false) );
 
       else if (ball)
       {
-        if (gigaKeywords.includes(args[2].toLowerCase()))
-          return message.channel.send( bestBallCalc(pkmn, ball, true) );
+        if (botspeech.gigaKeywords.includes(args[2].toLowerCase()))
+          return message.channel.send( calc.bestBallMsg(pkmn, ball, true) );
 
         else
-          message.channel.send(argNotFound);
+          message.channel.send(botspeech.argNotFound);
       }
 
       else
-        return message.channel.send(ballNotFound);
+        return message.channel.send(botspeech.ballNotFound);
     }
 
     else if (pkmn2)
     {
       let ballName = args[2].toLowerCase();
-      let ball = ballFinder(ballName);
+      let ball = calc.ballFinder(ballName);
 
-      if (gigaKeywords.includes(args[2].toLowerCase()))
-        return message.channel.send( bestBallsCalc(pkmn2, true) );
+      if (botspeech.gigaKeywords.includes(args[2].toLowerCase()))
+        return message.channel.send( calc.bestBallsMsg(pkmn2, true) );
 
       else if (ball)
-        return message.channel.send( bestBallCalc(pkmn2, ball, false) );
+        return message.channel.send( calc.bestBallMsg(pkmn2, ball, false) );
       
       else
-        return message.channel.send(argNotFound);
+        return message.channel.send(botspeech.argNotFound);
     }
 
     else
-      return message.channel.send(pkmnNotFound);
+      return message.channel.send(botspeech.pkmnNotFound);
   }
 
   else if (args.length == 4)
@@ -111,27 +114,27 @@ else if (command === "catch")
     let pkmnName = args[0].toLowerCase();
     let pkmnName2 = (args[0] + " " + args[1]).toLowerCase();
 
-    let pkmn = ingamePkmn.find(x => {
+    let pkmn = pokedata.pokemon.find(x => {
       return x.Name.toLowerCase() == pkmnName
     });
 
-    let pkmn2 = ingamePkmn.find(x => {
+    let pkmn2 = pokedata.pokemon.find(x => {
       return x.Name.toLowerCase() == pkmnName2
     });
 
     if (pkmn)
     {
       let ballName = (args[1] + " " + args[2]).toLowerCase();
-      let ball = ballFinder(ballName);
+      let ball = calc.ballFinder(ballName);
 
       if (!ball)
-        return message.channel.send(ballNotFound);
+        return message.channel.send(botspeech.ballNotFound);
 
-      else if (!gigaKeywords.includes(args[3].toLowerCase()))
-        return message.channel.send(argNotFound);
+      else if (!botspeech.gigaKeywords.includes(args[3].toLowerCase()))
+        return message.channel.send(botspeech.argNotFound);
 
       else
-        return message.channel.send( bestBallCalc(pkmn, ball, true) );
+        return message.channel.send( calc.bestBallMsg(pkmn, ball, true) );
     }
 
     else if (pkmn2)
@@ -139,52 +142,50 @@ else if (command === "catch")
       let ballName = args[2].toLowerCase();
       let ballName2 = (args[2] + " " + args[3]).toLowerCase();
 
-      let ball = ballFinder(ballName);
-      let ball2 = ballFinder(ballName2);
+      let ball = calc.ballFinder(ballName);
+      let ball2 = calc.ballFinder(ballName2);
 
       if (ball2)
-        return message.channel.send( bestBallCalc(pkmn2, ball2, false) );
+        return message.channel.send( calc.bestBallMsg(pkmn2, ball2, false) );
 
       else if (ball)
       {
-        if (gigaKeywords.includes(args[3].toLowerCase()))
-          return message.channel.send( bestBallCalc(pkmn2, ball, true) );
+        if (botspeech.gigaKeywords.includes(args[3].toLowerCase()))
+          return message.channel.send( calc.bestBallMsg(pkmn2, ball, true) );
 
         else
-          message.channel.send(argNotFound);
+          message.channel.send(botspeech.argNotFound);
       }
 
       else
-        return message.channel.send(ballNotFound);
+        return message.channel.send(botspeech.ballNotFound);
     }
 
     else
-      return message.channel.send(pkmnNotFound);
+      return message.channel.send(botspeech.pkmnNotFound);
   }
 
   else if (args.length == 5)
   {
     let pkmnName = (args[0] + " " + args[1]).toLowerCase();
 
-    let pkmn = ingamePkmn.find(x => {
+    let pkmn = pokedata.pokemon.find(x => {
       return x.Name.toLowerCase() == pkmnName
     });
 
     let ballName = (args[2] + " " + args[3]).toLowerCase();
-    let ball = ballFinder(ballName);
+    let ball = calc.ballFinder(ballName);
 
     if (!pkmn)
-      return message.channel.send(pkmnNotFound);
+      return message.channel.send(botspeech.pkmnNotFound);
 
     else if (!ball)
-      return message.channel.send(ballNotFound);
+      return message.channel.send(botspeech.ballNotFound);
 
-    else if (!gigaKeywords.includes(args[4].toLowerCase()))
-      return message.channel.send(argNotFound);
+    else if (!botspeech.gigaKeywords.includes(args[4].toLowerCase()))
+      return message.channel.send(botspeech.argNotFound);
 
     else
-      return message.channel.send( bestBallCalc(pkmn, ball, true) );
+      return message.channel.send( calc.bestBallMsg(pkmn, ball, true) );
   }
 }
-});
-*/
