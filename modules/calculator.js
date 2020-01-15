@@ -1,4 +1,6 @@
 const pokedata = require("./pokedata.js");
+const botspeech = require("./botspeech.js");
+
 const baseStat = (stat, iv, level) => {
   let x = ( ( (2 * stat) + iv ) * level) / 100;
   return Math.floor(x) + level + 10;
@@ -20,56 +22,81 @@ const capProb = (shakeProb, modCatchRate) => {
   return (Math.pow( (shakeProb/65535), 4) * 100);
 }
 
-exports.bestBallsMsg = (pkmn, gFlag) => {
-  let maxhp0 = baseStat(pkmn.HP, 0, 30);
-  let maxhp31 = baseStat(pkmn.HP, 31, 70);
-
-  let bestBalls = pokedata.balls.filter(x => {
-    let notMB = x.name != "Master Ball";
-    let notQB = x.name != "Quick Ball";
-    return x.modifier >= 3 && notMB && notQB;
-  });
-  bestBalls.sort((x, y) => y.modifier > x.modifier);
-
-  let messageToSend = gFlag? `The best Poké-Balls for catching G-Max ${pkmn.Name} are:` : `The best Poké-Balls for catching ${pkmn.Name} are:`;
-
-  bestBalls.forEach(ball => {
-    let pkmnCatchRate = gFlag? 3 : pkmn.CatchRate;
-    let modCatchRate0 = catchRate(maxhp0, 1, pkmnCatchRate, ball.modifier);
-
-    let modCatchRate31 = catchRate(maxhp31, 1, pkmnCatchRate, ball.modifier);
-
-    let shakeProb0 = shakeProb(modCatchRate0);
-    let shakeProb31 = shakeProb(modCatchRate31);
-
-    catchProb0 = capProb(shakeProb0, modCatchRate0).toFixed(2);
-
-    catchProb31 = capProb(shakeProb31, modCatchRate31).toFixed(2);
-
-    ball.catchProb = `${catchProb0}% ~ ${catchProb31}%`;
-
-    messageToSend = messageToSend.concat(`\n${ball.name}: ${ball.catchProb}`);
-  });
-
-  return messageToSend;
-}
-
-exports.bestBallMsg = (pkmn, ball, gFlag) => {
+const capProbRange = (pkmn, ball, gFlag) => {
   let maxhp0 = baseStat(pkmn.HP, 0, 30);
   let maxhp31 = baseStat(pkmn.HP, 31, 70);
 
   let pkmnCatchRate = gFlag? 3 : pkmn.CatchRate;
-
   let modCatchRate0 = catchRate(maxhp0, 1, pkmnCatchRate, ball.modifier);
+
   let modCatchRate31 = catchRate(maxhp31, 1, pkmnCatchRate, ball.modifier);
 
   let shakeProb0 = shakeProb(modCatchRate0);
   let shakeProb31 = shakeProb(modCatchRate31);
 
   catchProb0 = capProb(shakeProb0, modCatchRate0).toFixed(2);
+
   catchProb31 = capProb(shakeProb31, modCatchRate31).toFixed(2);
 
-  ball.catchProb = `${catchProb0}% ~ ${catchProb31}%`;
+  return [catchProb0, catchProb31];
+}
+
+const modChecker = (ball, pkmn) => {
+  // TODO: Implement typing for Net-Ball, weight for Heavy-Ball, gender for
+  // Love-Ball
+  switch (ball.name)
+  {
+    case "Fast Ball":
+      return pkmn.Speed >= 100? 4 : 1;
+    case "Moon Ball":
+      return botspeech.moonPkmn.includes(pkmn.Name)? 4 : 1;
+    default:
+      return ball.modifier;
+  }
+}
+
+exports.bestBallsMsg = (pkmn, gFlag) => {
+
+  let balls = pokedata.balls;
+  balls.forEach(x => {
+    x.modifier = modChecker(x, pkmn);
+  });
+
+  let bestBalls = balls
+    .filter(x => {
+      let notExcludedBall = !botspeech.excludedBalls.includes(x.name);
+      return x.modifier > 1 && notExcludedBall;
+    })
+    .sort((x, y) => y.modifier - x.modifier)
+    .slice(0, 4);
+
+  let messageToSend = gFlag? `The best balls for catching G-Max ${pkmn.Name} are:` : `The best balls for catching ${pkmn.Name} are:`;
+
+  bestBalls.forEach(ball => {
+
+   let catchProb = capProbRange(pkmn, ball, gFlag);
+   ball.catchProb = (catchProb[0] == catchProb[1])? `${catchProb[0]}%` : `${catchProb[0]}% ~ ${catchProb[1]}%`;
+
+    messageToSend = messageToSend.concat(`\n${ball.name}: ${ball.catchProb}`);
+  });
+
+  let pokeball = balls.find(x => x.name == "Poke Ball");
+  let catchProb = capProbRange(pkmn, pokeball, gFlag);
+  pokeball.catchProb = (catchProb[0] == catchProb[1])? `${catchProb[0]}%` : `${catchProb[0]}% ~ ${catchProb[1]}%`;
+
+  messageToSend = messageToSend.concat(`\nStandard Balls (Poké/Luxury/Premier): ${pokeball.catchProb}`);
+
+  return messageToSend;
+}
+
+exports.bestBallMsg = (pkmn, ball, gFlag) => {
+  pokedata.balls.forEach(x => {
+    x.modifier = modChecker(x, pkmn);
+  });
+
+  let catchProb = capProbRange(pkmn, ball, gFlag);
+
+  ball.catchProb = (catchProb[0] == catchProb[1])? `${catchProb[0]}%` : `${catchProb[0]}% ~ ${catchProb[1]}%`;
 
   let messageToSend = gFlag? `The probability of catching G-Max ${pkmn.Name} with a ${ball.name} is: ${ball.catchProb}` : `The probability of catching ${pkmn.Name} with a ${ball.name} is: ${ball.catchProb}` 
 
