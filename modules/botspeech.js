@@ -1,6 +1,8 @@
 // Keywords
 exports.gigaKeywords = ["g", "-g", "g-", "giga", "gigantamax", "gmax"];
 exports.adminRoles = ["Fattest Cake", "Elite Four"];
+exports.moonPkmn = ["Nidoran", "Nidorina", "Nidoqueen", "Nidoran", "Nidorino", "Nidoking", "Cleffa", "Clefairy", "Clefable", "Igglybuff", "Jigglypuff", "Wigglytuff", "Munna", "Musharna"];
+exports.excludedBalls = ["Timer Ball", "Quick Ball", "Heavy Ball", "Love Ball", "Master Ball", "Level Ball", "Lure Ball", "Nest Ball", "Dive Ball", "Dream Ball", "Net Ball"];
 
 // Not Founds
 exports.pkmnNotFound = "The Pokémon requested was either not found or not available in current dens.";
