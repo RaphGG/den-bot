@@ -16,9 +16,10 @@ exports.roleNotFound = "The requested role was not found.";
 exports.pingableRoles = "Only Shiny Raid Pings and Giveaway Pings may be pinged.";
 
 // No Arg Calls -> May format with command structure
-exports.pingNoArg = "Please enter a role to ping";
+exports.pingNoArg = "Please enter a role to ping.";
 exports.catchNoArg = "Please enter a Pokémon to catch followed by a ball of your choice.";
 exports.denNoArg = "That is not a den!";
+exports.reloadNoArg = "Please enter a command to reload.";
 
 // Help Commands
 exports.nonAdminCommands = "%help";
