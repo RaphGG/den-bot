@@ -22,20 +22,20 @@ const capProb = (shakeProb, modCatchRate) => {
   return (Math.pow( (shakeProb/65535), 4) * 100);
 }
 
-const capProbRange = (pkmn, ball, gFlag) => {
+const capProbRange = (pkmn, ball, gFlag, pFlag) => {
   let maxhp0 = baseStat(pkmn.HP, 0, 30);
   let maxhp31 = baseStat(pkmn.HP, 31, 70);
 
   let pkmnCatchRate = gFlag? 3 : pkmn.CatchRate;
-  let modCatchRate0 = catchRate(maxhp0, 1, pkmnCatchRate, ball.modifier);
+  pkmnCatchRate = pFlag? 20 : pkmnCatchRate;
 
+  let modCatchRate0 = catchRate(maxhp0, 1, pkmnCatchRate, ball.modifier);
   let modCatchRate31 = catchRate(maxhp31, 1, pkmnCatchRate, ball.modifier);
 
   let shakeProb0 = shakeProb(modCatchRate0);
   let shakeProb31 = shakeProb(modCatchRate31);
 
   catchProb0 = capProb(shakeProb0, modCatchRate0).toFixed(2);
-
   catchProb31 = capProb(shakeProb31, modCatchRate31).toFixed(2);
 
   return [catchProb0, catchProb31];
@@ -72,16 +72,25 @@ exports.bestBallsMsg = (pkmn, gFlag) => {
 
   let messageToSend = gFlag? `The best balls for catching G-Max ${pkmn.Name} are:` : `The best balls for catching ${pkmn.Name} are:`;
 
+  let promoFlag = (botspeech.promoPkmn.includes(pkmn.Name)) && (botspeech.gmaxPkmn.includes(pkmn.Name));
+
   bestBalls.forEach(ball => {
 
-   let catchProb = capProbRange(pkmn, ball, gFlag);
+   let catchProb = capProbRange(pkmn, ball, gFlag, false);
    ball.catchProb = (catchProb[0] == catchProb[1])? `${catchProb[0]}%` : `${catchProb[0]}% ~ ${catchProb[1]}%`;
 
     messageToSend = messageToSend.concat(`\n${ball.name}: ${ball.catchProb}`);
+
+    if (promoFlag)
+    {
+      let promoCatchProb = capProbRange(pkmn, ball, gFlag, true);
+      let promoCatchRate = (promoCatchProb[0] == promoCatchProb[1])? `${promoCatchProb[0]}%` : `${promoCatchProb[0]}% ~ ${promoCatchProb[1]}%`;
+      messageToSend = messageToSend.concat(` / G-Max Promo: ${promoCatchRate}`);
+    }
   });
 
   let pokeball = balls.find(x => x.name == "Poke Ball");
-  let catchProb = capProbRange(pkmn, pokeball, gFlag);
+  let catchProb = capProbRange(pkmn, pokeball, gFlag, false);
   pokeball.catchProb = (catchProb[0] == catchProb[1])? `${catchProb[0]}%` : `${catchProb[0]}% ~ ${catchProb[1]}%`;
 
   messageToSend = messageToSend.concat(`\nStandard Balls (Poké/Luxury/Premier): ${pokeball.catchProb}`);
@@ -94,11 +103,20 @@ exports.bestBallMsg = (pkmn, ball, gFlag) => {
     x.modifier = modChecker(x, pkmn);
   });
 
-  let catchProb = capProbRange(pkmn, ball, gFlag);
+  let catchProb = capProbRange(pkmn, ball, gFlag, false);
+
+  let promoFlag = (botspeech.promoPkmn.includes(pkmn.Name)) && (botspeech.gmaxPkmn.includes(pkmn.Name));
 
   ball.catchProb = (catchProb[0] == catchProb[1])? `${catchProb[0]}%` : `${catchProb[0]}% ~ ${catchProb[1]}%`;
 
-  let messageToSend = gFlag? `The probability of catching G-Max ${pkmn.Name} with a ${ball.name} is: ${ball.catchProb}` : `The probability of catching ${pkmn.Name} with a ${ball.name} is: ${ball.catchProb}` 
+  let messageToSend = gFlag? `The probability of catching G-Max ${pkmn.Name} with a ${ball.name} is: ${ball.catchProb}` : `The probability of catching ${pkmn.Name} with a ${ball.name} is: ${ball.catchProb}`;
+
+  if (promoFlag)
+  {
+    let promoCatchProb = capProbRange(pkmn, ball, gFlag, true);
+    let promoCatchRate = (promoCatchProb[0] == promoCatchProb[1])? `${promoCatchProb[0]}%` : `${promoCatchProb[0]}% ~ ${promoCatchProb[1]}%`;
+    messageToSend = messageToSend.concat(` / G-Max Promo: ${promoCatchRate}`);
+  }
 
   return messageToSend;
 }
