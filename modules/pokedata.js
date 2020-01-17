@@ -1,4 +1,5 @@
 const fs = require("fs");
+const botspeech = require("./botspeech.js");
 
 let data = fs.readFileSync("./data/pokemon.json");
 let pokeSON = JSON.parse(data);
@@ -11,19 +12,20 @@ let denpokemon = JSON.parse(data);
 data = fs.readFileSync("./data/balls.json");
 var balls = JSON.parse(data);
 
+/*
 var ingamePkmn = pokemon.filter(x => {
   return denpokemon.includes(x.name);
 });
+*/
 
+/*
+pokemon.forEach(pkmn => {
+  let formIndex = pkmn.name.indexOf("-");
 
-ingamePkmn.forEach(pkmn => {
-  let gf = "-Galar";
-  let nameLength = pkmn.name.length;
-
-  if (pkmn.name.endsWith(gf))
-    pkmn.name = pkmn.name.slice(0, (nameLength - gf.length));
-
+  if (formIndex != -1 && !botspeech.dashPkmn.includes(pkmn.name))
+    pkmn.name = pkmn.name.slice(0, formIndex+2);
 });
+*/
 
 var ballNames = new Array();
 
@@ -37,6 +39,6 @@ balls.forEach(ball => {
   ballNames.push(ballNameAbbr);
 });
 
-exports.pokemon = ingamePkmn;
+exports.pokemon = pokemon;
 exports.balls = balls;
 exports.ballNames = ballNames;

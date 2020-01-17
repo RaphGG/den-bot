@@ -1,5 +1,6 @@
 const pokedata = require("./pokedata.js");
 const botspeech = require("./botspeech.js");
+const Discord = require("discord.js");
 
 const baseStat = (stat, iv, level) => {
   let x = ( ( (2 * stat) + iv ) * level) / 100;
@@ -38,44 +39,44 @@ const capProbRange = (pkmn, ball, gFlag, pFlag) => {
   catchProb0 = capProb(shakeProb0, modCatchRate0).toFixed(2);
   catchProb31 = capProb(shakeProb31, modCatchRate31).toFixed(2);
 
+  if (isNaN(catchProb0) || isNaN(catchProb31))
+    return [0, 0];
+
   return [catchProb0, catchProb31];
 }
 
-const modChecker = (ball, pkmn) => {
+const setModifiers = (pkmn, balls) => {
   // TODO: Implement typing for Net-Ball, weight for Heavy-Ball, gender for
   // Love-Ball
   let netBall = pkmn.type1 == "Bug" || pkmn.type1 == "Water" || pkmn.type2 == "Bug" || pkmn.type2 == "Water";
-  switch (ball.name)
-  {
-    case "Fast Ball":
-      return pkmn.baseStats.spe >= 100? 4 : 1;
-    case "Moon Ball":
-      return botspeech.moonPkmn.includes(pkmn.name)? 4 : 1;
-    case "Heavy Ball":
-      return ball.modifier;
-    case "Net Ball":
-      return netBall? 3.5 : 1;
-    default:
-      return ball.modifier;
-  }
+  let fastBall = pkmn.baseStats.spe >= 100;
+  let moonBall = botspeech.moonPkmn.includes(pkmn.name);
+  let loveBall = "TODO";
+
+  balls.find(x => x.name == "Net Ball").modifier = netBall? 3.5 : 1;
+  
+  if (pkmn.weight >= 300)
+    balls.find(x => x.name == "Heavy Ball").modifier = 30;
+  
+  else if (pkmn.weight >= 200)
+    balls.find(x => x.name == "Heavy Ball").modifier = 20;
+
+  else if (pkmn.weight >= 100)
+    balls.find(x => x.name == "Heavy Ball").modifier = 0;
+
+  else
+    balls.find(x => x.name == "Heavy Ball").modifier = -20;
+
+  balls.find(x => x.name == "Fast Ball").modifier = fastBall? 4 : 1;
+
+  balls.find(x => x.name == "Moon Ball").modifier = moonBall? 4 : 1;
 }
 
-exports.bestBallsMsg = (pkmn, gFlag) => {
+exports.bestBallsMsg = (pkmn, gFlag, catchEmbed) => {
 
-  let image = pkmn.generation == "SwordShield"? `https://play.pokemonshowdown.com/sprites/bw/${pkmn.name.toLowerCase()}.png` : `https://play.pokemonshowdown.com/sprites/xyani/${pkmn.name.toLowerCase()}.gif`;
+  setModifiers(pkmn, pokedata.balls);
 
-  botspeech.catchEmbed.embed.image = {
-    url: image
-  }
-
-  botspeech.catchEmbed.embed.color = botspeech.colorFinder(pkmn);
-
-  let balls = pokedata.balls;
-  balls.forEach(x => {
-    x.modifier = modChecker(x, pkmn);
-  });
-
-  let bestBalls = balls
+  let bestBalls = pokedata.balls
     .filter(x => {
       let notExcludedBall = !botspeech.excludedBalls.includes(x.name);
       return x.modifier > 1 && notExcludedBall;
@@ -83,41 +84,57 @@ exports.bestBallsMsg = (pkmn, gFlag) => {
     .sort((x, y) => y.modifier - x.modifier)
     .slice(0, 4);
 
-  let messageToSend = gFlag? `The best balls for catching G-Max ${pkmn.name} are:` : `The best balls for catching ${pkmn.name} are:`;
+  let description = gFlag? `The best balls for catching G-Max ${pkmn.name} are:` : `The best balls for catching ${pkmn.name} are:`;
 
+  let tempName = pkmn.name.replace(" ", "");
+
+  let image = pkmn.generation == "SwordShield"? `https://play.pokemonshowdown.com/sprites/bw/${tempName.toLowerCase()}.png` : `https://play.pokemonshowdown.com/sprites/xyani/${tempName.toLowerCase()}.gif`;
+
+  catchEmbed.setImage(image);
+  catchEmbed.setColor(botspeech.colorFinder(pkmn));
+
+  catchEmbed.setTitle("Best Catch Rates");
+  catchEmbed.setDescription(description);
+
+  let fieldVal = "";
+  let gmaxPromo = "";
 
   let promoFlag = (botspeech.promoPkmn.includes(pkmn.name)) && (botspeech.gmaxPkmn.includes(pkmn.name));
 
   bestBalls.forEach(ball => {
 
    let catchProb = capProbRange(pkmn, ball, gFlag, false);
-   ball.catchProb = (catchProb[0] == catchProb[1])? `\`\`\`${catchProb[0]}%\`\`\`` : `${catchProb[0]}% ~ ${catchProb[1]}%`;
+   ball.catchProb = (catchProb[0] == catchProb[1])? `\`${catchProb[0]}%\`` : `\`${catchProb[0]}% ~ ${catchProb[1]}%\``;
 
-    messageToSend = messageToSend.concat(`\n${ball.name}: ${ball.catchProb}`);
+  fieldVal = fieldVal.concat(`\n${ball.name}: ${ball.catchProb}`);
 
     if (promoFlag)
     {
       let promoCatchProb = capProbRange(pkmn, ball, gFlag, true);
-      let promoCatchRate = (promoCatchProb[0] == promoCatchProb[1])? `${promoCatchProb[0]}%` : `${promoCatchProb[0]}% ~ ${promoCatchProb[1]}%`;
-      messageToSend = messageToSend.concat(` / G-Max Promo: ${promoCatchRate}`);
+      let promoCatchRate = (promoCatchProb[0] == promoCatchProb[1])? `\`${promoCatchProb[0]}%\`` : `\`${promoCatchProb[0]}% ~ ${promoCatchProb[1]}%\``;
+      gmaxPromo = gmaxPromo.concat(`\n${ball.name}: ${promoCatchRate}`);
     }
   });
 
-  let pokeball = balls.find(x => x.name == "Poke Ball");
+  catchEmbed.addField("Top 4:", fieldVal, true);
+  fieldVal = "";
+
+  if (promoFlag)
+    catchEmbed.addField("G-Max Promo Top 4:", gmaxPromo, true);
+
+  let pokeball = pokedata.balls.find(x => x.name == "Poke Ball");
   let catchProb = capProbRange(pkmn, pokeball, gFlag, false);
-  pokeball.catchProb = (catchProb[0] == catchProb[1])? `${catchProb[0]}%` : `${catchProb[0]}% ~ ${catchProb[1]}%`;
+  pokeball.catchProb = (catchProb[0] == catchProb[1])? `\`${catchProb[0]}%\`` : `\`${catchProb[0]}% ~ ${catchProb[1]}%\``;
 
-  messageToSend = messageToSend.concat(`\nStandard Balls (Poké/Luxury/Premier): ${pokeball.catchProb}`);
+  fieldVal = fieldVal.concat(`\nStandard Balls (Poké/Luxury/Premier): ${pokeball.catchProb}`);
 
-  botspeech.catchEmbed.embed.description = messageToSend;
+  catchEmbed.addField("Standard:", fieldVal, true);
 
-  return botspeech.catchEmbed;
+  return catchEmbed;
 }
 
 exports.bestBallMsg = (pkmn, ball, gFlag) => {
-  pokedata.balls.forEach(x => {
-    x.modifier = modChecker(x, pkmn);
-  });
+  setModifiers(pkmn, pokedata.balls);
 
   let catchProb = capProbRange(pkmn, ball, gFlag, false);
 

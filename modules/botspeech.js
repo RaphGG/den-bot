@@ -1,3 +1,5 @@
+//const Discord = require("discord.js");
+
 // Keywords
 exports.gigaKeywords = ["g", "-g", "g-", "giga", "gigantamax", "gmax"];
 exports.adminRoles = ["Fattest Cake", "Elite Four"];
@@ -5,6 +7,8 @@ exports.moonPkmn = ["Nidoran", "Nidorina", "Nidoqueen", "Nidoran", "Nidorino", "
 exports.excludedBalls = ["Timer Ball", "Quick Ball", "Love Ball", "Master Ball", "Level Ball", "Lure Ball", "Nest Ball", "Dive Ball", "Dream Ball"];
 exports.promoPkmn = ["Applin", "Milcery", "Rolycoly", "Flapple","Alcremie", "Carkol", "Coalossal", "Lapras", "Appletun"];
 exports.gmaxPkmn = ["Charizard", "Butterfree", "Pikachu", "Meowth", "Machamp", "Gengar", "Kingler", "Lapras", "Eevee", "Snorlax", "Garbodor", "Melmetal", "Corviknight", "Orbeetle", "Drednaw", "Coalossal", "Flapple", "Appletun", "Sandaconda", "Toxtricity", "Centiskorch", "Hatterene", "Grimmsnarl", "Alcremie", "Copperajah", "Duraludon"];
+exports.edgeCases = ["Mr Mime", "Mime Jr", "Mr Rime", "Jangmo-o", "Hakamo-o", "Kommo-o"];
+exports.dashPkmn = ["Jangmo-o", "Hakamo-o", "Kommo-o"];
 
 // Not Founds
 exports.pkmnNotFound = "The Pokémon requested was either not found or not available in current dens.";
@@ -13,6 +17,7 @@ exports.commandNotFound = "The requested command was not found.";
 exports.argNotFound = "The requested command with the inputted arguments was not found.";
 exports.permNotFound = "you do not have the permissions to use this command.";
 exports.roleNotFound = "The requested role was not found.";
+exports.guildNotFound = "The requested guild was not found.";
 
 // User Help Messages
 exports.pingableRoles = "Only Shiny Raid Pings and Giveaway Pings may be pinged.";
@@ -26,7 +31,7 @@ exports.reloadNoArg = "Please enter a command to reload.";
 // Help Commands
 exports.nonAdminCommands = "%help";
 exports.adminCommands = "%help\n%ping [shiny | giveaway]";
-exports.pokeCommands = "%den [#Den Number]\n%catch [Pokémon Name] (Ball Name) (Gmax Flag)";
+exports.pokeCommands = "%den [#Den Number]\n%catch [Pokémon Name]-(Form Name) (Ball Name) (Gmax Flag)\nForm Names Include -galar, -alola, etc.";
 exports.commandDescription = "[ ] Indicate required fields.\n( ) Indicate optional fields.";
 
 // Embeds
@@ -114,9 +119,3 @@ exports.colorFinder = (pkmn) => {
   else
     return color.color;
 }
-
-exports.catchEmbed = {embed: {
-  title: "Best Catch Rates by Ball",
-  description: "The best balls to catch ",
-}}
-
