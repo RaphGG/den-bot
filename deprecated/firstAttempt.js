@@ -9,12 +9,12 @@ client.config = config;
 let pkmnCatchRate = new Array();
 let allPkmn = new Array();
 
-let output = fs.readFileSync("./batch/Batch Pokemon.txt", "utf8");
+let output = fs.readFileSync("./data/data Pokemon.txt", "utf8");
 let tokens = output.split(/ +/g);
 
 const availablePkmn = tokens.filter((token) => {return !token.match(/^[0-9]+$/)});
 
-output = fs.readFileSync("./batch/Batch Catch Rate.txt", "utf8");
+output = fs.readFileSync("./data/data Catch Rate.txt", "utf8");
 tokens = output.split(/ +/g);
 tokens.forEach((token, i) => {
   if (i % 3 == 2)
@@ -44,19 +44,19 @@ const calculator = (pkmn, ball) => {
   return ballList;
 }
 
-output = fs.readFileSync("./batch/totalbin.json");
+output = fs.readFileSync("./data/totalbin.json");
 allPkmn = JSON.parse(output);
 //console.log(allPkmn.pokemon);
 
 //console.log(pkmnCatchRate);
 
 allPkmn.pokemon.forEach(mon => {
-  mon.CatchRate = pkmnCatchRate.find(x => mon.ID == x.id).catchRate;
+  mon.catchRate = pkmnCatchRate.find(x => mon.ID == x.id).catchRate;
 });
 
 let newData = JSON.stringify(allPkmn);
-fs.writeFileSync("./batch/pokemondata.json", newData);
-let p = allPkmn.pokemon.filter(mon => {return availablePkmn.includes(mon.Name)});
+fs.writeFileSync("./data/pokemon.json", newData);
+let p = allPkmn.pokemon.filter(mon => {return availablePkmn.includes(mon.name)});
 
 //console.log(p);
 */
@@ -97,19 +97,19 @@ console.log(`Everything:\nBall: ${ball.name}\nmodCatchRate0: ${modCatchRate0}\nm
 let ballModifier = balls.find(x => x.name == "Poke Ball").modifier;
 console.log(`Ball Modifier for Pokeball is: ${ballModifier}`);
 
-let maxhp0 = baseStatCalc(pkmn.HP, 0, 30);
+let maxhp0 = baseStatCalc(pkmn.baseStats.hp, 0, 30);
 console.log(`Max HP at iv 0, level 30 is: ${maxhp0}`);
 
-let maxhp31 = baseStatCalc(pkmn.HP, 31, 70);
+let maxhp31 = baseStatCalc(pkmn.baseStats.hp, 31, 70);
 
-let mCR = modCatchRate(maxhp0, pkmn.CatchRate, ballModifier);
+let mCR = modCatchRate(maxhp0, pkmn.catchRate, ballModifier);
 
 let sp = shakeProb(mCR);
 
-console.log(`Mod Catch Rate for pkmn with max hp: ${maxhp0}, catch rate: ${pkmn.CatchRate}, and ball modifier: ${ballModifier}, is ${mCR}, with shake prob: ${sp}`);
+console.log(`Mod Catch Rate for pkmn with max hp: ${maxhp0}, catch rate: ${pkmn.catchRate}, and ball modifier: ${ballModifier}, is ${mCR}, with shake prob: ${sp}`);
 
 
-message.channel.send(`Percent chance to catch ${pkmn.Name} with a pokeball is ${capProb(sp, mCR)}%`);
+message.channel.send(`Percent chance to catch ${pkmn.name} with a pokeball is ${capProb(sp, mCR)}%`);
 console.log(pkmn);
 */
 /*
@@ -186,7 +186,7 @@ client.login(config.token);
 /*
 let possiblePkmnName = (args[0] + " " + args[1]).toLowerCase();
 let possiblePkmn = ingamePkmn.find(x => {
-  return x.Name.toLowerCase() == possiblePkmnName
+  return x.name.toLowerCase() == possiblePkmnName
 });
 
 let ballName = ballNames.find(name => {
@@ -195,7 +195,7 @@ let ballName = ballNames.find(name => {
 
 if (gigaKeywords.includes(args[0].toLowerCase()))
 {
-  let pkmn = ingamePkmn.find(x => {return x.Name.toLowerCase() == args[1].toLowerCase()});
+  let pkmn = ingamePkmn.find(x => {return x.name.toLowerCase() == args[1].toLowerCase()});
   if (pkmn == null)
   {
     message.channel.send(pkmnNotFound);
@@ -218,7 +218,7 @@ else if (possiblePkmn != null)
 else if (ballName != null)
 {
   let pkmn = ingamePkmn.find(x => {
-    return x.Name.toLowerCase() == args[0].toLowerCase();
+    return x.name.toLowerCase() == args[0].toLowerCase();
   });
 
   let ball = ballFinder(ballName);
@@ -245,10 +245,10 @@ if (gigaKeywords.includes(args[0].toLowerCase()))
 {
   let possiblePkmnName = (args[1] + " " + args[2]).toLowerCase();
   let possiblePkmn = ingamePkmn.find(x => {
-    return x.Name.toLowerCase() == possiblePkmnName
+    return x.name.toLowerCase() == possiblePkmnName
   });
   let pkmn = ingamePkmn.find(x => {
-    return x.Name.toLowerCase() == args[1].toLowerCase();
+    return x.name.toLowerCase() == args[1].toLowerCase();
   });
 
   if (pkmn == null && possiblePkmn == null)
