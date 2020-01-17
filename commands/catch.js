@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
   else if (args.length == 1)
   {
     let pkmn = pokedata.pokemon.find(x => {
-      return x.Name.toLowerCase() == args[0].toLowerCase();
+      return x.name.toLowerCase() == args[0].toLowerCase();
     });
 
     if (pkmn == null)
@@ -24,11 +24,11 @@ exports.run = (client, message, args) => {
     let pkmnName2 = (args[0] + " " + args[1]).toLowerCase();
 
     let pkmn = pokedata.pokemon.find(x => {
-      return x.Name.toLowerCase() == pkmnName
+      return x.name.toLowerCase() == pkmnName
     });
 
     let pkmn2 = pokedata.pokemon.find(x => {
-      return x.Name.toLowerCase() == pkmnName2
+      return x.name.toLowerCase() == pkmnName2
     });
 
     if (pkmn)
@@ -59,11 +59,11 @@ exports.run = (client, message, args) => {
     let pkmnName2 = (args[0] + " " + args[1]).toLowerCase();
 
     let pkmn = pokedata.pokemon.find(x => {
-      return x.Name.toLowerCase() == pkmnName
+      return x.name.toLowerCase() == pkmnName
     });
 
     let pkmn2 = pokedata.pokemon.find(x => {
-      return x.Name.toLowerCase() == pkmnName2
+      return x.name.toLowerCase() == pkmnName2
     });
 
     if (pkmn)
@@ -115,11 +115,11 @@ exports.run = (client, message, args) => {
     let pkmnName2 = (args[0] + " " + args[1]).toLowerCase();
 
     let pkmn = pokedata.pokemon.find(x => {
-      return x.Name.toLowerCase() == pkmnName
+      return x.name.toLowerCase() == pkmnName
     });
 
     let pkmn2 = pokedata.pokemon.find(x => {
-      return x.Name.toLowerCase() == pkmnName2
+      return x.name.toLowerCase() == pkmnName2
     });
 
     if (pkmn)
@@ -170,7 +170,7 @@ exports.run = (client, message, args) => {
     let pkmnName = (args[0] + " " + args[1]).toLowerCase();
 
     let pkmn = pokedata.pokemon.find(x => {
-      return x.Name.toLowerCase() == pkmnName
+      return x.name.toLowerCase() == pkmnName
     });
 
     let ballName = (args[2] + " " + args[3]).toLowerCase();

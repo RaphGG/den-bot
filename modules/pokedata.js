@@ -1,26 +1,27 @@
 const fs = require("fs");
 
-let data = fs.readFileSync("./batch/pokemondata.json");
+let data = fs.readFileSync("./data/pokemon.json");
 let pokeSON = JSON.parse(data);
 
-var pokemon = pokeSON.pokemon;
+var pokemon = pokeSON;
 
-data = fs.readFileSync("./batch/availablepokemon.json");
-let availablepokemon = JSON.parse(data);
+data = fs.readFileSync("./data/denpokemon.json");
+let denpokemon = JSON.parse(data);
 
-data = fs.readFileSync("./batch/balldata.json");
+data = fs.readFileSync("./data/balls.json");
 var balls = JSON.parse(data);
 
 var ingamePkmn = pokemon.filter(x => {
-  return availablepokemon.includes(x.Name);
+  return denpokemon.includes(x.name);
 });
 
-ingamePkmn.forEach(pkmn => {
-  let gf = "(Galarian Form)";
-  let nameLength = pkmn.Name.length;
 
-  if (pkmn.Name.endsWith(gf))
-    pkmn.Name = pkmn.Name.slice(0, (nameLength - gf.length-1));
+ingamePkmn.forEach(pkmn => {
+  let gf = "-Galar";
+  let nameLength = pkmn.name.length;
+
+  if (pkmn.name.endsWith(gf))
+    pkmn.name = pkmn.name.slice(0, (nameLength - gf.length));
 
 });
 
