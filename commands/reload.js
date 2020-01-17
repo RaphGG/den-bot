@@ -1,6 +1,10 @@
 const botspeech = require("../modules/botspeech.js");
 
 exports.run = (client, message, args) => {
+  let guildMember = message.member;
+  if (!guildMember)
+    return message.reply(botspeech.guildNotFound);
+    
   let isOwner = message.member.id == client.config.owner;
   if (!isOwner)
     return message.reply(botspeech.permNotFound);
