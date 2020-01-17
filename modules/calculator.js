@@ -139,7 +139,7 @@ exports.bestBallMsg = (pkmn, ball, gFlag) => {
 
   ball.catchProb = (catchProb[0] == catchProb[1])? `${catchProb[0]}%` : `${catchProb[0]}% ~ ${catchProb[1]}%`;
 
-  let messageToSend = gFlag? `The probability of catching G-Max ${pkmn.name} with a ${ball.name} is: ${ball.catchProb}` : `The probability of catching ${pkmn.name} with a ${ball.name} is: ${ball.catchProb}`;
+  let messageToSend = gFlag? `\nThe probability of catching G-Max ${pkmn.name} with a ${ball.name} is: ${ball.catchProb}` : `\nThe probability of catching ${pkmn.name} with a ${ball.name} is: ${ball.catchProb}`;
 
   if (promoFlag)
   {

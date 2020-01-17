@@ -3,7 +3,6 @@ const botspeech = require("../modules/botspeech.js");
 const pokedata = require("../modules/pokedata.js");
 const Discord = require("discord.js");
 
-
 exports.run = (client, message, args) => {
 
   let catchEmbed = new Discord.RichEmbed();
