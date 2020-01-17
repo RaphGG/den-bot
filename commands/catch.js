@@ -1,8 +1,14 @@
 const calc = require("../modules/calculator.js");
 const botspeech = require("../modules/botspeech.js");
 const pokedata = require("../modules/pokedata.js");
+const Discord = require("discord.js");
+
 
 exports.run = (client, message, args) => {
+
+  let catchEmbed = new Discord.RichEmbed();
+  catchEmbed.setFooter("Alcremie-B, by Droopy", client.user.avatarURL);
+
   if (args.length == 0)
     return message.channel.send(botspeech.catchNoArg);
 
@@ -15,7 +21,7 @@ exports.run = (client, message, args) => {
     if (pkmn == null)
       return message.channel.send(botspeech.pkmnNotFound);
 
-    return message.channel.send( calc.bestBallsMsg(pkmn, false) );
+    return message.channel.send( calc.bestBallsMsg(pkmn, false, catchEmbed) );
   }
 
   else if (args.length == 2)
@@ -37,17 +43,17 @@ exports.run = (client, message, args) => {
       let ball = calc.ballFinder( arg1 );
 
       if (botspeech.gigaKeywords.includes(arg1))
-        return message.channel.send( calc.bestBallsMsg(pkmn, true) );
+        return message.channel.send( calc.bestBallsMsg(pkmn, true, catchEmbed) );
 
       else if (ball)
-        return message.channel.send( calc.bestBallMsg(pkmn, ball, false) );
+        return message.reply( calc.bestBallMsg(pkmn, ball, false) );
 
       else
         return message.channel.send(botspeech.argNotFound);
     }
 
     else if (pkmn2)
-      return message.channel.send( calc.bestBallsMsg(pkmn2, false) );
+      return message.channel.send( calc.bestBallsMsg(pkmn2, false, catchEmbed) );
 
     else
       return message.channel.send(botspeech.pkmnNotFound);
@@ -75,12 +81,12 @@ exports.run = (client, message, args) => {
       let ball2 = calc.ballFinder(ballName2);
 
       if (ball2)
-        return message.channel.send( calc.bestBallMsg(pkmn, ball2, false) );
+        return message.reply( calc.bestBallMsg(pkmn, ball2, false) );
 
       else if (ball)
       {
         if (botspeech.gigaKeywords.includes(args[2].toLowerCase()))
-          return message.channel.send( calc.bestBallMsg(pkmn, ball, true) );
+          return message.reply( calc.bestBallMsg(pkmn, ball, true) );
 
         else
           message.channel.send(botspeech.argNotFound);
@@ -96,10 +102,10 @@ exports.run = (client, message, args) => {
       let ball = calc.ballFinder(ballName);
 
       if (botspeech.gigaKeywords.includes(args[2].toLowerCase()))
-        return message.channel.send( calc.bestBallsMsg(pkmn2, true) );
+        return message.channel.send( calc.bestBallsMsg(pkmn2, true, catchEmbed) );
 
       else if (ball)
-        return message.channel.send( calc.bestBallMsg(pkmn2, ball, false) );
+        return message.reply( calc.bestBallMsg(pkmn2, ball, false) );
       
       else
         return message.channel.send(botspeech.argNotFound);
@@ -134,7 +140,7 @@ exports.run = (client, message, args) => {
         return message.channel.send(botspeech.argNotFound);
 
       else
-        return message.channel.send( calc.bestBallMsg(pkmn, ball, true) );
+        return message.reply( calc.bestBallMsg(pkmn, ball, true) );
     }
 
     else if (pkmn2)
@@ -146,12 +152,12 @@ exports.run = (client, message, args) => {
       let ball2 = calc.ballFinder(ballName2);
 
       if (ball2)
-        return message.channel.send( calc.bestBallMsg(pkmn2, ball2, false) );
+        return message.reply( calc.bestBallMsg(pkmn2, ball2, false) );
 
       else if (ball)
       {
         if (botspeech.gigaKeywords.includes(args[3].toLowerCase()))
-          return message.channel.send( calc.bestBallMsg(pkmn2, ball, true) );
+          return message.reply( calc.bestBallMsg(pkmn2, ball, true) );
 
         else
           message.channel.send(botspeech.argNotFound);
@@ -186,6 +192,6 @@ exports.run = (client, message, args) => {
       return message.channel.send(botspeech.argNotFound);
 
     else
-      return message.channel.send( calc.bestBallMsg(pkmn, ball, true) );
+      return message.reply( calc.bestBallMsg(pkmn, ball, true) );
   }
 }

@@ -1,6 +1,10 @@
 const botspeech = require("../modules/botspeech.js");
 
 exports.run = (client, message, args) => {
+  let guildMember = message.member;
+  if (!guildMember)
+    return message.channel.send(botspeech.guildNotFound);
+  
   let isAdmin = message.member.roles.some(role => {
     return botspeech.adminRoles.includes(role.name);
   });
