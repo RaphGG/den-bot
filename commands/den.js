@@ -1,7 +1,7 @@
 const botspeech = require("../modules/botspeech.js");
 
 exports.run = (client, message, args) => {
-  if (args.length == 0 || (args[0] < 1 || args[0] > 93))
+  if (!args || args.length < 1 || (args[0] < 1 || args[0] > 93))
     return message.reply(botspeech.denNoArg);
 
   else

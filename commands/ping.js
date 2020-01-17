@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
   if (!isAdmin)
     return message.reply(botspeech.permNotFound);
 
-  else if (args.length == 0)
+  else if (!args || args.length < 1)
     return message.channel.send(botspeech.pingNoArg);
 
   else

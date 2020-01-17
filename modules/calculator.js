@@ -86,11 +86,8 @@ exports.bestBallsMsg = (pkmn, gFlag, catchEmbed) => {
 
   let description = gFlag? `The best balls for catching G-Max ${pkmn.name} are:` : `The best balls for catching ${pkmn.name} are:`;
 
-  let tempName = pkmn.name.replace(" ", "");
 
-  let image = pkmn.generation == "SwordShield"? `https://play.pokemonshowdown.com/sprites/bw/${tempName.toLowerCase()}.png` : `https://play.pokemonshowdown.com/sprites/xyani/${tempName.toLowerCase()}.gif`;
-
-  catchEmbed.setImage(image);
+  catchEmbed.setImage(botspeech.imageFinder(pkmn));
   catchEmbed.setColor(botspeech.colorFinder(pkmn));
 
   catchEmbed.setTitle("Best Catch Rates");

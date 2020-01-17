@@ -119,3 +119,11 @@ exports.colorFinder = (pkmn) => {
   else
     return color.color;
 }
+
+exports.imageFinder = (pkmn) => {
+  let tempName = pkmn.name.replace(" ", "");
+
+  let image = pkmn.generation == "SwordShield"? `https://play.pokemonshowdown.com/sprites/bw/${tempName.toLowerCase()}.png` : `https://play.pokemonshowdown.com/sprites/xyani/${tempName.toLowerCase()}.gif`;
+
+  return image;
+}

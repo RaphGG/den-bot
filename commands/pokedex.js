@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
   let dexEmbed = new Discord.RichEmbed();
   dexEmbed.setFooter("Alcremie-B, by Droopy", client.user.avatarURL);
 
-  if (args.length == 0)
+  if (!args || args.length < 1)
     return message.channel.send(botspeech.pokedexNoArg);
 
   else if (args.length == 1)
@@ -21,17 +21,8 @@ exports.run = (client, message, args) => {
     if (pkmn == null)
       return message.channel.send(botspeech.pkmnNotFound);
 
-    
-    dexEmbed.setTitle(`**__#${pkmn.dexId} • ${pkmn.name} __**`);
-
-    let statHeader1 = `__\`HP     Atk     Def\`__`.replace(/ +g/, "\u2005");
-    let statHeader2 = `__\`SpA    SpD     Spe\`__`.replace(/ +g/, "\u2005");
-    let baseStats1 = `\`${pkmn.baseStats.hp.toString().padEnd(7, "\u2005")}${pkmn.baseStats.atk.toString().padEnd(8, "\u2005")}${pkmn.baseStats.def}\``;
-    let baseStats2 = `\`${pkmn.baseStats.spA.toString().padEnd(7, "\u2005")}${pkmn.baseStats.spD.toString().padEnd(8, "\u2005")}${pkmn.baseStats.spe}\``;
-    let baseStatTotal = `__\`Total: ${pkmn.baseStats.tot}\`__`;
-
-    let fieldVal = statHeader1 + "\n" + baseStats1 + "\n" + statHeader2 + "\n" + baseStats2 + "\n" + baseStatTotal;
-    dexEmbed.addField("Base Stats", fieldVal, true);
+    dexEmbed.setColor(botspeech.colorFinder(pkmn));
+    dexEmbed.setImage(botspeech.imageFinder(pkmn));
 
     let type1 = client.emojis.find(x => {
       return x.name == pkmn.type1;
@@ -41,24 +32,36 @@ exports.run = (client, message, args) => {
       return x.name == pkmn.type2;
     });
 
-    fieldVal = type2? type1 + " " + type2 : type1;
+    let types = type2? type1 + " " + type2 : type1;
 
-    dexEmbed.addField("Types(s)", fieldVal, true);
+    let title = `**__#${pkmn.dexId} • ${pkmn.name} __**` + types;
+    dexEmbed.setTitle(title);
 
-    /*
-    fieldVal = pkmn.type2? `\`${pkmn.type1} / ${pkmn.type2}\`` : `\`${pkmn.type1}\``;
+    let statHeader1 = `__\`HP     Atk     Def\`__`.replace(/ +g/, "\u2005");
+    let statHeader2 = `__\`SpA    SpD     Spe\`__`.replace(/ +g/, "\u2005");
 
-    dexEmbed.addField("Type(s)", fieldVal, true);
+    let baseStats1 = `\`${pkmn.baseStats.hp.toString().padEnd(7, "\u2005")}${pkmn.baseStats.atk.toString().padEnd(8, "\u2005")}${pkmn.baseStats.def}\``;
+    let baseStats2 = `\`${pkmn.baseStats.spA.toString().padEnd(7, "\u2005")}${pkmn.baseStats.spD.toString().padEnd(8, "\u2005")}${pkmn.baseStats.spe}\``;
+
+    let baseStatTotal = `__\`Total: ${pkmn.baseStats.tot}\`__`;
+
+    let baseStats = statHeader1 + "\n" + baseStats1 + "\n" + statHeader2 + "\n" + baseStats2 + "\n" + baseStatTotal;
+    dexEmbed.addField("Base Stats", baseStats, true);
     
 
-    let abilities = "";
+    let genderRatio = `Gender Ratio: \`${pkmn.genderRatio}\``;
+    let height = `Height: \`${pkmn.height}m\``;
+    let weight = `Weight: \`${pkmn.weight}kg\``;
+    let catchRate = `Catch Rate: \`${pkmn.catchRate}\``;
+    let gen = `Generation: \`${pkmn.generation}\``;
 
-    pkmn.possibleAbilities.forEach(x => {
-      abilities = abilities + 
-    })
+    let miscInfo = genderRatio + "\n" + height + "\n" + weight + "\n" + catchRate + "\n" + gen;
 
-    fieldVal = ;
-    */
+    dexEmbed.addField("Misc. Info", miscInfo, true);
+
+    let abilities = pkmn.possibleAbilities.join("/");
+
+    dexEmbed.addField("Possible Abilities", abilities, true);
 
     return message.channel.send( dexEmbed );
   }

@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
   let catchEmbed = new Discord.RichEmbed();
   catchEmbed.setFooter("Alcremie-B, by Droopy", client.user.avatarURL);
 
-  if (args.length == 0)
+  if (!args || args.length < 1)
     return message.channel.send(botspeech.catchNoArg);
 
   else if (args.length == 1)
