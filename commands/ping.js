@@ -20,7 +20,7 @@ exports.run = (client, message, args) => {
     let findRole = args[0].toLowerCase();
 
     let rolePing = message.guild.roles.find(role => {
-      return role.name.toLowerCase().startsWith(findRole);
+      return role.name.toLowerCase().startsWith(findRole) && role.name.toLowerCase().endsWith("pings");
     });
 
     if (!rolePing)

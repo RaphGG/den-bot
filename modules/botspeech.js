@@ -1,10 +1,8 @@
-//const Discord = require("discord.js");
-
 // Keywords
 exports.gigaKeywords = ["g", "-g", "g-", "giga", "gigantamax", "gmax"];
 exports.adminRoles = ["Fattest Cake", "Elite Four"];
 exports.moonPkmn = ["Nidoran", "Nidorina", "Nidoqueen", "Nidoran", "Nidorino", "Nidoking", "Cleffa", "Clefairy", "Clefable", "Igglybuff", "Jigglypuff", "Wigglytuff", "Munna", "Musharna"];
-exports.excludedBalls = ["Timer Ball", "Quick Ball", "Love Ball", "Master Ball", "Level Ball", "Lure Ball", "Nest Ball", "Dive Ball", "Dream Ball"];
+exports.excludedBalls = ["Timer Ball", "Quick Ball", "Master Ball", "Level Ball", "Lure Ball", "Nest Ball", "Dive Ball", "Dream Ball", "Heavy Ball"];
 exports.promoPkmn = ["Applin", "Milcery", "Rolycoly", "Flapple","Alcremie", "Carkol", "Coalossal", "Lapras", "Appletun"];
 exports.gmaxPkmn = ["Charizard", "Butterfree", "Pikachu", "Meowth", "Machamp", "Gengar", "Kingler", "Lapras", "Eevee", "Snorlax", "Garbodor", "Melmetal", "Corviknight", "Orbeetle", "Drednaw", "Coalossal", "Flapple", "Appletun", "Sandaconda", "Toxtricity", "Centiskorch", "Hatterene", "Grimmsnarl", "Alcremie", "Copperajah", "Duraludon"];
 exports.edgeCases = ["Mr Mime", "Mime Jr", "Mr Rime", "Jangmo-o", "Hakamo-o", "Kommo-o"];
@@ -21,11 +19,13 @@ exports.guildNotFound = "The requested guild was not found.";
 
 // User Help Messages
 exports.pingableRoles = "Only Shiny Raid Pings and Giveaway Pings may be pinged.";
+exports.disclaimerMsg = "*Assuming ball specific conditions have been met!*";
+exports.noRaidEff = "(No effect on raids)"
 
 // No Arg Calls -> May format with command structure
 exports.pingNoArg = "Please enter a role to ping.";
 exports.catchNoArg = "Please enter a Pokémon to catch followed by a ball of your choice.";
-exports.denNoArg = "That is not a den!";
+exports.denNoArg = "that is not a den!";
 exports.reloadNoArg = "Please enter a command to reload.";
 
 // Help Commands
@@ -109,6 +109,8 @@ const pkmnEmbedColors = [
     "color":12236497
   }
 ]
+
+exports.footerCred = "Alcremie-B - by Droopy";
 exports.colorFinder = (pkmn) => {
   let color = pkmnEmbedColors.find(x => {
     return x.type == pkmn.type1;

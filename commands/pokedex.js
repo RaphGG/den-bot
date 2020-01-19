@@ -1,13 +1,11 @@
-const calc = require("../modules/calculator.js");
 const botspeech = require("../modules/botspeech.js");
 const pokedata = require("../modules/pokedata.js");
 const Discord = require("discord.js");
 
-
 exports.run = (client, message, args) => {
 
   let dexEmbed = new Discord.RichEmbed();
-  dexEmbed.setFooter("Alcremie-B, by Droopy", client.user.avatarURL);
+  dexEmbed.setFooter(botspeech.footerCred, client.user.avatarURL);
 
   if (!args || args.length < 1)
     return message.channel.send(botspeech.pokedexNoArg);

@@ -6,12 +6,11 @@ exports.run = (client, message) => {
   let helpEmbed = new Discord.RichEmbed();
   helpEmbed.setAuthor(client.user.username, client.user.avatarURL);
   helpEmbed.setColor(14315906);
-  helpEmbed.setFooter("Alcremie-B, by Droopy", client.user.avatarURL);
+  helpEmbed.setFooter(botspeech.footerCred, client.user.avatarURL);
   helpEmbed.setTimestamp();
   helpEmbed.setTitle("All Bot Commands:");
   helpEmbed.setDescription(botspeech.commandDescription);
   helpEmbed.addField("Pokémon Commands:", botspeech.pokeCommands);
-
 
   if (!guildMember)
     return message.channel.send(helpEmbed);

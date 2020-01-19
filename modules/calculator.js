@@ -1,6 +1,5 @@
 const pokedata = require("./pokedata.js");
 const botspeech = require("./botspeech.js");
-const Discord = require("discord.js");
 
 const baseStat = (stat, iv, level) => {
   let x = ( ( (2 * stat) + iv ) * level) / 100;
@@ -16,8 +15,8 @@ const shakeProb = (catchRate) => {
   return Math.floor(b);
 }
 
-const capProb = (shakeProb, modCatchRate) => {
-  if (modCatchRate >= 100 || shakeProb >= 65536)
+const capProb = (shakeProb) => {
+  if (shakeProb >= 65536)
     return 100;
 
   return (Math.pow( (shakeProb/65535), 4) * 100);
@@ -36,8 +35,8 @@ const capProbRange = (pkmn, ball, gFlag, pFlag) => {
   let shakeProb0 = shakeProb(modCatchRate0);
   let shakeProb31 = shakeProb(modCatchRate31);
 
-  catchProb0 = capProb(shakeProb0, modCatchRate0).toFixed(2);
-  catchProb31 = capProb(shakeProb31, modCatchRate31).toFixed(2);
+  catchProb0 = capProb(shakeProb0).toFixed(2);
+  catchProb31 = capProb(shakeProb31).toFixed(2);
 
   if (isNaN(catchProb0) || isNaN(catchProb31))
     return [0, 0];
@@ -46,12 +45,11 @@ const capProbRange = (pkmn, ball, gFlag, pFlag) => {
 }
 
 const setModifiers = (pkmn, balls) => {
-  // TODO: Implement typing for Net-Ball, weight for Heavy-Ball, gender for
-  // Love-Ball
+
   let netBall = pkmn.type1 == "Bug" || pkmn.type1 == "Water" || pkmn.type2 == "Bug" || pkmn.type2 == "Water";
   let fastBall = pkmn.baseStats.spe >= 100;
   let moonBall = botspeech.moonPkmn.includes(pkmn.name);
-  let loveBall = "TODO";
+  let loveBall = pkmn.genderRatio == "100% ⚲" || pkmn.genderRatio == "100% ♀" || pkmn.genderRatio == "100% ♂";
 
   balls.find(x => x.name == "Net Ball").modifier = netBall? 3.5 : 1;
   
@@ -70,6 +68,8 @@ const setModifiers = (pkmn, balls) => {
   balls.find(x => x.name == "Fast Ball").modifier = fastBall? 4 : 1;
 
   balls.find(x => x.name == "Moon Ball").modifier = moonBall? 4 : 1;
+
+  balls.find(x => x.name == "Love Ball").modifier = loveBall? 1 : 8;
 }
 
 exports.bestBallsMsg = (pkmn, gFlag, catchEmbed) => {
@@ -85,7 +85,6 @@ exports.bestBallsMsg = (pkmn, gFlag, catchEmbed) => {
     .slice(0, 4);
 
   let description = gFlag? `The best balls for catching G-Max ${pkmn.name} are:` : `The best balls for catching ${pkmn.name} are:`;
-
 
   catchEmbed.setImage(botspeech.imageFinder(pkmn));
   catchEmbed.setColor(botspeech.colorFinder(pkmn));
@@ -114,7 +113,6 @@ exports.bestBallsMsg = (pkmn, gFlag, catchEmbed) => {
   });
 
   catchEmbed.addField("Top 4:", fieldVal, true);
-  fieldVal = "";
 
   if (promoFlag)
     catchEmbed.addField("G-Max Promo Top 4:", gmaxPromo, true);
@@ -123,9 +121,9 @@ exports.bestBallsMsg = (pkmn, gFlag, catchEmbed) => {
   let catchProb = capProbRange(pkmn, pokeball, gFlag, false);
   pokeball.catchProb = (catchProb[0] == catchProb[1])? `\`${catchProb[0]}%\`` : `\`${catchProb[0]}% ~ ${catchProb[1]}%\``;
 
-  fieldVal = fieldVal.concat(`\nStandard Balls (Poké/Luxury/Premier): ${pokeball.catchProb}`);
+  let standardBalls = `\nStandard Balls (Poké/Luxury/Premier): ${pokeball.catchProb}`;
 
-  catchEmbed.addField("Standard:", fieldVal, true);
+  catchEmbed.addField("Standard:", standardBalls, true);
 
   return catchEmbed;
 }
@@ -139,7 +137,7 @@ exports.bestBallMsg = (pkmn, ball, gFlag) => {
 
   ball.catchProb = (catchProb[0] == catchProb[1])? `${catchProb[0]}%` : `${catchProb[0]}% ~ ${catchProb[1]}%`;
 
-  let messageToSend = gFlag? `\nThe probability of catching G-Max ${pkmn.name} with a ${ball.name} is: ${ball.catchProb}` : `\nThe probability of catching ${pkmn.name} with a ${ball.name} is: ${ball.catchProb}`;
+  let messageToSend = gFlag? `The probability of catching G-Max ${pkmn.name} with a ${ball.name} is: ${ball.catchProb}` : `The probability of catching ${pkmn.name} with a ${ball.name} is: ${ball.catchProb}`;
 
   if (promoFlag)
   {
@@ -147,6 +145,8 @@ exports.bestBallMsg = (pkmn, ball, gFlag) => {
     let promoCatchRate = (promoCatchProb[0] == promoCatchProb[1])? `${promoCatchProb[0]}%` : `${promoCatchProb[0]}% ~ ${promoCatchProb[1]}%`;
     messageToSend = messageToSend.concat(` / G-Max Promo: ${promoCatchRate}`);
   }
+
+  messageToSend = messageToSend.concat("\n" + botspeech.disclaimerMsg);
 
   return messageToSend;
 }
