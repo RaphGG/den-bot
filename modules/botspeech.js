@@ -1,12 +1,4 @@
-// Keywords
-exports.gigaKeywords = ["g", "-g", "g-", "giga", "gigantamax", "gmax"];
-exports.adminRoles = ["Fattest Cake", "Elite Four"];
-exports.moonPkmn = ["Nidoran", "Nidorina", "Nidoqueen", "Nidoran", "Nidorino", "Nidoking", "Cleffa", "Clefairy", "Clefable", "Igglybuff", "Jigglypuff", "Wigglytuff", "Munna", "Musharna"];
-exports.excludedBalls = ["Timer Ball", "Quick Ball", "Master Ball", "Level Ball", "Lure Ball", "Nest Ball", "Dive Ball", "Dream Ball", "Heavy Ball"];
-exports.promoPkmn = ["Applin", "Milcery", "Rolycoly", "Flapple","Alcremie", "Carkol", "Coalossal", "Lapras", "Appletun"];
-exports.gmaxPkmn = ["Charizard", "Butterfree", "Pikachu", "Meowth", "Machamp", "Gengar", "Kingler", "Lapras", "Eevee", "Snorlax", "Garbodor", "Melmetal", "Corviknight", "Orbeetle", "Drednaw", "Coalossal", "Flapple", "Appletun", "Sandaconda", "Toxtricity", "Centiskorch", "Hatterene", "Grimmsnarl", "Alcremie", "Copperajah", "Duraludon"];
-exports.edgeCases = ["Mr Mime", "Mime Jr", "Mr Rime", "Jangmo-o", "Hakamo-o", "Kommo-o"];
-exports.dashPkmn = ["Jangmo-o", "Hakamo-o", "Kommo-o"];
+const Discord = require("discord.js");
 
 // Not Founds
 exports.pkmnNotFound = "The Pokémon requested was either not found or not available in current dens.";
@@ -31,7 +23,7 @@ exports.reloadNoArg = "Please enter a command to reload.";
 // Help Commands
 exports.nonAdminCommands = "%help";
 exports.adminCommands = "%help\n%ping [shiny | giveaway]";
-exports.pokeCommands = "%den [#Den Number]\n%catch [Pokémon Name]-(Form Name) (Ball Name) (Gmax Flag)\nForm Names Include -galar, -alola, etc.";
+exports.pokeCommands = "%den [Den Number]\n%catch [Pokémon Name]-(Form Name) (Ball Name) (Gmax Flag)\nForm Names Include -galar, -alola, etc.";
 exports.commandDescription = "[ ] Indicate required fields.\n( ) Indicate optional fields.";
 
 // Embeds
@@ -110,8 +102,8 @@ const pkmnEmbedColors = [
   }
 ]
 
-exports.footerCred = "Alcremie-B - by Droopy";
-exports.colorFinder = (pkmn) => {
+const footerCred = "Alcremie-B - by Droopy";
+const colorFinder = (pkmn) => {
   let color = pkmnEmbedColors.find(x => {
     return x.type == pkmn.type1;
   });
@@ -122,10 +114,12 @@ exports.colorFinder = (pkmn) => {
     return color.color;
 }
 
-exports.imageFinder = (pkmn) => {
+const imageFinder = (pkmn) => {
   let tempName = pkmn.name.replace(" ", "");
+  if (this.dashPkmn.includes(tempName))
+    tempName = tempName.replace("-", "");
 
-  let image = pkmn.generation == "SwordShield"? `https://play.pokemonshowdown.com/sprites/bw/${tempName.toLowerCase()}.png` : `https://play.pokemonshowdown.com/sprites/xyani/${tempName.toLowerCase()}.gif`;
+  let image = pkmn.generation == "SwordShield"? `https://projectpokemon.org/images/normal-sprite/${tempName.toLowerCase()}.gif` : `https://play.pokemonshowdown.com/sprites/xyani/${tempName.toLowerCase()}.gif`;
 
   return image;
 }

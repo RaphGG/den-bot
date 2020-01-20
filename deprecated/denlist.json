@@ -1,0 +1,1510 @@
+[
+  {
+    "name": "Charmander",
+    "dens": "53 77"
+  },
+  {
+    "name": "Charmeleon",
+    "dens": "53 77"
+  },
+  {
+    "name": "Charizard",
+    "dens": "53 77"
+  },
+  {
+    "name": "Caterpie",
+    "dens": "4 5"
+  },
+  {
+    "name": "Metapod",
+    "dens": "4 5"
+  },
+  {
+    "name": "Butterfree",
+    "dens": "4 5 61 89 90"
+  },
+  {
+    "name": "Pikachu",
+    "dens": "24 24 25 56 57 57 72 72"
+  },
+  {
+    "name": "Raichu",
+    "dens": "24"
+  },
+  {
+    "name": "Clefairy",
+    "dens": "33 34"
+  },
+  {
+    "name": "Clefable",
+    "dens": "33 34"
+  },
+  {
+    "name": "Vulpix",
+    "dens": "Sword 18 19 19 20 53 54 71 71 77 80"
+  },
+  {
+    "name": "Ninetales",
+    "dens": "Sword 18 19 20 53 53 54 71 77 77 80 /Shield 71"
+  },
+  {
+    "name": "Oddish",
+    "dens": "26 29 30"
+  },
+  {
+    "name": "Gloom",
+    "dens": "26 30"
+  },
+  {
+    "name": "Vileplume",
+    "dens": "26 29 30"
+  },
+  {
+    "name": "Diglett",
+    "dens": "16"
+  },
+  {
+    "name": "Dugtrio",
+    "dens": "16"
+  },
+  {
+    "name": "Meowth-Galar",
+    "dens": "11 49 85"
+  },
+  {
+    "name": "Growlithe",
+    "dens": "Shield 18 19 19 20 53 54 71 71 77 80"
+  },
+  {
+    "name": "Arcanine",
+    "dens": "Sword 71 /Shield 18 18 19 19 20 20 53 54 71 77 80"
+  },
+  {
+    "name": "Machop",
+    "dens": "Sword 1 48 81 /Shield 1 48"
+  },
+  {
+    "name": "Machoke",
+    "dens": "Sword 1 48 81 /Shield 1 48"
+  },
+  {
+    "name": "Machamp",
+    "dens": "Sword 1 48 81 /Shield 1 48"
+  },
+  {
+    "name": "Ponyta-Galar",
+    "dens":  "Shield 13 82"
+  },
+  {
+    "name": "Rapidash-Galar",
+    "dens":  "Shield 13 34 62 82"
+  },
+  {
+    "name": "Farfetch'd-Galar",
+    "dens": "Sword 10 81"
+  },
+  {
+    "name": "Shellder",
+    "dens": "9 41"
+  },
+  {
+    "name": "Cloyster",
+    "dens": "9 21 22 41"
+  },
+  {
+    "name": "Gastly",
+    "dens": "Sword 6 30 43 /Shield 6 30 43 81"
+  },
+  {
+    "name": "Haunter",
+    "dens": "Sword 6 30 43 /Shield 6 30 43 81"
+  },
+  {
+    "name": "Gengar",
+    "dens": "Sword 43 /Shield 43 81"
+  },
+  {
+    "name": "Onix",
+    "dens": "Sword 15 16 45 51 83 84 /Shield 15 16 45 51 84"
+  },
+  {
+    "name": "Krabby",
+    "dens": "42 75 76 78 91"
+  },
+  {
+    "name": "Kingler",
+    "dens": "42 75 76 78 91"
+  },
+  {
+    "name": "Hitmonlee",
+    "dens": "1"
+  },
+  {
+    "name": "Hitmonchan",
+    "dens": "1"
+  },
+  {
+    "name": "Koffing",
+    "dens": "30 60 86"
+  },
+  {
+    "name": "Weezing-Galar",
+    "dens": "30 60 86"
+  },
+  {
+    "name": "Rhyhorn",
+    "dens": "3"
+  },
+  {
+    "name": "Rhydon",
+    "dens": "3"
+  },
+  {
+    "name": "Mr Mime-Galar",
+    "dens": "Sword 14 22 23 50 55 68 73 /Shield 14 22 23 50 55 68 73 83"
+  },
+  {
+    "name": "Magikarp",
+    "dens": "7 44 75 78"
+  },
+  {
+    "name": "Gyarados",
+    "dens": "7 44 75 78 91"
+  },
+  {
+    "name": "Lapras",
+    "dens": "Sword 21 44 55 67 91 /Shield 21 44 55 67 83 91"
+  },
+  {
+    "name": "Ditto",
+    "dens": "66 66 66 66 66 66 66 66 66 66 66 66"
+  },
+  {
+    "name": "Eevee",
+    "dens": "65 65"
+  },
+  {
+    "name": "Vaporeon",
+    "dens": "67"
+  },
+  {
+    "name": "Jolteon",
+    "dens": "72"
+  },
+  {
+    "name": "Flareon",
+    "dens": "71"
+  },
+  {
+    "name": "Snorlax",
+    "dens": "40 65"
+  },
+  {
+    "name": "Hoothoot",
+    "dens": "31 39 61 89"
+  },
+  {
+    "name": "Noctowl",
+    "dens": "31 39 61 89"
+  },
+  {
+    "name": "Chinchou",
+    "dens": "7 24 25 41 56 72"
+  },
+  {
+    "name": "Lanturn",
+    "dens": "7 24 25 41 56 72"
+  },
+  {
+    "name": "Pichu",
+    "dens": "24 57"
+  },
+  {
+    "name": "Cleffa",
+    "dens": "33"
+  },
+  {
+    "name": "Togepi",
+    "dens": "33 62 74 82 87"
+  },
+  {
+    "name": "Togetic",
+    "dens": "33 62 74 82 87"
+  },
+  {
+    "name": "Natu",
+    "dens": "13 14 31 32 61 89"
+  },
+  {
+    "name": "Xatu",
+    "dens": "13 14 31 32 61 89"
+  },
+  {
+    "name": "Bellossom",
+    "dens": "26"
+  },
+  {
+    "name": "Sudowoodo",
+    "dens": "Sword 3 51 83 /Shield 3"
+  },
+  {
+    "name": "Wooper",
+    "dens": "9 52 75 93"
+  },
+  {
+    "name": "Quagsire",
+    "dens": "9 52 75 93"
+  },
+  {
+    "name": "Espeon",
+    "dens": "68"
+  },
+  {
+    "name": "Umbreon",
+    "dens": "69"
+  },
+  {
+    "name": "Wobbuffet",
+    "dens": "14"
+  },
+  {
+    "name": "Steelix",
+    "dens": "Sword 12 16 45 51 83 84 /Shield 12 12 16 45 51 84"
+  },
+  {
+    "name": "Qwilfish",
+    "dens": "29 30 44 75 76 78"
+  },
+  {
+    "name": "Shuckle",
+    "dens": "3"
+  },
+  {
+    "name": "Sneasel",
+    "dens": "22 23 35 63"
+  },
+  {
+    "name": "Swinub",
+    "dens": "17 21 22"
+  },
+  {
+    "name": "Piloswine",
+    "dens": "17 21 22"
+  },
+  {
+    "name": "Corsola-Galar",
+    "dens":  "Shield 43 47 81"
+  },
+  {
+    "name": "Remoraid",
+    "dens": "7 76"
+  },
+  {
+    "name": "Octillery",
+    "dens": "7 76"
+  },
+  {
+    "name": "Delibird",
+    "dens": "Sword 21 55 61 /Shield 21 23 55 61 83"
+  },
+  {
+    "name": "Mantine",
+    "dens": "7 67 76"
+  },
+  {
+    "name": "Tyrogue",
+    "dens": "1 10"
+  },
+  {
+    "name": "Hitmontop",
+    "dens": "1"
+  },
+  {
+    "name": "Larvitar",
+    "dens":  "Shield 51"
+  },
+  {
+    "name": "Pupitar",
+    "dens":  "Shield 51"
+  },
+  {
+    "name": "Tyranitar",
+    "dens":  "Shield 36 51 63 88"
+  },
+  {
+    "name": "Zigzagoon-Galar",
+    "dens": "36 40 63 69 88"
+  },
+  {
+    "name": "Linoone-Galar",
+    "dens": "36 40 63 69 88"
+  },
+  {
+    "name": "Lotad",
+    "dens":  "Shield 26 58 59 79"
+  },
+  {
+    "name": "Lombre",
+    "dens":  "Shield 26 58 59 79"
+  },
+  {
+    "name": "Ludicolo",
+    "dens":  "Shield 26 58 59 79"
+  },
+  {
+    "name": "Seedot",
+    "dens": "Sword 26 58 59 79"
+  },
+  {
+    "name": "Nuzleaf",
+    "dens": "Sword 26 58 59 79"
+  },
+  {
+    "name": "Shiftry",
+    "dens": "Sword 26 35 58 59 79"
+  },
+  {
+    "name": "Wingull",
+    "dens": "32 61 89"
+  },
+  {
+    "name": "Pelipper",
+    "dens": "32 61 89"
+  },
+  {
+    "name": "Ralts",
+    "dens": "2 34 50 62 74 82 87"
+  },
+  {
+    "name": "Kirlia",
+    "dens": "2 34 50"
+  },
+  {
+    "name": "Gardevoir",
+    "dens": "2 34 50 62 74 82 87"
+  },
+  {
+    "name": "Nincada",
+    "dens": "4 16"
+  },
+  {
+    "name": "Ninjask",
+    "dens": "4"
+  },
+  {
+    "name": "Shedinja",
+    "dens": "46"
+  },
+  {
+    "name": "Sableye",
+    "dens":  "Shield 35 43 47 81"
+  },
+  {
+    "name": "Mawile",
+    "dens": "Sword 12 34 62 82"
+  },
+  {
+    "name": "Electrike",
+    "dens": "24 57"
+  },
+  {
+    "name": "Manectric",
+    "dens": "24"
+  },
+  {
+    "name": "Roselia",
+    "dens": "26 27 28 29 30 58 79"
+  },
+  {
+    "name": "Wailmer",
+    "dens": "7 8 76"
+  },
+  {
+    "name": "Wailord",
+    "dens": "7 8 76"
+  },
+  {
+    "name": "Torkoal",
+    "dens": "Sword 18 19 20 53 54 71 77 80 /Shield 18 19 20 20 53 54 71 77 80"
+  },
+  {
+    "name": "Trapinch",
+    "dens": "17 37 64"
+  },
+  {
+    "name": "Vibrava",
+    "dens": "Sword 17 37 /Shield 17 37 64"
+  },
+  {
+    "name": "Flygon",
+    "dens": "Sword 17 37 /Shield 17 37 64"
+  },
+  {
+    "name": "Lunatone",
+    "dens":  "Shield 2"
+  },
+  {
+    "name": "Solrock",
+    "dens": "Sword 2"
+  },
+  {
+    "name": "Barboach",
+    "dens": "16 52 75 93"
+  },
+  {
+    "name": "Whiscash",
+    "dens": "16 75"
+  },
+  {
+    "name": "Corphish",
+    "dens": "9 42 67 91"
+  },
+  {
+    "name": "Crawdaunt",
+    "dens": "9 35 42 67 91"
+  },
+  {
+    "name": "Baltoy",
+    "dens": "14"
+  },
+  {
+    "name": "Claydol",
+    "dens": "14"
+  },
+  {
+    "name": "Feebas",
+    "dens": "44"
+  },
+  {
+    "name": "Milotic",
+    "dens": "44"
+  },
+  {
+    "name": "Duskull",
+    "dens": "6 43"
+  },
+  {
+    "name": "Dusclops",
+    "dens": "6 43"
+  },
+  {
+    "name": "Wynaut",
+    "dens": "14"
+  },
+  {
+    "name": "Snorunt",
+    "dens": "Sword 23 55 73 /Shield 23 55 73 83"
+  },
+  {
+    "name": "Glalie",
+    "dens": "Sword 23 55 /Shield 23 55 83"
+  },
+  {
+    "name": "Budew",
+    "dens": "26 27 58 79"
+  },
+  {
+    "name": "Roserade",
+    "dens": "58 79"
+  },
+  {
+    "name": "Combee",
+    "dens": "5"
+  },
+  {
+    "name": "Vespiquen",
+    "dens": "5"
+  },
+  {
+    "name": "Cherubi",
+    "dens": "27 59 70"
+  },
+  {
+    "name": "Cherrim",
+    "dens": "27 59 70"
+  },
+  {
+    "name": "Shellos",
+    "dens": "8 42"
+  },
+  {
+    "name": "Gastrodon",
+    "dens": "8 42 52 78 93"
+  },
+  {
+    "name": "Drifloon",
+    "dens": "6 32 47"
+  },
+  {
+    "name": "Drifblim",
+    "dens": "6 32 47"
+  },
+  {
+    "name": "Stunky",
+    "dens": "29 35 60 86"
+  },
+  {
+    "name": "Skuntank",
+    "dens": "29 35 60 86"
+  },
+  {
+    "name": "Bronzor",
+    "dens": "11 12 12 14 45 49 68 84 85"
+  },
+  {
+    "name": "Bronzong",
+    "dens": "11 12 45 49 68 84 85"
+  },
+  {
+    "name": "Bonsly",
+    "dens": "Sword 3 51 83 /Shield 3 51"
+  },
+  {
+    "name": "Mime Jr",
+    "dens": "13 14 34"
+  },
+  {
+    "name": "Munchlax",
+    "dens": "40"
+  },
+  {
+    "name": "Riolu",
+    "dens": "Sword 45 48 81 84 /Shield 45 48 84"
+  },
+  {
+    "name": "Lucario",
+    "dens": "Sword 45 48 81 /Shield 45 48"
+  },
+  {
+    "name": "Hippopotas",
+    "dens": "17"
+  },
+  {
+    "name": "Hippowdon",
+    "dens": "17"
+  },
+  {
+    "name": "Skorupi",
+    "dens": "29 30 60 86"
+  },
+  {
+    "name": "Drapion",
+    "dens": "29 60 86"
+  },
+  {
+    "name": "Croagunk",
+    "dens":  "Shield 1 48"
+  },
+  {
+    "name": "Toxicroak",
+    "dens":  "Shield 1 48"
+  },
+  {
+    "name": "Mantyke",
+    "dens": "7 67 76"
+  },
+  {
+    "name": "Snover",
+    "dens": "21 23"
+  },
+  {
+    "name": "Abomasnow",
+    "dens": "21 23"
+  },
+  {
+    "name": "Weavile",
+    "dens": "22 35 63"
+  },
+  {
+    "name": "Rhyperior",
+    "dens": "15 52 93"
+  },
+  {
+    "name": "Togekiss",
+    "dens": "33 62 74 82 87"
+  },
+  {
+    "name": "Leafeon",
+    "dens": "70"
+  },
+  {
+    "name": "Glaceon",
+    "dens": "73"
+  },
+  {
+    "name": "Mamoswine",
+    "dens": "22"
+  },
+  {
+    "name": "Gallade",
+    "dens": "Sword 48 81 /Shield 48"
+  },
+  {
+    "name": "Dusknoir",
+    "dens": "43"
+  },
+  {
+    "name": "Froslass",
+    "dens": "23 73"
+  },
+  {
+    "name": "Rotom",
+    "dens": "57 57 57 57 57"
+  },
+  {
+    "name": "Purrloin",
+    "dens": "35 36"
+  },
+  {
+    "name": "Liepard",
+    "dens": "35 63 69 88"
+  },
+  {
+    "name": "Munna",
+    "dens": "2"
+  },
+  {
+    "name": "Musharna",
+    "dens": "2"
+  },
+  {
+    "name": "Pidove",
+    "dens": "31 39 65"
+  },
+  {
+    "name": "Tranquill",
+    "dens": "31 65"
+  },
+  {
+    "name": "Unfezant",
+    "dens": "31 39 65"
+  },
+  {
+    "name": "Roggenrola",
+    "dens": "Sword 3 15 /Shield 3 15 51"
+  },
+  {
+    "name": "Boldore",
+    "dens": "3 15"
+  },
+  {
+    "name": "Gigalith",
+    "dens": "3 15"
+  },
+  {
+    "name": "Woobat",
+    "dens": "31 50 68"
+  },
+  {
+    "name": "Swoobat",
+    "dens": "31 50 68"
+  },
+  {
+    "name": "Drilbur",
+    "dens": "16"
+  },
+  {
+    "name": "Excadrill",
+    "dens": "16"
+  },
+  {
+    "name": "Timburr",
+    "dens": "1"
+  },
+  {
+    "name": "Gurdurr",
+    "dens": "1"
+  },
+  {
+    "name": "Conkeldurr",
+    "dens": "1"
+  },
+  {
+    "name": "Tympole",
+    "dens": "9 41"
+  },
+  {
+    "name": "Palpitoad",
+    "dens": "9 41 52 93"
+  },
+  {
+    "name": "Seismitoad",
+    "dens": "9 41 52 93"
+  },
+  {
+    "name": "Throh",
+    "dens":  "Shield 10"
+  },
+  {
+    "name": "Sawk",
+    "dens": "Sword 10"
+  },
+  {
+    "name": "Cottonee",
+    "dens": "27 59 70"
+  },
+  {
+    "name": "Whimsicott",
+    "dens": "27 59 70"
+  },
+  {
+    "name": "Basculin",
+    "dens": "7 8 44 67 76 78 91"
+  },
+  {
+    "name": "Darumaka-Galar",
+    "dens": "Sword 18 20 23 55"
+  },
+  {
+    "name": "Darmanitan-Galar",
+    "dens": "Sword 18 20 23 55"
+  },
+  {
+    "name": "Maractus",
+    "dens": "28"
+  },
+  {
+    "name": "Dwebble",
+    "dens": "Sword 3 15 46 51 83 90 92 /Shield 3 15 46 51 90 92"
+  },
+  {
+    "name": "Crustle",
+    "dens": "Sword 3 15 51 83 /Shield 3 15 51"
+  },
+  {
+    "name": "Scraggy",
+    "dens": "Sword 1 48 63 88"
+  },
+  {
+    "name": "Scrafty",
+    "dens": "Sword 1 48 63 88"
+  },
+  {
+    "name": "Sigilyph",
+    "dens": "Sword 13 13 14 31 89 /Shield 13 14 31 89"
+  },
+  {
+    "name": "Yamask-Galar",
+    "dens": "Sword 17 43 47 52 93 /Shield 17 43 47 52 81 93"
+  },
+  {
+    "name": "Trubbish",
+    "dens": "29 60 86"
+  },
+  {
+    "name": "Garbodor",
+    "dens": "29 60 86"
+  },
+  {
+    "name": "Minccino",
+    "dens": "39"
+  },
+  {
+    "name": "Cinccino",
+    "dens": "39"
+  },
+  {
+    "name": "Gothita",
+    "dens": "Sword 2"
+  },
+  {
+    "name": "Gothorita",
+    "dens": "Sword 2"
+  },
+  {
+    "name": "Gothitelle",
+    "dens": "Sword 2"
+  },
+  {
+    "name": "Solosis",
+    "dens":  "Shield 2"
+  },
+  {
+    "name": "Duosion",
+    "dens":  "Shield 2"
+  },
+  {
+    "name": "Reuniclus",
+    "dens":  "Shield 2"
+  },
+  {
+    "name": "Vanillite",
+    "dens": "Sword 21 55 73 /Shield 21 55 73 83"
+  },
+  {
+    "name": "Vanillish",
+    "dens": "21 73"
+  },
+  {
+    "name": "Vanilluxe",
+    "dens": "Sword 21 55 73 /Shield 21 55 73 83"
+  },
+  {
+    "name": "Karrablast",
+    "dens": "46 90 92"
+  },
+  {
+    "name": "Escavalier",
+    "dens": "Sword 46 90 92"
+  },
+  {
+    "name": "Frillish",
+    "dens": "6"
+  },
+  {
+    "name": "Jellicent",
+    "dens": "6 42"
+  },
+  {
+    "name": "Joltik",
+    "dens": "4 5 24 56 57"
+  },
+  {
+    "name": "Galvantula",
+    "dens": "4 5 24 56"
+  },
+  {
+    "name": "Ferroseed",
+    "dens": "11 12 27 49 58 70 79 85"
+  },
+  {
+    "name": "Ferrothorn",
+    "dens": "12 27 49 58 70 79 85"
+  },
+  {
+    "name": "Klink",
+    "dens": "11 12 12 45 84"
+  },
+  {
+    "name": "Klang",
+    "dens": "11 45 84"
+  },
+  {
+    "name": "Klinklang",
+    "dens": "11 45 84"
+  },
+  {
+    "name": "Elgyem",
+    "dens": "2"
+  },
+  {
+    "name": "Litwick",
+    "dens": "18 19 20 53 54 71 77 80"
+  },
+  {
+    "name": "Lampent",
+    "dens": "18 19 54 71 80"
+  },
+  {
+    "name": "Chandelure",
+    "dens": "19 54 71 80"
+  },
+  {
+    "name": "Axew",
+    "dens": "37 64"
+  },
+  {
+    "name": "Fraxure",
+    "dens": "Sword 37 64 /Shield 37"
+  },
+  {
+    "name": "Haxorus",
+    "dens": "Sword 37 64 /Shield 37"
+  },
+  {
+    "name": "Cubchoo",
+    "dens": "Sword 22 /Shield 22 55 83"
+  },
+  {
+    "name": "Beartic",
+    "dens": "22"
+  },
+  {
+    "name": "Shelmet",
+    "dens": "46 90 92"
+  },
+  {
+    "name": "Accelgor",
+    "dens":  "Shield 46 90 92"
+  },
+  {
+    "name": "Stunfisk-Galar",
+    "dens": "17 49 52 85 93"
+  },
+  {
+    "name": "Golett",
+    "dens": "52 93"
+  },
+  {
+    "name": "Golurk",
+    "dens": "52 93"
+  },
+  {
+    "name": "Pawniard",
+    "dens": "11 12 35 45 49 69 84 85"
+  },
+  {
+    "name": "Bisharp",
+    "dens": "11 12 35 45 49 69 84 85"
+  },
+  {
+    "name": "Rufflet",
+    "dens": "Sword 31"
+  },
+  {
+    "name": "Braviary",
+    "dens": "Sword 31 40 65"
+  },
+  {
+    "name": "Vullaby",
+    "dens":  "Shield 31 36 63 88"
+  },
+  {
+    "name": "Mandibuzz",
+    "dens":  "Shield 31 36 63 88"
+  },
+  {
+    "name": "Heatmor",
+    "dens": "Sword 18 53 54 71 77 80 /Shield 18 18 53 53 54 71 77 77 80"
+  },
+  {
+    "name": "Durant",
+    "dens": "4 4 45 84"
+  },
+  {
+    "name": "Deino",
+    "dens": "Sword 36"
+  },
+  {
+    "name": "Zweilous",
+    "dens": "Sword 36"
+  },
+  {
+    "name": "Hydreigon",
+    "dens": "Sword 36 63 88"
+  },
+  {
+    "name": "Bunnelby",
+    "dens": "39 65"
+  },
+  {
+    "name": "Diggersby",
+    "dens": "16 39 40"
+  },
+  {
+    "name": "Pancham",
+    "dens": "10"
+  },
+  {
+    "name": "Pangoro",
+    "dens": "10 63 69 88"
+  },
+  {
+    "name": "Espurr",
+    "dens": "2"
+  },
+  {
+    "name": "Meowstic",
+    "dens": "2"
+  },
+  {
+    "name": "Honedge",
+    "dens": "Sword 47 49 85 /Shield 47 49 81 85"
+  },
+  {
+    "name": "Doublade",
+    "dens": "Sword 47 /Shield 47 81"
+  },
+  {
+    "name": "Aegislash",
+    "dens": "47"
+  },
+  {
+    "name": "Spritzee",
+    "dens":  "Shield 33 74 87"
+  },
+  {
+    "name": "Aromatisse",
+    "dens":  "Shield 33 74 87"
+  },
+  {
+    "name": "Swirlix",
+    "dens": "Sword 33 74 87"
+  },
+  {
+    "name": "Slurpuff",
+    "dens": "Sword 33 74 87"
+  },
+  {
+    "name": "Inkay",
+    "dens": "35 50 68 69"
+  },
+  {
+    "name": "Malamar",
+    "dens": "35 50 68 69"
+  },
+  {
+    "name": "Binacle",
+    "dens": "Sword 3 15 42 51 76 83 /Shield 3 15 42 76"
+  },
+  {
+    "name": "Barbaracle",
+    "dens": "Sword 3 15 42 51 83 /Shield 3 15 42"
+  },
+  {
+    "name": "Helioptile",
+    "dens": "25 39 57 72"
+  },
+  {
+    "name": "Heliolisk",
+    "dens": "25 39 72"
+  },
+  {
+    "name": "Sylveon",
+    "dens": "74"
+  },
+  {
+    "name": "Hawlucha",
+    "dens": "Sword 10 32 61 81 89 /Shield 10 32 48 61 89"
+  },
+  {
+    "name": "Goomy",
+    "dens":  "Shield 37 38 64"
+  },
+  {
+    "name": "Sliggoo",
+    "dens":  "Shield 37 38 64"
+  },
+  {
+    "name": "Goodra",
+    "dens":  "Shield 37 38 64"
+  },
+  {
+    "name": "Phantump",
+    "dens": "6 28"
+  },
+  {
+    "name": "Trevenant",
+    "dens": "6 28"
+  },
+  {
+    "name": "Pumpkaboo",
+    "dens": "Sword 6 28 28 28 28 43 47 /Shield 6 28 28 28 28"
+  },
+  {
+    "name": "Gourgeist",
+    "dens": "Sword 6 28 43 47 47 /Shield 6 28"
+  },
+  {
+    "name": "Bergmite",
+    "dens": "Sword 21 55 73 /Shield 21 55 73 83"
+  },
+  {
+    "name": "Avalugg",
+    "dens": "Sword 21 55 73 /Shield 21 55 73 83"
+  },
+  {
+    "name": "Noibat",
+    "dens": "32 37 37 38 38"
+  },
+  {
+    "name": "Noivern",
+    "dens": "38"
+  },
+  {
+    "name": "Grubbin",
+    "dens": "4"
+  },
+  {
+    "name": "Charjabug",
+    "dens": "4 24"
+  },
+  {
+    "name": "Vikavolt",
+    "dens": "4 24 72"
+  },
+  {
+    "name": "Cutiefly",
+    "dens": "5 33"
+  },
+  {
+    "name": "Ribombee",
+    "dens": "5 33"
+  },
+  {
+    "name": "Wishiwashi",
+    "dens": "7 8 41 75 78"
+  },
+  {
+    "name": "Mareanie",
+    "dens": "Sword 29 41 44 60 67 86 91 /Shield 29 41 44 67 91"
+  },
+  {
+    "name": "Toxapex",
+    "dens": "Sword 29 41 44 60 67 86 91 /Shield 29 41 44 67 91"
+  },
+  {
+    "name": "Mudbray",
+    "dens": "16"
+  },
+  {
+    "name": "Mudsdale",
+    "dens": "16"
+  },
+  {
+    "name": "Dewpider",
+    "dens": "8 46 75 90 92"
+  },
+  {
+    "name": "Araquanid",
+    "dens": "8 46 75 90 92"
+  },
+  {
+    "name": "Morelull",
+    "dens": "Sword 28 33 59 62 82 /Shield 28 33 59 62"
+  },
+  {
+    "name": "Shiinotic",
+    "dens": "28 33 59 62 82"
+  },
+  {
+    "name": "Salandit",
+    "dens": "Sword 18 19 19 20 54 80 /Shield 18 19 19 20 54 60 80 86"
+  },
+  {
+    "name": "Salazzle",
+    "dens": "Sword 18 19 19 20 53 77 /Shield 18 19 19 20 53 54 60 77 86"
+  },
+  {
+    "name": "Stufful",
+    "dens": "Sword 10 39 48 81 /Shield 10 10 39 48"
+  },
+  {
+    "name": "Bewear",
+    "dens": "Sword 10 39 48 81 /Shield 10 10 39 48"
+  },
+  {
+    "name": "Bounsweet",
+    "dens": "26 70"
+  },
+  {
+    "name": "Steenee",
+    "dens": "26 70"
+  },
+  {
+    "name": "Tsareena",
+    "dens": "26 70"
+  },
+  {
+    "name": "Oranguru",
+    "dens":  "Shield 13 40 65"
+  },
+  {
+    "name": "Passimian",
+    "dens": "Sword 48"
+  },
+  {
+    "name": "Wimpod",
+    "dens": "46 90 92"
+  },
+  {
+    "name": "Golisopod",
+    "dens": "46 90 92"
+  },
+  {
+    "name": "Pyukumuku",
+    "dens": "9 42 44 67 76 78 91"
+  },
+  {
+    "name": "Turtonator",
+    "dens": "Sword 19 37 54 64"
+  },
+  {
+    "name": "Togedemaru",
+    "dens": "12 25 56"
+  },
+  {
+    "name": "Mimikyu",
+    "dens": "62"
+  },
+  {
+    "name": "Drampa",
+    "dens":  "Shield 37 64"
+  },
+  {
+    "name": "Dhelmise",
+    "dens": "28 59"
+  },
+  {
+    "name": "Jangmo-o",
+    "dens": "Sword 37 38 64"
+  },
+  {
+    "name": "Hakamo-o",
+    "dens": "Sword 37 38 64"
+  },
+  {
+    "name": "Kommo-o",
+    "dens": "Sword 37 38 64"
+  },
+  {
+    "name": "Skwovet",
+    "dens": "40 65"
+  },
+  {
+    "name": "Greedent",
+    "dens": "40 40"
+  },
+  {
+    "name": "Rookidee",
+    "dens": "32 61 89"
+  },
+  {
+    "name": "Corvisquire",
+    "dens": "32 61 89"
+  },
+  {
+    "name": "Corviknight",
+    "dens": "32 61 89"
+  },
+  {
+    "name": "Blipbug",
+    "dens": "5 13 46 90 92"
+  },
+  {
+    "name": "Dottler",
+    "dens": "Sword 5 13 46 90 92 /Shield 5 46 90 92"
+  },
+  {
+    "name": "Orbeetle",
+    "dens": "Sword 5 13 46 90 92 92 /Shield 5 46 90 92 92"
+  },
+  {
+    "name": "Nickit",
+    "dens": "36 63 69 88"
+  },
+  {
+    "name": "Thievul",
+    "dens": "36 63 69 88"
+  },
+  {
+    "name": "Gossifleur",
+    "dens": "27 58 59 70 79"
+  },
+  {
+    "name": "Eldegoss",
+    "dens": "27 58 59 70 79"
+  },
+  {
+    "name": "Wooloo",
+    "dens": "40 65"
+  },
+  {
+    "name": "Dubwool",
+    "dens": "40 65"
+  },
+  {
+    "name": "Chewtle",
+    "dens": "8 9 42 44 67 78 91"
+  },
+  {
+    "name": "Drednaw",
+    "dens": "8 9 42 78"
+  },
+  {
+    "name": "Yamper",
+    "dens": "25 56 72"
+  },
+  {
+    "name": "Boltund",
+    "dens": "25 56 72"
+  },
+  {
+    "name": "Rolycoly",
+    "dens": "Sword 15 51 83 /Shield 15 51"
+  },
+  {
+    "name": "Carkol",
+    "dens": "Sword 15 20 51 54 71 80 83 /Shield 15 20 51 54 71 80"
+  },
+  {
+    "name": "Coalossal",
+    "dens": "Sword 15 20 51 54 80 83 /Shield 15 20 51 54 80"
+  },
+  {
+    "name": "Applin",
+    "dens": "27 38 38 58 64 79"
+  },
+  {
+    "name": "Flapple",
+    "dens": "Sword 27 38 58 79"
+  },
+  {
+    "name": "Appletun",
+    "dens":  "Shield 27 38 58 79"
+  },
+  {
+    "name": "Silicobra",
+    "dens": "17"
+  },
+  {
+    "name": "Sandaconda",
+    "dens": "17 93"
+  },
+  {
+    "name": "Cramorant",
+    "dens": "32"
+  },
+  {
+    "name": "Arrokuda",
+    "dens": "8 41 44 67 78 91"
+  },
+  {
+    "name": "Barraskewda",
+    "dens": "8 41"
+  },
+  {
+    "name": "Toxel",
+    "dens": "25 30 56 57 60 72 86"
+  },
+  {
+    "name": "Toxtricity",
+    "dens": "25 30 56 60 72 86"
+  },
+  {
+    "name": "Sizzlipede",
+    "dens": "18 20 53 54 71 77 80"
+  },
+  {
+    "name": "Centiskorch",
+    "dens": "18 20 53 77 80"
+  },
+  {
+    "name": "Clobbopus",
+    "dens": "10"
+  },
+  {
+    "name": "Grapploct",
+    "dens": "10"
+  },
+  {
+    "name": "Sinistea",
+    "dens": "Sword 43 47 /Shield 43 47 81"
+  },
+  {
+    "name": "Polteageist",
+    "dens": "Sword 43 47 /Shield 47 81"
+  },
+  {
+    "name": "Hatenna",
+    "dens": "13 50 68"
+  },
+  {
+    "name": "Hattrem",
+    "dens": "13 50 68"
+  },
+  {
+    "name": "Hatterene",
+    "dens": "13 50 68 87"
+  },
+  {
+    "name": "Impidimp",
+    "dens": "34 36 62 74 82 87 88"
+  },
+  {
+    "name": "Morgrem",
+    "dens": "34 36 62 74 82 87 88"
+  },
+  {
+    "name": "Grimmsnarl",
+    "dens": "34 36 62 74 82 87 88"
+  },
+  {
+    "name": "Obstagoon",
+    "dens": "36 63 69"
+  },
+  {
+    "name": "Perrserker",
+    "dens": "11 49 85"
+  },
+  {
+    "name": "Cursola",
+    "dens":  "Shield 43 47 81"
+  },
+  {
+    "name": "Sirfetch'd",
+    "dens": "Sword 10 81"
+  },
+  {
+    "name": "Mr Rime",
+    "dens": "Sword 14 22 23 50 55 68 73 /Shield 14 22 23 50 55 68 73 83"
+  },
+  {
+    "name": "Runerigus",
+    "dens": "Sword 17 43 47 52 /Shield 17 43 47 52 81"
+  },
+  {
+    "name": "Milcery",
+    "dens": "34 74 87"
+  },
+  {
+    "name": "Alcremie",
+    "dens": "34 82"
+  },
+  {
+    "name": "Falinks",
+    "dens": "Sword 10 48 81 /Shield 10 48"
+  },
+  {
+    "name": "Pincurchin",
+    "dens": "25 56"
+  },
+  {
+    "name": "Snom",
+    "dens": "22 23 73"
+  },
+  {
+    "name": "Frosmoth",
+    "dens": "22 23 73"
+  },
+  {
+    "name": "Stonjourner",
+    "dens": "Sword 51 83"
+  },
+  {
+    "name": "Eiscue",
+    "dens":  "Shield 23 55 83"
+  },
+  {
+    "name": "Indeedee",
+    "dens": "13 14 40 65"
+  },
+  {
+    "name": "Morpeko",
+    "dens": "25 56"
+  },
+  {
+    "name": "Cufant",
+    "dens": "11"
+  },
+  {
+    "name": "Copperajah",
+    "dens": "11 49 85"
+  },
+  {
+    "name": "Duraludon",
+    "dens": "49 84 85"
+  },
+  {
+    "name": "Dreepy",
+    "dens": "38 64"
+  },
+  {
+    "name": "Drakloak",
+    "dens": "38 64"
+  },
+  {
+    "name": "Dragapult",
+    "dens": "38 64"
+  }
+ ]

@@ -1,0 +1,7079 @@
+[
+  {
+    "dexId": 1,
+    "name": "Bulbasaur",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Chlorophyll"
+  },
+  {
+    "dexId": 2,
+    "name": "Ivysaur",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Chlorophyll"
+  },
+  {
+    "dexId": 3,
+    "name": "Venusaur",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Chlorophyll"
+  },
+  {
+    "dexId": 3,
+    "name": "Venusaur-Mega",
+    "Ab1": "Thick Fat",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 4,
+    "name": "Charmander",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Solar Power"
+  },
+  {
+    "dexId": 5,
+    "name": "Charmeleon",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Solar Power"
+  },
+  {
+    "dexId": 6,
+    "name": "Charizard",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Solar Power"
+  },
+  {
+    "dexId": 6,
+    "name": "Charizard-Mega-X",
+    "Ab1": "Tough Claws",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 6,
+    "name": "Charizard-Mega-Y",
+    "Ab1": "Drought",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 7,
+    "name": "Squirtle",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Rain Dish"
+  },
+  {
+    "dexId": 8,
+    "name": "Wartortle",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Rain Dish"
+  },
+  {
+    "dexId": 9,
+    "name": "Blastoise",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Rain Dish"
+  },
+  {
+    "dexId": 9,
+    "name": "Blastoise-Mega",
+    "Ab1": "Megan Launcher",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 10,
+    "name": "Caterpie",
+    "Ab1": "Shield Dust",
+    "Ab2": "",
+    "Hidden": "Run Away"
+  },
+  {
+    "dexId": 11,
+    "name": "Metapod",
+    "Ab1": "Shed Skin",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 12,
+    "name": "Butterfree",
+    "Ab1": "Compound Eyes",
+    "Ab2": "",
+    "Hidden": "Tinted Lens"
+  },
+  {
+    "dexId": 13,
+    "name": "Weedle",
+    "Ab1": "Shield Dust",
+    "Ab2": "",
+    "Hidden": "Run Away"
+  },
+  {
+    "dexId": 14,
+    "name": "Kakuna",
+    "Ab1": "Shed Skin",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 15,
+    "name": "Beedrill",
+    "Ab1": "Swarm",
+    "Ab2": "",
+    "Hidden": "Sniper"
+  },
+  {
+    "dexId": 15,
+    "name": "Beedrill-Mega",
+    "Ab1": "Adaptability",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 16,
+    "name": "Pidgey",
+    "Ab1": "Keen Eye",
+    "Ab2": "Tangled Feet*",
+    "Hidden": "Big Pecks"
+  },
+  {
+    "dexId": 17,
+    "name": "Pidgeotto",
+    "Ab1": "Keen Eye",
+    "Ab2": "Tangled Feet*",
+    "Hidden": "Big Pecks"
+  },
+  {
+    "dexId": 18,
+    "name": "Pidgeot",
+    "Ab1": "Keen Eye",
+    "Ab2": "Tangled Feet*",
+    "Hidden": "Big Pecks"
+  },
+  {
+    "dexId": 18,
+    "name": "Pidgeot-Mega",
+    "Ab1": "No Guard",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 19,
+    "name": "Rattata",
+    "Ab1": "Run Away",
+    "Ab2": "Guts",
+    "Hidden": "Hustle"
+  },
+  {
+    "dexId": 19,
+    "name": "Rattata-Alola",
+    "Ab1": "Gluttony",
+    "Ab2": "Hustle",
+    "Hidden": "Thick Fat"
+  },
+  {
+    "dexId": 20,
+    "name": "Raticate",
+    "Ab1": "Run Away",
+    "Ab2": "Guts",
+    "Hidden": "Hustle"
+  },
+  {
+    "dexId": 20,
+    "name": "Raticate-Alola",
+    "Ab1": "Gluttony",
+    "Ab2": "Hustle",
+    "Hidden": "Thick Fat"
+  },
+  {
+    "dexId": 21,
+    "name": "Spearow",
+    "Ab1": "Keen Eye",
+    "Ab2": "",
+    "Hidden": "Sniper"
+  },
+  {
+    "dexId": 22,
+    "name": "Fearow",
+    "Ab1": "Keen Eye",
+    "Ab2": "",
+    "Hidden": "Sniper"
+  },
+  {
+    "dexId": 23,
+    "name": "Ekans",
+    "Ab1": "Intimidate",
+    "Ab2": "Shed Skin",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 24,
+    "name": "Arbok",
+    "Ab1": "Intimidate",
+    "Ab2": "Shed Skin",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 172,
+    "name": "Pichu",
+    "Ab1": "Static",
+    "Ab2": "",
+    "Hidden": "Lightning Rod"
+  },
+  {
+    "dexId": 172,
+    "name": "Spiky-eared Pichu",
+    "Ab1": "Static",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 25,
+    "name": "Pikachu",
+    "Ab1": "Static",
+    "Ab2": "",
+    "Hidden": "Lightning Rod"
+  },
+  {
+    "dexId": 25,
+    "name": "Cosplay Pikachu",
+    "Ab1": "Lightning Rod",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 25,
+    "name": "Pikachu in a cap",
+    "Ab1": "Static",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 26,
+    "name": "Raichu",
+    "Ab1": "Static",
+    "Ab2": "",
+    "Hidden": "Lightning Rod"
+  },
+  {
+    "dexId": 26,
+    "name": "Raichu-Alola",
+    "Ab1": "Surge Surfer",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 27,
+    "name": "Sandshrew",
+    "Ab1": "Sand Veil",
+    "Ab2": "",
+    "Hidden": "Sand Rush"
+  },
+  {
+    "dexId": 27,
+    "name": "Sandshrew-Alola",
+    "Ab1": "Snow Cloak",
+    "Ab2": "",
+    "Hidden": "Slush Rush"
+  },
+  {
+    "dexId": 28,
+    "name": "Sandslash",
+    "Ab1": "Sand Veil",
+    "Ab2": "",
+    "Hidden": "Sand Rush"
+  },
+  {
+    "dexId": 28,
+    "name": "Sandslash-Alola",
+    "Ab1": "Snow Cloak",
+    "Ab2": "",
+    "Hidden": "Slush Rush"
+  },
+  {
+    "dexId": 29,
+    "name": "Nidoran♀",
+    "Ab1": "Poison Point",
+    "Ab2": "Rivalry*",
+    "Hidden": "Hustle"
+  },
+  {
+    "dexId": 30,
+    "name": "Nidorina",
+    "Ab1": "Poison Point",
+    "Ab2": "Rivalry*",
+    "Hidden": "Hustle"
+  },
+  {
+    "dexId": 31,
+    "name": "Nidoqueen",
+    "Ab1": "Poison Point",
+    "Ab2": "Rivalry*",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 32,
+    "name": "Nidoran♂",
+    "Ab1": "Poison Point",
+    "Ab2": "Rivalry*",
+    "Hidden": "Hustle"
+  },
+  {
+    "dexId": 33,
+    "name": "Nidorino",
+    "Ab1": "Poison Point",
+    "Ab2": "Rivalry*",
+    "Hidden": "Hustle"
+  },
+  {
+    "dexId": 34,
+    "name": "Nidoking",
+    "Ab1": "Poison Point",
+    "Ab2": "Rivalry*",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 173,
+    "name": "Cleffa",
+    "Ab1": "Cute Charm",
+    "Ab2": "Magic Guard*",
+    "Hidden": "Friend Guard"
+  },
+  {
+    "dexId": 35,
+    "name": "Clefairy",
+    "Ab1": "Cute Charm",
+    "Ab2": "Magic Guard*",
+    "Hidden": "Friend Guard"
+  },
+  {
+    "dexId": 36,
+    "name": "Clefable",
+    "Ab1": "Cute Charm",
+    "Ab2": "Magic Guard*",
+    "Hidden": "Unaware"
+  },
+  {
+    "dexId": 37,
+    "name": "Vulpix",
+    "Ab1": "Flash Fire",
+    "Ab2": "",
+    "Hidden": "Drought"
+  },
+  {
+    "dexId": 37,
+    "name": "Vulpix-Alola",
+    "Ab1": "Snow Cloak",
+    "Ab2": "",
+    "Hidden": "Snow Warning"
+  },
+  {
+    "dexId": 38,
+    "name": "Ninetales",
+    "Ab1": "Flash Fire",
+    "Ab2": "",
+    "Hidden": "Drought"
+  },
+  {
+    "dexId": 38,
+    "name": "Ninetales-Alola",
+    "Ab1": "Snow Cloak",
+    "Ab2": "",
+    "Hidden": "Snow Warning"
+  },
+  {
+    "dexId": 174,
+    "name": "Igglybuff",
+    "Ab1": "Cute Charm",
+    "Ab2": "Competitive*",
+    "Hidden": "Friend Guard"
+  },
+  {
+    "dexId": 39,
+    "name": "Jigglypuff",
+    "Ab1": "Cute Charm",
+    "Ab2": "Competitive*",
+    "Hidden": "Friend Guard"
+  },
+  {
+    "dexId": 40,
+    "name": "Wigglytuff",
+    "Ab1": "Cute Charm",
+    "Ab2": "Competitive*",
+    "Hidden": "Frisk"
+  },
+  {
+    "dexId": 41,
+    "name": "Zubat",
+    "Ab1": "Inner Focus",
+    "Ab2": "",
+    "Hidden": "Infiltrator"
+  },
+  {
+    "dexId": 42,
+    "name": "Golbat",
+    "Ab1": "Inner Focus",
+    "Ab2": "",
+    "Hidden": "Infiltrator"
+  },
+  {
+    "dexId": 169,
+    "name": "Crobat",
+    "Ab1": "Inner Focus",
+    "Ab2": "",
+    "Hidden": "Infiltrator"
+  },
+  {
+    "dexId": 43,
+    "name": "Oddish",
+    "Ab1": "Chlorophyll",
+    "Ab2": "",
+    "Hidden": "Run Away"
+  },
+  {
+    "dexId": 44,
+    "name": "Gloom",
+    "Ab1": "Chlorophyll",
+    "Ab2": "",
+    "Hidden": "Stench"
+  },
+  {
+    "dexId": 45,
+    "name": "Vileplume",
+    "Ab1": "Chlorophyll",
+    "Ab2": "",
+    "Hidden": "Effect Spore"
+  },
+  {
+    "dexId": 182,
+    "name": "Bellossom",
+    "Ab1": "Chlorophyll",
+    "Ab2": "",
+    "Hidden": "Healer"
+  },
+  {
+    "dexId": 46,
+    "name": "Paras",
+    "Ab1": "Effect Spore",
+    "Ab2": "Dry Skin*",
+    "Hidden": "Damp"
+  },
+  {
+    "dexId": 47,
+    "name": "Parasect",
+    "Ab1": "Effect Spore",
+    "Ab2": "Dry Skin*",
+    "Hidden": "Damp"
+  },
+  {
+    "dexId": 48,
+    "name": "Venonat",
+    "Ab1": "Compound Eyes",
+    "Ab2": "Tinted Lens*",
+    "Hidden": "Run Away"
+  },
+  {
+    "dexId": 49,
+    "name": "Venomoth",
+    "Ab1": "Shield Dust",
+    "Ab2": "Tinted Lens*",
+    "Hidden": "Wonder Skin"
+  },
+  {
+    "dexId": 50,
+    "name": "Diglett",
+    "Ab1": "Sand Veil",
+    "Ab2": "Arena Trap",
+    "Hidden": "Sand Force"
+  },
+  {
+    "dexId": 50,
+    "name": "Diglett-Alola",
+    "Ab1": "Sand Veil",
+    "Ab2": "Tangling Hair",
+    "Hidden": "Sand Force"
+  },
+  {
+    "dexId": 51,
+    "name": "Dugtrio",
+    "Ab1": "Sand Veil",
+    "Ab2": "Arena Trap",
+    "Hidden": "Sand Force"
+  },
+  {
+    "dexId": 51,
+    "name": "Dugtrio-Alola",
+    "Ab1": "Sand Veil",
+    "Ab2": "Tangling Hair",
+    "Hidden": "Sand Force"
+  },
+  {
+    "dexId": 52,
+    "name": "Meowth",
+    "Ab1": "Pickup",
+    "Ab2": "Technician*",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 52,
+    "name": "Meowth-Alola",
+    "Ab1": "Pickup",
+    "Ab2": "Technician",
+    "Hidden": "Rattled"
+  },
+  {
+    "dexId": 52,
+    "name": "Meowth-Galar",
+    "Ab1": "Pickup",
+    "Ab2": "Tough Claws",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 53,
+    "name": "Persian",
+    "Ab1": "Limber",
+    "Ab2": "Technician*",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 53,
+    "name": "Persian-Alola",
+    "Ab1": "Fur Coat",
+    "Ab2": "Technician",
+    "Hidden": "Rattled"
+  },
+  {
+    "dexId": 54,
+    "name": "Psyduck",
+    "Ab1": "Damp",
+    "Ab2": "Cloud Nine",
+    "Hidden": "Swift Swim"
+  },
+  {
+    "dexId": 55,
+    "name": "Golduck",
+    "Ab1": "Damp",
+    "Ab2": "Cloud Nine",
+    "Hidden": "Swift Swim"
+  },
+  {
+    "dexId": 56,
+    "name": "Mankey",
+    "Ab1": "Vital Spirit",
+    "Ab2": "Anger Point*",
+    "Hidden": "Defiant"
+  },
+  {
+    "dexId": 57,
+    "name": "Primeape",
+    "Ab1": "Vital Spirit",
+    "Ab2": "Anger Point*",
+    "Hidden": "Defiant"
+  },
+  {
+    "dexId": 58,
+    "name": "Growlithe",
+    "Ab1": "Intimidate",
+    "Ab2": "Flash Fire",
+    "Hidden": "Justified"
+  },
+  {
+    "dexId": 59,
+    "name": "Arcanine",
+    "Ab1": "Intimidate",
+    "Ab2": "Flash Fire",
+    "Hidden": "Justified"
+  },
+  {
+    "dexId": 60,
+    "name": "Poliwag",
+    "Ab1": "Water Absorb",
+    "Ab2": "Damp",
+    "Hidden": "Swift Swim"
+  },
+  {
+    "dexId": 61,
+    "name": "Poliwhirl",
+    "Ab1": "Water Absorb",
+    "Ab2": "Damp",
+    "Hidden": "Swift Swim"
+  },
+  {
+    "dexId": 62,
+    "name": "Poliwrath",
+    "Ab1": "Water Absorb",
+    "Ab2": "Damp",
+    "Hidden": "Swift Swim"
+  },
+  {
+    "dexId": 186,
+    "name": "Politoed",
+    "Ab1": "Water Absorb",
+    "Ab2": "Damp",
+    "Hidden": "Drizzle"
+  },
+  {
+    "dexId": 63,
+    "name": "Abra",
+    "Ab1": "Synchronize",
+    "Ab2": "Inner Focus",
+    "Hidden": "Magic Guard"
+  },
+  {
+    "dexId": 64,
+    "name": "Kadabra",
+    "Ab1": "Synchronize",
+    "Ab2": "Inner Focus",
+    "Hidden": "Magic Guard"
+  },
+  {
+    "dexId": 65,
+    "name": "Alakazam",
+    "Ab1": "Synchronize",
+    "Ab2": "Inner Focus",
+    "Hidden": "Magic Guard"
+  },
+  {
+    "dexId": 65,
+    "name": "Alakazam-Mega",
+    "Ab1": "Trace",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 66,
+    "name": "Machop",
+    "Ab1": "Guts",
+    "Ab2": "No Guard*",
+    "Hidden": "Steadfast"
+  },
+  {
+    "dexId": 67,
+    "name": "Machoke",
+    "Ab1": "Guts",
+    "Ab2": "No Guard*",
+    "Hidden": "Steadfast"
+  },
+  {
+    "dexId": 68,
+    "name": "Machamp",
+    "Ab1": "Guts",
+    "Ab2": "No Guard*",
+    "Hidden": "Steadfast"
+  },
+  {
+    "dexId": 69,
+    "name": "Bellsprout",
+    "Ab1": "Chlorophyll",
+    "Ab2": "",
+    "Hidden": "Gluttony"
+  },
+  {
+    "dexId": 70,
+    "name": "Weepinbell",
+    "Ab1": "Chlorophyll",
+    "Ab2": "",
+    "Hidden": "Gluttony"
+  },
+  {
+    "dexId": 71,
+    "name": "Victreebel",
+    "Ab1": "Chlorophyll",
+    "Ab2": "",
+    "Hidden": "Gluttony"
+  },
+  {
+    "dexId": 72,
+    "name": "Tentacool",
+    "Ab1": "Clear Body",
+    "Ab2": "Liquid Ooze",
+    "Hidden": "Rain Dish"
+  },
+  {
+    "dexId": 73,
+    "name": "Tentacruel",
+    "Ab1": "Clear Body",
+    "Ab2": "Liquid Ooze",
+    "Hidden": "Rain Dish"
+  },
+  {
+    "dexId": 74,
+    "name": "Geodude",
+    "Ab1": "Rock Head",
+    "Ab2": "Sturdy",
+    "Hidden": "Sand Veil"
+  },
+  {
+    "dexId": 74,
+    "name": "Geodude-Alola",
+    "Ab1": "Magnet Pull",
+    "Ab2": "Sturdy",
+    "Hidden": "Galvanize"
+  },
+  {
+    "dexId": 75,
+    "name": "Graveler",
+    "Ab1": "Rock Head",
+    "Ab2": "Sturdy",
+    "Hidden": "Sand Veil"
+  },
+  {
+    "dexId": 75,
+    "name": "Graveler-Alola",
+    "Ab1": "Magnet Pull",
+    "Ab2": "Sturdy",
+    "Hidden": "Galvanize"
+  },
+  {
+    "dexId": 76,
+    "name": "Golem",
+    "Ab1": "Rock Head",
+    "Ab2": "Sturdy",
+    "Hidden": "Sand Veil"
+  },
+  {
+    "dexId": 76,
+    "name": "Golem-Alola",
+    "Ab1": "Magnet Pull",
+    "Ab2": "Sturdy",
+    "Hidden": "Galvanize"
+  },
+  {
+    "dexId": 77,
+    "name": "Ponyta",
+    "Ab1": "Run Away",
+    "Ab2": "Flash Fire",
+    "Hidden": "Flame Body"
+  },
+  {
+    "dexId": 77,
+    "name": "Ponyta-Galar",
+    "Ab1": "Run Away",
+    "Ab2": "Pastel Veil",
+    "Hidden": "Anticipation"
+  },
+  {
+    "dexId": 78,
+    "name": "Rapidash",
+    "Ab1": "Run Away",
+    "Ab2": "Flash Fire",
+    "Hidden": "Flame Body"
+  },
+  {
+    "dexId": 78,
+    "name": "Rapidash-Galar",
+    "Ab1": "Run Away",
+    "Ab2": "Pastel Veil",
+    "Hidden": "Anticipation"
+  },
+  {
+    "dexId": 79,
+    "name": "Slowpoke",
+    "Ab1": "Oblivious",
+    "Ab2": "Own Tempo",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 79,
+    "name": "Slowpoke-Galar",
+    "Ab1": "Gluttony",
+    "Ab2": "Own Tempo",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 80,
+    "name": "Slowbro",
+    "Ab1": "Oblivious",
+    "Ab2": "Own Tempo",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 80,
+    "name": "Slowbro-Mega",
+    "Ab1": "Shell Armor",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 199,
+    "name": "Slowking",
+    "Ab1": "Oblivious",
+    "Ab2": "Own Tempo",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 81,
+    "name": "Magnemite",
+    "Ab1": "Magnet Pull",
+    "Ab2": "Sturdy",
+    "Hidden": "Analytic"
+  },
+  {
+    "dexId": 82,
+    "name": "Magneton",
+    "Ab1": "Magnet Pull",
+    "Ab2": "Sturdy",
+    "Hidden": "Analytic"
+  },
+  {
+    "dexId": 462,
+    "name": "Magnezone",
+    "Ab1": "Magnet Pull",
+    "Ab2": "Sturdy",
+    "Hidden": "Analytic"
+  },
+  {
+    "dexId": 83,
+    "name": "Farfetch'd",
+    "Ab1": "Keen Eye",
+    "Ab2": "Inner Focus",
+    "Hidden": "Defiant"
+  },
+  {
+    "dexId": 83,
+    "name": "Farfetch'd-Galar",
+    "Ab1": "Steadfast",
+    "Ab2": "",
+    "Hidden": "Scrappy"
+  },
+  {
+    "dexId": 84,
+    "name": "Doduo",
+    "Ab1": "Run Away",
+    "Ab2": "Early Bird",
+    "Hidden": "Tangled Feet"
+  },
+  {
+    "dexId": 85,
+    "name": "Dodrio",
+    "Ab1": "Run Away",
+    "Ab2": "Early Bird",
+    "Hidden": "Tangled Feet"
+  },
+  {
+    "dexId": 86,
+    "name": "Seel",
+    "Ab1": "Thick Fat",
+    "Ab2": "Hydration*",
+    "Hidden": "Ice Body"
+  },
+  {
+    "dexId": 87,
+    "name": "Dewgong",
+    "Ab1": "Thick Fat",
+    "Ab2": "Hydration*",
+    "Hidden": "Ice Body"
+  },
+  {
+    "dexId": 88,
+    "name": "Grimer",
+    "Ab1": "Stench",
+    "Ab2": "Sticky Hold",
+    "Hidden": "Poison Touch"
+  },
+  {
+    "dexId": 88,
+    "name": "Grimer-Alola",
+    "Ab1": "Poison Touch",
+    "Ab2": "Gluttony",
+    "Hidden": "Power of Alchemy"
+  },
+  {
+    "dexId": 89,
+    "name": "Muk",
+    "Ab1": "Stench",
+    "Ab2": "Sticky Hold",
+    "Hidden": "Poison Touch"
+  },
+  {
+    "dexId": 89,
+    "name": "Muk-Alola",
+    "Ab1": "Poison Touch",
+    "Ab2": "Gluttony",
+    "Hidden": "Power of Alchemy"
+  },
+  {
+    "dexId": 90,
+    "name": "Shellder",
+    "Ab1": "Shell Armor",
+    "Ab2": "Skill Link*",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 91,
+    "name": "Cloyster",
+    "Ab1": "Shell Armor",
+    "Ab2": "Skill Link*",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 92,
+    "name": "Gastly",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 93,
+    "name": "Haunter",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 94,
+    "name": "Gengar*",
+    "Ab1": "Cursed Body",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 94,
+    "name": "Gengar-Mega",
+    "Ab1": "Shadow Tag",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 95,
+    "name": "Onix",
+    "Ab1": "Rock Head",
+    "Ab2": "Sturdy",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 208,
+    "name": "Steelix",
+    "Ab1": "Rock Head",
+    "Ab2": "Sturdy",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 208,
+    "name": "Steelix-Mega",
+    "Ab1": "Sand Force",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 96,
+    "name": "Drowzee",
+    "Ab1": "Insomnia",
+    "Ab2": "Forewarn*",
+    "Hidden": "Inner Focus"
+  },
+  {
+    "dexId": 97,
+    "name": "Hypno",
+    "Ab1": "Insomnia",
+    "Ab2": "Forewarn*",
+    "Hidden": "Inner Focus"
+  },
+  {
+    "dexId": 98,
+    "name": "Krabby",
+    "Ab1": "Hyper Cutter",
+    "Ab2": "Shell Armor",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 99,
+    "name": "Kingler",
+    "Ab1": "Hyper Cutter",
+    "Ab2": "Shell Armor",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 100,
+    "name": "Voltorb",
+    "Ab1": "Soundproof",
+    "Ab2": "Static",
+    "Hidden": "Aftermath"
+  },
+  {
+    "dexId": 101,
+    "name": "Electrode",
+    "Ab1": "Soundproof",
+    "Ab2": "Static",
+    "Hidden": "Aftermath"
+  },
+  {
+    "dexId": 102,
+    "name": "Exeggcute",
+    "Ab1": "Chlorophyll",
+    "Ab2": "",
+    "Hidden": "Harvest"
+  },
+  {
+    "dexId": 103,
+    "name": "Exeggutor",
+    "Ab1": "Chlorophyll",
+    "Ab2": "",
+    "Hidden": "Harvest"
+  },
+  {
+    "dexId": 103,
+    "name": "Exeggutor-Alola",
+    "Ab1": "Frisk",
+    "Ab2": "",
+    "Hidden": "Harvest"
+  },
+  {
+    "dexId": 104,
+    "name": "Cubone",
+    "Ab1": "Rock Head",
+    "Ab2": "Lightning Rod",
+    "Hidden": "Battle Armor"
+  },
+  {
+    "dexId": 105,
+    "name": "Marowak",
+    "Ab1": "Rock Head",
+    "Ab2": "Lightning Rod",
+    "Hidden": "Battle Armor"
+  },
+  {
+    "dexId": 105,
+    "name": "Marowak-Alola",
+    "Ab1": "Cursed Body",
+    "Ab2": "Lightning Rod",
+    "Hidden": "Rock Head"
+  },
+  {
+    "dexId": 236,
+    "name": "Tyrogue",
+    "Ab1": "Guts",
+    "Ab2": "Steadfast*",
+    "Hidden": "Vital Spirit"
+  },
+  {
+    "dexId": 106,
+    "name": "Hitmonlee",
+    "Ab1": "Limber",
+    "Ab2": "Reckless*",
+    "Hidden": "Unburden"
+  },
+  {
+    "dexId": 107,
+    "name": "Hitmonchan",
+    "Ab1": "Keen Eye",
+    "Ab2": "Iron Fist*",
+    "Hidden": "Inner Focus"
+  },
+  {
+    "dexId": 237,
+    "name": "Hitmontop",
+    "Ab1": "Intimidate",
+    "Ab2": "Technician*",
+    "Hidden": "Steadfast"
+  },
+  {
+    "dexId": 108,
+    "name": "Lickitung",
+    "Ab1": "Own Tempo",
+    "Ab2": "Oblivious",
+    "Hidden": "Cloud Nine"
+  },
+  {
+    "dexId": 463,
+    "name": "Lickilicky",
+    "Ab1": "Own Tempo",
+    "Ab2": "Oblivious",
+    "Hidden": "Cloud Nine"
+  },
+  {
+    "dexId": 109,
+    "name": "Koffing",
+    "Ab1": "Levitate",
+    "Ab2": "Neutralizing Gas*",
+    "Hidden": "Stench*"
+  },
+  {
+    "dexId": 110,
+    "name": "Weezing",
+    "Ab1": "Levitate",
+    "Ab2": "Neutralizing Gas*",
+    "Hidden": "Stench*"
+  },
+  {
+    "dexId": 110,
+    "name": "Weezing-Galar",
+    "Ab1": "Levitate",
+    "Ab2": "Neutralizing Gas",
+    "Hidden": "Misty Surge"
+  },
+  {
+    "dexId": 111,
+    "name": "Rhyhorn",
+    "Ab1": "Lightning Rod",
+    "Ab2": "Rock Head",
+    "Hidden": "Reckless"
+  },
+  {
+    "dexId": 112,
+    "name": "Rhydon",
+    "Ab1": "Lightning Rod",
+    "Ab2": "Rock Head",
+    "Hidden": "Reckless"
+  },
+  {
+    "dexId": 464,
+    "name": "Rhyperior",
+    "Ab1": "Lightning Rod",
+    "Ab2": "Solid Rock",
+    "Hidden": "Reckless"
+  },
+  {
+    "dexId": 440,
+    "name": "Happiny",
+    "Ab1": "Natural Cure",
+    "Ab2": "Serene Grace",
+    "Hidden": "Friend Guard"
+  },
+  {
+    "dexId": 113,
+    "name": "Chansey",
+    "Ab1": "Natural Cure",
+    "Ab2": "Serene Grace",
+    "Hidden": "Healer"
+  },
+  {
+    "dexId": 242,
+    "name": "Blissey",
+    "Ab1": "Natural Cure",
+    "Ab2": "Serene Grace",
+    "Hidden": "Healer"
+  },
+  {
+    "dexId": 114,
+    "name": "Tangela",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Leaf Guard*",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 465,
+    "name": "Tangrowth",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Leaf Guard",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 115,
+    "name": "Kangaskhan",
+    "Ab1": "Early Bird",
+    "Ab2": "Scrappy*",
+    "Hidden": "Inner Focus"
+  },
+  {
+    "dexId": 115,
+    "name": "Kangaskhan-Mega",
+    "Ab1": "Parental Bond",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 116,
+    "name": "Horsea",
+    "Ab1": "Swift Swim",
+    "Ab2": "Sniper*",
+    "Hidden": "Damp"
+  },
+  {
+    "dexId": 117,
+    "name": "Seadra",
+    "Ab1": "Poison Point",
+    "Ab2": "Sniper*",
+    "Hidden": "Damp"
+  },
+  {
+    "dexId": 230,
+    "name": "Kingdra",
+    "Ab1": "Swift Swim",
+    "Ab2": "Sniper*",
+    "Hidden": "Damp"
+  },
+  {
+    "dexId": 118,
+    "name": "Goldeen",
+    "Ab1": "Swift Swim",
+    "Ab2": "Water Veil",
+    "Hidden": "Lightning Rod"
+  },
+  {
+    "dexId": 119,
+    "name": "Seaking",
+    "Ab1": "Swift Swim",
+    "Ab2": "Water Veil",
+    "Hidden": "Lightning Rod"
+  },
+  {
+    "dexId": 120,
+    "name": "Staryu",
+    "Ab1": "Illuminate",
+    "Ab2": "Natural Cure",
+    "Hidden": "Analytic"
+  },
+  {
+    "dexId": 121,
+    "name": "Starmie",
+    "Ab1": "Illuminate",
+    "Ab2": "Natural Cure",
+    "Hidden": "Analytic"
+  },
+  {
+    "dexId": 439,
+    "name": "Mime Jr",
+    "Ab1": "Soundproof",
+    "Ab2": "Filter",
+    "Hidden": "Technician"
+  },
+  {
+    "dexId": 122,
+    "name": "Mr Mime",
+    "Ab1": "Soundproof",
+    "Ab2": "Filter*",
+    "Hidden": "Technician"
+  },
+  {
+    "dexId": 122,
+    "name": "Mr Mime-Galar",
+    "Ab1": "Vital Spirit",
+    "Ab2": "Screen Cleaner",
+    "Hidden": "Ice Body"
+  },
+  {
+    "dexId": 123,
+    "name": "Scyther",
+    "Ab1": "Swarm",
+    "Ab2": "Technician*",
+    "Hidden": "Steadfast"
+  },
+  {
+    "dexId": 212,
+    "name": "Scizor",
+    "Ab1": "Swarm",
+    "Ab2": "Technician*",
+    "Hidden": "Light Metal"
+  },
+  {
+    "dexId": 212,
+    "name": "Scizor-Mega",
+    "Ab1": "Technician",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 238,
+    "name": "Smoochum",
+    "Ab1": "Oblivious",
+    "Ab2": "Forewarn*",
+    "Hidden": "Hydration"
+  },
+  {
+    "dexId": 124,
+    "name": "Jynx",
+    "Ab1": "Oblivious",
+    "Ab2": "Forewarn*",
+    "Hidden": "Dry Skin"
+  },
+  {
+    "dexId": 239,
+    "name": "Elekid",
+    "Ab1": "Static",
+    "Ab2": "",
+    "Hidden": "Vital Spirit"
+  },
+  {
+    "dexId": 125,
+    "name": "Electabuzz",
+    "Ab1": "Static",
+    "Ab2": "",
+    "Hidden": "Vital Spirit"
+  },
+  {
+    "dexId": 466,
+    "name": "Electivire",
+    "Ab1": "Motor Drive",
+    "Ab2": "",
+    "Hidden": "Vital Spirit"
+  },
+  {
+    "dexId": 240,
+    "name": "Magby",
+    "Ab1": "Flame Body",
+    "Ab2": "",
+    "Hidden": "Vital Spirit"
+  },
+  {
+    "dexId": 126,
+    "name": "Magmar",
+    "Ab1": "Flame Body",
+    "Ab2": "",
+    "Hidden": "Vital Spirit"
+  },
+  {
+    "dexId": 467,
+    "name": "Magmortar",
+    "Ab1": "Flame Body",
+    "Ab2": "",
+    "Hidden": "Vital Spirit"
+  },
+  {
+    "dexId": 127,
+    "name": "Pinsir",
+    "Ab1": "Hyper Cutter",
+    "Ab2": "Mold Breaker*",
+    "Hidden": "Moxie"
+  },
+  {
+    "dexId": 127,
+    "name": "Pinsir-Mega",
+    "Ab1": "Aerilate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 128,
+    "name": "Tauros",
+    "Ab1": "Intimidate",
+    "Ab2": "Anger Point*",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 129,
+    "name": "Magikarp",
+    "Ab1": "Swift Swim",
+    "Ab2": "",
+    "Hidden": "Rattled"
+  },
+  {
+    "dexId": 130,
+    "name": "Gyarados",
+    "Ab1": "Intimidate",
+    "Ab2": "",
+    "Hidden": "Moxie"
+  },
+  {
+    "dexId": 130,
+    "name": "Gyarados-Mega",
+    "Ab1": "Mold Breaker",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 131,
+    "name": "Lapras",
+    "Ab1": "Water Absorb",
+    "Ab2": "Shell Armor",
+    "Hidden": "Hydration"
+  },
+  {
+    "dexId": 132,
+    "name": "Ditto",
+    "Ab1": "Limber",
+    "Ab2": "",
+    "Hidden": "Imposter"
+  },
+  {
+    "dexId": 133,
+    "name": "Eevee",
+    "Ab1": "Run Away",
+    "Ab2": "Adaptability*",
+    "Hidden": "Anticipation"
+  },
+  {
+    "dexId": 134,
+    "name": "Vaporeon",
+    "Ab1": "Water Absorb",
+    "Ab2": "",
+    "Hidden": "Hydration"
+  },
+  {
+    "dexId": 135,
+    "name": "Jolteon",
+    "Ab1": "Volt Absorb",
+    "Ab2": "",
+    "Hidden": "Quick Feet"
+  },
+  {
+    "dexId": 136,
+    "name": "Flareon",
+    "Ab1": "Flash Fire",
+    "Ab2": "",
+    "Hidden": "Guts"
+  },
+  {
+    "dexId": 196,
+    "name": "Espeon",
+    "Ab1": "Synchronize",
+    "Ab2": "",
+    "Hidden": "Magic Bounce"
+  },
+  {
+    "dexId": 197,
+    "name": "Umbreon",
+    "Ab1": "Synchronize",
+    "Ab2": "",
+    "Hidden": "Inner Focus"
+  },
+  {
+    "dexId": 470,
+    "name": "Leafeon",
+    "Ab1": "Leaf Guard",
+    "Ab2": "",
+    "Hidden": "Chlorophyll"
+  },
+  {
+    "dexId": 471,
+    "name": "Glaceon",
+    "Ab1": "Snow Cloak",
+    "Ab2": "",
+    "Hidden": "Ice Body"
+  },
+  {
+    "dexId": 700,
+    "name": "Sylveon",
+    "Ab1": "Cute Charm",
+    "Ab2": "",
+    "Hidden": "Pixilate"
+  },
+  {
+    "dexId": 137,
+    "name": "Porygon",
+    "Ab1": "Trace",
+    "Ab2": "Download*",
+    "Hidden": "Analytic"
+  },
+  {
+    "dexId": 233,
+    "name": "Porygon2",
+    "Ab1": "Trace",
+    "Ab2": "Download*",
+    "Hidden": "Analytic"
+  },
+  {
+    "dexId": 474,
+    "name": "Porygon-Z",
+    "Ab1": "Adaptability",
+    "Ab2": "Download",
+    "Hidden": "Analytic"
+  },
+  {
+    "dexId": 138,
+    "name": "Omanyte",
+    "Ab1": "Swift Swim",
+    "Ab2": "Shell Armor",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 139,
+    "name": "Omastar",
+    "Ab1": "Swift Swim",
+    "Ab2": "Shell Armor",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 140,
+    "name": "Kabuto",
+    "Ab1": "Swift Swim",
+    "Ab2": "Battle Armor",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 141,
+    "name": "Kabutops",
+    "Ab1": "Swift Swim",
+    "Ab2": "Battle Armor",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 142,
+    "name": "Aerodactyl",
+    "Ab1": "Rock Head",
+    "Ab2": "Pressure",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 142,
+    "name": "Aerodactyl-Mega",
+    "Ab1": "Tough Claws",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 446,
+    "name": "Munchlax",
+    "Ab1": "Pickup",
+    "Ab2": "Thick Fat",
+    "Hidden": "Gluttony"
+  },
+  {
+    "dexId": 143,
+    "name": "Snorlax",
+    "Ab1": "Immunity",
+    "Ab2": "Thick Fat",
+    "Hidden": "Gluttony"
+  },
+  {
+    "dexId": 144,
+    "name": "Articuno",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Snow Cloak"
+  },
+  {
+    "dexId": 145,
+    "name": "Zapdos*",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Static*"
+  },
+  {
+    "dexId": 146,
+    "name": "Moltres",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Flame Body"
+  },
+  {
+    "dexId": 147,
+    "name": "Dratini",
+    "Ab1": "Shed Skin",
+    "Ab2": "",
+    "Hidden": "Marvel Scale"
+  },
+  {
+    "dexId": 148,
+    "name": "Dragonair",
+    "Ab1": "Shed Skin",
+    "Ab2": "",
+    "Hidden": "Marvel Scale"
+  },
+  {
+    "dexId": 149,
+    "name": "Dragonite",
+    "Ab1": "Inner Focus",
+    "Ab2": "",
+    "Hidden": "Multiscale"
+  },
+  {
+    "dexId": 150,
+    "name": "Mewtwo",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 150,
+    "name": "Mewtwo-Mega-X",
+    "Ab1": "Steadfast",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 150,
+    "name": "Mewtwo-Mega-Y",
+    "Ab1": "Insomnia",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 151,
+    "name": "Mew",
+    "Ab1": "Synchronize",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 152,
+    "name": "Chikorita",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Leaf Guard"
+  },
+  {
+    "dexId": 153,
+    "name": "Bayleef",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Leaf Guard"
+  },
+  {
+    "dexId": 154,
+    "name": "Meganium",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Leaf Guard"
+  },
+  {
+    "dexId": 155,
+    "name": "Cyndaquil",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Flash Fire"
+  },
+  {
+    "dexId": 156,
+    "name": "Quilava",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Flash Fire"
+  },
+  {
+    "dexId": 157,
+    "name": "Typhlosion",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Flash Fire"
+  },
+  {
+    "dexId": 158,
+    "name": "Totodile",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 159,
+    "name": "Croconaw",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 160,
+    "name": "Feraligatr",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 161,
+    "name": "Sentret",
+    "Ab1": "Run Away",
+    "Ab2": "Keen Eye",
+    "Hidden": "Frisk"
+  },
+  {
+    "dexId": 162,
+    "name": "Furret",
+    "Ab1": "Run Away",
+    "Ab2": "Keen Eye",
+    "Hidden": "Frisk"
+  },
+  {
+    "dexId": 163,
+    "name": "Hoothoot",
+    "Ab1": "Insomnia",
+    "Ab2": "Keen Eye",
+    "Hidden": "Tinted Lens"
+  },
+  {
+    "dexId": 164,
+    "name": "Noctowl",
+    "Ab1": "Insomnia",
+    "Ab2": "Keen Eye",
+    "Hidden": "Tinted Lens"
+  },
+  {
+    "dexId": 165,
+    "name": "Ledyba",
+    "Ab1": "Swarm",
+    "Ab2": "Early Bird",
+    "Hidden": "Rattled"
+  },
+  {
+    "dexId": 166,
+    "name": "Ledian",
+    "Ab1": "Swarm",
+    "Ab2": "Early Bird",
+    "Hidden": "Iron Fist"
+  },
+  {
+    "dexId": 167,
+    "name": "Spinarak",
+    "Ab1": "Swarm",
+    "Ab2": "Insomnia",
+    "Hidden": "Sniper"
+  },
+  {
+    "dexId": 168,
+    "name": "Ariados",
+    "Ab1": "Swarm",
+    "Ab2": "Insomnia",
+    "Hidden": "Sniper"
+  },
+  {
+    "dexId": 170,
+    "name": "Chinchou",
+    "Ab1": "Volt Absorb",
+    "Ab2": "Illuminate",
+    "Hidden": "Water Absorb"
+  },
+  {
+    "dexId": 171,
+    "name": "Lanturn",
+    "Ab1": "Volt Absorb",
+    "Ab2": "Illuminate",
+    "Hidden": "Water Absorb"
+  },
+  {
+    "dexId": 175,
+    "name": "Togepi",
+    "Ab1": "Hustle",
+    "Ab2": "Serene Grace",
+    "Hidden": "Super Luck"
+  },
+  {
+    "dexId": 176,
+    "name": "Togetic",
+    "Ab1": "Hustle",
+    "Ab2": "Serene Grace",
+    "Hidden": "Super Luck"
+  },
+  {
+    "dexId": 468,
+    "name": "Togekiss",
+    "Ab1": "Hustle",
+    "Ab2": "Serene Grace",
+    "Hidden": "Super Luck"
+  },
+  {
+    "dexId": 177,
+    "name": "Natu",
+    "Ab1": "Synchronize",
+    "Ab2": "Early Bird",
+    "Hidden": "Magic Bounce"
+  },
+  {
+    "dexId": 178,
+    "name": "Xatu",
+    "Ab1": "Synchronize",
+    "Ab2": "Early Bird",
+    "Hidden": "Magic Bounce"
+  },
+  {
+    "dexId": 179,
+    "name": "Mareep",
+    "Ab1": "Static",
+    "Ab2": "",
+    "Hidden": "Plus"
+  },
+  {
+    "dexId": 180,
+    "name": "Flaaffy",
+    "Ab1": "Static",
+    "Ab2": "",
+    "Hidden": "Plus"
+  },
+  {
+    "dexId": 181,
+    "name": "Ampharos",
+    "Ab1": "Static",
+    "Ab2": "",
+    "Hidden": "Plus"
+  },
+  {
+    "dexId": 181,
+    "name": "Ampharos-Mega",
+    "Ab1": "Mold Breaker",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 298,
+    "name": "Azurill",
+    "Ab1": "Thick Fat",
+    "Ab2": "Huge Power",
+    "Hidden": "Sap Sipper"
+  },
+  {
+    "dexId": 183,
+    "name": "Marill",
+    "Ab1": "Thick Fat",
+    "Ab2": "Huge Power",
+    "Hidden": "Sap Sipper"
+  },
+  {
+    "dexId": 184,
+    "name": "Azumarill",
+    "Ab1": "Thick Fat",
+    "Ab2": "Huge Power",
+    "Hidden": "Sap Sipper"
+  },
+  {
+    "dexId": 438,
+    "name": "Bonsly",
+    "Ab1": "Sturdy",
+    "Ab2": "Rock Head",
+    "Hidden": "Rattled"
+  },
+  {
+    "dexId": 185,
+    "name": "Sudowoodo",
+    "Ab1": "Sturdy",
+    "Ab2": "Rock Head",
+    "Hidden": "Rattled"
+  },
+  {
+    "dexId": 187,
+    "name": "Hoppip",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Leaf Guard*",
+    "Hidden": "Infiltrator"
+  },
+  {
+    "dexId": 188,
+    "name": "Skiploom",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Leaf Guard*",
+    "Hidden": "Infiltrator"
+  },
+  {
+    "dexId": 189,
+    "name": "Jumpluff",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Leaf Guard*",
+    "Hidden": "Infiltrator"
+  },
+  {
+    "dexId": 190,
+    "name": "Aipom",
+    "Ab1": "Run Away",
+    "Ab2": "Pickup",
+    "Hidden": "Skill Link"
+  },
+  {
+    "dexId": 424,
+    "name": "Ambipom",
+    "Ab1": "Technician",
+    "Ab2": "Pickup",
+    "Hidden": "Skill Link"
+  },
+  {
+    "dexId": 191,
+    "name": "Sunkern",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Solar Power*",
+    "Hidden": "Early Bird"
+  },
+  {
+    "dexId": 192,
+    "name": "Sunflora",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Solar Power*",
+    "Hidden": "Early Bird"
+  },
+  {
+    "dexId": 193,
+    "name": "Yanma",
+    "Ab1": "Speed Boost",
+    "Ab2": "Compound Eyes",
+    "Hidden": "Frisk"
+  },
+  {
+    "dexId": 469,
+    "name": "Yanmega",
+    "Ab1": "Speed Boost",
+    "Ab2": "Tinted Lens",
+    "Hidden": "Frisk"
+  },
+  {
+    "dexId": 194,
+    "name": "Wooper",
+    "Ab1": "Damp",
+    "Ab2": "Water Absorb",
+    "Hidden": "Unaware"
+  },
+  {
+    "dexId": 195,
+    "name": "Quagsire",
+    "Ab1": "Damp",
+    "Ab2": "Water Absorb",
+    "Hidden": "Unaware"
+  },
+  {
+    "dexId": 198,
+    "name": "Murkrow",
+    "Ab1": "Insomnia",
+    "Ab2": "Super Luck*",
+    "Hidden": "Prankster"
+  },
+  {
+    "dexId": 430,
+    "name": "Honchkrow",
+    "Ab1": "Insomnia",
+    "Ab2": "Super Luck",
+    "Hidden": "Moxie"
+  },
+  {
+    "dexId": 200,
+    "name": "Misdreavus",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 429,
+    "name": "Mismagius",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 201,
+    "name": "Unown",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 360,
+    "name": "Wynaut",
+    "Ab1": "Shadow Tag",
+    "Ab2": "",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 202,
+    "name": "Wobbuffet",
+    "Ab1": "Shadow Tag",
+    "Ab2": "",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 203,
+    "name": "Girafarig",
+    "Ab1": "Inner Focus",
+    "Ab2": "Early Bird",
+    "Hidden": "Sap Sipper"
+  },
+  {
+    "dexId": 204,
+    "name": "Pineco",
+    "Ab1": "Sturdy",
+    "Ab2": "",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 205,
+    "name": "Forretress",
+    "Ab1": "Sturdy",
+    "Ab2": "",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 206,
+    "name": "Dunsparce",
+    "Ab1": "Serene Grace",
+    "Ab2": "Run Away",
+    "Hidden": "Rattled"
+  },
+  {
+    "dexId": 207,
+    "name": "Gligar",
+    "Ab1": "Hyper Cutter",
+    "Ab2": "Sand Veil",
+    "Hidden": "Immunity"
+  },
+  {
+    "dexId": 472,
+    "name": "Gliscor",
+    "Ab1": "Hyper Cutter",
+    "Ab2": "Sand Veil",
+    "Hidden": "Poison Heal"
+  },
+  {
+    "dexId": 209,
+    "name": "Snubbull",
+    "Ab1": "Intimidate",
+    "Ab2": "Run Away",
+    "Hidden": "Rattled"
+  },
+  {
+    "dexId": 210,
+    "name": "Granbull",
+    "Ab1": "Intimidate",
+    "Ab2": "Quick Feet*",
+    "Hidden": "Rattled"
+  },
+  {
+    "dexId": 211,
+    "name": "Qwilfish",
+    "Ab1": "Poison Point",
+    "Ab2": "Swift Swim",
+    "Hidden": "Intimidate"
+  },
+  {
+    "dexId": 213,
+    "name": "Shuckle",
+    "Ab1": "Sturdy",
+    "Ab2": "Gluttony*",
+    "Hidden": "Contrary"
+  },
+  {
+    "dexId": 214,
+    "name": "Heracross",
+    "Ab1": "Swarm",
+    "Ab2": "Guts",
+    "Hidden": "Moxie"
+  },
+  {
+    "dexId": 214,
+    "name": "Heracross-Mega",
+    "Ab1": "Skill Link",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 215,
+    "name": "Sneasel",
+    "Ab1": "Inner Focus",
+    "Ab2": "Keen Eye",
+    "Hidden": "Pickpocket"
+  },
+  {
+    "dexId": 461,
+    "name": "Weavile",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Pickpocket"
+  },
+  {
+    "dexId": 216,
+    "name": "Teddiursa",
+    "Ab1": "Pickup",
+    "Ab2": "Quick Feet*",
+    "Hidden": "Honey Gather"
+  },
+  {
+    "dexId": 217,
+    "name": "Ursaring",
+    "Ab1": "Guts",
+    "Ab2": "Quick Feet*",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 218,
+    "name": "Slugma",
+    "Ab1": "Magma Armor",
+    "Ab2": "Flame Body",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 219,
+    "name": "Magcargo",
+    "Ab1": "Magma Armor",
+    "Ab2": "Flame Body",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 220,
+    "name": "Swinub",
+    "Ab1": "Oblivious",
+    "Ab2": "Snow Cloak*",
+    "Hidden": "Thick Fat"
+  },
+  {
+    "dexId": 221,
+    "name": "Piloswine",
+    "Ab1": "Oblivious",
+    "Ab2": "Snow Cloak*",
+    "Hidden": "Thick Fat"
+  },
+  {
+    "dexId": 473,
+    "name": "Mamoswine",
+    "Ab1": "Oblivious",
+    "Ab2": "Snow Cloak",
+    "Hidden": "Thick Fat"
+  },
+  {
+    "dexId": 222,
+    "name": "Corsola",
+    "Ab1": "Hustle",
+    "Ab2": "Natural Cure",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 222,
+    "name": "Corsola-Galar",
+    "Ab1": "Weak Armor",
+    "Ab2": "",
+    "Hidden": "Cursed Body"
+  },
+  {
+    "dexId": 223,
+    "name": "Remoraid",
+    "Ab1": "Hustle",
+    "Ab2": "Sniper*",
+    "Hidden": "Moody"
+  },
+  {
+    "dexId": 224,
+    "name": "Octillery",
+    "Ab1": "Suction Cups",
+    "Ab2": "Sniper*",
+    "Hidden": "Moody"
+  },
+  {
+    "dexId": 225,
+    "name": "Delibird",
+    "Ab1": "Vital Spirit",
+    "Ab2": "Hustle",
+    "Hidden": "Insomnia"
+  },
+  {
+    "dexId": 458,
+    "name": "Mantyke",
+    "Ab1": "Swift Swim",
+    "Ab2": "Water Absorb",
+    "Hidden": "Water Veil"
+  },
+  {
+    "dexId": 226,
+    "name": "Mantine",
+    "Ab1": "Swift Swim",
+    "Ab2": "Water Absorb",
+    "Hidden": "Water Veil"
+  },
+  {
+    "dexId": 227,
+    "name": "Skarmory",
+    "Ab1": "Keen Eye",
+    "Ab2": "Sturdy",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 228,
+    "name": "Houndour",
+    "Ab1": "Early Bird",
+    "Ab2": "Flash Fire",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 229,
+    "name": "Houndoom",
+    "Ab1": "Early Bird",
+    "Ab2": "Flash Fire",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 229,
+    "name": "Houndoom-Mega",
+    "Ab1": "Solar Power",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 231,
+    "name": "Phanpy",
+    "Ab1": "Pickup",
+    "Ab2": "",
+    "Hidden": "Sand Veil"
+  },
+  {
+    "dexId": 232,
+    "name": "Donphan",
+    "Ab1": "Sturdy",
+    "Ab2": "",
+    "Hidden": "Sand Veil"
+  },
+  {
+    "dexId": 234,
+    "name": "Stantler",
+    "Ab1": "Intimidate",
+    "Ab2": "Frisk*",
+    "Hidden": "Sap Sipper"
+  },
+  {
+    "dexId": 235,
+    "name": "Smeargle",
+    "Ab1": "Own Tempo",
+    "Ab2": "Technician*",
+    "Hidden": "Moody"
+  },
+  {
+    "dexId": 241,
+    "name": "Miltank",
+    "Ab1": "Thick Fat",
+    "Ab2": "Scrappy*",
+    "Hidden": "Sap Sipper"
+  },
+  {
+    "dexId": 243,
+    "name": "Raikou*",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Inner Focus"
+  },
+  {
+    "dexId": 244,
+    "name": "Entei*",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Inner Focus"
+  },
+  {
+    "dexId": 245,
+    "name": "Suicune*",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Inner Focus"
+  },
+  {
+    "dexId": 246,
+    "name": "Larvitar",
+    "Ab1": "Guts",
+    "Ab2": "",
+    "Hidden": "Sand Veil"
+  },
+  {
+    "dexId": 247,
+    "name": "Pupitar",
+    "Ab1": "Shed Skin",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 248,
+    "name": "Tyranitar",
+    "Ab1": "Sand Stream",
+    "Ab2": "",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 248,
+    "name": "Tyranitar-Mega",
+    "Ab1": "Sand Stream",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 249,
+    "name": "Lugia",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Multiscale"
+  },
+  {
+    "dexId": 250,
+    "name": "Ho-Oh",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 251,
+    "name": "Celebi",
+    "Ab1": "Natural Cure",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 494,
+    "name": "Victini",
+    "Ab1": "Victory Star",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 495,
+    "name": "Snivy",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Contrary"
+  },
+  {
+    "dexId": 496,
+    "name": "Servine",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Contrary"
+  },
+  {
+    "dexId": 497,
+    "name": "Serperior",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Contrary"
+  },
+  {
+    "dexId": 498,
+    "name": "Tepig",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Thick Fat"
+  },
+  {
+    "dexId": 499,
+    "name": "Pignite",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Thick Fat"
+  },
+  {
+    "dexId": 500,
+    "name": "Emboar",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Reckless"
+  },
+  {
+    "dexId": 501,
+    "name": "Oshawott",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Shell Armor"
+  },
+  {
+    "dexId": 502,
+    "name": "Dewott",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Shell Armor"
+  },
+  {
+    "dexId": 503,
+    "name": "Samurott",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Shell Armor"
+  },
+  {
+    "dexId": 504,
+    "name": "Patrat",
+    "Ab1": "Run Away",
+    "Ab2": "Keen Eye",
+    "Hidden": "Analytic"
+  },
+  {
+    "dexId": 505,
+    "name": "Watchog",
+    "Ab1": "Illuminate",
+    "Ab2": "Keen Eye",
+    "Hidden": "Analytic"
+  },
+  {
+    "dexId": 506,
+    "name": "Lillipup",
+    "Ab1": "Vital Spirit",
+    "Ab2": "Pickup",
+    "Hidden": "Run Away"
+  },
+  {
+    "dexId": 507,
+    "name": "Herdier",
+    "Ab1": "Intimidate",
+    "Ab2": "Sand Rush",
+    "Hidden": "Scrappy"
+  },
+  {
+    "dexId": 508,
+    "name": "Stoutland",
+    "Ab1": "Intimidate",
+    "Ab2": "Sand Rush",
+    "Hidden": "Scrappy"
+  },
+  {
+    "dexId": 509,
+    "name": "Purrloin",
+    "Ab1": "Limber",
+    "Ab2": "Unburden",
+    "Hidden": "Prankster"
+  },
+  {
+    "dexId": 510,
+    "name": "Liepard",
+    "Ab1": "Limber",
+    "Ab2": "Unburden",
+    "Hidden": "Prankster"
+  },
+  {
+    "dexId": 511,
+    "name": "Pansage",
+    "Ab1": "Gluttony",
+    "Ab2": "",
+    "Hidden": "Overgrow"
+  },
+  {
+    "dexId": 512,
+    "name": "Simisage",
+    "Ab1": "Gluttony",
+    "Ab2": "",
+    "Hidden": "Overgrow"
+  },
+  {
+    "dexId": 513,
+    "name": "Pansear",
+    "Ab1": "Gluttony",
+    "Ab2": "",
+    "Hidden": "Blaze"
+  },
+  {
+    "dexId": 514,
+    "name": "Simisear",
+    "Ab1": "Gluttony",
+    "Ab2": "",
+    "Hidden": "Blaze"
+  },
+  {
+    "dexId": 515,
+    "name": "Panpour",
+    "Ab1": "Gluttony",
+    "Ab2": "",
+    "Hidden": "Torrent"
+  },
+  {
+    "dexId": 516,
+    "name": "Simipour",
+    "Ab1": "Gluttony",
+    "Ab2": "",
+    "Hidden": "Torrent"
+  },
+  {
+    "dexId": 517,
+    "name": "Munna",
+    "Ab1": "Forewarn",
+    "Ab2": "Synchronize",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 518,
+    "name": "Musharna",
+    "Ab1": "Forewarn",
+    "Ab2": "Synchronize",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 519,
+    "name": "Pidove",
+    "Ab1": "Big Pecks",
+    "Ab2": "Super Luck",
+    "Hidden": "Rivalry"
+  },
+  {
+    "dexId": 520,
+    "name": "Tranquill",
+    "Ab1": "Big Pecks",
+    "Ab2": "Super Luck",
+    "Hidden": "Rivalry"
+  },
+  {
+    "dexId": 521,
+    "name": "Unfezant",
+    "Ab1": "Big Pecks",
+    "Ab2": "Super Luck",
+    "Hidden": "Rivalry"
+  },
+  {
+    "dexId": 522,
+    "name": "Blitzle",
+    "Ab1": "Lightning Rod",
+    "Ab2": "Motor Drive",
+    "Hidden": "Sap Sipper"
+  },
+  {
+    "dexId": 523,
+    "name": "Zebstrika",
+    "Ab1": "Lightning Rod",
+    "Ab2": "Motor Drive",
+    "Hidden": "Sap Sipper"
+  },
+  {
+    "dexId": 524,
+    "name": "Roggenrola",
+    "Ab1": "Sturdy",
+    "Ab2": "Weak Armor*",
+    "Hidden": "Sand Force"
+  },
+  {
+    "dexId": 525,
+    "name": "Boldore",
+    "Ab1": "Sturdy",
+    "Ab2": "Weak Armor*",
+    "Hidden": "Sand Force"
+  },
+  {
+    "dexId": 526,
+    "name": "Gigalith",
+    "Ab1": "Sturdy",
+    "Ab2": "Sand Stream*",
+    "Hidden": "Sand Force"
+  },
+  {
+    "dexId": 527,
+    "name": "Woobat",
+    "Ab1": "Unaware",
+    "Ab2": "Klutz",
+    "Hidden": "Simple"
+  },
+  {
+    "dexId": 528,
+    "name": "Swoobat",
+    "Ab1": "Unaware",
+    "Ab2": "Klutz",
+    "Hidden": "Simple"
+  },
+  {
+    "dexId": 529,
+    "name": "Drilbur",
+    "Ab1": "Sand Rush",
+    "Ab2": "Sand Force",
+    "Hidden": "Mold Breaker"
+  },
+  {
+    "dexId": 530,
+    "name": "Excadrill",
+    "Ab1": "Sand Rush",
+    "Ab2": "Sand Force",
+    "Hidden": "Mold Breaker"
+  },
+  {
+    "dexId": 531,
+    "name": "Audino",
+    "Ab1": "Healer",
+    "Ab2": "Regenerator",
+    "Hidden": "Klutz"
+  },
+  {
+    "dexId": 531,
+    "name": "Audino-Mega",
+    "Ab1": "Healer",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 532,
+    "name": "Timburr",
+    "Ab1": "Guts",
+    "Ab2": "Sheer Force",
+    "Hidden": "Iron Fist"
+  },
+  {
+    "dexId": 533,
+    "name": "Gurdurr",
+    "Ab1": "Guts",
+    "Ab2": "Sheer Force",
+    "Hidden": "Iron Fist"
+  },
+  {
+    "dexId": 534,
+    "name": "Conkeldurr",
+    "Ab1": "Guts",
+    "Ab2": "Sheer Force",
+    "Hidden": "Iron Fist"
+  },
+  {
+    "dexId": 535,
+    "name": "Tympole",
+    "Ab1": "Swift Swim",
+    "Ab2": "Hydration",
+    "Hidden": "Water Absorb"
+  },
+  {
+    "dexId": 536,
+    "name": "Palpitoad",
+    "Ab1": "Swift Swim",
+    "Ab2": "Hydration",
+    "Hidden": "Water Absorb"
+  },
+  {
+    "dexId": 537,
+    "name": "Seismitoad",
+    "Ab1": "Swift Swim",
+    "Ab2": "Poison Touch",
+    "Hidden": "Water Absorb"
+  },
+  {
+    "dexId": 538,
+    "name": "Throh",
+    "Ab1": "Guts",
+    "Ab2": "Inner Focus",
+    "Hidden": "Mold Breaker"
+  },
+  {
+    "dexId": 539,
+    "name": "Sawk",
+    "Ab1": "Sturdy",
+    "Ab2": "Inner Focus",
+    "Hidden": "Mold Breaker"
+  },
+  {
+    "dexId": 540,
+    "name": "Sewaddle",
+    "Ab1": "Swarm",
+    "Ab2": "Chlorophyll",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 541,
+    "name": "Swadloon",
+    "Ab1": "Leaf Guard",
+    "Ab2": "Chlorophyll",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 542,
+    "name": "Leavanny",
+    "Ab1": "Swarm",
+    "Ab2": "Chlorophyll",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 543,
+    "name": "Venipede*",
+    "Ab1": "Poison Point",
+    "Ab2": "Swarm",
+    "Hidden": "Speed Boost*"
+  },
+  {
+    "dexId": 544,
+    "name": "Whirlipede*",
+    "Ab1": "Poison Point",
+    "Ab2": "Swarm",
+    "Hidden": "Speed Boost*"
+  },
+  {
+    "dexId": 545,
+    "name": "Scolipede*",
+    "Ab1": "Poison Point",
+    "Ab2": "Swarm",
+    "Hidden": "Speed Boost*"
+  },
+  {
+    "dexId": 546,
+    "name": "Cottonee",
+    "Ab1": "Prankster",
+    "Ab2": "Infiltrator",
+    "Hidden": "Chlorophyll"
+  },
+  {
+    "dexId": 547,
+    "name": "Whimsicott",
+    "Ab1": "Prankster",
+    "Ab2": "Infiltrator",
+    "Hidden": "Chlorophyll"
+  },
+  {
+    "dexId": 548,
+    "name": "Petilil",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Own Tempo",
+    "Hidden": "Leaf Guard"
+  },
+  {
+    "dexId": 549,
+    "name": "Lilligant",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Own Tempo",
+    "Hidden": "Leaf Guard"
+  },
+  {
+    "dexId": 550,
+    "name": "Basculin",
+    "Ab1": "Reckless",
+    "Ab2": "Adaptability",
+    "Hidden": "Mold Breaker"
+  },
+  {
+    "dexId": 550,
+    "name": "Basculin-Blue",
+    "Ab1": "Rock Head",
+    "Ab2": "Adaptability",
+    "Hidden": "Mold Breaker"
+  },
+  {
+    "dexId": 551,
+    "name": "Sandile",
+    "Ab1": "Intimidate",
+    "Ab2": "Moxie",
+    "Hidden": "Anger Point"
+  },
+  {
+    "dexId": 552,
+    "name": "Krokorok",
+    "Ab1": "Intimidate",
+    "Ab2": "Moxie",
+    "Hidden": "Anger Point"
+  },
+  {
+    "dexId": 553,
+    "name": "Krookodile",
+    "Ab1": "Intimidate",
+    "Ab2": "Moxie",
+    "Hidden": "Anger Point"
+  },
+  {
+    "dexId": 554,
+    "name": "Darumaka",
+    "Ab1": "Hustle",
+    "Ab2": "",
+    "Hidden": "Inner Focus"
+  },
+  {
+    "dexId": 554,
+    "name": "Darumaka-Galar",
+    "Ab1": "Hustle",
+    "Ab2": "",
+    "Hidden": "Inner Focus"
+  },
+  {
+    "dexId": 555,
+    "name": "Darmanitan",
+    "Ab1": "Sheer Force",
+    "Ab2": "",
+    "Hidden": "Zen Mode"
+  },
+  {
+    "dexId": 555,
+    "name": "Darmanitan-Zen",
+    "Ab1": "Zen Mode",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 555,
+    "name": "Darmanitan-Galar",
+    "Ab1": "Gorilla Tactics",
+    "Ab2": "",
+    "Hidden": "Zen Mode"
+  },
+  {
+    "dexId": 555,
+    "name": "Darmanitan-GalarZen",
+    "Ab1": "Gorilla Tactics",
+    "Ab2": "",
+    "Hidden": "Zen Mode"
+  },
+  {
+    "dexId": 556,
+    "name": "Maractus",
+    "Ab1": "Water Absorb",
+    "Ab2": "Chlorophyll",
+    "Hidden": "Storm Drain"
+  },
+  {
+    "dexId": 557,
+    "name": "Dwebble",
+    "Ab1": "Sturdy",
+    "Ab2": "Shell Armor",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 558,
+    "name": "Crustle",
+    "Ab1": "Sturdy",
+    "Ab2": "Shell Armor",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 559,
+    "name": "Scraggy",
+    "Ab1": "Shed Skin",
+    "Ab2": "Moxie",
+    "Hidden": "Intimidate"
+  },
+  {
+    "dexId": 560,
+    "name": "Scrafty",
+    "Ab1": "Shed Skin",
+    "Ab2": "Moxie",
+    "Hidden": "Intimidate"
+  },
+  {
+    "dexId": 561,
+    "name": "Sigilyph",
+    "Ab1": "Wonder Skin",
+    "Ab2": "Magic Guard",
+    "Hidden": "Tinted Lens"
+  },
+  {
+    "dexId": 562,
+    "name": "Yamask",
+    "Ab1": "Mummy",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 562,
+    "name": "Yamask-Galar",
+    "Ab1": "Wandering Spirit",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 563,
+    "name": "Cofagrigus",
+    "Ab1": "Mummy",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 564,
+    "name": "Tirtouga",
+    "Ab1": "Solid Rock",
+    "Ab2": "Sturdy",
+    "Hidden": "Swift Swim"
+  },
+  {
+    "dexId": 565,
+    "name": "Carracosta",
+    "Ab1": "Solid Rock",
+    "Ab2": "Sturdy",
+    "Hidden": "Swift Swim"
+  },
+  {
+    "dexId": 566,
+    "name": "Archen",
+    "Ab1": "Defeatist",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 567,
+    "name": "Archeops",
+    "Ab1": "Defeatist",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 568,
+    "name": "Trubbish",
+    "Ab1": "Stench",
+    "Ab2": "Sticky Hold",
+    "Hidden": "Aftermath"
+  },
+  {
+    "dexId": 569,
+    "name": "Garbodor",
+    "Ab1": "Stench",
+    "Ab2": "Weak Armor",
+    "Hidden": "Aftermath"
+  },
+  {
+    "dexId": 570,
+    "name": "Zorua",
+    "Ab1": "Illusion",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 571,
+    "name": "Zoroark",
+    "Ab1": "Illusion",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 572,
+    "name": "Minccino",
+    "Ab1": "Cute Charm",
+    "Ab2": "Technician",
+    "Hidden": "Skill Link"
+  },
+  {
+    "dexId": 573,
+    "name": "Cinccino",
+    "Ab1": "Cute Charm",
+    "Ab2": "Technician",
+    "Hidden": "Skill Link"
+  },
+  {
+    "dexId": 574,
+    "name": "Gothita",
+    "Ab1": "Frisk",
+    "Ab2": "Competitive*",
+    "Hidden": "Shadow Tag"
+  },
+  {
+    "dexId": 575,
+    "name": "Gothorita",
+    "Ab1": "Frisk",
+    "Ab2": "Competitive*",
+    "Hidden": "Shadow Tag"
+  },
+  {
+    "dexId": 576,
+    "name": "Gothitelle",
+    "Ab1": "Frisk",
+    "Ab2": "Competitive*",
+    "Hidden": "Shadow Tag"
+  },
+  {
+    "dexId": 577,
+    "name": "Solosis",
+    "Ab1": "Overcoat",
+    "Ab2": "Magic Guard",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 578,
+    "name": "Duosion",
+    "Ab1": "Overcoat",
+    "Ab2": "Magic Guard",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 579,
+    "name": "Reuniclus",
+    "Ab1": "Overcoat",
+    "Ab2": "Magic Guard",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 580,
+    "name": "Ducklett",
+    "Ab1": "Keen Eye",
+    "Ab2": "Big Pecks",
+    "Hidden": "Hydration"
+  },
+  {
+    "dexId": 581,
+    "name": "Swanna",
+    "Ab1": "Keen Eye",
+    "Ab2": "Big Pecks",
+    "Hidden": "Hydration"
+  },
+  {
+    "dexId": 582,
+    "name": "Vanillite",
+    "Ab1": "Ice Body",
+    "Ab2": "Snow Cloak*",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 583,
+    "name": "Vanillish",
+    "Ab1": "Ice Body",
+    "Ab2": "Snow Cloak*",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 584,
+    "name": "Vanilluxe",
+    "Ab1": "Ice Body",
+    "Ab2": "Snow Warning*",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 585,
+    "name": "Deerling",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Sap Sipper",
+    "Hidden": "Serene Grace"
+  },
+  {
+    "dexId": 586,
+    "name": "Sawsbuck",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Sap Sipper",
+    "Hidden": "Serene Grace"
+  },
+  {
+    "dexId": 587,
+    "name": "Emolga",
+    "Ab1": "Static",
+    "Ab2": "",
+    "Hidden": "Motor Drive"
+  },
+  {
+    "dexId": 588,
+    "name": "Karrablast",
+    "Ab1": "Swarm",
+    "Ab2": "Shed Skin",
+    "Hidden": "No Guard"
+  },
+  {
+    "dexId": 589,
+    "name": "Escavalier",
+    "Ab1": "Swarm",
+    "Ab2": "Shell Armor",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 590,
+    "name": "Foongus",
+    "Ab1": "Effect Spore",
+    "Ab2": "",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 591,
+    "name": "Amoonguss",
+    "Ab1": "Effect Spore",
+    "Ab2": "",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 592,
+    "name": "Frillish",
+    "Ab1": "Water Absorb",
+    "Ab2": "Cursed Body",
+    "Hidden": "Damp"
+  },
+  {
+    "dexId": 593,
+    "name": "Jellicent",
+    "Ab1": "Water Absorb",
+    "Ab2": "Cursed Body",
+    "Hidden": "Damp"
+  },
+  {
+    "dexId": 594,
+    "name": "Alomomola",
+    "Ab1": "Healer",
+    "Ab2": "Hydration",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 595,
+    "name": "Joltik",
+    "Ab1": "Compound Eyes",
+    "Ab2": "Unnerve",
+    "Hidden": "Swarm"
+  },
+  {
+    "dexId": 596,
+    "name": "Galvantula",
+    "Ab1": "Compound Eyes",
+    "Ab2": "Unnerve",
+    "Hidden": "Swarm"
+  },
+  {
+    "dexId": 597,
+    "name": "Ferroseed",
+    "Ab1": "Iron Barbs",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 598,
+    "name": "Ferrothorn",
+    "Ab1": "Iron Barbs",
+    "Ab2": "",
+    "Hidden": "Anticipation*"
+  },
+  {
+    "dexId": 599,
+    "name": "Klink",
+    "Ab1": "Plus",
+    "Ab2": "Minus",
+    "Hidden": "Clear Body"
+  },
+  {
+    "dexId": 600,
+    "name": "Klang",
+    "Ab1": "Plus",
+    "Ab2": "Minus",
+    "Hidden": "Clear Body"
+  },
+  {
+    "dexId": 601,
+    "name": "Klinklang",
+    "Ab1": "Plus",
+    "Ab2": "Minus",
+    "Hidden": "Clear Body"
+  },
+  {
+    "dexId": 602,
+    "name": "Tynamo",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 603,
+    "name": "Eelektrik",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 604,
+    "name": "Eelektross",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 605,
+    "name": "Elgyem",
+    "Ab1": "Telepathy",
+    "Ab2": "Synchronize",
+    "Hidden": "Analytic"
+  },
+  {
+    "dexId": 606,
+    "name": "Beheeyem",
+    "Ab1": "Telepathy",
+    "Ab2": "Synchronize",
+    "Hidden": "Analytic"
+  },
+  {
+    "dexId": 607,
+    "name": "Litwick*",
+    "Ab1": "Flash Fire",
+    "Ab2": "Flame Body",
+    "Hidden": "Infiltrator*"
+  },
+  {
+    "dexId": 608,
+    "name": "Lampent*",
+    "Ab1": "Flash Fire",
+    "Ab2": "Flame Body",
+    "Hidden": "Infiltrator*"
+  },
+  {
+    "dexId": 609,
+    "name": "Chandelure*",
+    "Ab1": "Flash Fire",
+    "Ab2": "Flame Body",
+    "Hidden": "Infiltrator*"
+  },
+  {
+    "dexId": 610,
+    "name": "Axew",
+    "Ab1": "Rivalry",
+    "Ab2": "Mold Breaker",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 611,
+    "name": "Fraxure",
+    "Ab1": "Rivalry",
+    "Ab2": "Mold Breaker",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 612,
+    "name": "Haxorus",
+    "Ab1": "Rivalry",
+    "Ab2": "Mold Breaker",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 613,
+    "name": "Cubchoo",
+    "Ab1": "Snow Cloak",
+    "Ab2": "Slush Rush*",
+    "Hidden": "Rattled"
+  },
+  {
+    "dexId": 614,
+    "name": "Beartic",
+    "Ab1": "Snow Cloak",
+    "Ab2": "Slush Rush*",
+    "Hidden": "Swift Swim"
+  },
+  {
+    "dexId": 615,
+    "name": "Cryogonal",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 616,
+    "name": "Shelmet",
+    "Ab1": "Hydration",
+    "Ab2": "Shell Armor",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 617,
+    "name": "Accelgor",
+    "Ab1": "Hydration",
+    "Ab2": "Sticky Hold",
+    "Hidden": "Unburden"
+  },
+  {
+    "dexId": 618,
+    "name": "Stunfisk",
+    "Ab1": "Static",
+    "Ab2": "Limber",
+    "Hidden": "Sand Veil"
+  },
+  {
+    "dexId": 618,
+    "name": "Stunfisk-Galar",
+    "Ab1": "Mimicry",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 619,
+    "name": "Mienfoo",
+    "Ab1": "Inner Focus",
+    "Ab2": "Regenerator",
+    "Hidden": "Reckless"
+  },
+  {
+    "dexId": 620,
+    "name": "Mienshao",
+    "Ab1": "Inner Focus",
+    "Ab2": "Regenerator",
+    "Hidden": "Reckless"
+  },
+  {
+    "dexId": 621,
+    "name": "Druddigon",
+    "Ab1": "Rough Skin",
+    "Ab2": "Sheer Force",
+    "Hidden": "Mold Breaker"
+  },
+  {
+    "dexId": 622,
+    "name": "Golett",
+    "Ab1": "Iron Fist",
+    "Ab2": "Klutz",
+    "Hidden": "No Guard"
+  },
+  {
+    "dexId": 623,
+    "name": "Golurk",
+    "Ab1": "Iron Fist",
+    "Ab2": "Klutz",
+    "Hidden": "No Guard"
+  },
+  {
+    "dexId": 624,
+    "name": "Pawniard",
+    "Ab1": "Defiant",
+    "Ab2": "Inner Focus",
+    "Hidden": "Pressure"
+  },
+  {
+    "dexId": 625,
+    "name": "Bisharp",
+    "Ab1": "Defiant",
+    "Ab2": "Inner Focus",
+    "Hidden": "Pressure"
+  },
+  {
+    "dexId": 626,
+    "name": "Bouffalant",
+    "Ab1": "Reckless",
+    "Ab2": "Sap Sipper",
+    "Hidden": "Soundproof"
+  },
+  {
+    "dexId": 627,
+    "name": "Rufflet",
+    "Ab1": "Keen Eye",
+    "Ab2": "Sheer Force",
+    "Hidden": "Hustle"
+  },
+  {
+    "dexId": 628,
+    "name": "Braviary",
+    "Ab1": "Keen Eye",
+    "Ab2": "Sheer Force",
+    "Hidden": "Defiant"
+  },
+  {
+    "dexId": 629,
+    "name": "Vullaby",
+    "Ab1": "Big Pecks",
+    "Ab2": "Overcoat",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 630,
+    "name": "Mandibuzz",
+    "Ab1": "Big Pecks",
+    "Ab2": "Overcoat",
+    "Hidden": "Weak Armor"
+  },
+  {
+    "dexId": 631,
+    "name": "Heatmor",
+    "Ab1": "Gluttony",
+    "Ab2": "Flash Fire",
+    "Hidden": "White Smoke"
+  },
+  {
+    "dexId": 632,
+    "name": "Durant",
+    "Ab1": "Swarm",
+    "Ab2": "Hustle",
+    "Hidden": "Truant"
+  },
+  {
+    "dexId": 633,
+    "name": "Deino",
+    "Ab1": "Hustle",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 634,
+    "name": "Zweilous",
+    "Ab1": "Hustle",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 635,
+    "name": "Hydreigon",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 636,
+    "name": "Larvesta",
+    "Ab1": "Flame Body",
+    "Ab2": "",
+    "Hidden": "Swarm"
+  },
+  {
+    "dexId": 637,
+    "name": "Volcarona",
+    "Ab1": "Flame Body",
+    "Ab2": "",
+    "Hidden": "Swarm"
+  },
+  {
+    "dexId": 638,
+    "name": "Cobalion",
+    "Ab1": "Justified",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 639,
+    "name": "Terrakion",
+    "Ab1": "Justified",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 640,
+    "name": "Virizion",
+    "Ab1": "Justified",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 641,
+    "name": "Tornadus",
+    "Ab1": "Prankster",
+    "Ab2": "",
+    "Hidden": "Defiant"
+  },
+  {
+    "dexId": 641,
+    "name": "Tornadus-Therian",
+    "Ab1": "Regenerator",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 642,
+    "name": "Thundurus",
+    "Ab1": "Prankster",
+    "Ab2": "",
+    "Hidden": "Defiant"
+  },
+  {
+    "dexId": 642,
+    "name": "Thundurus-Therian",
+    "Ab1": "Volt Absorb",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 643,
+    "name": "Reshiram",
+    "Ab1": "Turboblaze",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 644,
+    "name": "Zekrom",
+    "Ab1": "Teravolt",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 645,
+    "name": "Landorus",
+    "Ab1": "Sand Force",
+    "Ab2": "",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 645,
+    "name": "Landorus-Therian",
+    "Ab1": "Intimidate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 646,
+    "name": "Kyurem",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 646,
+    "name": "Kyurem-Black",
+    "Ab1": "Teravolt",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 646,
+    "name": "Kyurem-White",
+    "Ab1": "Turboblaze",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 647,
+    "name": "Keldeo",
+    "Ab1": "Justified",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 648,
+    "name": "Meloetta",
+    "Ab1": "Serene Grace",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 648,
+    "name": "Meloetta-Pirouette",
+    "Ab1": "Serene Grace",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 649,
+    "name": "Genesect",
+    "Ab1": "Download",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 387,
+    "name": "Turtwig",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Shell Armor"
+  },
+  {
+    "dexId": 388,
+    "name": "Grotle",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Shell Armor"
+  },
+  {
+    "dexId": 389,
+    "name": "Torterra",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Shell Armor"
+  },
+  {
+    "dexId": 390,
+    "name": "Chimchar",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Iron Fist"
+  },
+  {
+    "dexId": 391,
+    "name": "Monferno",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Iron Fist"
+  },
+  {
+    "dexId": 392,
+    "name": "Infernape",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Iron Fist"
+  },
+  {
+    "dexId": 393,
+    "name": "Piplup",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Defiant"
+  },
+  {
+    "dexId": 394,
+    "name": "Prinplup",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Defiant"
+  },
+  {
+    "dexId": 395,
+    "name": "Empoleon",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Defiant"
+  },
+  {
+    "dexId": 396,
+    "name": "Starly",
+    "Ab1": "Keen Eye",
+    "Ab2": "",
+    "Hidden": "Reckless*"
+  },
+  {
+    "dexId": 397,
+    "name": "Staravia",
+    "Ab1": "Intimidate",
+    "Ab2": "",
+    "Hidden": "Reckless"
+  },
+  {
+    "dexId": 398,
+    "name": "Staraptor",
+    "Ab1": "Intimidate",
+    "Ab2": "",
+    "Hidden": "Reckless"
+  },
+  {
+    "dexId": 399,
+    "name": "Bidoof",
+    "Ab1": "Simple",
+    "Ab2": "Unaware",
+    "Hidden": "Moody"
+  },
+  {
+    "dexId": 400,
+    "name": "Bibarel",
+    "Ab1": "Simple",
+    "Ab2": "Unaware",
+    "Hidden": "Moody"
+  },
+  {
+    "dexId": 401,
+    "name": "Kricketot",
+    "Ab1": "Shed Skin",
+    "Ab2": "",
+    "Hidden": "Run Away"
+  },
+  {
+    "dexId": 402,
+    "name": "Kricketune",
+    "Ab1": "Swarm",
+    "Ab2": "",
+    "Hidden": "Technician"
+  },
+  {
+    "dexId": 403,
+    "name": "Shinx",
+    "Ab1": "Rivalry",
+    "Ab2": "Intimidate",
+    "Hidden": "Guts"
+  },
+  {
+    "dexId": 404,
+    "name": "Luxio",
+    "Ab1": "Rivalry",
+    "Ab2": "Intimidate",
+    "Hidden": "Guts"
+  },
+  {
+    "dexId": 405,
+    "name": "Luxray",
+    "Ab1": "Rivalry",
+    "Ab2": "Intimidate",
+    "Hidden": "Guts"
+  },
+  {
+    "dexId": 408,
+    "name": "Cranidos",
+    "Ab1": "Mold Breaker",
+    "Ab2": "",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 409,
+    "name": "Rampardos",
+    "Ab1": "Mold Breaker",
+    "Ab2": "",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 410,
+    "name": "Shieldon",
+    "Ab1": "Sturdy",
+    "Ab2": "",
+    "Hidden": "Soundproof"
+  },
+  {
+    "dexId": 411,
+    "name": "Bastiodon",
+    "Ab1": "Sturdy",
+    "Ab2": "",
+    "Hidden": "Soundproof"
+  },
+  {
+    "dexId": 412,
+    "name": "Burmy",
+    "Ab1": "Shed Skin",
+    "Ab2": "",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 413,
+    "name": "Wormadam",
+    "Ab1": "Anticipation",
+    "Ab2": "",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 413,
+    "name": "Wormadam-Sandy",
+    "Ab1": "Anticipation",
+    "Ab2": "",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 413,
+    "name": "Wormadam-Trash",
+    "Ab1": "Anticipation",
+    "Ab2": "",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 414,
+    "name": "Mothim",
+    "Ab1": "Swarm",
+    "Ab2": "",
+    "Hidden": "Tinted Lens"
+  },
+  {
+    "dexId": 415,
+    "name": "Combee",
+    "Ab1": "Honey Gather",
+    "Ab2": "",
+    "Hidden": "Hustle"
+  },
+  {
+    "dexId": 416,
+    "name": "Vespiquen",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 417,
+    "name": "Pachirisu",
+    "Ab1": "Run Away",
+    "Ab2": "Pickup",
+    "Hidden": "Volt Absorb"
+  },
+  {
+    "dexId": 418,
+    "name": "Buizel",
+    "Ab1": "Swift Swim",
+    "Ab2": "",
+    "Hidden": "Water Veil"
+  },
+  {
+    "dexId": 419,
+    "name": "Floatzel",
+    "Ab1": "Swift Swim",
+    "Ab2": "",
+    "Hidden": "Water Veil"
+  },
+  {
+    "dexId": 420,
+    "name": "Cherubi",
+    "Ab1": "Chlorophyll",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 421,
+    "name": "Cherrim",
+    "Ab1": "Flower Gift",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 422,
+    "name": "Shellos",
+    "Ab1": "Sticky Hold",
+    "Ab2": "Storm Drain",
+    "Hidden": "Sand Force"
+  },
+  {
+    "dexId": 423,
+    "name": "Gastrodon",
+    "Ab1": "Sticky Hold",
+    "Ab2": "Storm Drain",
+    "Hidden": "Sand Force"
+  },
+  {
+    "dexId": 425,
+    "name": "Drifloon",
+    "Ab1": "Aftermath",
+    "Ab2": "Unburden",
+    "Hidden": "Flare Boost"
+  },
+  {
+    "dexId": 426,
+    "name": "Drifblim",
+    "Ab1": "Aftermath",
+    "Ab2": "Unburden",
+    "Hidden": "Flare Boost"
+  },
+  {
+    "dexId": 427,
+    "name": "Buneary",
+    "Ab1": "Run Away",
+    "Ab2": "Klutz",
+    "Hidden": "Limber"
+  },
+  {
+    "dexId": 428,
+    "name": "Lopunny",
+    "Ab1": "Cute Charm",
+    "Ab2": "Klutz",
+    "Hidden": "Limber"
+  },
+  {
+    "dexId": 428,
+    "name": "Lopunny-Mega",
+    "Ab1": "Scrappy",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 431,
+    "name": "Glameow",
+    "Ab1": "Limber",
+    "Ab2": "Own Tempo",
+    "Hidden": "Keen Eye"
+  },
+  {
+    "dexId": 432,
+    "name": "Purugly",
+    "Ab1": "Thick Fat",
+    "Ab2": "Own Tempo",
+    "Hidden": "Defiant"
+  },
+  {
+    "dexId": 434,
+    "name": "Stunky",
+    "Ab1": "Stench",
+    "Ab2": "Aftermath",
+    "Hidden": "Keen Eye"
+  },
+  {
+    "dexId": 435,
+    "name": "Skuntank",
+    "Ab1": "Stench",
+    "Ab2": "Aftermath",
+    "Hidden": "Keen Eye"
+  },
+  {
+    "dexId": 436,
+    "name": "Bronzor",
+    "Ab1": "Levitate",
+    "Ab2": "Heatproof",
+    "Hidden": "Heavy Metal"
+  },
+  {
+    "dexId": 437,
+    "name": "Bronzong",
+    "Ab1": "Levitate",
+    "Ab2": "Heatproof",
+    "Hidden": "Heavy Metal"
+  },
+  {
+    "dexId": 441,
+    "name": "Chatot",
+    "Ab1": "Keen Eye",
+    "Ab2": "Tangled Feet",
+    "Hidden": "Big Pecks"
+  },
+  {
+    "dexId": 442,
+    "name": "Spiritomb",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Infiltrator"
+  },
+  {
+    "dexId": 443,
+    "name": "Gible",
+    "Ab1": "Sand Veil",
+    "Ab2": "",
+    "Hidden": "Rough Skin"
+  },
+  {
+    "dexId": 444,
+    "name": "Gabite",
+    "Ab1": "Sand Veil",
+    "Ab2": "",
+    "Hidden": "Rough Skin"
+  },
+  {
+    "dexId": 445,
+    "name": "Garchomp",
+    "Ab1": "Sand Veil",
+    "Ab2": "",
+    "Hidden": "Rough Skin"
+  },
+  {
+    "dexId": 445,
+    "name": "Garchomp-Mega",
+    "Ab1": "Sand Force",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 447,
+    "name": "Riolu",
+    "Ab1": "Steadfast",
+    "Ab2": "Inner Focus",
+    "Hidden": "Prankster"
+  },
+  {
+    "dexId": 448,
+    "name": "Lucario",
+    "Ab1": "Steadfast",
+    "Ab2": "Inner Focus",
+    "Hidden": "Justified"
+  },
+  {
+    "dexId": 448,
+    "name": "Lucario-Mega",
+    "Ab1": "Adaptability",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 449,
+    "name": "Hippopotas",
+    "Ab1": "Sand Stream",
+    "Ab2": "",
+    "Hidden": "Sand Force"
+  },
+  {
+    "dexId": 450,
+    "name": "Hippowdon",
+    "Ab1": "Sand Stream",
+    "Ab2": "",
+    "Hidden": "Sand Force"
+  },
+  {
+    "dexId": 451,
+    "name": "Skorupi",
+    "Ab1": "Battle Armor",
+    "Ab2": "Sniper",
+    "Hidden": "Keen Eye"
+  },
+  {
+    "dexId": 452,
+    "name": "Drapion",
+    "Ab1": "Battle Armor",
+    "Ab2": "Sniper",
+    "Hidden": "Keen Eye"
+  },
+  {
+    "dexId": 453,
+    "name": "Croagunk",
+    "Ab1": "Anticipation",
+    "Ab2": "Dry Skin",
+    "Hidden": "Poison Touch"
+  },
+  {
+    "dexId": 454,
+    "name": "Toxicroak",
+    "Ab1": "Anticipation",
+    "Ab2": "Dry Skin",
+    "Hidden": "Poison Touch"
+  },
+  {
+    "dexId": 455,
+    "name": "Carnivine",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 456,
+    "name": "Finneon",
+    "Ab1": "Swift Swim",
+    "Ab2": "Storm Drain",
+    "Hidden": "Water Veil"
+  },
+  {
+    "dexId": 457,
+    "name": "Lumineon",
+    "Ab1": "Swift Swim",
+    "Ab2": "Storm Drain",
+    "Hidden": "Water Veil"
+  },
+  {
+    "dexId": 459,
+    "name": "Snover",
+    "Ab1": "Snow Warning",
+    "Ab2": "",
+    "Hidden": "Soundproof"
+  },
+  {
+    "dexId": 460,
+    "name": "Abomasnow",
+    "Ab1": "Snow Warning",
+    "Ab2": "",
+    "Hidden": "Soundproof"
+  },
+  {
+    "dexId": 460,
+    "name": "Abomasnow-Mega",
+    "Ab1": "Snow Warning",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 479,
+    "name": "Rotom",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 479,
+    "name": "Rotom-Heat",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 479,
+    "name": "Rotom-Wash",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 479,
+    "name": "Rotom-Frost",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 479,
+    "name": "Rotom-Fan",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 479,
+    "name": "Rotom-Mow",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 480,
+    "name": "Uxie",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 481,
+    "name": "Mesprit",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 482,
+    "name": "Azelf",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 483,
+    "name": "Dialga",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 484,
+    "name": "Palkia",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 485,
+    "name": "Heatran",
+    "Ab1": "Flash Fire",
+    "Ab2": "",
+    "Hidden": "Flame Body"
+  },
+  {
+    "dexId": 486,
+    "name": "Regigigas",
+    "Ab1": "Slow Start",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 487,
+    "name": "Giratina",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 487,
+    "name": "Giratina-Origin",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 488,
+    "name": "Cresselia",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 489,
+    "name": "Phione",
+    "Ab1": "Hydration",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 490,
+    "name": "Manaphy",
+    "Ab1": "Hydration",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 491,
+    "name": "Darkrai",
+    "Ab1": "Bad Dreams",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 492,
+    "name": "Shaymin",
+    "Ab1": "Natural Cure",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 492,
+    "name": "Shaymin-Sky",
+    "Ab1": "Serene Grace",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 493,
+    "name": "Arceus",
+    "Ab1": "Multitype",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 252,
+    "name": "Treecko",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Unburden"
+  },
+  {
+    "dexId": 253,
+    "name": "Grovyle",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Unburden"
+  },
+  {
+    "dexId": 254,
+    "name": "Sceptile",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Unburden"
+  },
+  {
+    "dexId": 254,
+    "name": "Sceptile-Mega",
+    "Ab1": "Lightning Rod",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 255,
+    "name": "Torchic",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Speed Boost"
+  },
+  {
+    "dexId": 256,
+    "name": "Combusken",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Speed Boost"
+  },
+  {
+    "dexId": 257,
+    "name": "Blaziken",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Speed Boost"
+  },
+  {
+    "dexId": 257,
+    "name": "Blaziken-Mega",
+    "Ab1": "Speed Boost",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 258,
+    "name": "Mudkip",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Damp"
+  },
+  {
+    "dexId": 259,
+    "name": "Marshtomp",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Damp"
+  },
+  {
+    "dexId": 260,
+    "name": "Swampert",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Damp"
+  },
+  {
+    "dexId": 260,
+    "name": "Swampert-Mega",
+    "Ab1": "Swift Swim",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 261,
+    "name": "Poochyena",
+    "Ab1": "Run Away",
+    "Ab2": "Quick Feet*",
+    "Hidden": "Rattled"
+  },
+  {
+    "dexId": 262,
+    "name": "Mightyena",
+    "Ab1": "Intimidate",
+    "Ab2": "Quick Feet*",
+    "Hidden": "Moxie"
+  },
+  {
+    "dexId": 263,
+    "name": "Zigzagoon",
+    "Ab1": "Pickup",
+    "Ab2": "Gluttony*",
+    "Hidden": "Quick Feet"
+  },
+  {
+    "dexId": 263,
+    "name": "Zigzagoon-Galar",
+    "Ab1": "Pickup",
+    "Ab2": "Gluttony",
+    "Hidden": "Quick Feet"
+  },
+  {
+    "dexId": 264,
+    "name": "Linoone",
+    "Ab1": "Pickup",
+    "Ab2": "Gluttony*",
+    "Hidden": "Quick Feet"
+  },
+  {
+    "dexId": 264,
+    "name": "Linoone-Galar",
+    "Ab1": "Pickup",
+    "Ab2": "Gluttony",
+    "Hidden": "Quick Feet"
+  },
+  {
+    "dexId": 265,
+    "name": "Wurmple",
+    "Ab1": "Shield Dust",
+    "Ab2": "",
+    "Hidden": "Run Away"
+  },
+  {
+    "dexId": 266,
+    "name": "Silcoon",
+    "Ab1": "Shed Skin",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 267,
+    "name": "Beautifly",
+    "Ab1": "Swarm",
+    "Ab2": "",
+    "Hidden": "Rivalry"
+  },
+  {
+    "dexId": 268,
+    "name": "Cascoon",
+    "Ab1": "Shed Skin",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 269,
+    "name": "Dustox",
+    "Ab1": "Shield Dust",
+    "Ab2": "",
+    "Hidden": "Compound Eyes"
+  },
+  {
+    "dexId": 270,
+    "name": "Lotad",
+    "Ab1": "Swift Swim",
+    "Ab2": "Rain Dish",
+    "Hidden": "Own Tempo"
+  },
+  {
+    "dexId": 271,
+    "name": "Lombre",
+    "Ab1": "Swift Swim",
+    "Ab2": "Rain Dish",
+    "Hidden": "Own Tempo"
+  },
+  {
+    "dexId": 272,
+    "name": "Ludicolo",
+    "Ab1": "Swift Swim",
+    "Ab2": "Rain Dish",
+    "Hidden": "Own Tempo"
+  },
+  {
+    "dexId": 273,
+    "name": "Seedot",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Early Bird",
+    "Hidden": "Pickpocket"
+  },
+  {
+    "dexId": 274,
+    "name": "Nuzleaf",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Early Bird",
+    "Hidden": "Pickpocket"
+  },
+  {
+    "dexId": 275,
+    "name": "Shiftry",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Early Bird",
+    "Hidden": "Pickpocket"
+  },
+  {
+    "dexId": 276,
+    "name": "Taillow",
+    "Ab1": "Guts",
+    "Ab2": "",
+    "Hidden": "Scrappy"
+  },
+  {
+    "dexId": 277,
+    "name": "Swellow",
+    "Ab1": "Guts",
+    "Ab2": "",
+    "Hidden": "Scrappy"
+  },
+  {
+    "dexId": 278,
+    "name": "Wingull",
+    "Ab1": "Keen Eye",
+    "Ab2": "Hydration*",
+    "Hidden": "Rain Dish"
+  },
+  {
+    "dexId": 279,
+    "name": "Pelipper",
+    "Ab1": "Keen Eye",
+    "Ab2": "Drizzle*",
+    "Hidden": "Rain Dish"
+  },
+  {
+    "dexId": 280,
+    "name": "Ralts",
+    "Ab1": "Synchronize",
+    "Ab2": "Trace",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 281,
+    "name": "Kirlia",
+    "Ab1": "Synchronize",
+    "Ab2": "Trace",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 282,
+    "name": "Gardevoir",
+    "Ab1": "Synchronize",
+    "Ab2": "Trace",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 282,
+    "name": "Gardevoir-Mega",
+    "Ab1": "Pixilate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 475,
+    "name": "Gallade",
+    "Ab1": "Steadfast",
+    "Ab2": "",
+    "Hidden": "Justified"
+  },
+  {
+    "dexId": 475,
+    "name": "Gallade-Mega",
+    "Ab1": "Inner Focus",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 283,
+    "name": "Surskit",
+    "Ab1": "Swift Swim",
+    "Ab2": "",
+    "Hidden": "Rain Dish"
+  },
+  {
+    "dexId": 284,
+    "name": "Masquerain",
+    "Ab1": "Intimidate",
+    "Ab2": "",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 285,
+    "name": "Shroomish",
+    "Ab1": "Effect Spore",
+    "Ab2": "Poison Heal*",
+    "Hidden": "Quick Feet"
+  },
+  {
+    "dexId": 286,
+    "name": "Breloom",
+    "Ab1": "Effect Spore",
+    "Ab2": "Poison Heal*",
+    "Hidden": "Technician"
+  },
+  {
+    "dexId": 287,
+    "name": "Slakoth",
+    "Ab1": "Truant",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 288,
+    "name": "Vigoroth",
+    "Ab1": "Vital Spirit",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 289,
+    "name": "Slaking",
+    "Ab1": "Truant",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 290,
+    "name": "Nincada",
+    "Ab1": "Compound Eyes",
+    "Ab2": "",
+    "Hidden": "Run Away"
+  },
+  {
+    "dexId": 291,
+    "name": "Ninjask",
+    "Ab1": "Speed Boost",
+    "Ab2": "",
+    "Hidden": "Infiltrator"
+  },
+  {
+    "dexId": 292,
+    "name": "Shedinja",
+    "Ab1": "Wonder Guard",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 293,
+    "name": "Whismur",
+    "Ab1": "Soundproof",
+    "Ab2": "",
+    "Hidden": "Rattled"
+  },
+  {
+    "dexId": 294,
+    "name": "Loudred",
+    "Ab1": "Soundproof",
+    "Ab2": "",
+    "Hidden": "Scrappy"
+  },
+  {
+    "dexId": 295,
+    "name": "Exploud",
+    "Ab1": "Soundproof",
+    "Ab2": "",
+    "Hidden": "Scrappy"
+  },
+  {
+    "dexId": 296,
+    "name": "Makuhita",
+    "Ab1": "Thick Fat",
+    "Ab2": "Guts",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 297,
+    "name": "Hariyama",
+    "Ab1": "Thick Fat",
+    "Ab2": "Guts",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 299,
+    "name": "Nosepass",
+    "Ab1": "Sturdy",
+    "Ab2": "Magnet Pull",
+    "Hidden": "Sand Force"
+  },
+  {
+    "dexId": 476,
+    "name": "Probopass",
+    "Ab1": "Sturdy",
+    "Ab2": "Magnet Pull",
+    "Hidden": "Sand Force"
+  },
+  {
+    "dexId": 300,
+    "name": "Skitty",
+    "Ab1": "Cute Charm",
+    "Ab2": "Normalize*",
+    "Hidden": "Wonder Skin"
+  },
+  {
+    "dexId": 301,
+    "name": "Delcatty",
+    "Ab1": "Cute Charm",
+    "Ab2": "Normalize*",
+    "Hidden": "Wonder Skin"
+  },
+  {
+    "dexId": 302,
+    "name": "Sableye",
+    "Ab1": "Keen Eye",
+    "Ab2": "Stall*",
+    "Hidden": "Prankster"
+  },
+  {
+    "dexId": 302,
+    "name": "Sableye-Mega",
+    "Ab1": "Magic Bounce",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 303,
+    "name": "Mawile",
+    "Ab1": "Hyper Cutter",
+    "Ab2": "Intimidate",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 303,
+    "name": "Mawile-Mega",
+    "Ab1": "Huge Power",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 304,
+    "name": "Aron",
+    "Ab1": "Sturdy",
+    "Ab2": "Rock Head",
+    "Hidden": "Heavy Metal"
+  },
+  {
+    "dexId": 305,
+    "name": "Lairon",
+    "Ab1": "Sturdy",
+    "Ab2": "Rock Head",
+    "Hidden": "Heavy Metal"
+  },
+  {
+    "dexId": 306,
+    "name": "Aggron",
+    "Ab1": "Sturdy",
+    "Ab2": "Rock Head",
+    "Hidden": "Heavy Metal"
+  },
+  {
+    "dexId": 306,
+    "name": "Aggron-Mega",
+    "Ab1": "Filter",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 307,
+    "name": "Meditite",
+    "Ab1": "Pure Power",
+    "Ab2": "",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 308,
+    "name": "Medicham",
+    "Ab1": "Pure Power",
+    "Ab2": "",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 308,
+    "name": "Medicham-Mega",
+    "Ab1": "Pure Power",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 309,
+    "name": "Electrike",
+    "Ab1": "Static",
+    "Ab2": "Lightning Rod",
+    "Hidden": "Minus"
+  },
+  {
+    "dexId": 310,
+    "name": "Manectric",
+    "Ab1": "Static",
+    "Ab2": "Lightning Rod",
+    "Hidden": "Minus"
+  },
+  {
+    "dexId": 310,
+    "name": "Manectric-Mega",
+    "Ab1": "Intimidate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 311,
+    "name": "Plusle",
+    "Ab1": "Plus",
+    "Ab2": "",
+    "Hidden": "Lightning Rod*"
+  },
+  {
+    "dexId": 312,
+    "name": "Minun",
+    "Ab1": "Minus",
+    "Ab2": "",
+    "Hidden": "Volt Absorb*"
+  },
+  {
+    "dexId": 313,
+    "name": "Volbeat",
+    "Ab1": "Illuminate",
+    "Ab2": "Swarm",
+    "Hidden": "Prankster"
+  },
+  {
+    "dexId": 314,
+    "name": "Illumise",
+    "Ab1": "Oblivious",
+    "Ab2": "Tinted Lens*",
+    "Hidden": "Prankster"
+  },
+  {
+    "dexId": 406,
+    "name": "Budew",
+    "Ab1": "Natural Cure",
+    "Ab2": "Poison Point",
+    "Hidden": "Leaf Guard"
+  },
+  {
+    "dexId": 315,
+    "name": "Roselia",
+    "Ab1": "Natural Cure",
+    "Ab2": "Poison Point",
+    "Hidden": "Leaf Guard"
+  },
+  {
+    "dexId": 407,
+    "name": "Roserade",
+    "Ab1": "Natural Cure",
+    "Ab2": "Poison Point",
+    "Hidden": "Technician"
+  },
+  {
+    "dexId": 316,
+    "name": "Gulpin",
+    "Ab1": "Liquid Ooze",
+    "Ab2": "Sticky Hold",
+    "Hidden": "Gluttony"
+  },
+  {
+    "dexId": 317,
+    "name": "Swalot",
+    "Ab1": "Liquid Ooze",
+    "Ab2": "Sticky Hold",
+    "Hidden": "Gluttony"
+  },
+  {
+    "dexId": 318,
+    "name": "Carvanha",
+    "Ab1": "Rough Skin",
+    "Ab2": "",
+    "Hidden": "Speed Boost"
+  },
+  {
+    "dexId": 319,
+    "name": "Sharpedo",
+    "Ab1": "Rough Skin",
+    "Ab2": "",
+    "Hidden": "Speed Boost"
+  },
+  {
+    "dexId": 319,
+    "name": "Sharpedo-Mega",
+    "Ab1": "Strong Jaw",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 320,
+    "name": "Wailmer",
+    "Ab1": "Water Veil",
+    "Ab2": "Oblivious",
+    "Hidden": "Pressure"
+  },
+  {
+    "dexId": 321,
+    "name": "Wailord",
+    "Ab1": "Water Veil",
+    "Ab2": "Oblivious",
+    "Hidden": "Pressure"
+  },
+  {
+    "dexId": 322,
+    "name": "Numel",
+    "Ab1": "Oblivious",
+    "Ab2": "Simple*",
+    "Hidden": "Own Tempo"
+  },
+  {
+    "dexId": 323,
+    "name": "Camerupt",
+    "Ab1": "Magma Armor",
+    "Ab2": "Solid Rock*",
+    "Hidden": "Anger Point"
+  },
+  {
+    "dexId": 323,
+    "name": "Camerupt-Mega",
+    "Ab1": "Sheer Force",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 324,
+    "name": "Torkoal",
+    "Ab1": "White Smoke",
+    "Ab2": "Drought*",
+    "Hidden": "Shell Armor"
+  },
+  {
+    "dexId": 325,
+    "name": "Spoink",
+    "Ab1": "Thick Fat",
+    "Ab2": "Own Tempo",
+    "Hidden": "Gluttony"
+  },
+  {
+    "dexId": 326,
+    "name": "Grumpig",
+    "Ab1": "Thick Fat",
+    "Ab2": "Own Tempo",
+    "Hidden": "Gluttony"
+  },
+  {
+    "dexId": 327,
+    "name": "Spinda",
+    "Ab1": "Own Tempo",
+    "Ab2": "Tangled Feet*",
+    "Hidden": "Contrary"
+  },
+  {
+    "dexId": 328,
+    "name": "Trapinch",
+    "Ab1": "Hyper Cutter",
+    "Ab2": "Arena Trap",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 329,
+    "name": "Vibrava",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 330,
+    "name": "Flygon",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 331,
+    "name": "Cacnea",
+    "Ab1": "Sand Veil",
+    "Ab2": "",
+    "Hidden": "Water Absorb"
+  },
+  {
+    "dexId": 332,
+    "name": "Cacturne",
+    "Ab1": "Sand Veil",
+    "Ab2": "",
+    "Hidden": "Water Absorb"
+  },
+  {
+    "dexId": 333,
+    "name": "Swablu",
+    "Ab1": "Natural Cure",
+    "Ab2": "",
+    "Hidden": "Cloud Nine"
+  },
+  {
+    "dexId": 334,
+    "name": "Altaria",
+    "Ab1": "Natural Cure",
+    "Ab2": "",
+    "Hidden": "Cloud Nine"
+  },
+  {
+    "dexId": 334,
+    "name": "Altaria-Mega",
+    "Ab1": "Pixilate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 335,
+    "name": "Zangoose",
+    "Ab1": "Immunity",
+    "Ab2": "",
+    "Hidden": "Toxic Boost"
+  },
+  {
+    "dexId": 336,
+    "name": "Seviper",
+    "Ab1": "Shed Skin",
+    "Ab2": "",
+    "Hidden": "Infiltrator"
+  },
+  {
+    "dexId": 337,
+    "name": "Lunatone",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 338,
+    "name": "Solrock",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 339,
+    "name": "Barboach",
+    "Ab1": "Oblivious",
+    "Ab2": "Anticipation*",
+    "Hidden": "Hydration"
+  },
+  {
+    "dexId": 340,
+    "name": "Whiscash",
+    "Ab1": "Oblivious",
+    "Ab2": "Anticipation*",
+    "Hidden": "Hydration"
+  },
+  {
+    "dexId": 341,
+    "name": "Corphish",
+    "Ab1": "Hyper Cutter",
+    "Ab2": "Shell Armor",
+    "Hidden": "Adaptability"
+  },
+  {
+    "dexId": 342,
+    "name": "Crawdaunt",
+    "Ab1": "Hyper Cutter",
+    "Ab2": "Shell Armor",
+    "Hidden": "Adaptability"
+  },
+  {
+    "dexId": 343,
+    "name": "Baltoy",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 344,
+    "name": "Claydol",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 345,
+    "name": "Lileep",
+    "Ab1": "Suction Cups",
+    "Ab2": "",
+    "Hidden": "Storm Drain"
+  },
+  {
+    "dexId": 346,
+    "name": "Cradily",
+    "Ab1": "Suction Cups",
+    "Ab2": "",
+    "Hidden": "Storm Drain"
+  },
+  {
+    "dexId": 347,
+    "name": "Anorith",
+    "Ab1": "Battle Armor",
+    "Ab2": "",
+    "Hidden": "Swift Swim"
+  },
+  {
+    "dexId": 348,
+    "name": "Armaldo",
+    "Ab1": "Battle Armor",
+    "Ab2": "",
+    "Hidden": "Swift Swim"
+  },
+  {
+    "dexId": 349,
+    "name": "Feebas",
+    "Ab1": "Swift Swim",
+    "Ab2": "Oblivious*",
+    "Hidden": "Adaptability"
+  },
+  {
+    "dexId": 350,
+    "name": "Milotic",
+    "Ab1": "Marvel Scale",
+    "Ab2": "Competitive*",
+    "Hidden": "Cute Charm"
+  },
+  {
+    "dexId": 351,
+    "name": "Castform",
+    "Ab1": "Forecast",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 352,
+    "name": "Kecleon",
+    "Ab1": "Color Change",
+    "Ab2": "",
+    "Hidden": "Protean*"
+  },
+  {
+    "dexId": 353,
+    "name": "Shuppet",
+    "Ab1": "Insomnia",
+    "Ab2": "Frisk*",
+    "Hidden": "Cursed Body"
+  },
+  {
+    "dexId": 354,
+    "name": "Banette",
+    "Ab1": "Insomnia",
+    "Ab2": "Frisk*",
+    "Hidden": "Cursed Body"
+  },
+  {
+    "dexId": 354,
+    "name": "Banette-Mega",
+    "Ab1": "Prankster",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 355,
+    "name": "Duskull",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": "Frisk*"
+  },
+  {
+    "dexId": 356,
+    "name": "Dusclops",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Frisk*"
+  },
+  {
+    "dexId": 477,
+    "name": "Dusknoir",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": "Frisk*"
+  },
+  {
+    "dexId": 357,
+    "name": "Tropius",
+    "Ab1": "Chlorophyll",
+    "Ab2": "Solar Power*",
+    "Hidden": "Harvest"
+  },
+  {
+    "dexId": 433,
+    "name": "Chingling",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 358,
+    "name": "Chimecho",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 359,
+    "name": "Absol",
+    "Ab1": "Pressure",
+    "Ab2": "Super Luck*",
+    "Hidden": "Justified"
+  },
+  {
+    "dexId": 359,
+    "name": "Absol-Mega",
+    "Ab1": "Magic Bounce",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 361,
+    "name": "Snorunt",
+    "Ab1": "Inner Focus",
+    "Ab2": "Ice Body*",
+    "Hidden": "Moody"
+  },
+  {
+    "dexId": 362,
+    "name": "Glalie",
+    "Ab1": "Inner Focus",
+    "Ab2": "Ice Body*",
+    "Hidden": "Moody"
+  },
+  {
+    "dexId": 362,
+    "name": "Glalie-Mega",
+    "Ab1": "Refrigerate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 478,
+    "name": "Froslass",
+    "Ab1": "Snow Cloak",
+    "Ab2": "",
+    "Hidden": "Cursed Body"
+  },
+  {
+    "dexId": 363,
+    "name": "Spheal",
+    "Ab1": "Thick Fat",
+    "Ab2": "Ice Body*",
+    "Hidden": "Oblivious"
+  },
+  {
+    "dexId": 364,
+    "name": "Sealeo",
+    "Ab1": "Thick Fat",
+    "Ab2": "Ice Body*",
+    "Hidden": "Oblivious"
+  },
+  {
+    "dexId": 365,
+    "name": "Walrein",
+    "Ab1": "Thick Fat",
+    "Ab2": "Ice Body*",
+    "Hidden": "Oblivious"
+  },
+  {
+    "dexId": 366,
+    "name": "Clamperl",
+    "Ab1": "Shell Armor",
+    "Ab2": "",
+    "Hidden": "Rattled"
+  },
+  {
+    "dexId": 367,
+    "name": "Huntail",
+    "Ab1": "Swift Swim",
+    "Ab2": "",
+    "Hidden": "Water Veil"
+  },
+  {
+    "dexId": 368,
+    "name": "Gorebyss",
+    "Ab1": "Swift Swim",
+    "Ab2": "",
+    "Hidden": "Hydration"
+  },
+  {
+    "dexId": 369,
+    "name": "Relicanth",
+    "Ab1": "Swift Swim",
+    "Ab2": "Rock Head",
+    "Hidden": "Sturdy"
+  },
+  {
+    "dexId": 370,
+    "name": "Luvdisc",
+    "Ab1": "Swift Swim",
+    "Ab2": "",
+    "Hidden": "Hydration"
+  },
+  {
+    "dexId": 371,
+    "name": "Bagon",
+    "Ab1": "Rock Head",
+    "Ab2": "",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 372,
+    "name": "Shelgon",
+    "Ab1": "Rock Head",
+    "Ab2": "",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 373,
+    "name": "Salamence",
+    "Ab1": "Intimidate",
+    "Ab2": "",
+    "Hidden": "Moxie"
+  },
+  {
+    "dexId": 373,
+    "name": "Salamence-Mega",
+    "Ab1": "Aerilate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 374,
+    "name": "Beldum",
+    "Ab1": "Clear Body",
+    "Ab2": "",
+    "Hidden": "Light Metal"
+  },
+  {
+    "dexId": 375,
+    "name": "Metang",
+    "Ab1": "Clear Body",
+    "Ab2": "",
+    "Hidden": "Light Metal"
+  },
+  {
+    "dexId": 376,
+    "name": "Metagross",
+    "Ab1": "Clear Body",
+    "Ab2": "",
+    "Hidden": "Light Metal"
+  },
+  {
+    "dexId": 376,
+    "name": "Metagross-Mega",
+    "Ab1": "Tough Claws",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 377,
+    "name": "Regirock",
+    "Ab1": "Clear Body",
+    "Ab2": "",
+    "Hidden": "Sturdy"
+  },
+  {
+    "dexId": 378,
+    "name": "Regice",
+    "Ab1": "Clear Body",
+    "Ab2": "",
+    "Hidden": "Ice Body"
+  },
+  {
+    "dexId": 379,
+    "name": "Registeel",
+    "Ab1": "Clear Body",
+    "Ab2": "",
+    "Hidden": "Light Metal"
+  },
+  {
+    "dexId": 380,
+    "name": "Latias",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 380,
+    "name": "Latias-Mega",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 381,
+    "name": "Latios",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 381,
+    "name": "Latios-Mega",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 382,
+    "name": "Kyogre",
+    "Ab1": "Drizzle",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 382,
+    "name": "Primal Kyogre",
+    "Ab1": "Primordial Sea",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 383,
+    "name": "Groudon",
+    "Ab1": "Drought",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 383,
+    "name": "Primal Groudon",
+    "Ab1": "Desolate Land",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 384,
+    "name": "Rayquaza",
+    "Ab1": "Air Lock",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 384,
+    "name": "Rayquaza-Mega",
+    "Ab1": "Delta Stream",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 385,
+    "name": "Jirachi",
+    "Ab1": "Serene Grace",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 386,
+    "name": "Deoxys",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 386,
+    "name": "Deoxys-Attack",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 386,
+    "name": "Deoxys-Defense",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 386,
+    "name": "Deoxys-Speed",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 650,
+    "name": "Chespin",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Bulletproof"
+  },
+  {
+    "dexId": 651,
+    "name": "Quilladin",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Bulletproof"
+  },
+  {
+    "dexId": 652,
+    "name": "Chesnaught",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Bulletproof"
+  },
+  {
+    "dexId": 653,
+    "name": "Fennekin",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Magician"
+  },
+  {
+    "dexId": 654,
+    "name": "Braixen",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Magician"
+  },
+  {
+    "dexId": 655,
+    "name": "Delphox",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Magician"
+  },
+  {
+    "dexId": 656,
+    "name": "Froakie",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Protean"
+  },
+  {
+    "dexId": 657,
+    "name": "Frogadier",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Protean"
+  },
+  {
+    "dexId": 658,
+    "name": "Greninja",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Protean"
+  },
+  {
+    "dexId": 658,
+    "name": "Greninja-Ash",
+    "Ab1": "Battle Bond",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 659,
+    "name": "Bunnelby",
+    "Ab1": "Pickup",
+    "Ab2": "Cheek Pouch",
+    "Hidden": "Huge Power"
+  },
+  {
+    "dexId": 660,
+    "name": "Diggersby",
+    "Ab1": "Pickup",
+    "Ab2": "Cheek Pouch",
+    "Hidden": "Huge Power"
+  },
+  {
+    "dexId": 661,
+    "name": "Fletchling",
+    "Ab1": "Big Pecks",
+    "Ab2": "",
+    "Hidden": "Gale Wings"
+  },
+  {
+    "dexId": 662,
+    "name": "Fletchinder",
+    "Ab1": "Flame Body",
+    "Ab2": "",
+    "Hidden": "Gale Wings"
+  },
+  {
+    "dexId": 663,
+    "name": "Talonflame",
+    "Ab1": "Flame Body",
+    "Ab2": "",
+    "Hidden": "Gale Wings"
+  },
+  {
+    "dexId": 664,
+    "name": "Scatterbug",
+    "Ab1": "Shield Dust",
+    "Ab2": "Compound Eyes",
+    "Hidden": "Friend Guard"
+  },
+  {
+    "dexId": 665,
+    "name": "Spewpa",
+    "Ab1": "Shed Skin",
+    "Ab2": "",
+    "Hidden": "Friend Guard"
+  },
+  {
+    "dexId": 666,
+    "name": "Vivillon",
+    "Ab1": "Shield Dust",
+    "Ab2": "Compound Eyes",
+    "Hidden": "Friend Guard"
+  },
+  {
+    "dexId": 667,
+    "name": "Litleo",
+    "Ab1": "Rivalry",
+    "Ab2": "Unnerve",
+    "Hidden": "Moxie"
+  },
+  {
+    "dexId": 668,
+    "name": "Pyroar",
+    "Ab1": "Rivalry",
+    "Ab2": "Unnerve",
+    "Hidden": "Moxie"
+  },
+  {
+    "dexId": 669,
+    "name": "Flabebe",
+    "Ab1": "Flower Veil",
+    "Ab2": "",
+    "Hidden": "Symbiosis"
+  },
+  {
+    "dexId": 670,
+    "name": "Floette",
+    "Ab1": "Flower Veil",
+    "Ab2": "",
+    "Hidden": "Symbiosis"
+  },
+  {
+    "dexId": 670,
+    "name": "Floette-Eternal",
+    "Ab1": "Flower Veil",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 671,
+    "name": "Florges",
+    "Ab1": "Flower Veil",
+    "Ab2": "",
+    "Hidden": "Symbiosis"
+  },
+  {
+    "dexId": 672,
+    "name": "Skiddo",
+    "Ab1": "Sap Sipper",
+    "Ab2": "",
+    "Hidden": "Grass Pelt"
+  },
+  {
+    "dexId": 673,
+    "name": "Gogoat",
+    "Ab1": "Sap Sipper",
+    "Ab2": "",
+    "Hidden": "Grass Pelt"
+  },
+  {
+    "dexId": 674,
+    "name": "Pancham",
+    "Ab1": "Iron Fist",
+    "Ab2": "Mold Breaker",
+    "Hidden": "Scrappy"
+  },
+  {
+    "dexId": 675,
+    "name": "Pangoro",
+    "Ab1": "Iron Fist",
+    "Ab2": "Mold Breaker",
+    "Hidden": "Scrappy"
+  },
+  {
+    "dexId": 676,
+    "name": "Furfrou",
+    "Ab1": "Fur Coat",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 677,
+    "name": "Espurr",
+    "Ab1": "Keen Eye",
+    "Ab2": "Infiltrator",
+    "Hidden": "Own Tempo"
+  },
+  {
+    "dexId": 678,
+    "name": "Meowstic♂",
+    "Ab1": "Keen Eye",
+    "Ab2": "Infiltrator",
+    "Hidden": "Prankster"
+  },
+  {
+    "dexId": 678,
+    "name": "Meowstic♀",
+    "Ab1": "Keen Eye",
+    "Ab2": "Infiltrator",
+    "Hidden": "Competitive"
+  },
+  {
+    "dexId": 679,
+    "name": "Honedge",
+    "Ab1": "No Guard",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 680,
+    "name": "Doublade",
+    "Ab1": "No Guard",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 681,
+    "name": "Aegislash-Blade",
+    "Ab1": "Stance Change",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 681,
+    "name": "Aegislash-Shield",
+    "Ab1": "Stance Change",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 682,
+    "name": "Spritzee",
+    "Ab1": "Healer",
+    "Ab2": "",
+    "Hidden": "Aroma Veil"
+  },
+  {
+    "dexId": 683,
+    "name": "Aromatisse",
+    "Ab1": "Healer",
+    "Ab2": "",
+    "Hidden": "Aroma Veil"
+  },
+  {
+    "dexId": 684,
+    "name": "Swirlix",
+    "Ab1": "Sweet Veil",
+    "Ab2": "",
+    "Hidden": "Unburden"
+  },
+  {
+    "dexId": 685,
+    "name": "Slurpuff",
+    "Ab1": "Sweet Veil",
+    "Ab2": "",
+    "Hidden": "Unburden"
+  },
+  {
+    "dexId": 686,
+    "name": "Inkay",
+    "Ab1": "Contrary",
+    "Ab2": "Suction Cups",
+    "Hidden": "Infiltrator"
+  },
+  {
+    "dexId": 687,
+    "name": "Malamar",
+    "Ab1": "Contrary",
+    "Ab2": "Suction Cups",
+    "Hidden": "Infiltrator"
+  },
+  {
+    "dexId": 688,
+    "name": "Binacle",
+    "Ab1": "Sniper",
+    "Ab2": "Tough Claws",
+    "Hidden": "Pickpocket"
+  },
+  {
+    "dexId": 689,
+    "name": "Barbaracle",
+    "Ab1": "Sniper",
+    "Ab2": "Tough Claws",
+    "Hidden": "Pickpocket"
+  },
+  {
+    "dexId": 690,
+    "name": "Skrelp",
+    "Ab1": "Poison Point",
+    "Ab2": "Poison Touch",
+    "Hidden": "Adaptability"
+  },
+  {
+    "dexId": 691,
+    "name": "Dragalge",
+    "Ab1": "Poison Point",
+    "Ab2": "Poison Touch",
+    "Hidden": "Adaptability"
+  },
+  {
+    "dexId": 692,
+    "name": "Clauncher",
+    "Ab1": "Megan Launcher",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 693,
+    "name": "Clawitzer",
+    "Ab1": "Megan Launcher",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 694,
+    "name": "Helioptile",
+    "Ab1": "Dry Skin",
+    "Ab2": "Sand Veil",
+    "Hidden": "Solar Power"
+  },
+  {
+    "dexId": 695,
+    "name": "Heliolisk",
+    "Ab1": "Dry Skin",
+    "Ab2": "Sand Veil",
+    "Hidden": "Solar Power"
+  },
+  {
+    "dexId": 696,
+    "name": "Tyrunt",
+    "Ab1": "Strong Jaw",
+    "Ab2": "",
+    "Hidden": "Sturdy"
+  },
+  {
+    "dexId": 697,
+    "name": "Tyrantrum",
+    "Ab1": "Strong Jaw",
+    "Ab2": "",
+    "Hidden": "Rock Head"
+  },
+  {
+    "dexId": 698,
+    "name": "Amaura",
+    "Ab1": "Refrigerate",
+    "Ab2": "",
+    "Hidden": "Snow Warning"
+  },
+  {
+    "dexId": 699,
+    "name": "Aurorus",
+    "Ab1": "Refrigerate",
+    "Ab2": "",
+    "Hidden": "Snow Warning"
+  },
+  {
+    "dexId": 701,
+    "name": "Hawlucha",
+    "Ab1": "Limber",
+    "Ab2": "Unburden",
+    "Hidden": "Mold Breaker"
+  },
+  {
+    "dexId": 702,
+    "name": "Dedenne",
+    "Ab1": "Cheek Pouch",
+    "Ab2": "Pickup",
+    "Hidden": "Plus"
+  },
+  {
+    "dexId": 703,
+    "name": "Carbink",
+    "Ab1": "Clear Body",
+    "Ab2": "",
+    "Hidden": "Sturdy"
+  },
+  {
+    "dexId": 704,
+    "name": "Goomy",
+    "Ab1": "Sap Sipper",
+    "Ab2": "Hydration",
+    "Hidden": "Gooey"
+  },
+  {
+    "dexId": 705,
+    "name": "Sliggoo",
+    "Ab1": "Sap Sipper",
+    "Ab2": "Hydration",
+    "Hidden": "Gooey"
+  },
+  {
+    "dexId": 706,
+    "name": "Goodra",
+    "Ab1": "Sap Sipper",
+    "Ab2": "Hydration",
+    "Hidden": "Gooey"
+  },
+  {
+    "dexId": 707,
+    "name": "Klefki",
+    "Ab1": "Prankster",
+    "Ab2": "",
+    "Hidden": "Magician"
+  },
+  {
+    "dexId": 708,
+    "name": "Phantump",
+    "Ab1": "Natural Cure",
+    "Ab2": "Frisk",
+    "Hidden": "Harvest"
+  },
+  {
+    "dexId": 709,
+    "name": "Trevenant",
+    "Ab1": "Natural Cure",
+    "Ab2": "Frisk",
+    "Hidden": "Harvest"
+  },
+  {
+    "dexId": 710,
+    "name": "Pumpkaboo",
+    "Ab1": "Pickup",
+    "Ab2": "Frisk",
+    "Hidden": "Insomnia"
+  },
+  {
+    "dexId": 711,
+    "name": "Gourgeist",
+    "Ab1": "Pickup",
+    "Ab2": "Frisk",
+    "Hidden": "Insomnia"
+  },
+  {
+    "dexId": 712,
+    "name": "Bergmite",
+    "Ab1": "Own Tempo",
+    "Ab2": "Ice Body",
+    "Hidden": "Sturdy"
+  },
+  {
+    "dexId": 713,
+    "name": "Avalugg",
+    "Ab1": "Own Tempo",
+    "Ab2": "Ice Body",
+    "Hidden": "Sturdy"
+  },
+  {
+    "dexId": 714,
+    "name": "Noibat",
+    "Ab1": "Frisk",
+    "Ab2": "Infiltrator",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 715,
+    "name": "Noivern",
+    "Ab1": "Frisk",
+    "Ab2": "Infiltrator",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 716,
+    "name": "Xerneas",
+    "Ab1": "Fairy Aura",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 717,
+    "name": "Yveltal",
+    "Ab1": "Dark Aura",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 718,
+    "name": "Zygarde",
+    "Ab1": "Aura Break",
+    "Ab2": "Power Construct",
+    "Hidden": ""
+  },
+  {
+    "dexId": 718,
+    "name": "Zygarde-10%",
+    "Ab1": "Aura Break",
+    "Ab2": "Power Construct",
+    "Hidden": ""
+  },
+  {
+    "dexId": 718,
+    "name": "Zygarde-Complete",
+    "Ab1": "Power Construct",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 719,
+    "name": "Diancie",
+    "Ab1": "Clear Body",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 719,
+    "name": "Diancie-Mega",
+    "Ab1": "Magic Bounce",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 720,
+    "name": "Hoopa",
+    "Ab1": "Magician",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 720,
+    "name": "Hoopa-Unbound",
+    "Ab1": "Magician",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 721,
+    "name": "Volcanion",
+    "Ab1": "Water Absorb",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 722,
+    "name": "Rowlet",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Long Reach"
+  },
+  {
+    "dexId": 723,
+    "name": "Dartrix",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Long Reach"
+  },
+  {
+    "dexId": 724,
+    "name": "Decidueye",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Long Reach"
+  },
+  {
+    "dexId": 725,
+    "name": "Litten",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Intimidate"
+  },
+  {
+    "dexId": 726,
+    "name": "Torracat",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Intimidate"
+  },
+  {
+    "dexId": 727,
+    "name": "Incineroar",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Intimidate"
+  },
+  {
+    "dexId": 728,
+    "name": "Popplio",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Liquid Voice"
+  },
+  {
+    "dexId": 729,
+    "name": "Brionne",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Liquid Voice"
+  },
+  {
+    "dexId": 730,
+    "name": "Primarina",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Liquid Voice"
+  },
+  {
+    "dexId": 731,
+    "name": "Pikipek",
+    "Ab1": "Keen Eye",
+    "Ab2": "Skill Link",
+    "Hidden": "Pickup"
+  },
+  {
+    "dexId": 732,
+    "name": "Trumbeak",
+    "Ab1": "Keen Eye",
+    "Ab2": "Skill Link",
+    "Hidden": "Pickup"
+  },
+  {
+    "dexId": 733,
+    "name": "Toucannon",
+    "Ab1": "Keen Eye",
+    "Ab2": "Skill Link",
+    "Hidden": "Sheer Force"
+  },
+  {
+    "dexId": 734,
+    "name": "Yungoos",
+    "Ab1": "Stakeout",
+    "Ab2": "Strong Jaw",
+    "Hidden": "Adaptability"
+  },
+  {
+    "dexId": 735,
+    "name": "Gumshoos",
+    "Ab1": "Stakeout",
+    "Ab2": "Strong Jaw",
+    "Hidden": "Adaptability"
+  },
+  {
+    "dexId": 736,
+    "name": "Grubbin",
+    "Ab1": "Swarm",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 737,
+    "name": "Charjabug",
+    "Ab1": "Battery",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 738,
+    "name": "Vikavolt",
+    "Ab1": "Levitate",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 739,
+    "name": "Crabrawler",
+    "Ab1": "Hyper Cutter",
+    "Ab2": "Iron Fist",
+    "Hidden": "Anger Point"
+  },
+  {
+    "dexId": 740,
+    "name": "Crabominable",
+    "Ab1": "Hyper Cutter",
+    "Ab2": "Iron Fist",
+    "Hidden": "Anger Point"
+  },
+  {
+    "dexId": 741,
+    "name": "Oricorio",
+    "Ab1": "Dancer",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 742,
+    "name": "Cutiefly",
+    "Ab1": "Honey Gather",
+    "Ab2": "Shield Dust",
+    "Hidden": "Sweet Veil"
+  },
+  {
+    "dexId": 743,
+    "name": "Ribombee",
+    "Ab1": "Honey Gather",
+    "Ab2": "Shield Dust",
+    "Hidden": "Sweet Veil"
+  },
+  {
+    "dexId": 744,
+    "name": "Rockruff",
+    "Ab1": "Keen Eye",
+    "Ab2": "Vital Spirit",
+    "Hidden": "Steadfast"
+  },
+  {
+    "dexId": 744,
+    "name": "Special Rockruff",
+    "Ab1": "Own Tempo",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 745,
+    "name": "Lycanroc",
+    "Ab1": "Keen Eye",
+    "Ab2": "Sand Rush",
+    "Hidden": "Steadfast"
+  },
+  {
+    "dexId": 745,
+    "name": "Lycanroc-Midnight",
+    "Ab1": "Keen Eye",
+    "Ab2": "Vital Spirit",
+    "Hidden": "No Guard"
+  },
+  {
+    "dexId": 745,
+    "name": "Lycanroc-Dusk",
+    "Ab1": "Tough Claws",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 746,
+    "name": "Wishiwashi",
+    "Ab1": "Schooling",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 747,
+    "name": "Mareanie",
+    "Ab1": "Merciless",
+    "Ab2": "Limber",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 748,
+    "name": "Toxapex",
+    "Ab1": "Merciless",
+    "Ab2": "Limber",
+    "Hidden": "Regenerator"
+  },
+  {
+    "dexId": 749,
+    "name": "Mudbray",
+    "Ab1": "Own Tempo",
+    "Ab2": "Stamina",
+    "Hidden": "Inner Focus"
+  },
+  {
+    "dexId": 750,
+    "name": "Mudsdale",
+    "Ab1": "Own Tempo",
+    "Ab2": "Stamina",
+    "Hidden": "Inner Focus"
+  },
+  {
+    "dexId": 751,
+    "name": "Dewpider",
+    "Ab1": "Water Bubble",
+    "Ab2": "",
+    "Hidden": "Water Absorb"
+  },
+  {
+    "dexId": 752,
+    "name": "Araquanid",
+    "Ab1": "Water Bubble",
+    "Ab2": "",
+    "Hidden": "Water Absorb"
+  },
+  {
+    "dexId": 753,
+    "name": "Fomantis",
+    "Ab1": "Leaf Guard",
+    "Ab2": "",
+    "Hidden": "Contrary"
+  },
+  {
+    "dexId": 754,
+    "name": "Lurantis",
+    "Ab1": "Leaf Guard",
+    "Ab2": "",
+    "Hidden": "Contrary"
+  },
+  {
+    "dexId": 755,
+    "name": "Morelull",
+    "Ab1": "Illuminate",
+    "Ab2": "Effect Spore",
+    "Hidden": "Rain Dish"
+  },
+  {
+    "dexId": 756,
+    "name": "Shiinotic",
+    "Ab1": "Illuminate",
+    "Ab2": "Effect Spore",
+    "Hidden": "Rain Dish"
+  },
+  {
+    "dexId": 757,
+    "name": "Salandit",
+    "Ab1": "Corrosion",
+    "Ab2": "",
+    "Hidden": "Oblivious"
+  },
+  {
+    "dexId": 758,
+    "name": "Salazzle",
+    "Ab1": "Corrosion",
+    "Ab2": "",
+    "Hidden": "Oblivious"
+  },
+  {
+    "dexId": 759,
+    "name": "Stufful",
+    "Ab1": "Fluffy",
+    "Ab2": "Klutz",
+    "Hidden": "Cute Charm"
+  },
+  {
+    "dexId": 760,
+    "name": "Bewear",
+    "Ab1": "Fluffy",
+    "Ab2": "Klutz",
+    "Hidden": "Unnerve"
+  },
+  {
+    "dexId": 761,
+    "name": "Bounsweet",
+    "Ab1": "Leaf Guard",
+    "Ab2": "Oblivious",
+    "Hidden": "Sweet Veil"
+  },
+  {
+    "dexId": 762,
+    "name": "Steenee",
+    "Ab1": "Leaf Guard",
+    "Ab2": "Oblivious",
+    "Hidden": "Sweet Veil"
+  },
+  {
+    "dexId": 763,
+    "name": "Tsareena",
+    "Ab1": "Leaf Guard",
+    "Ab2": "Queenly Majesty",
+    "Hidden": "Sweet Veil"
+  },
+  {
+    "dexId": 764,
+    "name": "Comfey",
+    "Ab1": "Flower Veil",
+    "Ab2": "Triage",
+    "Hidden": "Natural Cure"
+  },
+  {
+    "dexId": 765,
+    "name": "Oranguru",
+    "Ab1": "Inner Focus",
+    "Ab2": "Telepathy",
+    "Hidden": "Symbiosis"
+  },
+  {
+    "dexId": 766,
+    "name": "Passimian",
+    "Ab1": "Receiver",
+    "Ab2": "",
+    "Hidden": "Defiant"
+  },
+  {
+    "dexId": 767,
+    "name": "Wimpod",
+    "Ab1": "Wimp Out",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 768,
+    "name": "Golisopod",
+    "Ab1": "Emergency Exit",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 769,
+    "name": "Sandygast",
+    "Ab1": "Water Compaction",
+    "Ab2": "",
+    "Hidden": "Sand Veil"
+  },
+  {
+    "dexId": 770,
+    "name": "Palossand",
+    "Ab1": "Water Compaction",
+    "Ab2": "",
+    "Hidden": "Sand Veil"
+  },
+  {
+    "dexId": 771,
+    "name": "Pyukumuku",
+    "Ab1": "Innards Out",
+    "Ab2": "",
+    "Hidden": "Unaware"
+  },
+  {
+    "dexId": 772,
+    "name": "Type: Null",
+    "Ab1": "Battle Armor",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 773,
+    "name": "Silvally",
+    "Ab1": "RKS System",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 774,
+    "name": "Minior",
+    "Ab1": "Shields Down",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 775,
+    "name": "Komala",
+    "Ab1": "Comatose",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 776,
+    "name": "Turtonator",
+    "Ab1": "Shell Armor",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 777,
+    "name": "Togedemaru",
+    "Ab1": "Iron Barbs",
+    "Ab2": "Lightning Rod",
+    "Hidden": "Sturdy"
+  },
+  {
+    "dexId": 778,
+    "name": "Mimikyu",
+    "Ab1": "Disguise",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 779,
+    "name": "Bruxish",
+    "Ab1": "Dazzling",
+    "Ab2": "Strong Jaw",
+    "Hidden": "Wonder Skin"
+  },
+  {
+    "dexId": 780,
+    "name": "Drampa",
+    "Ab1": "Berserk",
+    "Ab2": "Sap Sipper",
+    "Hidden": "Cloud Nine"
+  },
+  {
+    "dexId": 781,
+    "name": "Dhelmise",
+    "Ab1": "Steelworker",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 782,
+    "name": "Jangmo-o",
+    "Ab1": "Bulletproof",
+    "Ab2": "Soundproof",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 783,
+    "name": "Hakamo-o",
+    "Ab1": "Bulletproof",
+    "Ab2": "Soundproof",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 784,
+    "name": "Kommo-o",
+    "Ab1": "Bulletproof",
+    "Ab2": "Soundproof",
+    "Hidden": "Overcoat"
+  },
+  {
+    "dexId": 785,
+    "name": "Tapu Koko",
+    "Ab1": "Electric Surge",
+    "Ab2": "",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 786,
+    "name": "Tapu Lele",
+    "Ab1": "Psychic Surge",
+    "Ab2": "",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 787,
+    "name": "Tapu Bulu",
+    "Ab1": "Grassy Surge",
+    "Ab2": "",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 788,
+    "name": "Tapu Fini",
+    "Ab1": "Misty Surge",
+    "Ab2": "",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 789,
+    "name": "Cosmog",
+    "Ab1": "Unaware",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 790,
+    "name": "Cosmoem",
+    "Ab1": "Sturdy",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 791,
+    "name": "Solgaleo",
+    "Ab1": "Full Metal Body",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 792,
+    "name": "Lunala",
+    "Ab1": "Shadow Shield",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 793,
+    "name": "Nihilego",
+    "Ab1": "Beast Boost",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 794,
+    "name": "Buzzwole",
+    "Ab1": "Beast Boost",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 795,
+    "name": "Pheromosa",
+    "Ab1": "Beast Boost",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 796,
+    "name": "Xurkitree",
+    "Ab1": "Beast Boost",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 797,
+    "name": "Celesteela",
+    "Ab1": "Beast Boost",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 798,
+    "name": "Kartana",
+    "Ab1": "Beast Boost",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 799,
+    "name": "Guzzlord",
+    "Ab1": "Beast Boost",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 800,
+    "name": "Necrozma",
+    "Ab1": "Prism Armor",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 800,
+    "name": "Necrozma-DuskMane",
+    "Ab1": "Prism Armor",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 800,
+    "name": "Necrozma-DawnWings",
+    "Ab1": "Prism Armor",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 800,
+    "name": "Necrozma-Ultra",
+    "Ab1": "Neuroforce",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 801,
+    "name": "Magearna",
+    "Ab1": "Soul-Heart",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 802,
+    "name": "Marshadow",
+    "Ab1": "Technician",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 803,
+    "name": "Poipole",
+    "Ab1": "Beast Boost",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 804,
+    "name": "Naganadel",
+    "Ab1": "Beast Boost",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 805,
+    "name": "Stakataka",
+    "Ab1": "Beast Boost",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 806,
+    "name": "Blacephalon",
+    "Ab1": "Beast Boost",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 807,
+    "name": "Zeraora",
+    "Ab1": "Volt Absorb",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 808,
+    "name": "Meltan",
+    "Ab1": "Magnet Pull",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 809,
+    "name": "Melmetal",
+    "Ab1": "Iron Fist",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 810,
+    "name": "Grookey",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Grassy Surge"
+  },
+  {
+    "dexId": 811,
+    "name": "Thwackey",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Grassy Surge"
+  },
+  {
+    "dexId": 812,
+    "name": "Rillaboom",
+    "Ab1": "Overgrow",
+    "Ab2": "",
+    "Hidden": "Grassy Surge"
+  },
+  {
+    "dexId": 813,
+    "name": "Scorbunny",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Libero"
+  },
+  {
+    "dexId": 814,
+    "name": "Raboot",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Libero"
+  },
+  {
+    "dexId": 815,
+    "name": "Cinderace",
+    "Ab1": "Blaze",
+    "Ab2": "",
+    "Hidden": "Libero"
+  },
+  {
+    "dexId": 816,
+    "name": "Sobble",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Sniper"
+  },
+  {
+    "dexId": 817,
+    "name": "Drizzile",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Sniper"
+  },
+  {
+    "dexId": 818,
+    "name": "Inteleon",
+    "Ab1": "Torrent",
+    "Ab2": "",
+    "Hidden": "Sniper"
+  },
+  {
+    "dexId": 819,
+    "name": "Skwovet",
+    "Ab1": "Cheek Pouch",
+    "Ab2": "",
+    "Hidden": "Gluttony"
+  },
+  {
+    "dexId": 820,
+    "name": "Greedent",
+    "Ab1": "Cheek Pouch",
+    "Ab2": "",
+    "Hidden": "Gluttony"
+  },
+  {
+    "dexId": 821,
+    "name": "Rookidee",
+    "Ab1": "Keen Eye",
+    "Ab2": "Unnerve",
+    "Hidden": "Big Pecks"
+  },
+  {
+    "dexId": 822,
+    "name": "Corvisquire",
+    "Ab1": "Keen Eye",
+    "Ab2": "Unnerve",
+    "Hidden": "Big Pecks"
+  },
+  {
+    "dexId": 823,
+    "name": "Corviknight",
+    "Ab1": "Pressure",
+    "Ab2": "Unnerve",
+    "Hidden": "Mirror Armor"
+  },
+  {
+    "dexId": 824,
+    "name": "Blipbug",
+    "Ab1": "Swarm",
+    "Ab2": "Compound Eyes",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 825,
+    "name": "Dottler",
+    "Ab1": "Swarm",
+    "Ab2": "Compound Eyes",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 826,
+    "name": "Orbeetle",
+    "Ab1": "Swarm",
+    "Ab2": "Frisk",
+    "Hidden": "Telepathy"
+  },
+  {
+    "dexId": 827,
+    "name": "Nickit",
+    "Ab1": "Run Away",
+    "Ab2": "Unburden",
+    "Hidden": "Stakeout"
+  },
+  {
+    "dexId": 828,
+    "name": "Thievul",
+    "Ab1": "Run Away",
+    "Ab2": "Unburden",
+    "Hidden": "Stakeout"
+  },
+  {
+    "dexId": 829,
+    "name": "Gossifleur",
+    "Ab1": "Cotton Down",
+    "Ab2": "Regenerator",
+    "Hidden": "Effect Spore"
+  },
+  {
+    "dexId": 830,
+    "name": "Eldegoss",
+    "Ab1": "Cotton Down",
+    "Ab2": "Regenerator",
+    "Hidden": "Effect Spore"
+  },
+  {
+    "dexId": 831,
+    "name": "Wooloo",
+    "Ab1": "Fluffy",
+    "Ab2": "Run Away",
+    "Hidden": "Bulletproof"
+  },
+  {
+    "dexId": 832,
+    "name": "Dubwool",
+    "Ab1": "Fluffy",
+    "Ab2": "Steadfast",
+    "Hidden": "Bulletproof"
+  },
+  {
+    "dexId": 833,
+    "name": "Chewtle",
+    "Ab1": "Strong Jaw",
+    "Ab2": "Shell Armor",
+    "Hidden": "Swift Swim"
+  },
+  {
+    "dexId": 834,
+    "name": "Drednaw",
+    "Ab1": "Strong Jaw",
+    "Ab2": "Shell Armor",
+    "Hidden": "Swift Swim"
+  },
+  {
+    "dexId": 835,
+    "name": "Yamper",
+    "Ab1": "Ball Fetch",
+    "Ab2": "",
+    "Hidden": "Rattled"
+  },
+  {
+    "dexId": 836,
+    "name": "Boltund",
+    "Ab1": "Strong Jaw",
+    "Ab2": "",
+    "Hidden": "Competitive"
+  },
+  {
+    "dexId": 837,
+    "name": "Rolycoly",
+    "Ab1": "Steam Engine",
+    "Ab2": "Heatproof",
+    "Hidden": "Flash Fire"
+  },
+  {
+    "dexId": 838,
+    "name": "Carkol",
+    "Ab1": "Steam Engine",
+    "Ab2": "Flame Body",
+    "Hidden": "Flash Fire"
+  },
+  {
+    "dexId": 839,
+    "name": "Coalossal",
+    "Ab1": "Steam Engine",
+    "Ab2": "Flame Body",
+    "Hidden": "Flash Fire"
+  },
+  {
+    "dexId": 840,
+    "name": "Applin",
+    "Ab1": "Ripen",
+    "Ab2": "Gluttony",
+    "Hidden": "Bulletproof"
+  },
+  {
+    "dexId": 841,
+    "name": "Flapple",
+    "Ab1": "Ripen",
+    "Ab2": "Gluttony",
+    "Hidden": "Hustle"
+  },
+  {
+    "dexId": 842,
+    "name": "Appletun",
+    "Ab1": "Ripen",
+    "Ab2": "Gluttony",
+    "Hidden": "Thick Fat"
+  },
+  {
+    "dexId": 843,
+    "name": "Silicobra",
+    "Ab1": "Sand Spit",
+    "Ab2": "Shed Skin",
+    "Hidden": "Sand Veil"
+  },
+  {
+    "dexId": 844,
+    "name": "Sandaconda",
+    "Ab1": "Sand Spit",
+    "Ab2": "Shed Skin",
+    "Hidden": "Sand Veil"
+  },
+  {
+    "dexId": 845,
+    "name": "Cramorant",
+    "Ab1": "Gulp Missile",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 846,
+    "name": "Arrokuda",
+    "Ab1": "Swift Swim",
+    "Ab2": "",
+    "Hidden": "Propeller Tail"
+  },
+  {
+    "dexId": 847,
+    "name": "Barraskewda",
+    "Ab1": "Swift Swim",
+    "Ab2": "",
+    "Hidden": "Propeller Tail"
+  },
+  {
+    "dexId": 848,
+    "name": "Toxel",
+    "Ab1": "Rattled",
+    "Ab2": "Static",
+    "Hidden": "Klutz"
+  },
+  {
+    "dexId": 849,
+    "name": "Toxtricity",
+    "Ab1": "Punk Rock",
+    "Ab2": "Plus",
+    "Hidden": "Technician"
+  },
+  {
+    "dexId": 849,
+    "name": "Toxtricity-LowKey",
+    "Ab1": "Punk Rock",
+    "Ab2": "Minus",
+    "Hidden": "Technician"
+  },
+  {
+    "dexId": 850,
+    "name": "Sizzlipede",
+    "Ab1": "Flash Fire",
+    "Ab2": "White Smoke",
+    "Hidden": "Flame Body"
+  },
+  {
+    "dexId": 851,
+    "name": "Centiskorch",
+    "Ab1": "Flash Fire",
+    "Ab2": "White Smoke",
+    "Hidden": "Flame Body"
+  },
+  {
+    "dexId": 852,
+    "name": "Clobbopus",
+    "Ab1": "Limber",
+    "Ab2": "",
+    "Hidden": "Technician"
+  },
+  {
+    "dexId": 853,
+    "name": "Grapploct",
+    "Ab1": "Limber",
+    "Ab2": "",
+    "Hidden": "Technician"
+  },
+  {
+    "dexId": 854,
+    "name": "Sinistea",
+    "Ab1": "Weak Armor",
+    "Ab2": "",
+    "Hidden": "Cursed Body"
+  },
+  {
+    "dexId": 855,
+    "name": "Polteageist",
+    "Ab1": "Weak Armor",
+    "Ab2": "",
+    "Hidden": "Cursed Body"
+  },
+  {
+    "dexId": 856,
+    "name": "Hatenna",
+    "Ab1": "Healer",
+    "Ab2": "Anticipation",
+    "Hidden": "Magic Bounce"
+  },
+  {
+    "dexId": 857,
+    "name": "Hattrem",
+    "Ab1": "Healer",
+    "Ab2": "Anticipation",
+    "Hidden": "Magic Bounce"
+  },
+  {
+    "dexId": 858,
+    "name": "Hatterene",
+    "Ab1": "Healer",
+    "Ab2": "Anticipation",
+    "Hidden": "Magic Bounce"
+  },
+  {
+    "dexId": 859,
+    "name": "Impidimp",
+    "Ab1": "Prankster",
+    "Ab2": "Frisk",
+    "Hidden": "Pickpocket"
+  },
+  {
+    "dexId": 860,
+    "name": "Morgrem",
+    "Ab1": "Prankster",
+    "Ab2": "Frisk",
+    "Hidden": "Pickpocket"
+  },
+  {
+    "dexId": 861,
+    "name": "Grimmsnarl",
+    "Ab1": "Prankster",
+    "Ab2": "Frisk",
+    "Hidden": "Pickpocket"
+  },
+  {
+    "dexId": 862,
+    "name": "Obstagoon",
+    "Ab1": "Reckless",
+    "Ab2": "Guts",
+    "Hidden": "Defiant"
+  },
+  {
+    "dexId": 863,
+    "name": "Perrserker",
+    "Ab1": "Battle Armor",
+    "Ab2": "Tough Claws",
+    "Hidden": "Steely Spirit"
+  },
+  {
+    "dexId": 864,
+    "name": "Cursola",
+    "Ab1": "Weak Armor",
+    "Ab2": "",
+    "Hidden": "Perish Body"
+  },
+  {
+    "dexId": 865,
+    "name": "Sirfetch'd",
+    "Ab1": "Steadfast",
+    "Ab2": "",
+    "Hidden": "Scrappy"
+  },
+  {
+    "dexId": 866,
+    "name": "Mr Rime",
+    "Ab1": "Tangled Feet",
+    "Ab2": "Screen Cleaner",
+    "Hidden": "Ice Body"
+  },
+  {
+    "dexId": 867,
+    "name": "Runerigus",
+    "Ab1": "Wandering Spirit",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 868,
+    "name": "Milcery",
+    "Ab1": "Sweet Veil",
+    "Ab2": "",
+    "Hidden": "Aroma Veil"
+  },
+  {
+    "dexId": 869,
+    "name": "Alcremie",
+    "Ab1": "Sweet Veil",
+    "Ab2": "",
+    "Hidden": "Aroma Veil"
+  },
+  {
+    "dexId": 870,
+    "name": "Falinks",
+    "Ab1": "Battle Armor",
+    "Ab2": "",
+    "Hidden": "Defiant"
+  },
+  {
+    "dexId": 871,
+    "name": "Pincurchin",
+    "Ab1": "Lightning Rod",
+    "Ab2": "",
+    "Hidden": "Electric Surge"
+  },
+  {
+    "dexId": 872,
+    "name": "Snom",
+    "Ab1": "Shield Dust",
+    "Ab2": "",
+    "Hidden": "Ice Scales"
+  },
+  {
+    "dexId": 873,
+    "name": "Frosmoth",
+    "Ab1": "Shield Dust",
+    "Ab2": "",
+    "Hidden": "Ice Scales"
+  },
+  {
+    "dexId": 874,
+    "name": "Stonjourner",
+    "Ab1": "Power Spot",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 875,
+    "name": "Eiscue",
+    "Ab1": "Ice Face",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 876,
+    "name": "Indeedee",
+    "Ab1": "Inner Focus",
+    "Ab2": "Synchronize",
+    "Hidden": "Psychic Surge"
+  },
+  {
+    "dexId": 876,
+    "name": "Indeedee-F",
+    "Ab1": "Own Tempo",
+    "Ab2": "Synchronize",
+    "Hidden": "Psychic Surge"
+  },
+  {
+    "dexId": 877,
+    "name": "Morpeko",
+    "Ab1": "Hunger Switch",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 878,
+    "name": "Cufant",
+    "Ab1": "Sheer Force",
+    "Ab2": "",
+    "Hidden": "Heavy Metal"
+  },
+  {
+    "dexId": 879,
+    "name": "Copperajah",
+    "Ab1": "Sheer Force",
+    "Ab2": "",
+    "Hidden": "Heavy Metal"
+  },
+  {
+    "dexId": 880,
+    "name": "Dracozolt",
+    "Ab1": "Volt Absorb",
+    "Ab2": "Hustle",
+    "Hidden": "Sand Rush"
+  },
+  {
+    "dexId": 881,
+    "name": "Arctozolt",
+    "Ab1": "Volt Absorb",
+    "Ab2": "Static",
+    "Hidden": "Slush Rush"
+  },
+  {
+    "dexId": 882,
+    "name": "Dracovish",
+    "Ab1": "Water Absorb",
+    "Ab2": "Strong Jaw",
+    "Hidden": "Sand Rush"
+  },
+  {
+    "dexId": 883,
+    "name": "Arctovish",
+    "Ab1": "Water Absorb",
+    "Ab2": "Ice Body",
+    "Hidden": "Slush Rush"
+  },
+  {
+    "dexId": 884,
+    "name": "Duraludon",
+    "Ab1": "Light Metal",
+    "Ab2": "Heavy Metal",
+    "Hidden": "Stalwart"
+  },
+  {
+    "dexId": 885,
+    "name": "Dreepy",
+    "Ab1": "Clear Body",
+    "Ab2": "Infiltrator",
+    "Hidden": "Cursed Body"
+  },
+  {
+    "dexId": 886,
+    "name": "Drakloak",
+    "Ab1": "Clear Body",
+    "Ab2": "Infiltrator",
+    "Hidden": "Cursed Body"
+  },
+  {
+    "dexId": 887,
+    "name": "Dragapult",
+    "Ab1": "Clear Body",
+    "Ab2": "Infiltrator",
+    "Hidden": "Cursed Body"
+  },
+  {
+    "dexId": 888,
+    "name": "Zacian",
+    "Ab1": "Intrepid Sword",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 889,
+    "name": "Zamazenta",
+    "Ab1": "Dauntless Shield",
+    "Ab2": "",
+    "Hidden": ""
+  },
+  {
+    "dexId": 890,
+    "name": "Eternatus",
+    "Ab1": "Pressure",
+    "Ab2": "",
+    "Hidden": ""
+  }
+ ]

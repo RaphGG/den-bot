@@ -457,3 +457,59 @@ console.log(pokemon);
 let newdata = JSON.stringify(pokemon);
 fs.writeFileSync("./data/ratiop.json", newdata);
 */
+
+/*
+pokemon.forEach(x => {
+  x.dens = {"sword":[], "shield":[]};
+});
+
+pokemon.forEach(x => {
+  let p = pokeSON.find(y => {return y.name == x.name});
+  if (!p)
+    return;
+
+  let den = p.dens.split("/");
+  if (den.length <= 1)
+  {
+    if (den[0].startsWith("Sword"))
+    {
+      let ds = den[0].slice(5).trim().split(/ +g/);
+      x.dens.sword = ds;
+    }
+    else if (den[0].startsWith("Shield"))
+    {
+      let ds = den[0].slice(6).trim().split(/ +g/);
+      x.dens.shield = ds;
+    }
+    else
+    {
+      let ds = den[0].trim().split(/ +g/);
+      x.dens.sword = ds;
+      x.dens.shield = ds;
+    }
+  }
+  else
+  {
+    let ds = den[0].slice(5).trim().split(/ +g/);
+    x.dens.sword = ds;
+
+    ds = den[1].slice(6).trim().split(/ +g/);
+    x.dens.shield = ds;
+  }
+
+});
+*/
+
+/*
+pokemon.forEach(x => {
+  x.forms = [];
+  let p = pokeSON.find(y => {return y.name == x.name});
+  if (!p)
+    return;
+
+  x.forms = p.forms;
+});
+
+console.log(pokemon);
+
+*/

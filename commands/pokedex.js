@@ -3,6 +3,7 @@ const pokedata = require("../modules/pokedata.js");
 const Discord = require("discord.js");
 
 exports.run = (client, message, args) => {
+  //fetch(pokemon, args);
 
   let dexEmbed = new Discord.RichEmbed();
   dexEmbed.setFooter(botspeech.footerCred, client.user.avatarURL);
