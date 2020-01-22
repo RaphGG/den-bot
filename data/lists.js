@@ -2104,7 +2104,7 @@ exports.edgeCases = ["Mr Mime", "Mime Jr", "Mr Rime", "Jangmo-o", "Hakamo-o", "K
 exports.dashPkmn = ["Jangmo-o", "Hakamo-o", "Kommo-o"];
 exports.formKeywords = ["gigantamax", "gmax", "galar", "galarian", "alola", "alolan", "mega", "mega x", "mega y"];
 exports.megaPkmn= ['Venusaur','Blastoise','Charizard','Beedrill','Pidgeot','Alakazam','Slowbro','Gengar','Kangaskhan','Pinsir','Gyarados','Aerodactyl','Mewtwo','Ampharos','Steelix','Scizor','Heracross','Houndoom','Tyranitar','Sceptile','Blaziken','Swampert','Gardevoir','Sableye','Mawile','Aggron','Medicham','Manectric','Sharpedo','Camerupt','Altaria','Banette','Absol','Glalie','Salamence','Metagross','Latias','Latios','Rayquaza','Lopunny','Garchomp','Lucario','Abomasnow','Gallade','Audino','Diancie']
-
+exports.cosmeticForms = ['Full Belly', 'Hangry', 'Phony', 'Antique', 'Disguised', 'Busted', 'Gulping', 'Gorging', 'Gigantamax', 'Baile Style', 'Pom-Pom Style', 'Pa\'u Style', 'Sensu Style', 'Neutral', 'Active', 'Hair Styles', 'Flavors', 'Toppings', 'Patterns', 'Flowers', 'Locations', 'Types', 'Resolute','Patterns','Spring','Summer','Autumn','Winter','West Sea','East Sea','Overcast','Sunshine','Sunny','Rainy','Snowy','Alphabet','Cosplay','Cap','Overdrive','Radiant Sun Phase','Full Moon Phase','Gloomdweller','Zenith'];
 // Exclusion/Filters/Keywords End
 
 // Raid Pokemon Begin
@@ -2187,11 +2187,11 @@ const formJson = [
 },
 {
 "name":"Pumpkaboo",
-"forms":["Small Size","Average Size","Large Size","Super Size"]
+"forms":["Small Size","Large Size","Super Size"]
 },
 {
 "name":"Gourgeist",
-"forms":["Small Size","Average Size","Large Size","Super Size"]
+"forms":["Small Size","Large Size","Super Size"]
 },
 {
 "name":"Aegislash",
@@ -2235,7 +2235,7 @@ const formJson = [
 },
 {
 "name":"Genesect",
-"forms":["Heat","Wash","Mow","Frost","Fan"]
+"forms":["Types"]
 },
 {
 "name":"Greninja",
