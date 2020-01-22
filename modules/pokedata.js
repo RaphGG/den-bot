@@ -6,6 +6,7 @@ let pokeSON = JSON.parse(data);
 
 var pokemon = pokeSON;
 
+/*
 data = fs.readFileSync("./data/denpokemon.json");
 let denpokemon = JSON.parse(data);
 
@@ -36,10 +37,42 @@ balls.forEach(ball => {
   ballNames.push(ballNameFull);
   ballNames.push(ballNameAbbr);
 });
+let test = "type: null.";
+let test2 = "Mr. Mime.";
+let test3 = "Necrozma-Dawn-Wings";
+
+let print = test.replace(/[^A-Za-z0-9_-]/g, "");
+console.log(print);
+let print2 = test2.replace(/[^A-Za-z0-9_-]/g, "");
+console.log(print2);
+let print3 = test3.replace(/[^A-Za-z0-9_-]/g, "");
+console.log(print3);
+*/
 
 exports.fetch = (flag, args) => {
   if (flag == "pkmn")
   {
-    
+    let pkmnName = "";
+    if (args.length >= 1)
+      args = args.join("");
+
+    pkmnName = args.replace(/[^A-Za-z0-9_-]/g, "").toLowerCase();
+    let pkmnObj = pokemon.find(x => {
+      let pname = x.name.replace(/[^A-Za-z0-9_-]/g, "").toLowerCase();
+      return pname == pkmnName;
+    });
+
+    return pkmnObj
   }
+
+  /*
+  else if (flag == "ball");
+  {
+    let ballName = "";
+    if (args.length)
+  }
+  */
 }
+
+let mon = this.fetch("pkmn", ["Type", "Null"]);
+console.log(mon);
