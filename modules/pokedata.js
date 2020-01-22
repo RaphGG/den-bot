@@ -6,16 +6,6 @@ let pokeSON = JSON.parse(data);
 
 var pokemon = pokeSON;
 
-
-let p = pokemon.filter(x => {return x.forms.includes("Mega")} );
-let r = [];
-p.forEach(x => {
-  r.push(x.name);
-});
-
-console.log(r);
-
-/*
 data = fs.readFileSync("./data/denpokemon.json");
 let denpokemon = JSON.parse(data);
 
@@ -26,9 +16,7 @@ var balls = JSON.parse(data);
 var ingamePkmn = pokemon.filter(x => {
   return denpokemon.includes(x.name);
 });
-*/
 
-/*
 pokemon.forEach(pkmn => {
   let formIndex = pkmn.name.indexOf("-");
 
@@ -50,18 +38,8 @@ balls.forEach(ball => {
 });
 
 exports.fetch = (flag, args) => {
-  if (flag == "pokemon")
+  if (flag == "pkmn")
   {
-
+    
   }
-  else if (flag == "ball")
-  {
-
-  }
-  else
-  {
-
-  }
-
 }
-*/
