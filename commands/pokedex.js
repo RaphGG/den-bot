@@ -1,124 +1,51 @@
 const botspeech = require("../modules/botspeech.js");
 const pokedata = require("../modules/pokedata.js");
-const Discord = require("discord.js");
+const embedHelper = require("../modules/embedHelper.js");
+// TODO: Finish Comments.
+// TODO: Fix flags maybe?
+const f = "pokedex";
 
 exports.run = (client, message, args) => {
-  //fetch(pokemon, args);
-
-  let dexEmbed = new Discord.RichEmbed();
-  dexEmbed.setFooter(botspeech.footerCred, client.user.avatarURL);
 
   if (!args || args.length < 1)
     return message.channel.send(botspeech.pokedexNoArg);
 
   else if (args.length == 1)
   {
-    let pkmn = pokedata.pokemon.find(x => {
-      return x.name.toLowerCase() == args[0].toLowerCase();
-    });
+    let pkmnObj = pokedata.fetch("pkmn", args);
 
-    if (!pkmn)
+    if (!pkmnObj.pkmn)
       return message.channel.send(botspeech.pkmnNotFound);
 
-    dexEmbed.setColor(botspeech.colorFinder(pkmn));
-    dexEmbed.setImage(botspeech.imageFinder(pkmn));
-
-    let type1 = client.emojis.find(x => {
-      return x.name == pkmn.type1;
-    });
-
-    let type2 = client.emojis.find(x => {
-      return x.name == pkmn.type2;
-    });
-
-    let types = type2? type1 + " " + type2 : type1;
-
-    let title = `**__#${pkmn.dexId} • ${pkmn.name} __**` + types;
-    dexEmbed.setTitle(title);
-
-    let statHeader1 = `__\`HP     Atk     Def\`__`;
-    let statHeader2 = `__\`SpA    SpD     Spe\`__`;
-
-    let baseStats1 = `\`${pkmn.baseStats.hp.toString().padEnd(7, " ")}${pkmn.baseStats.atk.toString().padEnd(8, " ")}${pkmn.baseStats.def.toString().padEnd(3, " ")}\``;
-
-    let baseStats2 = `\`${pkmn.baseStats.spA.toString().padEnd(7, " ")}${pkmn.baseStats.spD.toString().padEnd(8, " ")}${pkmn.baseStats.spe.toString().padEnd(3, " ")}\``;
-
-
-    let baseStatTotal = `__\`Total: ${pkmn.baseStats.tot}\`__`;
-
-    let baseStats = statHeader1 + "\n" + baseStats1 + "\n" + statHeader2 + "\n" + baseStats2 + "\n" + baseStatTotal;
-    dexEmbed.addField("Base Stats", baseStats, true);
-    
-    let genderRatio = `Gender Ratio: \`${pkmn.genderRatio}\``;
-    let height = `Height: \`${pkmn.height}m\``;
-    let weight = `Weight: \`${pkmn.weight}kg\``;
-    let catchRate = `Catch Rate: \`${pkmn.catchRate}\``;
-    let gen = `Generation: \`${pkmn.generation}\``;
-
-    let miscInfo = genderRatio + "\n" + height + "\n" + weight + "\n" + catchRate + "\n" + gen;
-
-    dexEmbed.addField("Misc. Info", miscInfo, true);
-
-    let abilities = pkmn.possibleAbilities.join("/");
-
-    dexEmbed.addField("Possible Abilities", abilities, true);
-
-    return message.channel.send( dexEmbed );
+    else
+      return message.channel.send(embedHelper.createEmbed(f, pkmnObj, client));
   }
 
   else if (args.length == 2)
   {
-    let pkmnName = (args[0] + " " + args[1]).toLowerCase();
+    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 1));
+    let pkmnObj2 = pokedata.fetch("pkmn", args);
+    pkmnObj.shiny = pkmnObj2 = args[1].match(/shiny/gi);
 
-    let pkmn = pokedata.pokemon.find(x => {
-      return x.name.toLowerCase() == pkmnName
-    });
+    if (pkmnObj.pkmn)
+      return message.channel.send(embedHelper.createEmbed(f, pkmnObj, client));
 
-    if (!pkmn)
+    else if (pkmnObj2.pkmn)
+      return message.channel.send(embedHelper.createEmbed(f, pkmnObj2, client));
+
+    else
+      return message.channel.send(botspeech.pkmnNotFound);
+  }
+
+  else if (args.length == 3)
+  {
+    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 2));
+    pkmnObj.shiny = args[2].match(/shiny/gi);
+
+    if (!pkmnObj.pkmn)
       return message.channel.send(botspeech.pkmnNotFound);
 
-    dexEmbed.setColor(botspeech.colorFinder(pkmn));
-    dexEmbed.setImage(botspeech.imageFinder(pkmn));
-
-    let type1 = client.emojis.find(x => {
-      return x.name == pkmn.type1;
-    });
-
-    let type2 = client.emojis.find(x => {
-      return x.name == pkmn.type2;
-    });
-
-    let types = type2? type1 + " " + type2 : type1;
-
-    let title = `**__#${pkmn.dexId} • ${pkmn.name} __**` + types;
-    dexEmbed.setTitle(title);
-
-    let statHeader1 = `__\`HP     Atk     Def\`__`;
-    let statHeader2 = `__\`SpA    SpD     Spe\`__`;
-
-    let baseStats1 = `\`${pkmn.baseStats.hp.toString().padEnd(7, " ")}${pkmn.baseStats.atk.toString().padEnd(8, " ")}${pkmn.baseStats.def.toString().padEnd(3, " ")}\``;
-
-    let baseStats2 = `\`${pkmn.baseStats.spA.toString().padEnd(7, " ")}${pkmn.baseStats.spD.toString().padEnd(8, " ")}${pkmn.baseStats.spe.toString().padEnd(3, " ")}\``;
-
-    let baseStatTotal = `__\`Total: ${pkmn.baseStats.tot}\`__`;
-
-    let baseStats = statHeader1 + "\n" + baseStats1 + "\n" + statHeader2 + "\n" + baseStats2 + "\n" + baseStatTotal;
-    dexEmbed.addField("Base Stats", baseStats, true);
-    
-    let genderRatio = `Gender Ratio: \`${pkmn.genderRatio}\``;
-    let height = `Height: \`${pkmn.height}m\``;
-    let weight = `Weight: \`${pkmn.weight}kg\``;
-    let catchRate = `Catch Rate: \`${pkmn.catchRate}\``;
-    let gen = `Generation: \`${pkmn.generation}\``;
-
-    let miscInfo = genderRatio + "\n" + height + "\n" + weight + "\n" + catchRate + "\n" + gen;
-
-    dexEmbed.addField("Misc. Info", miscInfo, true);
-
-    let abilities = pkmn.possibleAbilities.join("/");
-
-    dexEmbed.addField("Possible Abilities", abilities, true);
-
-    return message.channel.send( dexEmbed );
+    else
+      return message.channel.send(embedHelper.createEmbed(f, pkmnObj, client));
   }
 }

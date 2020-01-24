@@ -1,5 +1,7 @@
 const botspeech = require("../modules/botspeech.js");
 const Discord = require("discord.js");
+// TODO: Finish Comments.
+// TODO: Extract to embedHelper?
 
 exports.run = (client, message) => {
   let guildMember = message.member;

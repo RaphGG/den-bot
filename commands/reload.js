@@ -1,4 +1,5 @@
 const botspeech = require("../modules/botspeech.js");
+// TODO: Finish Comments.
 
 exports.run = (client, message, args) => {
   let guildMember = message.member;

@@ -1,22 +1,27 @@
 const pokedata = require("./pokedata.js");
 const botspeech = require("./botspeech.js");
 const pokelists = require("../data/lists.js");
-const embedHelper = require("./embedHelper.js");
+// TODO: Finish Comments.
 
+// Stat calculator using base stat, iv, and level of a pkmn.
 const baseStat = (stat, iv, level) => {
   let x = ( ( (2 * stat) + iv ) * level) / 100;
   return Math.floor(x) + level + 10;
 }
 
+// Modified catch rate calculator with raid assumptions.
+// i.e => status effects are not present.
 const catchRate = (maxhp, currhp, catchRate, ballMod) => {
   return ((3*maxhp - 2*currhp) * (catchRate * ballMod)) / (3*maxhp);
 }
 
+// Shake Probability calculator using a pkmn's modified catch rate.
 const shakeProb = (catchRate) => {
   let b = 65536 / Math.pow((255/catchRate), 0.1875)
   return Math.floor(b);
 }
 
+// Final capture probability calculator using a pkmn's shake probability.
 const capProb = (shakeProb) => {
   if (shakeProb >= 65536)
     return 100;
@@ -24,6 +29,11 @@ const capProb = (shakeProb) => {
   return (Math.pow( (shakeProb/65535), 4) * 100);
 }
 
+// Capture probability range calculator for gen 8 pkmn raids. Uses above
+// calculators and raid assumptions to compute final range. These assumptions
+// include: No status effects, pkmn at level 30 with 0 hp iv, pkmn at level 70
+// with 31 hp iv, modified base catch rates given gigantamax forms and promoted
+// events, certain balls only, and more.
 const capProbRange = (pkmn, ball, gFlag, pFlag) => {
   let maxhp0 = baseStat(pkmn.baseStats.hp, 0, 30);
   let maxhp31 = baseStat(pkmn.baseStats.hp, 31, 70);
@@ -46,37 +56,74 @@ const capProbRange = (pkmn, ball, gFlag, pFlag) => {
   return [catchProb0, catchProb31];
 }
 
-const setModifiers = (pkmn, balls) => {
+// Method to set modifier for given ball & pkmn.
+const setModifier = (pkmn, ball) => {
+  let netBall = pkmn.type1 == "Bug" || pkmn.type1 == "Water" || pkmn.type2 == "Bug" || pkmn.type2 == "Water";
+  let fastBall = pkmn.baseStats.spe >= 100;
+  let moonBall = pokelists.moonPkmn.includes(pkmn.name);
+  let loveBall = pkmn.genderRatio == "100% ⚲" || pkmn.genderRatio == "100% ♀" || pkmn.genderRatio == "100% ♂";
+  let beastBall = "";
+
+  switch(ball.name)
+  {
+    case "Net Ball":
+      ball.modifier = netBall? 3.5 : 1;
+      break;
+    case "Fast Ball":
+      ball.modifier = fastBall? 4 : 1;
+      break;
+    case "Moon Ball":
+      ball.modifier = moonBall? 4 : 1;
+      break;
+    case "Love Ball":
+      ball.modifier = loveBall? 1 : 8;
+      break;
+    default:
+      break;
+  }
+}
+
+// Method to set modifier for all balls in pokedata.balls given a pkmn.
+// TODO: Include all possible balls. [Beast]
+// TODO: Seperate from pokedata instance.
+const setModifiers = (pkmn) => {
 
   let netBall = pkmn.type1 == "Bug" || pkmn.type1 == "Water" || pkmn.type2 == "Bug" || pkmn.type2 == "Water";
   let fastBall = pkmn.baseStats.spe >= 100;
   let moonBall = pokelists.moonPkmn.includes(pkmn.name);
   let loveBall = pkmn.genderRatio == "100% ⚲" || pkmn.genderRatio == "100% ♀" || pkmn.genderRatio == "100% ♂";
+  let beastBall = "";
 
-  balls.find(x => x.name == "Net Ball").modifier = netBall? 3.5 : 1;
+  pokedata.balls.find(x => x.name == "Net Ball").modifier = netBall? 3.5 : 1;
   
   if (pkmn.weight >= 300)
-    balls.find(x => x.name == "Heavy Ball").modifier = 30;
+    pokedata.balls.find(x => x.name == "Heavy Ball").modifier = 30;
   
   else if (pkmn.weight >= 200)
-    balls.find(x => x.name == "Heavy Ball").modifier = 20;
+    pokedata.balls.find(x => x.name == "Heavy Ball").modifier = 20;
 
   else if (pkmn.weight >= 100)
-    balls.find(x => x.name == "Heavy Ball").modifier = 0;
+    pokedata.balls.find(x => x.name == "Heavy Ball").modifier = 0;
 
   else
-    balls.find(x => x.name == "Heavy Ball").modifier = -20;
+    pokedata.balls.find(x => x.name == "Heavy Ball").modifier = -20;
 
-  balls.find(x => x.name == "Fast Ball").modifier = fastBall? 4 : 1;
+  pokedata.balls.find(x => x.name == "Fast Ball").modifier = fastBall? 4 : 1;
 
-  balls.find(x => x.name == "Moon Ball").modifier = moonBall? 4 : 1;
+  pokedata.balls.find(x => x.name == "Moon Ball").modifier = moonBall? 4 : 1;
 
-  balls.find(x => x.name == "Love Ball").modifier = loveBall? 1 : 8;
+  pokedata.balls.find(x => x.name == "Love Ball").modifier = loveBall? 1 : 8;
 }
 
-exports.bestBallsMsg = (pkmn, gFlag, form, embed) => {
+exports.bestBalls = (pkmnObj) => {
+  // 
+  pkmnObj.shiny = true; // TODO: Guild-Specific
+  pkmnObj.catchProb = [];
+  pkmnObj.promoCatchProb = [];
+  let gmax = pkmnObj.cform == "gigantamax";
+  pkmnObj.promo = (pokelists.promoPkmn.includes(pkmnObj.pkmn.name)) && (gmax);
 
-  setModifiers(pkmn, pokedata.balls);
+  setModifiers(pkmnObj.pkmn);
 
   let bestBalls = pokedata.balls
     .filter(x => {
@@ -86,64 +133,43 @@ exports.bestBallsMsg = (pkmn, gFlag, form, embed) => {
     .sort((x, y) => y.modifier - x.modifier)
     .slice(0, 4);
 
-  let description = gFlag? `The best balls for catching G-Max ${pkmn.name} are:` : `The best balls for catching ${pkmn.name} are:`;
-
-  catchEmbed.setImage(embedHelper.imageFinder(pkmn, form, true));
-  catchEmbed.setColor(embedHelper.colorFinder(pkmn));
-
-  catchEmbed.setTitle("Best Catch Rates");
-  catchEmbed.setDescription(description);
-
-  let fieldVal = "";
-  let gmaxPromo = "";
-
-  let promoFlag = (pokeLists.promoPkmn.includes(pkmn.name)) && (pokeLists.gmaxPkmn.includes(pkmn.name));
-
   bestBalls.forEach(ball => {
 
-   let catchProb = capProbRange(pkmn, ball, gFlag, false);
-   ball.catchProb = (catchProb[0] == catchProb[1])? `\`${catchProb[0]}%\`` : `\`${catchProb[0]}% ~ ${catchProb[1]}%\``;
+   let catchProbRange = capProbRange(pkmnObj.pkmn, ball, gmax, false);
+   let catchProb = (catchProbRange[0] == catchProbRange[1])? `\`${catchProbRange[0]}%\`` : `\`${catchProbRange[0]}% ~ ${catchProbRange[1]}%\``;
+   pkmnObj.catchProb.push(catchProb);
 
-  fieldVal = fieldVal.concat(`\n${ball.name}: ${ball.catchProb}`);
-
-    if (promoFlag)
+    if (pkmnObj.promo)
     {
-      let promoCatchProb = capProbRange(pkmn, ball, gFlag, true);
-      let promoCatchRate = (promoCatchProb[0] == promoCatchProb[1])? `\`${promoCatchProb[0]}%\`` : `\`${promoCatchProb[0]}% ~ ${promoCatchProb[1]}%\``;
-      gmaxPromo = gmaxPromo.concat(`\n${ball.name}: ${promoCatchRate}`);
+      let promoCatchRange = capProbRange(pkmnObj.pkmn, ball, gmax, true);
+      let promoCatchProb = (promoCatchRange[0] == promoCatchRange[1])? `\`${promoCatchRange[0]}%\`` : `\`${promoCatchRange[0]}% ~ ${promoCatchRange[1]}%\``;
+      pkmnObj.promoCatchProb.push(promoCatchProb);
     }
   });
 
-  catchEmbed.addField("Top 4:", fieldVal, true);
-
-  if (promoFlag)
-    catchEmbed.addField("G-Max Promo Top 4:", gmaxPromo, true);
-
   let pokeball = pokedata.balls.find(x => x.name == "Poke Ball");
-  let catchProb = capProbRange(pkmn, pokeball, gFlag, false);
-  pokeball.catchProb = (catchProb[0] == catchProb[1])? `\`${catchProb[0]}%\`` : `\`${catchProb[0]}% ~ ${catchProb[1]}%\``;
+  let catchProb = capProbRange(pkmnObj.pkmn, pokeball, gmax, false);
+  pkmnObj.pbCatchProb = (catchProb[0] == catchProb[1])? `\`${catchProb[0]}%\`` : `\`${catchProb[0]}% ~ ${catchProb[1]}%\``;
 
-  let standardBalls = `\nStandard Balls (Poké/Luxury/Premier): ${pokeball.catchProb}`;
-
-  catchEmbed.addField("Standard:", standardBalls, true);
-
-  return catchEmbed;
+  return bestBalls;
 }
-*/
-exports.bestBallMsg = (pkmn, ball, gFlag) => {
-  setModifiers(pkmn, pokedata.balls);
 
-  let catchProb = capProbRange(pkmn, ball, gFlag, false);
+exports.bestBall = (pkmnObj, ball) => {
+  // TODO: Fix this method with its messages & purpose.
+  setModifier(pkmnObj.pkmn, ball);
+  let gmax = pkmnObj.cform == "gigantamax";
 
-  let promoFlag = (pokeLists.promoPkmn.includes(pkmn.name)) && (pokeLists.gmaxPkmn.includes(pkmn.name));
+  let catchProb = capProbRange(pkmnObj.pkmn, ball, gmax, false);
+
+  let promoFlag = (pokelists.promoPkmn.includes(pkmnObj.pkmn.name)) && gmax;
 
   ball.catchProb = (catchProb[0] == catchProb[1])? `${catchProb[0]}%` : `${catchProb[0]}% ~ ${catchProb[1]}%`;
 
-  let messageToSend = gFlag? `The probability of catching G-Max ${pkmn.name} with a ${ball.name} is: ${ball.catchProb}` : `The probability of catching ${pkmn.name} with a ${ball.name} is: ${ball.catchProb}`;
+  let messageToSend = gmax? `The probability of catching G-Max ${pkmnObj.pkmn.name} with a ${ball.name} is: ${ball.catchProb}` : `The probability of catching ${pkmnObj.pkmn.name} with a ${ball.name} is: ${ball.catchProb}`;
 
   if (promoFlag)
   {
-    let promoCatchProb = capProbRange(pkmn, ball, gFlag, true);
+    let promoCatchProb = capProbRange(pkmnObj.pkmn, ball, gmax, true);
     let promoCatchRate = (promoCatchProb[0] == promoCatchProb[1])? `${promoCatchProb[0]}%` : `${promoCatchProb[0]}% ~ ${promoCatchProb[1]}%`;
     messageToSend = messageToSend.concat(` / G-Max Promo: ${promoCatchRate}`);
   }

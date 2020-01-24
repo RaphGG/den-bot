@@ -2100,11 +2100,12 @@ exports.moonPkmn = ["Nidoran", "Nidorina", "Nidoqueen", "Nidoran", "Nidorino", "
 exports.excludedBalls = ["Timer Ball", "Quick Ball", "Master Ball", "Level Ball", "Lure Ball", "Nest Ball", "Dive Ball", "Dream Ball", "Heavy Ball", "Love Ball"];
 exports.promoPkmn = ["Applin", "Milcery", "Rolycoly", "Flapple","Alcremie", "Carkol", "Coalossal", "Lapras", "Appletun"];
 exports.gmaxPkmn = ["Charizard", "Butterfree", "Pikachu", "Meowth", "Machamp", "Gengar", "Kingler", "Lapras", "Eevee", "Snorlax", "Garbodor", "Melmetal", "Corviknight", "Orbeetle", "Drednaw", "Coalossal", "Flapple", "Appletun", "Sandaconda", "Toxtricity", "Centiskorch", "Hatterene", "Grimmsnarl", "Alcremie", "Copperajah", "Duraludon"];
-exports.edgeCases = ["Mr Mime", "Mime Jr", "Mr Rime", "Jangmo-o", "Hakamo-o", "Kommo-o"];
+exports.edgeCasesPkmn = ["Zamazenta-Crowned", "Zacian-Crowned", "Mr Mime"];
+exports.edgeCasesForms = ["Hangry", "Noice"];
 exports.dashPkmn = ["Jangmo-o", "Hakamo-o", "Kommo-o"];
 exports.formKeywords = ["gigantamax", "gmax", "galar", "galarian", "alola", "alolan", "mega", "mega x", "mega y"];
 exports.megaPkmn= ['Venusaur','Blastoise','Charizard','Beedrill','Pidgeot','Alakazam','Slowbro','Gengar','Kangaskhan','Pinsir','Gyarados','Aerodactyl','Mewtwo','Ampharos','Steelix','Scizor','Heracross','Houndoom','Tyranitar','Sceptile','Blaziken','Swampert','Gardevoir','Sableye','Mawile','Aggron','Medicham','Manectric','Sharpedo','Camerupt','Altaria','Banette','Absol','Glalie','Salamence','Metagross','Latias','Latios','Rayquaza','Lopunny','Garchomp','Lucario','Abomasnow','Gallade','Audino','Diancie']
-exports.cosmeticForms = ['Full Belly', 'Hangry', 'Phony', 'Antique', 'Disguised', 'Busted', 'Gulping', 'Gorging', 'Gigantamax', 'Gmax', 'Baile Style', 'Pom-Pom Style', 'Pa\'u Style', 'Sensu Style', 'Neutral', 'Active', 'Hair Styles', 'Flavors', 'Toppings', 'Patterns', 'Flowers', 'Locations', 'Types', 'Resolute','Patterns','Spring','Summer','Autumn','Winter','West Sea','East Sea','Overcast','Sunshine','Sunny','Rainy','Snowy','Alphabet','Cosplay','Cap','Overdrive','Radiant Sun Phase','Full Moon Phase','Gloomdweller','Zenith'];
+exports.cosmeticForms = ['Hangry', 'Antique', 'Busted', 'Gulping', 'Gorging', 'Gigantamax', 'Gmax', 'Pom-Pom', 'Pa\'u', 'Sensu', 'Active', 'Hairs', 'Flavors', 'Toppings', 'Patterns', 'Flowers', 'Locations', 'Types', 'Resolute','Patterns','Spring','Summer','Autumn','Winter','East','Sunshine','Sunny','Rainy','Snowy','Alphabet','Cosplay','Cap','Overdrive'];
 // Exclusion/Filters/Keywords End
 
 // Raid Pokemon Begin
@@ -2171,7 +2172,7 @@ const formJson = [
 },
 {
 "name":"Oricorio",
-"forms":["Baile Style","Pom-Pom Style","Pa'u Style","Sensu Style"]
+"forms":["Baile","Pom-Pom","Pa'u","Sensu"]
 },
 {
 "name":"Hoopa",
@@ -2199,7 +2200,7 @@ const formJson = [
 },
 {
 "name":"Furfrou",
-"forms":["Hair Styles"]
+"forms":["Hairs"]
 },
 {
 "name":"Alcremie",
@@ -2319,7 +2320,7 @@ const formJson = [
 },
 {
 "name":"Urshifu",
-"forms":["Single Strike Style","Rapid Strike Style"]
+"forms":["Single Strike","Rapid Strike"]
 },
 {
 "name":"Reshiram",

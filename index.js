@@ -1,4 +1,5 @@
 // Out with the old and in with the new.
+// TODO: Guild-Specific configs?
 
 // Module/Config/API Imports
 const Discord = require("discord.js");

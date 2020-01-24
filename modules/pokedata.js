@@ -1,10 +1,10 @@
 const fs = require("fs");
 const pokeLists = require("../data/lists.js");
+// TODO: Finish Comments
+// TODO: Guild-Specific Configs?
 
 let data = fs.readFileSync("./data/pokemon.json");
-let pokeSON = JSON.parse(data);
-
-var pokemon = pokeSON;
+pokemon = JSON.parse(data);
 
 var denPokemon = pokemon.filter(x => {
   return pokeLists.denPokemon.includes(x.name);
@@ -13,7 +13,7 @@ var denPokemon = pokemon.filter(x => {
 var nonAlpha = new RegExp(/[^A-Za-z0-9]/, 'g');
 let reg = "";
 pokeLists.cosmeticForms.forEach(form => {
-  reg = reg + form + '|';
+  reg = reg + form.replace(/ /g, '') + '|';
 });
 
 var cosmeticForms = new RegExp(reg, 'gi');
@@ -36,25 +36,36 @@ exports.fetch = (flag, args) => {
       cform = "gigantamax";
   }
 
-  switch (flag)
+  if (flag == "pkmn")
   {
-    case "pkmn":
-      return pokemon.find(x => {
-        let nameMatch = x.name.replace(nonAlpha, "").toLowerCase() == name;
-        let formMatch = cform? x.forms.some(form => {return form.toLowerCase() == cform}) : true;
-        return nameMatch && formMatch;
-      });
-
-    case "ball":
-      return balls.find(x => {
-        return x.name.replace(nonAlpha, "").toLowerCase().startsWith(name);
-      });
-
-    default:
-      return null;
+    let pkmn = pokemon.find(x => {
+      let nameMatch = x.name.replace(nonAlpha, "").toLowerCase() == name;
+      let formMatch = cform? x.forms.some(form => {return form.replace(/ /g, '').toLowerCase() == cform}) : true;
+      return nameMatch && formMatch;
+    });
+    return {
+      pkmn: pkmn,
+      cform: cform
+    }
   }
+
+  else if (flag == "ball")
+  {
+    return balls.find(x => {
+      return x.name.replace(nonAlpha, "").toLowerCase().startsWith(name);
+    });
+  }
+
+  else
+    return null;
+
 }
 
 exports.balls = balls;
 exports.nonAlpha = nonAlpha;
 exports.cosmeticForms = cosmeticForms;
+
+/*
+let y = this.fetch("pkmn", ["morpeko-hangry-mode"]);
+console.log(y);
+*/
