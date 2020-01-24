@@ -1,13 +1,15 @@
-const Discord = require("discord.js");
+const pokeLists = require("../data/lists.js");
 
 // Not Founds
-exports.pkmnNotFound = "The Pokémon requested was either not found or not available in current dens.";
-exports.ballNotFound = "The ball requested was not found.";
-exports.commandNotFound = "The requested command was not found.";
-exports.argNotFound = "The requested command with the inputted arguments was not found.";
+exports.pkmnNotFound = "```The Pokémon requested was either not found or not available in current dens.```";
+exports.ballNotFound = "```The ball requested was not found.```";
+exports.commandNotFound = "```The requested command was not found.```";
+exports.argNotFound = "```Arguments not found!\n";
 exports.permNotFound = "you do not have the permissions to use this command.";
-exports.roleNotFound = "The requested role was not found.";
-exports.guildNotFound = "The requested guild was not found.";
+exports.roleNotFound = "```The requested role was not found.```";
+exports.guildNotFound = "```The requested guild was not found.```";
+exports.formNotFound = "```The form requested for this Pokémon doesn't exist.```";
+exports.gmaxNotFound = "```This Pokémon does not have a Gigantamax form!```";
 
 // User Help Messages
 exports.pingableRoles = "Only Shiny Raid Pings and Giveaway Pings may be pinged.";
@@ -15,10 +17,10 @@ exports.disclaimerMsg = "*Assuming ball specific conditions have been met!*";
 exports.noRaidEff = "(No effect on raids)"
 
 // No Arg Calls -> May format with command structure
-exports.pingNoArg = "Please enter a role to ping.";
-exports.catchNoArg = "Please enter a Pokémon to catch followed by a ball of your choice.";
-exports.denNoArg = "that is not a den!";
-exports.reloadNoArg = "Please enter a command to reload.";
+exports.pingNoArg = "```Please enter a role to ping.```";
+exports.catchNoArg = "```Please enter a Pokémon to catch followed by a ball of your choice.```";
+exports.denNoArg = "```that is not a den!```";
+exports.reloadNoArg = "```Please enter a command to reload.```";
 
 // Help Commands
 exports.nonAdminCommands = "%help";
@@ -26,100 +28,16 @@ exports.adminCommands = "%help\n%ping [shiny | giveaway]";
 exports.pokeCommands = "%den [Den Number]\n%catch [Pokémon Name]-(Form Name) (Ball Name) (Gmax Flag)\nForm Names Include -galar, -alola, etc.";
 exports.commandDescription = "[ ] Indicate required fields.\n( ) Indicate optional fields.";
 
-// Embeds
-const pkmnEmbedColors = [
-  {
-    "type":"Normal",
-    "color":10922870
-  },
-  {
-    "type":"Fire",
-    "color":16724480
-  },
-  {
-    "type":"Water",
-    "color":6916083
-  },
-  {
-    "type":"Grass",
-    "color":4772433
-  },
-  {
-    "type":"Electric",
-    "color":16569344
-  },
-  {
-    "type":"Psychic",
-    "color":16724352
-  },
-  {
-    "type":"Ice",
-    "color":8641754
-  },
-  {
-    "type":"Dragon",
-    "color":8913147
-  },
-  {
-    "type":"Dark",
-    "color":7624774
-  },
-  {
-    "type":"Fairy",
-    "color":16724178
-  },
-  {
-    "type":"Fighting",
-    "color":10297114
-  },
-  {
-    "type":"Flying",
-    "color":11830002
-  },
-  {
-    "type":"Poison",
-    "color":11670944
-  },
-  {
-    "type":"Ground",
-    "color":14992224
-  },
-  {
-    "type":"Rock",
-    "color":12231723
-  },
-  {
-    "type":"Bug",
-    "color":10403595
-  },
-  {
-    "type":"Ghost",
-    "color":7949977
-  },
-  {
-    "type":"Steel",
-    "color":12236497
-  }
-]
+// Example Commands
+exports.catchExample2 = "%catch gengar (ball/gmax)";
+exports.catchExample3 = "%catch gengar (ball) (gmax)";
 
-const footerCred = "Alcremie-B - by Droopy";
-const colorFinder = (pkmn) => {
-  let color = pkmnEmbedColors.find(x => {
-    return x.type == pkmn.type1;
-  });
-  if (!color)
-    return 12236497;
-
-  else
-    return color.color;
+/*
+exports.errHandler = (flag, args) => {
+  if (flag == "notFounds")
+  {
+    let msg = "";
+    args.forEach()
+  } 
 }
-
-const imageFinder = (pkmn) => {
-  let tempName = pkmn.name.replace(" ", "");
-  if (this.dashPkmn.includes(tempName))
-    tempName = tempName.replace("-", "");
-
-  let image = pkmn.generation == "SwordShield"? `https://projectpokemon.org/images/normal-sprite/${tempName.toLowerCase()}.gif` : `https://play.pokemonshowdown.com/sprites/xyani/${tempName.toLowerCase()}.gif`;
-
-  return image;
-}
+*/

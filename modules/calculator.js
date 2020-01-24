@@ -1,5 +1,7 @@
 const pokedata = require("./pokedata.js");
 const botspeech = require("./botspeech.js");
+const pokelists = require("../data/lists.js");
+const embedHelper = require("./embedHelper.js");
 
 const baseStat = (stat, iv, level) => {
   let x = ( ( (2 * stat) + iv ) * level) / 100;
@@ -48,7 +50,7 @@ const setModifiers = (pkmn, balls) => {
 
   let netBall = pkmn.type1 == "Bug" || pkmn.type1 == "Water" || pkmn.type2 == "Bug" || pkmn.type2 == "Water";
   let fastBall = pkmn.baseStats.spe >= 100;
-  let moonBall = botspeech.moonPkmn.includes(pkmn.name);
+  let moonBall = pokelists.moonPkmn.includes(pkmn.name);
   let loveBall = pkmn.genderRatio == "100% ⚲" || pkmn.genderRatio == "100% ♀" || pkmn.genderRatio == "100% ♂";
 
   balls.find(x => x.name == "Net Ball").modifier = netBall? 3.5 : 1;
@@ -72,13 +74,13 @@ const setModifiers = (pkmn, balls) => {
   balls.find(x => x.name == "Love Ball").modifier = loveBall? 1 : 8;
 }
 
-exports.bestBallsMsg = (pkmn, gFlag, catchEmbed) => {
+exports.bestBallsMsg = (pkmn, gFlag, form, embed) => {
 
   setModifiers(pkmn, pokedata.balls);
 
   let bestBalls = pokedata.balls
     .filter(x => {
-      let notExcludedBall = !botspeech.excludedBalls.includes(x.name);
+      let notExcludedBall = !pokelists.excludedBalls.includes(x.name);
       return x.modifier > 1 && notExcludedBall;
     })
     .sort((x, y) => y.modifier - x.modifier)
@@ -86,8 +88,8 @@ exports.bestBallsMsg = (pkmn, gFlag, catchEmbed) => {
 
   let description = gFlag? `The best balls for catching G-Max ${pkmn.name} are:` : `The best balls for catching ${pkmn.name} are:`;
 
-  catchEmbed.setImage(botspeech.imageFinder(pkmn));
-  catchEmbed.setColor(botspeech.colorFinder(pkmn));
+  catchEmbed.setImage(embedHelper.imageFinder(pkmn, form, true));
+  catchEmbed.setColor(embedHelper.colorFinder(pkmn));
 
   catchEmbed.setTitle("Best Catch Rates");
   catchEmbed.setDescription(description);
@@ -95,7 +97,7 @@ exports.bestBallsMsg = (pkmn, gFlag, catchEmbed) => {
   let fieldVal = "";
   let gmaxPromo = "";
 
-  let promoFlag = (botspeech.promoPkmn.includes(pkmn.name)) && (botspeech.gmaxPkmn.includes(pkmn.name));
+  let promoFlag = (pokeLists.promoPkmn.includes(pkmn.name)) && (pokeLists.gmaxPkmn.includes(pkmn.name));
 
   bestBalls.forEach(ball => {
 
@@ -127,13 +129,13 @@ exports.bestBallsMsg = (pkmn, gFlag, catchEmbed) => {
 
   return catchEmbed;
 }
-
+*/
 exports.bestBallMsg = (pkmn, ball, gFlag) => {
   setModifiers(pkmn, pokedata.balls);
 
   let catchProb = capProbRange(pkmn, ball, gFlag, false);
 
-  let promoFlag = (botspeech.promoPkmn.includes(pkmn.name)) && (botspeech.gmaxPkmn.includes(pkmn.name));
+  let promoFlag = (pokeLists.promoPkmn.includes(pkmn.name)) && (pokeLists.gmaxPkmn.includes(pkmn.name));
 
   ball.catchProb = (catchProb[0] == catchProb[1])? `${catchProb[0]}%` : `${catchProb[0]}% ~ ${catchProb[1]}%`;
 
@@ -149,22 +151,4 @@ exports.bestBallMsg = (pkmn, ball, gFlag) => {
   messageToSend = messageToSend.concat("\n" + botspeech.disclaimerMsg);
 
   return messageToSend;
-}
-
-exports.ballFinder = (ballName) => {
-  let foundName = pokedata.ballNames.find(name => {
-    return name.toLowerCase() == ballName;
-  });
-
-  if (!foundName)
-    return null;
-
-  return pokedata.balls.find(ball => {
-    if (ball.name == foundName)
-      return true;
-
-    let a = ball.name.toLowerCase().replace(" ball", "");
-    let b = foundName.replace("ball", "");
-    return a == b;
-  });
 }
