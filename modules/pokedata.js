@@ -1,5 +1,4 @@
 const fs = require("fs");
-const botspeech = require("./botspeech.js");
 
 let data = fs.readFileSync("./data/pokemon.json");
 let pokeSON = JSON.parse(data);
@@ -12,11 +11,11 @@ let denpokemon = JSON.parse(data);
 data = fs.readFileSync("./data/balls.json");
 var balls = JSON.parse(data);
 
-/*
+
 var ingamePkmn = pokemon.filter(x => {
   return denpokemon.includes(x.name);
 });
-*/
+
 
 /*
 pokemon.forEach(pkmn => {
@@ -39,6 +38,7 @@ balls.forEach(ball => {
   ballNames.push(ballNameAbbr);
 });
 
+exports.ingamePkmn = ingamePkmn;
 exports.pokemon = pokemon;
 exports.balls = balls;
 exports.ballNames = ballNames;

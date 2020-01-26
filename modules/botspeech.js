@@ -2,7 +2,7 @@
 exports.gigaKeywords = ["g", "-g", "g-", "giga", "gigantamax", "gmax"];
 exports.adminRoles = ["Fattest Cake", "Elite Four"];
 exports.moonPkmn = ["Nidoran", "Nidorina", "Nidoqueen", "Nidoran", "Nidorino", "Nidoking", "Cleffa", "Clefairy", "Clefable", "Igglybuff", "Jigglypuff", "Wigglytuff", "Munna", "Musharna"];
-exports.excludedBalls = ["Timer Ball", "Quick Ball", "Master Ball", "Level Ball", "Lure Ball", "Nest Ball", "Dive Ball", "Dream Ball", "Heavy Ball"];
+exports.excludedBalls = ["Timer Ball", "Quick Ball", "Master Ball", "Level Ball", "Lure Ball", "Nest Ball", "Dive Ball", "Dream Ball", "Heavy Ball", "Love Ball"];
 exports.promoPkmn = ["Applin", "Milcery", "Rolycoly", "Flapple","Alcremie", "Carkol", "Coalossal", "Lapras", "Appletun"];
 exports.gmaxPkmn = ["Charizard", "Butterfree", "Pikachu", "Meowth", "Machamp", "Gengar", "Kingler", "Lapras", "Eevee", "Snorlax", "Garbodor", "Melmetal", "Corviknight", "Orbeetle", "Drednaw", "Coalossal", "Flapple", "Appletun", "Sandaconda", "Toxtricity", "Centiskorch", "Hatterene", "Grimmsnarl", "Alcremie", "Copperajah", "Duraludon"];
 exports.edgeCases = ["Mr Mime", "Mime Jr", "Mr Rime", "Jangmo-o", "Hakamo-o", "Kommo-o"];
