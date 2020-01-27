@@ -1,33 +1,45 @@
 const botspeech = require("../modules/botspeech.js");
+const pokedata = require("../modules/pokedata.js");
 
 exports.run = (client, message, args) => {
-  if (!args || args.length < 1 || (args[0] < 1 || args[0] > 93))
+  if (!args || args.length < 1)
     return message.reply(botspeech.denNoArg);
 
-  else
-    return message.reply(`Den ${args[0]} has the following Pokémon: `, {files: [`./data/dens/den${args[0]}.png`]});
-};
-
-/*
-const botspeech = require("../modules/botspeech.js");
-const Discord = require("discord.js");
-
-exports.run = (client, message, args) => {
-  let denEmbed = new Discord.RichEmbed();
-  denEmbed.setFooter("Alcremie-B, by Droopy", client.user.avatarURL);
-  denEmbed.setTitle("Den Finder");
-
-  if (args.length == 0 || (args[0] < 1 || args[0] > 93))
-    return message.reply(botspeech.denNoArg);
-
-  else
+  else if (args.length == 1)
   {
-    denEmbed.setDescription(`Den ${args[0]} has the following Pokémon:`);
-    denEmbed.file = `./data/dens/den${args[0]}.png`;
+    if (args[0] > 1 && args[0] < 93)
+     return message.reply(`Den ${args[0]} has the following Pokémon: `, {files: [`./data/dens/den${args[0]}.png`]});
 
-    return message.channel.send(denEmbed);
+    let pkmn = pokedata.fetch("pkmn", args).pkmn;
 
+    if (!pkmn)
+      return message.channel.send(botspeech.argNotFound);
+
+    if (pkmn.dens.sword.length == 0 && pkmn.dens.sword.length == 0)
+      return message.channel.send(`**${pkmn.name}** is not in any current dens.`);
+
+    let dens = "";
+    if (pkmn.dens.sword.length > 0)
+    {
+      let swordDens = "Sword: \`";
+      pkmn.dens.sword.forEach(den => {
+        swordDens = swordDens + den + ', ';
+      });
+      swordDens = swordDens.slice(0, swordDens.lastIndexOf(', ')) + '\`';
+    
+      dens = dens + swordDens;
+    }
+
+    if (pkmn.dens.shield.length > 0)
+    {
+      let shieldDens = "\nShield: \`";
+      pkmn.dens.shield.forEach(den => {
+        shieldDens = shieldDens + den + ', ';
+      });
+      shieldDens = shieldDens.slice(0, shieldDens.lastIndexOf(', ')) + '\`';
+      dens = dens + shieldDens;
+    }
+
+    return message.channel.send(`**${pkmn.name}** is in the following dens:\n${dens}`);
   }
-    //return message.reply(`Den ${args[0]} has the following Pokémon: `, {files: [`./data/dens/den${args[0]}.png`]});
-};
-*/
+}

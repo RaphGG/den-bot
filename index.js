@@ -10,7 +10,6 @@ const fs = require("fs");
 const client = new Discord.Client();
 client.config = config;
 
-
 // Event loader with client.on setup in a for loop. No need for repeated code.
 // To ensure that event.bind() works, make sure event modules are written
 // with a succint standard.
@@ -48,4 +47,5 @@ fs.readdir("./commands/", (err, files) => {
     client.commands.set(commandName, props);
   });
 });
-client.login(config.token);
+client.login(config.tokentest);
+// TEST SETUP

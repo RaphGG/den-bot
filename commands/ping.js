@@ -2,13 +2,14 @@ const botspeech = require("../modules/botspeech.js");
 // TODO: Finish Comments.
 
 exports.run = (client, message, args) => {
-  let pokeraidRoles = client.config.pokeraiders.roles;
+  // TEST SETUP
+  let pokeraidRoles = client.config.denbot.roles;
   let guildMember = message.member;
   if (!guildMember)
     return message.channel.send(botspeech.guildNotFound);
   
   let isAdmin = message.member.roles.some(role => {
-    return role.id == pokeraidRoles.owner || role.id == pokeraidRoles.admin || role.id == pokeraidRoles.mod;
+    return pokeraidRoles.adminroles.includes(role.id);
   });
 
   if (!isAdmin)
@@ -22,14 +23,11 @@ exports.run = (client, message, args) => {
     let findRole = args[0].toLowerCase();
 
     let rolePing = message.guild.roles.find(role => {
-      return role.name.toLowerCase().startsWith(findRole) && (role.id == pokeraidRoles.giveaway || role.id == pokeraidRoles.shiny);
+      return role.name.toLowerCase().startsWith(findRole) && (pokeraidRoles.pingableroles.includes(role.id));
     });
 
     if (!rolePing)
       return message.channel.send(botspeech.roleNotFound);
-
-    else if (!rolePing.name.startsWith("Shiny") && !rolePing.name.startsWith("Giveaway"))
-      return message.channel.send(botspeech.pingableRoles);
 
     else
     {

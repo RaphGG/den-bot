@@ -169,103 +169,111 @@ exports.createEmbed = (flag, args, client) => {
   else if (flag == "pokedex")
   {
     let pkmn = args.pkmn;
+    
+    // Edge Color & Image
+    embed.setColor(colorFinder(pkmn));
+    embed.setImage(imageFinder(args));
 
-  // Edge Color & Image
-  embed.setColor(colorFinder(pkmn));
-  embed.setImage(imageFinder(args));
-
-  // Types (Title)
-  let type1 = client.emojis.find(x => {
-    return x.name == pkmn.type1;
-  });
-
-  let type2 = client.emojis.find(x => {
-    return x.name == pkmn.type2;
-  });
-
-  let types = type2? type1 + " " + type2 : type1;
-
-  // Title
-  let title = `**__#${pkmn.dexId} • ${pkmn.name} __**` + types;
-  embed.setTitle(title);
-
-  // Misc. Info
-  let genderRatio = `Gender Ratio: \`${pkmn.genderRatio}\``;
-  let heightWeight = `Height/Weight: \`${pkmn.height}m\` / \`${pkmn.weight}kg\``;
-  //let weight = `Weight: \`${pkmn.weight}kg\``;
-  let catchRate = `Catch Rate: \`${pkmn.catchRate}\``;
-  let gen = `Generation: \`${pkmn.generation}\``;
-  let egg = `Egg Groups: \`${pkmn.eggGroup1}`;
-  if (pkmn.eggGroup2)
-    egg = egg + `, ${pkmn.eggGroup2}\``;
-
-  else
-    egg = egg + `\``;
-
-  let miscInfo = genderRatio + "\n" + heightWeight + "\n" + catchRate + "\n" + gen + "\n" + egg;
-  if (pkmn.forms.length > 0)
-  {
-    let forms = "\`";
-    pkmn.forms.forEach(form => {
-      forms = forms + form + ', ';
+    // Types (Title)
+    let type1 = client.emojis.find(x => {
+      return x.name == pkmn.type1;
     });
-    forms = forms.slice(0, forms.lastIndexOf(', ')) + '\`';
-  
-    //embed.addField("Forms", forms, true);
-    miscInfo = miscInfo + "\nForms: " + forms;
-  }
 
-  embed.addField("Misc. Info", miscInfo, true);
-
-  // Base Stats
-  let statHeader1 = `__\`HP     Atk     Def\`__`;
-  let statHeader2 = `__\`SpA    SpD     Spe\`__`;
-
-  let baseStats1 = `\`${pkmn.baseStats.hp.toString().padEnd(7, " ")}${pkmn.baseStats.atk.toString().padEnd(8, " ")}${pkmn.baseStats.def.toString().padEnd(3, " ")}\``;
-
-  let baseStats2 = `\`${pkmn.baseStats.spA.toString().padEnd(7, " ")}${pkmn.baseStats.spD.toString().padEnd(8, " ")}${pkmn.baseStats.spe.toString().padEnd(3, " ")}\``;
-
-
-  let baseStatTotal = `__\`Total: ${pkmn.baseStats.tot}\`__`;
-
-  let baseStats = statHeader1 + "\n" + baseStats1 + "\n" + statHeader2 + "\n" + baseStats2 + "\n" + baseStatTotal;
-  embed.addField("Base Stats", baseStats, true);
-
-
-  // Abilities
-  let ab2 = pkmn.abilities.ability2? `\nAbility2: \`${pkmn.abilities.ability2}\`` : "";
-
-  let abH = pkmn.abilities.abilityH? `\nHidden Ability: \`${pkmn.abilities.abilityH}\`` : "";
-
-  let abilities = `Ability 1: \`${pkmn.abilities.ability1}\`` + ab2 + abH;
-
-  embed.addField("Abilities", abilities, true);
-
-  // Dens
-  if (pkmn.dens.sword.length > 0 || pkmn.dens.shield.length > 0)
-  {
-    let swordDens = "Sword: \`";
-    pkmn.dens.sword.forEach(den => {
-      swordDens = swordDens + den + ', ';
+    let type2 = client.emojis.find(x => {
+      return x.name == pkmn.type2;
     });
-    swordDens = swordDens.slice(0, swordDens.lastIndexOf(', ')) + '\`';
-  
-    let shieldDens = "\nShield: \`";
-    pkmn.dens.shield.forEach(den => {
-      shieldDens = shieldDens + den + ', ';
-    });
-    shieldDens = shieldDens.slice(0, shieldDens.lastIndexOf(', ')) + '\`';
-  
-    let dens = swordDens + shieldDens;
-    embed.addField("Dens", dens, false);
-  }
 
-  return embed;
+    let types = type2? type1 + " " + type2 : type1;
+
+    // Title
+    let title = `**__#${pkmn.dexId} • ${pkmn.name} __**` + types;
+    embed.setTitle(title);
+
+    // Misc. Info
+    let genderRatio = `Gender Ratio: \`${pkmn.genderRatio}\``;
+    let heightWeight = `Height/Weight: \`${pkmn.height}m\` / \`${pkmn.weight}kg\``;
+    //let weight = `Weight: \`${pkmn.weight}kg\``;
+    let catchRate = `Catch Rate: \`${pkmn.catchRate}\``;
+    let gen = `Generation: \`${pkmn.generation}\``;
+    let egg = `Egg Groups: \`${pkmn.eggGroup1}`;
+    if (pkmn.eggGroup2)
+      egg = egg + `, ${pkmn.eggGroup2}\``;
+
+    else
+      egg = egg + `\``;
+
+    let miscInfo = genderRatio + "\n" + heightWeight + "\n" + catchRate + "\n" + gen + "\n" + egg;
+    if (pkmn.forms.length > 0)
+    {
+      let forms = "\`";
+      pkmn.forms.forEach(form => {
+        forms = forms + form + ', ';
+      });
+      forms = forms.slice(0, forms.lastIndexOf(', ')) + '\`';
+    
+      //embed.addField("Forms", forms, true);
+      miscInfo = miscInfo + "\nForms: " + forms;
+    }
+
+    embed.addField("Misc. Info", miscInfo, true);
+
+    // Base Stats
+    let statHeader1 = `__\`HP     Atk     Def\`__`;
+    let statHeader2 = `__\`SpA    SpD     Spe\`__`;
+
+    let baseStats1 = `\`${pkmn.baseStats.hp.toString().padEnd(7, " ")}${pkmn.baseStats.atk.toString().padEnd(8, " ")}${pkmn.baseStats.def.toString().padEnd(3, " ")}\``;
+
+    let baseStats2 = `\`${pkmn.baseStats.spA.toString().padEnd(7, " ")}${pkmn.baseStats.spD.toString().padEnd(8, " ")}${pkmn.baseStats.spe.toString().padEnd(3, " ")}\``;
+
+
+    let baseStatTotal = `__\`Total: ${pkmn.baseStats.tot}\`__`;
+
+    let baseStats = statHeader1 + "\n" + baseStats1 + "\n" + statHeader2 + "\n" + baseStats2 + "\n" + baseStatTotal;
+    embed.addField("Base Stats", baseStats, true);
+
+
+    // Abilities
+    let ab2 = pkmn.abilities.ability2? `\nAbility2: \`${pkmn.abilities.ability2}\`` : "";
+
+    let abH = pkmn.abilities.abilityH? `\nHidden Ability: \`${pkmn.abilities.abilityH}\`` : "";
+
+    let abilities = `Ability 1: \`${pkmn.abilities.ability1}\`` + ab2 + abH;
+
+    embed.addField("Abilities", abilities, true);
+
+    // Dens
+    let dens = "";
+    if (pkmn.dens.sword.length > 0)
+    {
+      let swordDens = "Sword: \`";
+      pkmn.dens.sword.forEach(den => {
+        swordDens = swordDens + den + ', ';
+      });
+      swordDens = swordDens.slice(0, swordDens.lastIndexOf(', ')) + '\`';
+    
+      dens = dens + swordDens;
+    }
+
+    if (pkmn.dens.shield.length > 0)
+    {
+      let shieldDens = "\nShield: \`";
+      pkmn.dens.shield.forEach(den => {
+        shieldDens = shieldDens + den + ', ';
+      });
+      shieldDens = shieldDens.slice(0, shieldDens.lastIndexOf(', ')) + '\`';
+      dens = dens + shieldDens;
+    }
+
+    if (dens != "")
+      embed.addField("Dens", dens, false);
+
+
+    return embed;
   }
 
   else if (flag == "balls")
   {
-
+    
   }
 
   else if (flag == "credits")
@@ -296,8 +304,8 @@ exports.createEmbed = (flag, args, client) => {
       return embed;
 
     let isAdmin = args.roles.some(role => {
-      return client.config.adminRoles.includes(role.id);
-    });
+      return client.config.denbot.roles.adminroles.includes(role.id);
+    }); // TEST SETUP
 
     if (isAdmin)
       embed.addField("User Commands:", botspeech.adminCommands);

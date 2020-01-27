@@ -1,5 +1,5 @@
 const fs = require("fs");
-const pokeLists = require("../data/lists.js");
+const pokelists = require("../data/lists.js");
 // TODO: Finish Comments
 // TODO: Guild-Specific Configs?
 
@@ -7,12 +7,12 @@ let data = fs.readFileSync("./data/pokemon.json");
 pokemon = JSON.parse(data);
 
 var denPokemon = pokemon.filter(x => {
-  return pokeLists.denPokemon.includes(x.name);
+  return pokelists.denPokemon.includes(x.name);
 });
 
 var nonAlpha = new RegExp(/[^A-Za-z0-9]/, 'g');
 let reg = "";
-pokeLists.cosmeticForms.forEach(form => {
+pokelists.cosmeticForms.forEach(form => {
   reg = reg + form.replace(/ /g, '') + '|';
 });
 
@@ -58,13 +58,12 @@ exports.fetch = (flag, args) => {
 
   else
     return null;
-
 }
 
 exports.balls = balls;
 exports.nonAlpha = nonAlpha;
 exports.cosmeticForms = cosmeticForms;
-
+exports.denPkmn = denPokemon;
 /*
 let y = this.fetch("pkmn", ["morpeko-hangry-mode"]);
 console.log(y);
