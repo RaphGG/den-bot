@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const botspeech = require("./botspeech.js");
 // TODO: Finish Comments.
 
 // Edge colors for Discord rich embed message. They correspond
@@ -269,11 +270,41 @@ exports.createEmbed = (flag, args, client) => {
 
   else if (flag == "credits")
   {
-
+    embed.setAuthor(client.user.username, client.user.avatarURL);
+    embed.setColor(14315906);
+    embed.setTimestamp();
   }
 
   else if (flag == "examples")
   {
+    embed.setAuthor(client.user.username, client.user.avatarURL);
+    embed.setColor(14315906);
+    embed.setTimestamp();
 
+  }
+
+  else if (flag == "help")
+  {
+    embed.setAuthor(client.user.username, client.user.avatarURL);
+    embed.setColor(14315906);
+    embed.setTimestamp();
+    embed.setTitle("All Bot Commands:");
+    embed.setDescription(botspeech.commandDescription);
+    embed.addField("Pokémon Commands:", botspeech.pokeCommands);
+
+    if (!args)
+      return embed;
+
+    let isAdmin = args.roles.some(role => {
+      return client.config.adminRoles.includes(role.id);
+    });
+
+    if (isAdmin)
+      embed.addField("User Commands:", botspeech.adminCommands);
+
+    else 
+      embed.addField("User Commands:", botspeech.nonAdminCommands);
+
+    return embed;
   }
 }
