@@ -2,12 +2,13 @@ const botspeech = require("../modules/botspeech.js");
 // TODO: Finish Comments.
 
 exports.run = (client, message, args) => {
+  let pokeraidRoles = client.config.pokeraiders.roles;
   let guildMember = message.member;
   if (!guildMember)
     return message.channel.send(botspeech.guildNotFound);
   
   let isAdmin = message.member.roles.some(role => {
-    return botspeech.adminRoles.includes(role.name);
+    return role.id == pokeraidRoles.owner || role.id == pokeraidRoles.admin || role.id == pokeraidRoles.mod;
   });
 
   if (!isAdmin)
@@ -21,7 +22,7 @@ exports.run = (client, message, args) => {
     let findRole = args[0].toLowerCase();
 
     let rolePing = message.guild.roles.find(role => {
-      return role.name.toLowerCase().startsWith(findRole) && role.name.toLowerCase().endsWith("pings");
+      return role.name.toLowerCase().startsWith(findRole) && (role.id == pokeraidRoles.giveaway || role.id == pokeraidRoles.shiny);
     });
 
     if (!rolePing)
@@ -32,10 +33,17 @@ exports.run = (client, message, args) => {
 
     else
     {
-      rolePing.setMentionable(true, "Role to be pinged.");
-      return message.channel.send(`${rolePing}`).then(() => {
-        rolePing.setMentionable(false, "Role has been pinged.")
-      });
+      rolePing.setMentionable(true, "Role to be pinged.")
+        .then(updated => {
+          message.channel.send(`${updated}`);
+          return updated;
+        })
+        .then(updated => {
+          setTimeout(() => {
+            updated.setMentionable(false, "Role has been pinged.")
+          }, 5000);
+        })
+        .catch(err => console.log(err));
     }
   }
 }
