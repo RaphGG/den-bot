@@ -300,9 +300,6 @@ exports.createEmbed = (flag, args, client) => {
     embed.setDescription(botspeech.commandDescription);
     embed.addField("Pokémon Commands:", botspeech.pokeCommands);
 
-    if (!args)
-      return embed;
-
     let isAdmin = args.roles.some(role => {
       return client.config.denbot.roles.adminroles.includes(role.id);
     }); // TEST SETUP

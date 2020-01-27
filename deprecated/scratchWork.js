@@ -2,9 +2,129 @@ const Discord = require("discord.js");
 const config = require("./config.json");
 const fs = require("fs");
 
+// Bot Creation
 const client = new Discord.Client();
 client.config = config;
 
+// Event loader with client.on setup in a for loop. No need for repeated code.
+// To ensure that event.bind() works, make sure event modules are written
+// with a succint standard.
+fs.readdir("./events/", (err, files) => {
+  if (err) return console.log(err);
+
+  console.log(`Loading ${files.length} events:`);
+
+  files.forEach((file, i) => {
+    if (!file.endsWith("js")) return;
+
+    const event = require(`./events/${file}`);
+    let eventName = file.split(".")[0];
+    console.log(`Attempting to load event ${i+1} of ${files.length}: ${eventName}`);
+    client.on(eventName, event.bind(null, client));
+  });
+});
+
+// Mapping commands as (K, V) -> (CommandName, CommandModule)
+client.commands = new Map();
+
+// Command loader to map commands as above into a Discord.js Collection 
+// which is held by the client (bot)
+fs.readdir("./commands/", (err, files) => {
+  if (err) return console.log(err);
+
+  console.log(`Loading ${files.length} commands:`);
+
+  files.forEach((file, i) => {
+    if (!file.endsWith("js")) return;
+
+    let props = require(`./commands/${file}`);
+    let commandName = file.split(".")[0];
+    console.log(`Attempting to load command ${i+1} of ${files.length}: ${commandName}`);
+    client.commands.set(commandName, props);
+  });
+});
+client.login(config.tokentest);
+
+/*
+client.settings = new Map();
+let m = new Map();
+
+// Just setting up a default configuration object here, to have somethign to insert.
+const pokeraiders = {
+  prefix: "%",
+  roles:{
+    owner:"648749959205879836",
+    admin:"666443360483147808",
+    mod:"648749558616162314",
+    adminroles:["648749959205879836","666443360483147808","648749558616162314"],
+    giveaway:"659252943622635526",
+    shiny:"658892950717202452",
+    pingableroles:["659252943622635526","658892950717202452"]
+  }
+}
+
+client.on("message", async (message) => {
+  // This stops if it's not a guild (obviously), and we ignore all bots.
+  // Pretty standard for any bot.
+  if(!message.guild || message.author.bot) return;
+  
+  // We can use ensure() to actually grab the default value for settings,
+  // if the key doesn't already exist. 
+  const guildConf = client.settings;
+  
+  // Now we can use the values! 
+  // We stop processing if the message does not start with our prefix for this guild.
+  if(message.content.indexOf(guildConf.prefix) !== 0) return;
+
+  //Then we use the config prefix to get our arguments and command:
+  const args = message.content.split(/\s+/g);
+  const command = args.shift().slice(guildConf.prefix.length).toLowerCase();
+  
+  // Commands Go Here
+});
+
+// Alright. Let's make a command! This one changes the value of any key
+  // in the configuration.
+  if(command === "setconf") {
+    // Command is admin only, let's grab the admin value: 
+    const adminRole = message.guild.roles.find("name", guildConf.adminRole);
+    if(!adminRole) return message.reply("Administrator Role Not Found");
+    
+    // Then we'll exit if the user is not admin
+    if(!message.member.roles.has(adminRole.id)) {
+      return message.reply("You're not an admin, sorry!");
+    }
+    
+    // Let's get our key and value from the arguments. 
+    // This is array destructuring, by the way. 
+    const [prop, ...value] = args;
+    // Example: 
+    // prop: "prefix"
+    // value: ["+"]
+    // (yes it's an array, we join it further down!)
+    
+    // We can check that the key exists to avoid having multiple useless, 
+    // unused keys in the config:
+    if(!client.settings.has(message.guild.id, prop)) {
+      return message.reply("This key is not in the configuration.");
+    }
+    
+    // Now we can finally change the value. Here we only have strings for values 
+    // so we won't bother trying to make sure it's the right type and such. 
+    client.settings.set(message.guild.id, value.join(" "), prop);
+    
+    // We can confirm everything's done to the client.
+    message.channel.send(`Guild configuration item ${prop} has been changed to:\n\`${value.join(" ")}\``);
+  }
+
+  if(command === "showconf") {
+    let configProps = Object.keys(guildConf).map(prop => {
+      return `${prop}  :  ${guildConf[prop]}\n`;
+    });
+    message.channel.send(`The following are the server's current configuration:
+    \`\`\`${configProps}\`\`\``);
+  }
+*/
 /*
     else if (!rolePing.name.startsWith("Shiny") && !rolePing.name.startsWith("Giveaway"))
       return message.channel.send(botspeech.pingableRoles);

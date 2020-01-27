@@ -4,9 +4,6 @@ const botspeech = require("../modules/botspeech.js");
 exports.run = (client, message, args) => {
   // TEST SETUP
   let pokeraidRoles = client.config.denbot.roles;
-  let guildMember = message.member;
-  if (!guildMember)
-    return message.channel.send(botspeech.guildNotFound);
   
   let isAdmin = message.member.roles.some(role => {
     return pokeraidRoles.adminroles.includes(role.id);

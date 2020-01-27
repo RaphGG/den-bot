@@ -2,12 +2,9 @@ const botspeech = require("../modules/botspeech.js");
 // TODO: Finish Comments.
 
 exports.run = (client, message, args) => {
-  let guildMember = message.member;
-  if (!guildMember)
-    return message.reply(botspeech.guildNotFound);
-    
-  let isOwner = message.member.id == client.config.owner;
-  if (!isOwner)
+
+  // isBotOwner
+  if (!(message.member.id == client.config.owner))
     return message.reply(botspeech.permNotFound);
   
   if (!args || args.length < 1)

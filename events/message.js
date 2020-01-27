@@ -1,11 +1,15 @@
-const botspeech = require("../modules/botspeech.js");
+const defaultSettings = require("../commands/resetconf.js");
 
 module.exports = (client, message) => {
-  if (message.author.bot) return;
+  if (!message.guild || message.author.bot) return;
 
-  if (message.content.indexOf(client.config.prefix) !== 0) return;
+  let guildConf = client.settings.get(message.guild.id);
+  if (!guildConf) 
+    guildConf = defaultSettings.run(client, message);
 
-  const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
+  if (message.content.indexOf(guildConf.prefix) !== 0) return;
+
+  const args = message.content.slice(guildConf.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
   const cmd = client.commands.get(command);
