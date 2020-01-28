@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
     return message.reply(botspeech.setconfNoArg);
 
   const [prop, ...value] = args;
-  let roles = value.join("").split(/,/g);
+  let roles = value.join(" ").split(/,/g);
   console.log(roles);
 
   let isAlpha = value.join("").match(/[A-Za-z0-9]/gi);
@@ -26,17 +26,20 @@ exports.run = (client, message, args) => {
 
   if (prop == "adminroles")
   {
-    for (var rolename in roles)
-    {
+    let addedRoles = [];
+    roles.forEach(rolename => {
       let role = message.guild.roles.find(role => {
-        role.name.toLowerCase().replace(/ /g, "") == rolename;
+        return role.name.toLowerCase() == rolename.toLowerCase();
       });
-
+      
       if (!role)
-        continue;
+        return;
 
-      settings[prop].adminroles.push(role.id);
-    }
+      settings.roles.adminroles.push(role.id);
+      addedRoles.push(rolename);
+    });
+
+    return message.channel.send(`The following roles have been added as admin roles: ${addedRoles.join(" ")}`);
   }
 
   settings[prop] = value.join(" ");
