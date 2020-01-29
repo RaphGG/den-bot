@@ -3,7 +3,6 @@ const pokedata = require("../modules/pokedata.js");
 const embedHelper = require("../modules/embedHelper.js");
 // TODO: Finish Comments.
 // TODO: Fix flags maybe?
-const f = "pokedex";
 
 exports.run = (client, message, args) => {
 
@@ -18,20 +17,20 @@ exports.run = (client, message, args) => {
       return message.channel.send(botspeech.pkmnNotFound);
 
     else
-      return message.channel.send(embedHelper.createEmbed(f, pkmnObj, client));
+      return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj));
   }
 
   else if (args.length == 2)
   {
     let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 1));
     let pkmnObj2 = pokedata.fetch("pkmn", args);
-    pkmnObj.shiny = pkmnObj2 = args[1].match(/shiny/gi);
+    pkmnObj.shiny = args[1].match(/shiny/gi);
 
     if (pkmnObj.pkmn)
-      return message.channel.send(embedHelper.createEmbed(f, pkmnObj, client));
+      return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj));
 
     else if (pkmnObj2.pkmn)
-      return message.channel.send(embedHelper.createEmbed(f, pkmnObj2, client));
+      return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj2));
 
     else
       return message.channel.send(botspeech.pkmnNotFound);
@@ -46,6 +45,6 @@ exports.run = (client, message, args) => {
       return message.channel.send(botspeech.pkmnNotFound);
 
     else
-      return message.channel.send(embedHelper.createEmbed(f, pkmnObj, client));
+      return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj));
   }
 }

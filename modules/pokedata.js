@@ -21,7 +21,8 @@ var cosmeticForms = new RegExp(reg, 'gi');
 data = fs.readFileSync("./data/balls.json");
 const balls = JSON.parse(data);
 
-exports.fetch = (flag, args) => {
+exports.fetch = (flag, args, denOnly) => {
+  let pokemonlist = denOnly? denPokemon : pokemon;
   let name = "";
   if (args.length >= 1)
     args = args.join("");
@@ -38,7 +39,7 @@ exports.fetch = (flag, args) => {
 
   if (flag == "pkmn")
   {
-    let pkmn = pokemon.find(x => {
+    let pkmn = pokemonlist.find(x => {
       let nameMatch = x.name.replace(nonAlpha, "").toLowerCase() == name;
       let formMatch = cform? x.forms.some(form => {return form.replace(/ /g, '').toLowerCase() == cform}) : true;
       return nameMatch && formMatch;
@@ -63,7 +64,6 @@ exports.fetch = (flag, args) => {
 exports.balls = balls;
 exports.nonAlpha = nonAlpha;
 exports.cosmeticForms = cosmeticForms;
-exports.denPkmn = denPokemon;
 /*
 let y = this.fetch("pkmn", ["morpeko-hangry-mode"]);
 console.log(y);

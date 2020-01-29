@@ -130,11 +130,11 @@ const imageFinder = (pkmnObj) => {
 // Exported polymorphic embed creator method. Uses flag to discern
 // what message to create. Args may be [pkmnObj], [pkmnObj, bestBalls].
 // TODO: Finish this method.
-exports.createEmbed = (flag, args, client) => {
+exports.createEmbed = (flag, client, args) => {
   let embed = new Discord.RichEmbed();
   embed.setFooter(footerCred, client.user.avatarURL);
 
-  if (flag == "bestballs")
+  if (flag == "catch")
   {
     let pkmnObj = args[0];
     let bestBalls = args[1];
@@ -166,7 +166,7 @@ exports.createEmbed = (flag, args, client) => {
     return embed;
   }
 
-  else if (flag == "pokedex")
+  else if (flag == "dex")
   {
     let pkmn = args.pkmn;
     
@@ -233,7 +233,7 @@ exports.createEmbed = (flag, args, client) => {
 
 
     // Abilities
-    let ab2 = pkmn.abilities.ability2? `\nAbility2: \`${pkmn.abilities.ability2}\`` : "";
+    let ab2 = pkmn.abilities.ability2? `\nAbility 2: \`${pkmn.abilities.ability2}\`` : "";
 
     let abH = pkmn.abilities.abilityH? `\nHidden Ability: \`${pkmn.abilities.abilityH}\`` : "";
 
@@ -298,17 +298,13 @@ exports.createEmbed = (flag, args, client) => {
     embed.setTimestamp();
     embed.setTitle("All Bot Commands:");
     embed.setDescription(botspeech.commandDescription);
-    embed.addField("Pokémon Commands:", botspeech.pokeCommands);
+    embed.addField("Pokémon Commands:", botspeech.pokeCommands.replace(/{{prefix}}/g, args[1]));
 
-    let isAdmin = args.roles.some(role => {
-      return client.config.denbot.roles.adminroles.includes(role.id);
-    }); // TEST SETUP
-
-    if (isAdmin)
-      embed.addField("User Commands:", botspeech.adminCommands);
+    if (args[0])
+      embed.addField("User Commands:", botspeech.adminCommands.replace(/{{prefix}}/g, args[1]));
 
     else 
-      embed.addField("User Commands:", botspeech.nonAdminCommands);
+      embed.addField("User Commands:", botspeech.nonAdminCommands.replace(/{{prefix}}/g, args[1]));
 
     return embed;
   }

@@ -2,8 +2,6 @@ const botspeech = require("../modules/botspeech.js");
 
 exports.run = (client, message, args) => {
   let settings = client.settings.get(message.guild.id);
-  if (!settings)
-    return message.reply(botspeech.guildConfNotFound);
 
   let isAdmin = message.member.roles.some(role => {
     return settings.roles.adminroles.includes(role.id);
@@ -16,8 +14,7 @@ exports.run = (client, message, args) => {
     return message.reply(botspeech.setconfNoArg);
 
   const [prop, ...value] = args;
-  let roles = value.join(" ").split(/,/g);
-  console.log(roles);
+  let roles = value.join(" ").split(/, |,/g);
 
   let isAlpha = value.join("").match(/[A-Za-z0-9]/gi);
 
@@ -39,7 +36,25 @@ exports.run = (client, message, args) => {
       addedRoles.push(rolename);
     });
 
-    return message.channel.send(`The following roles have been added as admin roles: ${addedRoles.join(" ")}`);
+    return message.channel.send(`The following roles have been added as admin roles: ${addedRoles.join(", ")}`);
+  }
+
+  if (prop == "pingroles")
+  {
+    let addedRoles = [];
+    roles.forEach(rolename => {
+      let role = message.guild.roles.find(role => {
+        return role.name.toLowerCase() == rolename.toLowerCase();
+      });
+      
+      if (!role)
+        return;
+
+      settings.roles.pingroles.push(role.id);
+      addedRoles.push(rolename);
+    });
+
+    return message.channel.send(botspeech`The following roles have been added as pingable roles: ${addedRoles.join(", ")}`);
   }
 
   settings[prop] = value.join(" ");

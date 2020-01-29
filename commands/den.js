@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
   if (!args || args.length < 1)
     return message.reply(botspeech.denNoArg);
 
-  else if (args.length == 1)
+  else
   {
     if (args[0] > 1 && args[0] < 93)
      return message.reply(`Den ${args[0]} has the following Pokémon: `, {files: [`./data/dens/den${args[0]}.png`]});
@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
     if (!pkmn)
       return message.channel.send(botspeech.argNotFound);
 
-    if (pkmn.dens.sword.length == 0 && pkmn.dens.sword.length == 0)
+    if (pkmn.dens.sword.length == 0 && pkmn.dens.shield.length == 0)
       return message.channel.send(`**${pkmn.name}** is not in any current dens.`);
 
     let dens = "";
@@ -27,12 +27,12 @@ exports.run = (client, message, args) => {
       });
       swordDens = swordDens.slice(0, swordDens.lastIndexOf(', ')) + '\`';
     
-      dens = dens + swordDens;
+      dens = dens + swordDens + '\n';
     }
 
     if (pkmn.dens.shield.length > 0)
     {
-      let shieldDens = "\nShield: \`";
+      let shieldDens = "Shield: \`";
       pkmn.dens.shield.forEach(den => {
         shieldDens = shieldDens + den + ', ';
       });

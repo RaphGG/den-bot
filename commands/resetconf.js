@@ -16,19 +16,23 @@ exports.run = (client, message) => {
   
   const owner = message.guild.ownerID
   const adminroles = [];
+  const pingroles = [];
+
   message.guild.roles.forEach(role => {
     if (role.hasPermission(0x00000008))
       adminroles.push(role.id);
-  })
+  });
+
   const defaultSettings = {
     prefix:"%",
     roles:{
       owner:owner.toString(),
-      adminroles:adminroles
+      adminroles:adminroles,
+      pingroles:pingroles
     },
     denOnly:false
   }
+
   client.settings.set(message.guild.id, defaultSettings);
-  message.reply(botspeech.configReset);
   return client.settings.get(message.guild.id);
 }
