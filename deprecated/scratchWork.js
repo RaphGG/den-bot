@@ -86,6 +86,66 @@ const pokeraiders = {
     pingableroles:["659252943622635526","658892950717202452"]
   }
 }
+/*
+const pokeraiders = {
+  prefix: "%",
+  roles:{
+    owner:"648749959205879836",
+    admin:"666443360483147808",
+    mod:"648749558616162314",
+    adminroles:["648749959205879836","666443360483147808","648749558616162314"],
+    giveaway:"659252943622635526",
+    shiny:"658892950717202452",
+    pingableroles:["659252943622635526","658892950717202452"]
+  },
+  denOnly:true
+}
+client.settings.set("648747323190542338", pokeraiders);
+
+const denbot = {
+  roles:{
+      owner:"666283334418169879",
+      admin:"666465912802639882",
+      mod:"666283270215958538",
+      adminroles:["666283334418169879","666465912802639882","666283270215958538"],
+      giveaway:"666283431147077642",
+      shiny:"666283386943438850",
+      pingableroles:["666283431147077642","666283386943438850"]
+  },
+  denOnly:false
+}
+client.settings.set("663506927912878091", denbot);
+*/
+
+  /*
+
+  else if (args.length == 1)
+  {
+    let pkmnObj = pokedata.fetch("pkmn", args, settings);
+
+    if (!pkmnObj.pkmn)
+      return message.channel.send(botspeech.pkmnNotFound);
+
+    else
+      return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj));
+  }
+
+  else if (args.length == 2)
+  {
+    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 1), settings);
+    let pkmnObj2 = pokedata.fetch("pkmn", args, settings);
+    pkmnObj.shiny = args[1].match(/shiny/gi);
+
+    if (pkmnObj.pkmn)
+      return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj));
+
+    else if (pkmnObj2.pkmn)
+      return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj2));
+
+    else
+      return message.channel.send(botspeech.pkmnNotFound);
+  }
+  */
 
 client.on("message", async (message) => {
   // This stops if it's not a guild (obviously), and we ignore all bots.
@@ -148,7 +208,6 @@ client.on("message", async (message) => {
     message.channel.send(`The following are the server's current configuration:
     \`\`\`${configProps}\`\`\``);
   }
-*/
 /*
     else if (!rolePing.name.startsWith("Shiny") && !rolePing.name.startsWith("Giveaway"))
       return message.channel.send(botspeech.pingableRoles);

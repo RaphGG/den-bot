@@ -2095,17 +2095,15 @@ exports.enby = ["Magnemite",
 // Gender Ratios End
 
 // Exclusion/Filters/Keywords Begin
-exports.adminRoles = ["Fattest Cake", "Elite Four"];
 exports.moonPkmn = ["Nidoran", "Nidorina", "Nidoqueen", "Nidoran", "Nidorino", "Nidoking", "Cleffa", "Clefairy", "Clefable", "Igglybuff", "Jigglypuff", "Wigglytuff", "Munna", "Musharna"];
 exports.excludedBalls = ["Timer Ball", "Quick Ball", "Master Ball", "Level Ball", "Lure Ball", "Nest Ball", "Dive Ball", "Dream Ball", "Heavy Ball", "Love Ball"];
-exports.promoPkmn = ["Applin", "Milcery", "Rolycoly", "Flapple","Alcremie", "Carkol", "Coalossal", "Lapras", "Appletun"];
+exports.promoPkmn = ["Applin", "Milcery", "Rolycoly", "Flapple", "Carkol", "Coalossal", "Lapras", "Appletun"];
 exports.gmaxPkmn = ["Charizard", "Butterfree", "Pikachu", "Meowth", "Machamp", "Gengar", "Kingler", "Lapras", "Eevee", "Snorlax", "Garbodor", "Melmetal", "Corviknight", "Orbeetle", "Drednaw", "Coalossal", "Flapple", "Appletun", "Sandaconda", "Toxtricity", "Centiskorch", "Hatterene", "Grimmsnarl", "Alcremie", "Copperajah", "Duraludon"];
 exports.edgeCasesPkmn = ["Zamazenta-Crowned", "Zacian-Crowned", "Mr Mime"];
 exports.edgeCasesForms = ["Hangry", "Noice"];
-exports.dashPkmn = ["Jangmo-o", "Hakamo-o", "Kommo-o"];
-exports.formKeywords = ["gigantamax", "gmax", "galar", "galarian", "alola", "alolan", "mega", "mega x", "mega y"];
 exports.megaPkmn= ['Venusaur','Blastoise','Charizard','Beedrill','Pidgeot','Alakazam','Slowbro','Gengar','Kangaskhan','Pinsir','Gyarados','Aerodactyl','Mewtwo','Ampharos','Steelix','Scizor','Heracross','Houndoom','Tyranitar','Sceptile','Blaziken','Swampert','Gardevoir','Sableye','Mawile','Aggron','Medicham','Manectric','Sharpedo','Camerupt','Altaria','Banette','Absol','Glalie','Salamence','Metagross','Latias','Latios','Rayquaza','Lopunny','Garchomp','Lucario','Abomasnow','Gallade','Audino','Diancie']
 exports.cosmeticForms = ['Hangry', 'Antique', 'Busted', 'Gulping', 'Gorging', 'Gigantamax', 'Gmax', 'Pom-Pom', 'Pa\'u', 'Sensu', 'Active', 'Hairs', 'Flavors', 'Toppings', 'Patterns', 'Flowers', 'Locations', 'Types', 'Resolute','Patterns','Spring','Summer','Autumn','Winter','East','Sunshine','Sunny','Rainy','Snowy','Alphabet','Cosplay','Cap','Overdrive'];
+exports.ultraBeasts = ['Nihilego','Buzzwole','Xurkitree','Celesteela','Kartana','Guzzlord','Poipole','Naganadel','Stakataka','Pheromosa','Blacephalon'];
 // Exclusion/Filters/Keywords End
 
 // Raid Pokemon Begin

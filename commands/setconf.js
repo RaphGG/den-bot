@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
   let settings = client.settings.get(message.guild.id);
 
   let isAdmin = message.member.roles.some(role => {
-    return settings.roles.adminroles.includes(role.id);
+    return settings.roles.adminroles.find(adminrole => {return adminrole.id == role.id});
   });
 
   if (!isAdmin)
@@ -32,11 +32,16 @@ exports.run = (client, message, args) => {
       if (!role)
         return;
 
-      settings.roles.adminroles.push(role.id);
-      addedRoles.push(rolename);
+      let x = {
+        name: role.name,
+        id: role.id
+      }
+
+      settings.roles.adminroles.push(x);
+      addedRoles.push(role.name);
     });
 
-    return message.channel.send(`The following roles have been added as admin roles: ${addedRoles.join(", ")}`);
+    return message.channel.send(botspeech.addAdminRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
   }
 
   if (prop == "pingroles")
@@ -50,12 +55,20 @@ exports.run = (client, message, args) => {
       if (!role)
         return;
 
-      settings.roles.pingroles.push(role.id);
-      addedRoles.push(rolename);
+      let x = {
+        name: role.name,
+        id: role.id
+      }
+
+      settings.roles.pingroles.push(x);
+      addedRoles.push(role.name);
     });
 
-    return message.channel.send(botspeech`The following roles have been added as pingable roles: ${addedRoles.join(", ")}`);
+    return message.channel.send(botspeech.addPingRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
   }
+
+  if (typeof settings[prop] == 'undefined')
+    return message.channel.send(botspeech.guildConfNotFound);
 
   settings[prop] = value.join(" ");
 

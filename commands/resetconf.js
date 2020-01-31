@@ -6,8 +6,11 @@ exports.run = (client, message) => {
   if (settings)
   {
     let isAdmin = message.member.roles.some(role => {
-      return settings.roles.adminroles.includes(role.id);
+      return settings.roles.adminroles.find(adminrole => {
+        return adminrole.id == role.id
+      });
     });
+
     if (!isAdmin)
       return message.reply(botspeech.permNotFound);
 
@@ -20,17 +23,23 @@ exports.run = (client, message) => {
 
   message.guild.roles.forEach(role => {
     if (role.hasPermission(0x00000008))
-      adminroles.push(role.id);
+    {
+      let x = {
+        name: role.name,
+        id: role.id
+      }
+      adminroles.push(x);
+    }
   });
 
   const defaultSettings = {
     prefix:"%",
     roles:{
-      owner:owner.toString(),
       adminroles:adminroles,
       pingroles:pingroles
     },
-    denOnly:false
+    denpkmnonly:false,
+    shinypkmnonly:false
   }
 
   client.settings.set(message.guild.id, defaultSettings);

@@ -9,29 +9,29 @@ const embedHelper = require("../modules/embedHelper.js");
 // calculator's bestballs/ball for the majority of computation.
 // Also uses embedHelper's createEmbed for the bot's responses.
 exports.run = (client, message, args) => {
-  let denOnly = client.settings.get(message.guild.id).denOnly;
+  let settings = client.settings.get(message.guild.id);
 
   if (!args || args.length < 1)
     return message.channel.send(botspeech.catchNoArg);
 
   else if (args.length == 1)
   {
-    let pkmnObj = pokedata.fetch("pkmn", args, denOnly);
+    let pkmnObj = pokedata.fetch("pkmn", args, settings);
     if (!pkmnObj.pkmn)
       return message.channel.send(botspeech.pkmnNotFound);
 
     else
     {
       let bestBalls = calc.bestBalls(pkmnObj);
-      let embed = embedHelper.createEmbed("catch", client, [pkmnObj, bestBalls]);
+      let embed = embedHelper.createEmbed("top4", client, [pkmnObj, bestBalls]);
       return message.channel.send(embed);
     }
   }
 
   else if (args.length == 2)
   {
-    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 1), denOnly);
-    let pkmnObj2 = pokedata.fetch("pkmn", args, denOnly)
+    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 1), settings);
+    let pkmnObj2 = pokedata.fetch("pkmn", args, settings)
     let ball = pokedata.fetch("ball", args.slice(1));
 
     if (pkmnObj.pkmn)
@@ -40,13 +40,16 @@ exports.run = (client, message, args) => {
         return message.channel.send(botspeech.ballNotFound);
 
       else
-        return message.channel.send(calc.bestBall(pkmnObj, ball));
+      {
+        calc.bestBall(pkmnObj, ball);
+        return message.channel.send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]));
+      }
     }
 
     else if (pkmnObj2.pkmn)
     {
       let bestBalls = calc.bestBalls(pkmnObj2);
-      let embed = embedHelper.createEmbed("catch", client, [pkmnObj2, bestBalls]);
+      let embed = embedHelper.createEmbed("top4", client, [pkmnObj2, bestBalls]);
       return message.channel.send(embed);
     }
 
@@ -56,7 +59,7 @@ exports.run = (client, message, args) => {
 
   else if (args.length == 3)
   {
-    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 2), denOnly);
+    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 2), settings);
     let ball = pokedata.fetch("ball", args.slice(2));
     
     if (!pkmnObj.pkmn)
@@ -66,6 +69,9 @@ exports.run = (client, message, args) => {
       return message.channel.send(botspeech.ballNotFound);
 
     else
-      return message.channel.send(calc.bestBall(pkmnObj, ball));
+    {
+      calc.bestBall(pkmnObj, ball);
+      return message.channel.send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]));
+    }
   }
 }

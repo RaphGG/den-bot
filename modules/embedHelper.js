@@ -103,27 +103,23 @@ const imageFinder = (pkmnObj) => {
   if (!pkmnObj.cform && !pkmnObj.shiny)
   {
     return `https://projectpokemon.org/images/normal-sprite/${name}.gif`;
-    //return pkmnObj.pkmn.generation == "SwordShield"? `https://projectpokemon.org/images/normal-sprite/${name}.gif` : `https://projectpokemon.org/images/normal-sprite/${name}.gif`;
   }
 
   else if (pkmnObj.cform && !pkmnObj.shiny)
   {
     name = name + '-' + pkmnObj.cform;
     return `https://projectpokemon.org/images/normal-sprite/${name}.gif`;
-    //return pkmnObj.pkmn.generation == "SwordShield"? `https://projectpokemon.org/images/normal-sprite/${name}.gif` : `https://projectpokemon.org/images/normal-sprite/${name}.gif`;
   }
 
   else if (!pkmnObj.cform && pkmnObj.shiny)
   {
     return `https://projectpokemon.org/images/shiny-sprite/${name}.gif`;
-    //return pkmnObj.pkmn.generation == "SwordShield"? `https://projectpokemon.org/images/shiny-sprite/${name}.gif` : `https://projectpokemon.org/images/shiny-sprite/${name}.gif`;
   }
 
   else
   {
     name = name + '-' + pkmnObj.cform;
     return `https://projectpokemon.org/images/shiny-sprite/${name}.gif`;
-    //return pkmnObj.pkmn.generation == "SwordShield"? `https://projectpokemon.org/images/shiny-sprite/${name}.gif` : `https://projectpokemon.org/images/shiny-sprite/${name}.gif`;
   }
 }
 
@@ -134,7 +130,7 @@ exports.createEmbed = (flag, client, args) => {
   let embed = new Discord.RichEmbed();
   embed.setFooter(footerCred, client.user.avatarURL);
 
-  if (flag == "catch")
+  if (flag == "top4")
   {
     let pkmnObj = args[0];
     let bestBalls = args[1];
@@ -162,6 +158,33 @@ exports.createEmbed = (flag, client, args) => {
       embed.addField("Promo Top 4:", promoPercents, true);
 
     embed.addField("Standard:", standardPercents, true);
+
+    return embed;
+  }
+  
+  else if (flag == "ball")
+  {
+    let pkmnObj = args[0];
+    let ball = args[1];
+    let gmax = (pkmnObj.cform == "gigantamax")? "G-Max" : ""; 
+    let promo = pkmnObj.promo? `\nPromo Probability is: ${pkmnObj.promoCatchProb}` : "";
+    embed.setTitle(`Probability of catching ${gmax} ${pkmnObj.pkmn.name} with a ${ball.name} is: ${pkmnObj.catchProb}`);
+
+    let assumption = "";
+
+    if (ball.assumption == null)
+      assumption = "checkassume";
+
+    else
+      assumption = ball.assumption? "checktrue" : "checkfalse";
+
+    let emoji = client.emojis.find(e => {
+      return e.name == assumption;
+    });
+
+    embed.setDescription(`Ball condition met: ${emoji}` + `${promo}`);
+    embed.setThumbnail(imageFinder(pkmnObj));
+    embed.setColor(colorFinder(pkmnObj.pkmn));
 
     return embed;
   }
@@ -281,14 +304,6 @@ exports.createEmbed = (flag, client, args) => {
     embed.setAuthor(client.user.username, client.user.avatarURL);
     embed.setColor(14315906);
     embed.setTimestamp();
-  }
-
-  else if (flag == "examples")
-  {
-    embed.setAuthor(client.user.username, client.user.avatarURL);
-    embed.setColor(14315906);
-    embed.setTimestamp();
-
   }
 
   else if (flag == "help")

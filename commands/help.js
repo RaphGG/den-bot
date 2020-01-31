@@ -4,7 +4,9 @@ const embedHelper = require("../modules/embedHelper.js");
 exports.run = (client, message) => {
   let settings = client.settings.get(message.guild.id);
   let isAdmin = message.member.roles.some(role => {
-    return settings.roles.adminroles.includes(role.id);
+    return settings.roles.adminroles.find(adminrole => {
+      return adminrole.id == role.id
+    });
   });
   let prefix = settings.prefix
   let embed = embedHelper.createEmbed("help", client, [isAdmin, prefix]);

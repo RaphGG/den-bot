@@ -11,7 +11,7 @@ exports.gmaxNotFound = "```This Pokémon does not have a Gigantamax form!```";
 exports.guildConfNotFound = "No Guild configuration was found.";
 
 // User Help Messages
-exports.disclaimerMsg = "*Assuming ball specific conditions have been met!*";
+exports.disclaimerMsg = "Ball conditions met: {{condcheck}}";
 exports.noRaidEff = "(No effect on raids)";
 exports.requiredPrefix = "Please enter a Non-Alphanumeric prefix to be used with the bot.";
 exports.configReset = "The Guild Configurations for this server have been reset.";
@@ -28,5 +28,6 @@ exports.setconfNoArg = "```Please enter a configuration property to set followed
 // Help Commands
 exports.nonAdminCommands = "{{prefix}}help\n{{prefix}}credits";
 exports.adminCommands = "{{prefix}}help\n{{prefix}}ping [First word of pingable role]\n{{prefix}}setconf [prefix | adminroles | pingroles] [nonalpha char | roles]\n{{prefix}}showconf\n{{prefix}}resetconf";
-exports.pokeCommands = "{{prefix}}den [Den Number | Pokémon Name]\n{{prefix}}catch [Pokémon Name]-(Form Name) (Ball Name)\n{{prefix}}pokedex [Pokémon Name]-(Form Name) (Shiny)\n{{prefix}}balls (Ball Name | Pokémon Name)\nForm Names Include -gmax, -galar, -alola, etc.";
-exports.commandDescription = "[ ] Indicate required fields.\n( ) Indicate optional fields.";
+exports.pokeCommands = "{{prefix}}den [Den Number | Pokémon Name]\n{{prefix}}catch [Pokémon Name]-(Form Name) (Ball Name)\n{{prefix}}pokedex [Pokémon Name]-(Form Name)\n{{prefix}}balls (Ball Name | Pokémon Name)\nForm Names Include -gmax, -galar, -alola, etc.";
+exports.commandDescription = "[ ] Indicate required fields.\n( ) Indicate optional fields.\nUse * for shiny sprites.";
+exports.presence = "Serving up smiles in {{guildcount}} guilds!";

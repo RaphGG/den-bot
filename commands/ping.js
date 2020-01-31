@@ -5,7 +5,9 @@ exports.run = (client, message, args) => {
   let settings = client.settings.get(message.guild.id);
   
   let isAdmin = message.member.roles.some(role => {
-    return settings.roles.adminroles.includes(role.id);
+    return settings.roles.adminroles.find(adminrole => {
+      return adminrole.id == role.id
+    });
   });
 
   if (!isAdmin)
@@ -19,27 +21,17 @@ exports.run = (client, message, args) => {
     let findRole = args[0].toLowerCase();
 
     let rolePing = message.guild.roles.find(role => {
-      return role.name.toLowerCase().startsWith(findRole) && (settings.roles.pingroles.includes(role.id));
+      return role.name.toLowerCase().startsWith(findRole) && (settings.roles.pingroles.find(pingrole => {return pingrole.id == role.id}));
     });
 
     if (!rolePing)
     {
       let pingroles = [];
-      settings.roles.pingroles.forEach(roleid => {
-        let role = message.guild.roles.find(role => {
-          return role.id == roleid;
-        });
-
-        if (!role)
-          return;
-
-        pingroles.push(role.name);
-      });
+      settings.roles.pingroles.forEach(role => {pingroles.push(role.name)});
 
       let roles = pingroles.join(", ");
       return message.channel.send(botspeech.roleNotFound.replace(`{{roles}}`, roles));
     }
-      
 
     else
     {
