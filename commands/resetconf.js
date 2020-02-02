@@ -17,7 +17,6 @@ exports.run = (client, message) => {
     client.settings.delete(message.guild.id);
   }
   
-  const owner = message.guild.ownerID
   const adminroles = [];
   const pingroles = [];
 

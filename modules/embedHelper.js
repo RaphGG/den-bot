@@ -102,24 +102,24 @@ const imageFinder = (pkmnObj) => {
 
   if (!pkmnObj.cform && !pkmnObj.shiny)
   {
-    return `https://projectpokemon.org/images/normal-sprite/${name}.gif`;
+    return `./data/sprites/pokemon/normal/${name}.gif`;
   }
 
   else if (pkmnObj.cform && !pkmnObj.shiny)
   {
     name = name + '-' + pkmnObj.cform;
-    return `https://projectpokemon.org/images/normal-sprite/${name}.gif`;
+    return `./data/sprites/pokemon/normal/${name}.gif`;
   }
 
   else if (!pkmnObj.cform && pkmnObj.shiny)
   {
-    return `https://projectpokemon.org/images/shiny-sprite/${name}.gif`;
+    return `./data/sprites/pokemon/shiny/${name}.gif`;
   }
 
   else
   {
     name = name + '-' + pkmnObj.cform;
-    return `https://projectpokemon.org/images/shiny-sprite/${name}.gif`;
+    return `./data/sprites/pokemon/shiny/${name}.gif`;
   }
 }
 
