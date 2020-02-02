@@ -102,24 +102,24 @@ const imageFinder = (pkmnObj) => {
 
   if (!pkmnObj.cform && !pkmnObj.shiny)
   {
-    return `./data/sprites/pokemon/normal/${name}.gif`;
+    return `https://raphgg.github.io/Den-Bot/data/sprites/pokemon/normal/${name}.gif`;
   }
 
   else if (pkmnObj.cform && !pkmnObj.shiny)
   {
     name = name + '-' + pkmnObj.cform;
-    return `./data/sprites/pokemon/normal/${name}.gif`;
+    return `https://raphgg.github.io/Den-Bot/data/sprites/pokemon/normal/${name}.gif`;
   }
 
   else if (!pkmnObj.cform && pkmnObj.shiny)
   {
-    return `./data/sprites/pokemon/shiny/${name}.gif`;
+    return `https://raphgg.github.io/Den-Bot/data/sprites/pokemon/shiny/${name}.gif`;
   }
 
   else
   {
     name = name + '-' + pkmnObj.cform;
-    return `./data/sprites/pokemon/shiny/${name}.gif`;
+    return `https://raphgg.github.io/Den-Bot/data/sprites/pokemon/shiny/${name}.gif`;
   }
 }
 
