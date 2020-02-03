@@ -38,6 +38,7 @@ exports.run = (client, message, args) => {
       rolePing.setMentionable(true, "Role to be pinged.")
         .then(updated => {
           message.channel.send(`${updated}`);
+          message.delete();
           return updated;
         })
         .then(updated => {

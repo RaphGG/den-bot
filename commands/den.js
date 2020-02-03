@@ -2,6 +2,7 @@ const botspeech = require("../modules/botspeech.js");
 const pokedata = require("../modules/pokedata.js");
 
 exports.run = (client, message, args) => {
+  let settings = client.settings.get(message.guild.id);
   if (!args || args.length < 1)
     return message.reply(botspeech.denNoArg);
 
@@ -10,10 +11,12 @@ exports.run = (client, message, args) => {
     if (args[0] > 1 && args[0] < 93)
      return message.reply(`Den ${args[0]} has the following Pokémon: `, {files: [`./data/dens/den${args[0]}.png`]});
 
-    let pkmn = pokedata.fetch("pkmn", args).pkmn;
+    let pkmnObj = pokedata.fetch("pkmn", args, settings);
 
-    if (!pkmn)
-      return message.channel.send(botspeech.argNotFound);
+    if (!pkmnObj)
+      return message.channel.send(botspeech.denNoArg);
+
+    let pkmn = pkmnObj.pkmn;
 
     if (pkmn.dens.sword.length == 0 && pkmn.dens.shield.length == 0)
       return message.channel.send(`**${pkmn.name}** is not in any current dens.`);
