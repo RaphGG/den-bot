@@ -1,5 +1,6 @@
 const botspeech = require("../modules/botspeech.js");
 const pokedata = require("../modules/pokedata.js");
+const embedHelper = require("../modules/embedHelper.js");
 
 exports.run = (client, message, args) => {
   let settings = client.settings.get(message.guild.id);
@@ -8,41 +9,27 @@ exports.run = (client, message, args) => {
 
   else
   {
-    if (args[0] > 1 && args[0] < 93)
-     return message.reply(`Den ${args[0]} has the following Pokémon: `, {files: [`./data/dens/den${args[0]}.png`]});
-
+    let den = pokedata.fetch("den", args);
     let pkmnObj = pokedata.fetch("pkmn", args, settings);
 
-    if (!pkmnObj)
+    if (den)
+    {
+      let embed = embedHelper.createEmbed("den", client, den);
+      return message.channel.send(embed);
+    }
+
+    else if (pkmnObj)
+    {
+      let pkmn = pkmnObj.pkmn;
+      if (pkmn.dens.sword.length == 0 && pkmn.dens.shield.length == 0)
+        return message.channel.send(`**${pkmn.name}** is not in any current dens.`);
+
+      
+      let embed = embedHelper.createEmbed("denPkmn", client, [pkmnObj, pokedata.dens]);
+      return message.channel.send(embed);
+    }
+
+    else
       return message.channel.send(botspeech.denNoArg);
-
-    let pkmn = pkmnObj.pkmn;
-
-    if (pkmn.dens.sword.length == 0 && pkmn.dens.shield.length == 0)
-      return message.channel.send(`**${pkmn.name}** is not in any current dens.`);
-
-    let dens = "";
-    if (pkmn.dens.sword.length > 0)
-    {
-      let swordDens = "Sword: \`";
-      pkmn.dens.sword.forEach(den => {
-        swordDens = swordDens + den + ', ';
-      });
-      swordDens = swordDens.slice(0, swordDens.lastIndexOf(', ')) + '\`';
-    
-      dens = dens + swordDens + '\n';
-    }
-
-    if (pkmn.dens.shield.length > 0)
-    {
-      let shieldDens = "Shield: \`";
-      pkmn.dens.shield.forEach(den => {
-        shieldDens = shieldDens + den + ', ';
-      });
-      shieldDens = shieldDens.slice(0, shieldDens.lastIndexOf(', ')) + '\`';
-      dens = dens + shieldDens;
-    }
-
-    return message.channel.send(`**${pkmn.name}** is in the following dens:\n${dens}`);
   }
 }

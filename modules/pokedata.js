@@ -4,7 +4,14 @@ const pokelists = require("../data/lists.js");
 // TODO: Guild-Specific Configs?
 
 let data = fs.readFileSync("./data/pokemon.json");
-pokemon = JSON.parse(data);
+const pokemon = JSON.parse(data);
+
+data = fs.readFileSync("./data/balls.json");
+const balls = JSON.parse(data);
+
+data = fs.readFileSync("./data/dens.json");
+const dens = JSON.parse(data);
+
 
 var denPokemon = pokemon.filter(x => {
   return pokelists.denPokemon.includes(x.name);
@@ -17,9 +24,6 @@ pokelists.cosmeticForms.forEach(form => {
 });
 
 var cosmeticForms = new RegExp(reg, 'gi');
-
-data = fs.readFileSync("./data/balls.json");
-const balls = JSON.parse(data);
 
 exports.fetch = (flag, args, settings) => {
 
@@ -64,10 +68,18 @@ exports.fetch = (flag, args, settings) => {
     });
   }
 
+  else if (flag == "den")
+  {
+    return dens.find(den => {
+      return den.den == name;
+    });
+  }
+
   else
     return null;
 }
 
 exports.balls = balls;
+exports.dens = dens;
 exports.nonAlpha = nonAlpha;
 exports.cosmeticForms = cosmeticForms;

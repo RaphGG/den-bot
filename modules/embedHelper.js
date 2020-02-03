@@ -294,6 +294,70 @@ exports.createEmbed = (flag, client, args) => {
     return embed;
   }
 
+  else if (flag == "den")
+  {
+    let color = args.den >= 43 ? 12390624 : 10231623;
+    embed.setColor(color);
+    embed.setImage(`https://raphgg.github.io/Den-Bot/data/dens/den${args.den}.png`);
+
+    embed.setTitle(`Den ${args.den}:`);
+    embed.setURL(`https://www.serebii.net/swordshield/maxraidbattles/den${args.den}.shtml`)
+    let swordHa = args.sword.filter(pkmn => {
+      return pkmn.ability.startsWith("Hidden");
+    })
+    .map(pkmn => {return pkmn.name})
+    .join("\n");
+
+    let shieldHa = args.shield.filter(pkmn => {
+        return pkmn.ability.startsWith("Hidden");
+      })
+      .map(pkmn => {return pkmn.name})
+      .join("\n");
+
+    embed.addField("Sword HA:", swordHa, true);
+    embed.addField("Shield HA:", shieldHa, true);
+
+    return embed;
+  }
+
+  else if (flag == "denPkmn")
+  {
+    let pkmnObj = args[0];
+    let pkmn = pkmnObj.pkmn;
+    let denArr = args[1];
+
+    embed.setColor(colorFinder(pkmn));
+    embed.setThumbnail(imageFinder(pkmnObj));
+
+    embed.setTitle(`${pkmn.name} is in the following dens: `);
+
+    let dens = "";
+    if (pkmn.dens.sword.length > 0)
+    {
+      let swordDens = "**Sword:** ";
+      pkmn.dens.sword.forEach(den => {
+        swordDens = swordDens + `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
+      });
+      swordDens = swordDens.slice(0, swordDens.lastIndexOf(', '));
+    
+      dens = dens + swordDens + '\n';
+    }
+
+    if (pkmn.dens.shield.length > 0)
+    {
+      let shieldDens = "**Shield:** ";
+      pkmn.dens.shield.forEach(den => {
+        shieldDens = shieldDens + `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
+      });
+      shieldDens = shieldDens.slice(0, shieldDens.lastIndexOf(', '));
+      dens = dens + shieldDens;
+    }
+
+    embed.setDescription(dens);
+
+    return embed;
+  }
+
   else if (flag == "balls")
   {
     

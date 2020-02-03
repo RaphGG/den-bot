@@ -1,7 +1,61 @@
+const fs = require("fs");
+const data = fs.readFileSync("./data/dens.json");
+const dens = JSON.parse(data);
+
+let arr = [];
+
+dens.forEach(den => {
+  let newDen = new Object;
+
+  newDen.den = den.den;
+  newDen.sword = den.pkmn.slice(0, 12);
+  newDen.shield = den.pkmn.slice(12);
+  arr.push(newDen);
+});
+
+let newdata = JSON.stringify(arr);
+fs.writeFileSync("./data/newdens.json", newdata);
+
+/*
+
+if (args[0] > 1 && args[0] < 93)
+     return message.reply(`Den ${args[0]} has the following Pokémon: `, {files: [`./data/dens/den${args[0]}.png`]});
+
+    let pkmnObj = pokedata.fetch("pkmn", args, settings);
+
+    if (!pkmnObj)
+      return message.channel.send(botspeech.denNoArg);
+
+    let pkmn = pkmnObj.pkmn;
+
+    if (pkmn.dens.sword.length == 0 && pkmn.dens.shield.length == 0)
+      return message.channel.send(`**${pkmn.name}** is not in any current dens.`);
+
+    let dens = "";
+    if (pkmn.dens.sword.length > 0)
+    {
+      let swordDens = "Sword: \`";
+      pkmn.dens.sword.forEach(den => {
+        swordDens = swordDens + den + ', ';
+      });
+      swordDens = swordDens.slice(0, swordDens.lastIndexOf(', ')) + '\`';
+    
+      dens = dens + swordDens + '\n';
+    }
+
+    if (pkmn.dens.shield.length > 0)
+    {
+      let shieldDens = "Shield: \`";
+      pkmn.dens.shield.forEach(den => {
+        shieldDens = shieldDens + den + ', ';
+      });
+      shieldDens = shieldDens.slice(0, shieldDens.lastIndexOf(', ')) + '\`';
+      dens = dens + shieldDens;
+    }
+
+    return message.channel.send(`**${pkmn.name}** is in the following dens:\n${dens}`);
 const Discord = require("discord.js");
 const config = require("./config.json");
-const fs = require("fs");
-
 // Bot Creation
 const client = new Discord.Client();
 client.config = config;
@@ -44,7 +98,7 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 client.login(config.tokentest);
-/*
+
 exports.errHandler = (flag, args) => {
   if (flag == "notFounds")
   {
@@ -52,8 +106,8 @@ exports.errHandler = (flag, args) => {
     args.forEach()
   } 
 }
-*/
-/*
+
+
 exports.run = (client, message, args) => {
   if(!args || args.length < 1) return message.reply("Must provide a command name to reload.");
   const commandName = args[0];
@@ -68,8 +122,8 @@ exports.run = (client, message, args) => {
   client.commands.set(commandName, props);
   message.reply(`The command ${commandName} has been reloaded`);
 };
-*/
-/*
+
+
 client.settings = new Map();
 let m = new Map();
 
@@ -86,7 +140,7 @@ const pokeraiders = {
     pingableroles:["659252943622635526","658892950717202452"]
   }
 }
-/*
+
 const pokeraiders = {
   prefix: "%",
   roles:{
@@ -115,9 +169,9 @@ const denbot = {
   denOnly:false
 }
 client.settings.set("663506927912878091", denbot);
-*/
 
-  /*
+
+  
 
   else if (args.length == 1)
   {
@@ -145,7 +199,7 @@ client.settings.set("663506927912878091", denbot);
     else
       return message.channel.send(botspeech.pkmnNotFound);
   }
-  */
+  
 
 client.on("message", async (message) => {
   // This stops if it's not a guild (obviously), and we ignore all bots.
@@ -208,7 +262,7 @@ client.on("message", async (message) => {
     message.channel.send(`The following are the server's current configuration:
     \`\`\`${configProps}\`\`\``);
   }
-/*
+
     else if (!rolePing.name.startsWith("Shiny") && !rolePing.name.startsWith("Giveaway"))
       return message.channel.send(botspeech.pingableRoles);
 let pkmnCatchRate = new Array();
@@ -264,9 +318,9 @@ fs.writeFileSync("./data/pokemon.json", newData);
 let p = allPkmn.pokemon.filter(mon => {return availablePkmn.includes(mon.name)});
 
 //console.log(p);
-*/
 
-/*
+
+
 const Enmap = require("enmap");
 fs.readdir("./events/", (err, files) => {
   if (err) return console.log(err);
@@ -294,9 +348,9 @@ fs.readdir("./commands/", (err, files) => {
     client.commands.set(commandName, props);
   });
 });
-*/
 
-/*
+
+
 console.log(`Everything:\nBall: ${ball.name}\nmodCatchRate0: ${modCatchRate0}\nmodCatchRate31: ${modCatchRate31}\nshakeProb0: ${shakeProb0}\nshakeProb31: ${shakeProb31}\n`);
 
 let ballModifier = balls.find(x => x.name == "Poke Ball").modifier;
@@ -316,8 +370,8 @@ console.log(`Mod Catch Rate for pkmn with max hp: ${maxhp0}, catch rate: ${pkmn.
 
 message.channel.send(`Percent chance to catch ${pkmn.name} with a pokeball is ${capProb(sp, mCR)}%`);
 console.log(pkmn);
-*/
-/*
+
+
 client.on("ready", () => { console.log("I am ready!"); });
 
 client.on("message", (message) => {
@@ -386,9 +440,9 @@ client.on("message", (message) => {
 });
 
 client.login(config.token);
-*/
 
-/*
+
+
 let possiblePkmnName = (args[0] + " " + args[1]).toLowerCase();
 let possiblePkmn = ingamePkmn.find(x => {
   return x.name.toLowerCase() == possiblePkmnName
@@ -443,9 +497,9 @@ else
 {
   message.channel.send(notFound);
 }
-*/
 
-/*
+
+
 if (gigaKeywords.includes(args[0].toLowerCase()))
 {
   let possiblePkmnName = (args[1] + " " + args[2]).toLowerCase();
@@ -488,9 +542,9 @@ if (gigaKeywords.includes(args[0].toLowerCase()))
     return;
   }
 }
-*/
 
-/*
+
+
 console.log(`Grass: ${lists.Grass.length}`);
 console.log(`Water1: ${lists.Water1.length}`);
 console.log(`Water2: ${lists.Water2.length}`);
@@ -661,9 +715,9 @@ pokemon.forEach(x => {
 console.log(pokemon);
 let newdata = JSON.stringify(pokemon);
 fs.writeFileSync("./data/ratiop.json", newdata);
-*/
 
-/*
+
+
 pokemon.forEach(x => {
   x.dens = {"sword":[], "shield":[]};
 });
@@ -703,9 +757,9 @@ pokemon.forEach(x => {
   }
 
 });
-*/
 
-/*
+
+
 pokemon.forEach(x => {
   x.forms = [];
   let p = pokeSON.find(y => {return y.name == x.name});
@@ -716,8 +770,8 @@ pokemon.forEach(x => {
 });
 
 console.log(pokemon);
-*/
-/*
+
+
 denPokemon.forEach(mon => {
   if (mon.dens.sword.length >= 1)
     mon.dens.sword = mon.dens.sword[0].match(/\b\d{1}\b|\b\d{2}\b/g);
@@ -728,9 +782,9 @@ denPokemon.forEach(mon => {
 
 let newdata = JSON.stringify(pokemon);
 fs.writeFileSync("./data/ver7pokemon.json", newdata);
-*/
 
-/*
+
+
   switch (flag)
   {
     case "pkmn":
@@ -748,9 +802,9 @@ fs.writeFileSync("./data/ver7pokemon.json", newdata);
     default:
       return null;
   }
-  */
+  
 
-  /*
+  
 
   else if (args.length == 1)
   {
@@ -879,8 +933,8 @@ fs.writeFileSync("./data/ver7pokemon.json", newdata);
     return message.channel.send(botspeech.argNotFound + '\`\`\`');
   }
 }
-*/
-/*
+
+
   else if (args.length == 1)
   {
     let pkmn = pokedata.fetch("pkmn", args);
@@ -1027,9 +1081,9 @@ fs.writeFileSync("./data/ver7pokemon.json", newdata);
       return message.channel.send( calc.bestBallMsg(pkmn, ball, true) );
   }
 }
-*/
 
-/*
+
+
 const botspeech = require("../modules/botspeech.js");
 const Discord = require("discord.js");
 
