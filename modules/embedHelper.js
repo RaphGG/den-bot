@@ -170,17 +170,13 @@ exports.createEmbed = (flag, client, args) => {
     let promo = pkmnObj.promo? `\nPromo Probability is: ${pkmnObj.promoCatchProb}` : "";
     embed.setTitle(`Probability of catching ${gmax} ${pkmnObj.pkmn.name} with a ${ball.name} is: ${pkmnObj.catchProb}`);
 
-    let assumption = "";
+    let emoji = "";
 
     if (ball.assumption == null)
-      assumption = "checkassume";
+      emoji = "❓";
 
     else
-      assumption = ball.assumption? "checktrue" : "checkfalse";
-
-    let emoji = client.emojis.find(e => {
-      return e.name == assumption;
-    });
+      emoji = ball.assumption? "✅" : "⛔";
 
     embed.setDescription(`Ball condition met: ${emoji}` + `${promo}`);
     embed.setThumbnail(imageFinder(pkmnObj));
