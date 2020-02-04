@@ -18,6 +18,25 @@ fs.writeFileSync("./data/newdens.json", newdata);
 
 /*
 
+      pkmn.dens.sword.forEach(den => {
+        swordDens = swordDens + `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
+      });
+      
+    
+      dens = dens + swordDens + '\n';
+      if (swordArr.length > 0)
+        dens += '\nHA: ' + swordArr.join(", ") + '\n';
+
+      pkmn.dens.shield.forEach(den => {
+        shieldDens = shieldDens + `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
+      });
+      
+      dens = dens + shieldDens;
+
+      if (shieldArr.length > 0)
+        dens += '\nHA: ' + shieldArr.join(", ") + '\n';
+
+
 if (args[0] > 1 && args[0] < 93)
      return message.reply(`Den ${args[0]} has the following Pokémon: `, {files: [`./data/dens/den${args[0]}.png`]});
 

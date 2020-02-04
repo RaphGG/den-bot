@@ -17,6 +17,7 @@ exports.requiredPrefix = "Please enter a Non-Alphanumeric prefix to be used with
 exports.configReset = "The Guild Configurations for this server have been reset.";
 exports.addAdminRoles = "The following roles have been added as admin roles: {{roles}}";
 exports.addPingRoles = "The following roles have been added as pingable roles: {{roles}}";
+exports.noRolesAdded = "No roles have been added.";
 
 // No Arg Calls -> May format with command structure
 exports.pingNoArg = "```Please enter a role to ping.```";

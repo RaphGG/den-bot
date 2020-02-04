@@ -37,9 +37,17 @@ exports.run = (client, message, args) => {
         id: role.id
       }
 
+      let prexistingRoles = settings.roles.adminroles.filter(role => (role.id === x.id));
+
+      if (prexistingRoles.length >= 1)
+        return;
+
       settings.roles.adminroles.push(x);
       addedRoles.push(role.name);
     });
+
+    if (addedRoles.length == 0)
+      return message.channel.send(botspeech.noRolesAdded);
 
     return message.channel.send(botspeech.addAdminRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
   }
@@ -60,9 +68,17 @@ exports.run = (client, message, args) => {
         id: role.id
       }
 
+      let prexistingRoles = settings.roles.adminroles.filter(role => (role.id === x.id));
+
+      if (prexistingRoles.length >= 1)
+        return;
+
       settings.roles.pingroles.push(x);
       addedRoles.push(role.name);
     });
+
+    if (addedRoles.length == 0)
+      return message.channel.send(botspeech.noRolesAdded);
 
     return message.channel.send(botspeech.addPingRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
   }

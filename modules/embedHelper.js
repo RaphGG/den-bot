@@ -325,6 +325,15 @@ exports.createEmbed = (flag, client, args) => {
     let pkmnObj = args[0];
     let pkmn = pkmnObj.pkmn;
     let denArr = args[1];
+    let shieldArr = denArr
+      .filter(den => (pkmn.dens.shield.includes(den.den)))
+      .filter(den => (den.shield.some(mon => (mon.name == pkmn.name && mon.ability.startsWith("Hidden")))))
+      .map(den => (den.den));
+
+    let swordArr = denArr
+      .filter(den => (pkmn.dens.sword.includes(den.den)))
+      .filter(den => (den.sword.some(mon => (mon.name == pkmn.name && mon.ability.startsWith("Hidden")))))
+      .map(den => (den.den));
 
     embed.setColor(colorFinder(pkmn));
     embed.setThumbnail(imageFinder(pkmnObj));
@@ -335,22 +344,38 @@ exports.createEmbed = (flag, client, args) => {
     if (pkmn.dens.sword.length > 0)
     {
       let swordDens = "**Sword:** ";
-      pkmn.dens.sword.forEach(den => {
-        swordDens = swordDens + `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
+      let nonHa = pkmn.dens.sword.filter(den => (!swordArr.includes(den)));
+      nonHa.forEach(den => {
+        swordDens += `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
+      });
+
+      if (swordArr.length > 0)
+        swordDens += 'HA: ';
+
+      swordArr.forEach(den => {
+        swordDens += `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
       });
       swordDens = swordDens.slice(0, swordDens.lastIndexOf(', '));
-    
-      dens = dens + swordDens + '\n';
+      dens += swordDens + '\n';
     }
 
     if (pkmn.dens.shield.length > 0)
     {
       let shieldDens = "**Shield:** ";
-      pkmn.dens.shield.forEach(den => {
-        shieldDens = shieldDens + `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
+      let nonHa = pkmn.dens.shield.filter(den => (!shieldArr.includes(den)));
+      nonHa.forEach(den => {
+        shieldDens += `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
       });
+
+      if (shieldArr.length > 0)
+        shieldDens += 'HA: ';
+
+      shieldArr.forEach(den => {
+        shieldDens += `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
+      });
+
       shieldDens = shieldDens.slice(0, shieldDens.lastIndexOf(', '));
-      dens = dens + shieldDens;
+      dens += shieldDens + '\n';
     }
 
     embed.setDescription(dens);
