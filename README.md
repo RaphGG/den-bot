@@ -24,7 +24,7 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 | `%pokedex`    | `[Pokèmon]`              | Shows a detailed summary of a Pokèmon's latest Statistics (Gen 8 / Gen 7)  |
 | `%ping`       | `[Role]`                 | Pings the specified role without setting it to be pingable by everyone     |
 | `%showconf`   |                          | Displays the server's current bot settings in a JSON Format                |
-| `%setconf`    | `[Setting] [Value]`      | Sets the specified setting's value(s)                                      |
+| `%setconf`    | `[Setting] [Value(s)]`   | Sets the specified setting's value(s)                                      |
 | `resetconf`   |                          | Resets the server's current bot settings to default                        |
 | `%help`       |                          | Displays a help message with this table of commands                        |
 | `%credits`    |                          | Displays a credit and thanks message                                       |
