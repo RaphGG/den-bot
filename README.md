@@ -61,6 +61,6 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 
 ## Credits
 * Many thanks to everyone listed below as without them this bot wouldn't be possible:
-- * Serebii & Bulbapedia for their mass wealth of Pokémon information and their dedication to host it.
-- * PkParaíso & Ian Clail [Layell] for their sprite work.
+- * [Serebii](Serebii.net) & [Bulbapedia](https://bulbapedia.bulbagarden.net/) for their mass wealth of Pokémon information and their dedication to host it.
+- * [PkParaíso](pkparaiso.com) & [Ian Clail](https://www.smogon.com/forums/threads/sun-moon-sprite-project.3577711/) [Layell] for their sprite work.
 - * Rhode & All of the people over at [Pokémon Raiders](https://discordapp.com/invite/pokemonraiders) for the idea & kindliness.
