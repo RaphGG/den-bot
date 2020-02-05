@@ -4,7 +4,6 @@ config.json
 #My First Ever Bot :')
 mybot.js
 
-
 #Node.JS
 node_modules
 .DS_Store
