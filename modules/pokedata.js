@@ -23,10 +23,19 @@ exports.fetch = (flag, args, settings) => {
   {
     let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
     let fullname = "";
-    args.forEach(term => (fullname += "\\b" + term + "\\b\|"));
+    let test = "";
+    args.forEach(term => {
+      fullname += "\\b" + term + "\\b\|";
+      test += "^" + term + "\|";
+    });
+
   
     let pkmnreg = new RegExp(fullname.substring(0, fullname.lastIndexOf("\|")), "gi");
+
+    let testreg = new RegExp(test.substring(0, test.lastIndexOf("\|")), "gi");
+
     console.log("pkmnreg: " + new RegExp(pkmnreg));
+    console.log("testreg: " + new RegExp(testreg));
   
     let form = pokelists.forms.find(form => (pkmnreg.test(form)));
     console.log("form: " + form);
@@ -43,8 +52,20 @@ exports.fetch = (flag, args, settings) => {
 
     else if (pokelists.noncosmeticforms.includes(form))
     {
-      let formreg = new RegExp(form + "$", "gi");
-      let pkmn = pokemonlist.find(mon => (pkmnreg.test(mon.name) && formreg.test(mon.name)))
+      
+      let tempmon = pokemonlist.filter(mon => (testreg.test(mon.name)))
+      if (!tempmon || tempmon.length <= 1)
+        return null;
+
+      let formreg = new RegExp(tempmon[0].name + "(?= " + form + ")", "gi");
+      console.log(formreg);
+      console.log(tempmon);
+
+      let pkmn = tempmon.find(mon => (formreg.test(mon.name)));
+
+      if (!pkmn)
+        return null;
+
 
       return pkmn;
     }
