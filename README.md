@@ -31,25 +31,26 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 
 
 ## Example Images
+`%catch gmax gengar`
+![Catch Gengar Gmax](https://raphgg.github.io/den-bot/data/readme/catchgengargmax.png)
 
+`%catch gmax gengar fast`
+![Catch Gengar Gmax Fast](https://raphgg.github.io/den-bot/data/readme/catchgengarfast.png)
 
+`%catch gmax gengar timer`
+![Catch Gengar Gmax Timer](https://raphgg.github.io/den-bot/data/readme/catchgengartimer.png)
+
+`%catch gmax appletun`
+![Catch Appletun Gmax](https://raphgg.github.io/den-bot/data/readme/catchappletungmax.png)
+
+`%den 23`
+![Den 23](https://raphgg.github.io/den-bot/data/readme/den23.png)
+
+`%den frosmoth`
+![Den Frosmoth](https://raphgg.github.io/den-bot/data/readme/denfrosmoth.png)
+
+`%pokedex froslass`
+![Pokedex Froslass](https://raphgg.github.io/den-bot/data/readme/pokedexfroslass.png)
 
 ## Credits
 * 
-
-Commands:
-
-Pokémon Related:
-%catch
-%den
-%pokedex
-%balls
-
-Guild Related:
-%ping
-%queue
-
-Bot Related:
-%help
-%credits
-%reload
