@@ -1,4 +1,4 @@
-# Discord Bot - [Alcremie-B](https://media.discordapp.net/attachments/657736140056428549/666530287395667970/icon.png)
+# Discord Bot - [Alcremie-B](https://raphgg.github.io/den-bot/data/icons/botpfp.png)
 A Pokèmon statistics Discord bot with the intended purpose of facilitating Max Raid Battles in Pokèmon Sword & Pokèmon Shield.
 
 ## Discord Usage
@@ -24,7 +24,7 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 | `%pokedex`    | `[Pokèmon]`              | Shows a detailed summary of a Pokèmon's latest Statistics (Gen 8 / Gen 7)  |
 | `%ping`       | `[Role]`                 | Pings the specified role without setting it to be pingable by everyone     |
 | `%showconf`   |                          | Displays the server's current bot settings in a JSON Format                |
-| `%setconf`    | `[prefix | adminroles | pingroles] [character | roles]`| Sets the specified setting's value(s)        |
+| `%setconf`    | `[Setting] [Value]`      | Sets the specified setting's value(s)                                      |
 | `resetconf`   |                          | Resets the server's current bot settings to default                        |
 | `%help`       |                          | Displays a help message with this table of commands                        |
 | `%credits`    |                          | Displays a credit and thanks message                                       |
@@ -60,4 +60,7 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 ![Pokedex Froslass](https://raphgg.github.io/den-bot/data/readme/pokedexfroslass.png)
 
 ## Credits
-* 
+* Many thanks to everyone listed below as without them this bot wouldn't be possible:
+- * Serebii & Bulbapedia for their mass wealth of Pokémon information and their dedication to host it.
+- * PkParaíso & Ian Clail [Layell] for their sprite work.
+- * Rhode & All of the people over at [Pokémon Raiders](https://discordapp.com/invite/pokemonraiders) for the idea & kindliness.
