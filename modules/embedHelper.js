@@ -102,24 +102,24 @@ const imageFinder = (pkmnObj) => {
 
   if (!pkmnObj.cform && !pkmnObj.shiny)
   {
-    return `https://raphgg.github.io/Den-Bot/data/sprites/pokemon/normal/${name}.gif`;
+    return `https://raphgg.github.io/den-bot/data/sprites/pokemon/normal/${name}.gif`;
   }
 
   else if (pkmnObj.cform && !pkmnObj.shiny)
   {
     name = name + '-' + pkmnObj.cform;
-    return `https://raphgg.github.io/Den-Bot/data/sprites/pokemon/normal/${name}.gif`;
+    return `https://raphgg.github.io/den-bot/data/sprites/pokemon/normal/${name}.gif`;
   }
 
   else if (!pkmnObj.cform && pkmnObj.shiny)
   {
-    return `https://raphgg.github.io/Den-Bot/data/sprites/pokemon/shiny/${name}.gif`;
+    return `https://raphgg.github.io/den-bot/data/sprites/pokemon/shiny/${name}.gif`;
   }
 
   else
   {
     name = name + '-' + pkmnObj.cform;
-    return `https://raphgg.github.io/Den-Bot/data/sprites/pokemon/shiny/${name}.gif`;
+    return `https://raphgg.github.io/den-bot/data/sprites/pokemon/shiny/${name}.gif`;
   }
 }
 
@@ -294,7 +294,7 @@ exports.createEmbed = (flag, client, args) => {
   {
     let color = args.den >= 43 ? 12390624 : 10231623;
     embed.setColor(color);
-    embed.setImage(`https://raphgg.github.io/Den-Bot/data/dens/den${args.den}.png`);
+    embed.setImage(`https://raphgg.github.io/den-bot/data/dens/den${args.den}.png`);
 
     embed.setTitle(`Den ${args.den}:`);
     embed.setURL(`https://www.serebii.net/swordshield/maxraidbattles/den${args.den}.shtml`)

@@ -68,7 +68,7 @@ exports.run = (client, message, args) => {
         id: role.id
       }
 
-      let prexistingRoles = settings.roles.adminroles.filter(role => (role.id === x.id));
+      let prexistingRoles = settings.roles.pingroles.filter(role => (role.id === x.id));
 
       if (prexistingRoles.length >= 1)
         return;
