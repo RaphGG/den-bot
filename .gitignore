@@ -1,9 +1,2 @@
-#Bot Private Config
-config.json
-
-#My First Ever Bot :')
-mybot.js
-
-botspeech.txt
-
+node_modules
 .DS_Store
