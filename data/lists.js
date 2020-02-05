@@ -2100,8 +2100,9 @@ exports.excludedBalls = ["Timer Ball", "Quick Ball", "Master Ball", "Level Ball"
 exports.promoPkmn = ["Applin", "Milcery", "Rolycoly", "Flapple", "Carkol", "Coalossal", "Lapras", "Appletun"];
 exports.gmaxPkmn = ["Charizard", "Butterfree", "Pikachu", "Meowth", "Machamp", "Gengar", "Kingler", "Lapras", "Eevee", "Snorlax", "Garbodor", "Melmetal", "Corviknight", "Orbeetle", "Drednaw", "Coalossal", "Flapple", "Appletun", "Sandaconda", "Toxtricity", "Centiskorch", "Hatterene", "Grimmsnarl", "Alcremie", "Copperajah", "Duraludon"];
 exports.edgeCasesForms = ["Hangry", "Noice"];
-exports.megaPkmn= ['Venusaur','Blastoise','Charizard','Beedrill','Pidgeot','Alakazam','Slowbro','Gengar','Kangaskhan','Pinsir','Gyarados','Aerodactyl','Mewtwo','Ampharos','Steelix','Scizor','Heracross','Houndoom','Tyranitar','Sceptile','Blaziken','Swampert','Gardevoir','Sableye','Mawile','Aggron','Medicham','Manectric','Sharpedo','Camerupt','Altaria','Banette','Absol','Glalie','Salamence','Metagross','Latias','Latios','Rayquaza','Lopunny','Garchomp','Lucario','Abomasnow','Gallade','Audino','Diancie']
-exports.cosmeticForms = ['Hangry', 'Antique', 'Busted', 'Gulping', 'Gorging', 'Gigantamax', 'Gmax', 'PomPom', 'Pau', 'Sensu', 'Active', 'Hairs', 'Flavors', 'Toppings', 'Patterns', 'Flowers', 'Locations', 'Types', 'Resolute','Patterns','Spring','Summer','Autumn','Winter','East','Sunshine','Sunny','Rainy','Snowy','Alphabet','Cosplay','Cap','Overdrive'];
+exports.megaPkmn= ['Venusaur','Blastoise','Charizard','Beedrill','Pidgeot','Alakazam','Slowbro','Gengar','Kangaskhan','Pinsir','Gyarados','Aerodactyl','Mewtwo','Ampharos','Steelix','Scizor','Heracross','Houndoom','Tyranitar','Sceptile','Blaziken','Swampert','Gardevoir','Sableye','Mawile','Aggron','Medicham','Manectric','Sharpedo','Camerupt','Altaria','Banette','Absol','Glalie','Salamence','Metagross','Latias','Latios','Rayquaza','Lopunny','Garchomp','Lucario','Abomasnow','Gallade','Audino','Diancie'];
+exports.noncosmeticforms = ["Galar", "Galarian", "Alola", "Alolan", "Mega", "Mega X", "Mega Y", "Noice Face", "Attack", "Speed", "Defense", "White", "Black", "Crowned", "Low Key", "Dusk Mane", "Dawn Wings", "Ultra", "Meteor", "School", "Midday", "Midnight", "Dusk", "Pirouette", "Pom-Pom", "Pau", "Sensu", "Therian", "Blue Striped", "Sky", "Primal", "Origin", "Heat", "Fan", "Wash", "Frost", "Fan", "Mow", "Sandy Cloak", "Trash Cloak","Small Size","Large Size","Super Size","Unbound","10%","50%","Complete"];
+exports.forms = ["Heat","Wash","Mow","Frost","Fan","Plant Cloak","Trash Cloak","Sandy Cloak","Full Belly","Hangry","Ice Face","Noice Face","Phony","Antique","Amped","Low Key","Gigantamax", "Gmax", "Gulping","Gorging","Dusk Mane","Dawn Wings","Ultra","Disguised","Busted","Meteor","Core","Solo","School","Midday","Midnight","Dusk","Baile","Pom-Pom","Pa'u","Sensu","Confined","Unbound","10%","50%","Complete","Neutral","Active","Small Size","Large Size","Super Size","Blade","Shield","Natural Trim","Heart Trim","Star Trim","Diamond Trim","Debutante Trim","Matron Trim","Dandy Trim","La Reine Trim","Kabuki Trim","Pharoah Trim","Vanilla Cream","Ruby Cream","Matcha Cream","Mint Cream","Lemon Cream","Salted Cream","Ruby Swirl","Caramel Swirl","Rainbow Swirl","Strawberry Sweet","Love Sweet","Berry Sweet","Clover Sweet","Flower Sweet","Star Sweet","Ribbon Sweet","Patterns","Red Flower","Yellow Flower","Orange Flower","Blue Flower","White Flower","Eternal","Archipelago","Continental","Elegant","Garden","High Plains","Icy Snow","Jungle","Marine","Meadow","Modern","Monsoon","Ocean","Polar","River","Sandstorm","Savanna","Sun","Tundra","Poke Ball","Fancy","Normal","Fire","Water","Grass","Rock","Ground","Fighting","Poison","Psychic","Dark","Ghost","Ice","Dragon","Steel","Fairy","Bug","Flying","Electric","Shock","Burn","Chill","Douse","Ash","Aria","Pirouette","Resolute","Black","White","Incarnate","Therian","Spring","Summer","Autumn","Winter","Zen","Galarian", "Galar", "Red-Striped","Blue-Striped","Land","Sky","Altered","Origin","West Sea","East Sea","Overcast","Sunshine","Attack","Speed","Defense","Sunny","Rainy","Snowy","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","!","?","Cosplay","Cap","Single Strike","Rapid Strike","Overdrive","Radiant Sun Phase","Full Moon Phase","Gloomdweller","Zenith","Alolan", "Alolan", "MegaX","MegaY","Mega","Primal"];
 exports.ultraBeasts = ['Nihilego','Buzzwole','Xurkitree','Celesteela','Kartana','Guzzlord','Poipole','Naganadel','Stakataka','Pheromosa','Blacephalon'];
 // Exclusion/Filters/Keywords End
 
@@ -2110,7 +2111,7 @@ exports.denPokemon = ["Charmander","Charmeleon","Charizard","Caterpie","Metapod"
 // Raid Pokemon End
 
 // Pokemon w/ Forms Begin
-const formJson = [
+exports.formJson = [
 {
 "name":"Rotom",
 "forms":["Heat","Wash","Mow","Frost","Fan"]
@@ -2197,11 +2198,11 @@ const formJson = [
 },
 {
 "name":"Furfrou",
-"forms":["Hairs"]
+"forms":["Natural Trim", "Heart Trim", "Star Trim", "Diamond Trim", "Debutante Trim", "Matron Trim", "Dandy Trim", "La Reine Trim", "Kabuki Trim", "Pharoah Trim"]
 },
 {
 "name":"Alcremie",
-"forms":["Flavors", "Toppings", "Gigantamax"]
+"forms":["Vanilla Cream", "Ruby Cream", "Matcha Cream", "Mint Cream", "Lemon Cream", "Salted Cream", "Ruby Swirl", "Caramel Swirl", "Rainbow Swirl", "Strawberry Sweet", "Love Sweet", "Berry Sweet", "Clover Sweet", "Flower Sweet","Star Sweet", "Ribbon Sweet", "Gigantamax"]
 },
 {
 "name":"Spinda",
@@ -2209,31 +2210,31 @@ const formJson = [
 },
 {
 "name":"Floette",
-"forms":["Flowers"]
+"forms":["Red Flower", "Yellow Flower", "Orange Flower", "Blue Flower", "White Flower", "Eternal"]
 },
 {
 "name":"Florges",
-"forms":["Flowers"]
+"forms":["Red Flower", "Yellow Flower", "Orange Flower", "Blue Flower", "White Flower"]
 },
 {
 "name":"Flabebe",
-"forms":["Flowers"]
+"forms":["Red Flower", "Yellow Flower", "Orange Flower", "Blue Flower", "White Flower"]
 },
 {
 "name":"Vivillon",
-"forms":["Locations"]
+"forms":["Archipelago", "Continental", "Elegant", "Garden", "High Plains", "Icy Snow", "Jungle", "Marine", "Meadow", "Modern", "Monsoon", "Ocean", "Polar", "River", "Sandstorm", "Savanna", "Sun", "Tundra", "Poke Ball", "Fancy"]
 },
 {
 "name":"Arceus",
-"forms":["Types"]
+"forms":["Normal", "Fire", "Water", "Grass", "Rock", "Ground", "Fighting", "Poison", "Psychic", "Dark", "Ghost", "Ice", "Dragon", "Steel", "Fairy", "Bug", "Flying", "Electric"]
 },
 {
 "name":"Silvally",
-"forms":["Types"]
+"forms":["Normal", "Fire", "Water", "Grass", "Rock", "Ground", "Fighting", "Poison", "Psychic", "Dark", "Ghost", "Ice", "Dragon", "Steel", "Fairy", "Bug", "Flying", "Electric"]
 },
 {
 "name":"Genesect",
-"forms":["Types"]
+"forms":["Shock", "Burn", "Chill", "Douse"]
 },
 {
 "name":"Greninja",
@@ -2309,7 +2310,7 @@ const formJson = [
 },
 {
 "name":"Unown",
-"forms":["Alphabet"]
+"forms":["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","!","?"]
 },
 {
 "name":"Pikachu",
@@ -2742,6 +2743,14 @@ const formJson = [
 {
 "name":"Audino",
 "forms":["Mega"]
+},
+{
+"name":"Kyogre",
+"forms":["Primal"]
+},
+{
+"name":"Groudon",
+"forms":["Primal"]
 },
 {
 "name":"Diancie",

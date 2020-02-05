@@ -17,16 +17,51 @@ var denPokemon = pokemon.filter(x => {
   return pokelists.denPokemon.includes(x.name);
 });
 
-var nonAlpha = new RegExp(/[^A-Za-z0-9]/, 'g');
-let reg = "";
-pokelists.cosmeticForms.forEach(form => {
-  reg = reg + form.replace(/ /g, '') + '|';
-});
-
-var cosmeticForms = new RegExp(reg, 'gi');
-
 exports.fetch = (flag, args, settings) => {
 
+  if (flag == "pkmn")
+  {
+    let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
+    let fullname = "";
+    args.forEach(term => (fullname += "\\b" + term + "\\b\|"));
+  
+    let pkmnreg = new RegExp(fullname.substring(0, fullname.lastIndexOf("\|")), "gi");
+    console.log("pkmnreg: " + new RegExp(pkmnreg));
+  
+    let form = pokelists.forms.find(form => (pkmnreg.test(form)));
+    console.log("form: " + form);
+
+    if (!form)
+    {
+      let pkmn = pokemonlist.find(mon => (pkmnreg.test(mon.name)));
+      if (!pkmn)
+        return null;
+
+      else
+        return pkmn
+    }
+
+    else if (pokelists.noncosmeticforms.includes(form))
+    {
+      let formreg = new RegExp(form + "$", "gi");
+      let pkmn = pokemonlist.find(mon => (pkmnreg.test(mon.name) && formreg.test(mon.name)))
+
+      return pkmn;
+    }
+
+    else
+    {
+      let pkmn = pokemonlist.find(mon => (pkmnreg.test(mon.name) && mon.forms.includes(form)));
+
+      if (!pkmn)
+        return null
+
+      else
+        return pkmn;
+    }
+  }
+
+  /*
   let name = "";
   if (args.length >= 1)
     args = args.join("");
@@ -53,7 +88,9 @@ exports.fetch = (flag, args, settings) => {
     if (!pkmn)
       return null;
 
-    let shiny = settings.shinypkmnonly? true : args.match(/\*/g);
+    */
+    //let shiny = settings.shinypkmnonly? true : args.match(/\*/g);
+    /*
     return {
       pkmn: pkmn,
       cform: cform,
@@ -77,9 +114,11 @@ exports.fetch = (flag, args, settings) => {
 
   else
     return null;
+    */
 }
-
-exports.balls = balls;
-exports.dens = dens;
-exports.nonAlpha = nonAlpha;
-exports.cosmeticForms = cosmeticForms;
+let settings = {
+  denpkmnonly: false
+}
+let args = "          Blastoise Mega      ".trim().split(/ |-/g);
+console.log(args);
+console.log(this.fetch("pkmn", args, settings));

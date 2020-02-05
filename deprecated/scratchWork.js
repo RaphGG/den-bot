@@ -1,9 +1,26 @@
 const fs = require("fs");
-const data = fs.readFileSync("./data/dens.json");
-const dens = JSON.parse(data);
+const pokelists = require("../data/lists.js");
 
 let arr = [];
 
+pokelists.formJson.forEach(pkmn => {
+  arr = arr.concat(pkmn.forms);
+});
+
+let set = new Set;
+
+arr.forEach(e => (set.add(e)));
+let p = [];
+set.forEach(e => (p.push(e)))
+
+
+let newdata = JSON.stringify(p);
+fs.writeFileSync("./data/test.json", newdata);
+
+
+
+/*
+const dens = JSON.parse(data);
 dens.forEach(den => {
   let newDen = new Object;
 
@@ -15,8 +32,6 @@ dens.forEach(den => {
 
 let newdata = JSON.stringify(arr);
 fs.writeFileSync("./data/newdens.json", newdata);
-
-/*
 
       pkmn.dens.sword.forEach(den => {
         swordDens = swordDens + `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
