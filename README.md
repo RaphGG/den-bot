@@ -9,12 +9,12 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 ## Features 
 * Quick and fully featured access to latest Pokèmon Data, such as: Base Stats / Abilities / Den Locations / And more!
 * Fully implemented catch rate calculator for Pokèmon encountered in raids.
-* 
+* Fast Den Information look-up including Pokémon lists and Hidden Ability availability.
 * Configurable settings to allow Server Admins to automate the role pinging process.
 
 ## Commands
-* [ ] Indicate Required Fields
-* ( ) Indicate Optional Fields
+* `[ ]` Indicate Required Fields
+* `( )` Indicate Optional Fields
 * Use * on Pokèmon Fields for shiny sprites
 
 | Command       | Arguments                | Descrition                                                                 |
@@ -32,24 +32,31 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 
 ## Example Images
 `%catch gmax gengar`
+
 ![Catch Gengar Gmax](https://raphgg.github.io/den-bot/data/readme/catchgengargmax.png)
 
 `%catch gmax gengar fast`
+
 ![Catch Gengar Gmax Fast](https://raphgg.github.io/den-bot/data/readme/catchgengarfast.png)
 
 `%catch gmax gengar timer`
+
 ![Catch Gengar Gmax Timer](https://raphgg.github.io/den-bot/data/readme/catchgengartimer.png)
 
 `%catch gmax appletun`
+
 ![Catch Appletun Gmax](https://raphgg.github.io/den-bot/data/readme/catchappletungmax.png)
 
 `%den 23`
+
 ![Den 23](https://raphgg.github.io/den-bot/data/readme/den23.png)
 
 `%den frosmoth`
+
 ![Den Frosmoth](https://raphgg.github.io/den-bot/data/readme/denfrosmoth.png)
 
 `%pokedex froslass`
+
 ![Pokedex Froslass](https://raphgg.github.io/den-bot/data/readme/pokedexfroslass.png)
 
 ## Credits
