@@ -12,14 +12,10 @@ exports.run = (client, message, args) => {
 
   else
   {
-    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 1), settings);
-    let pkmnObj2 = pokedata.fetch("pkmn", args, settings);
+    let pkmnObj = pokedata.fetch("pkmn", args, settings);
 
     if (pkmnObj)
       return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj));
-
-    else if (pkmnObj2)
-      return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj2));
 
     else
       return message.channel.send(botspeech.pkmnNotFound);

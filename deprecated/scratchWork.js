@@ -20,6 +20,136 @@ fs.writeFileSync("./data/test.json", newdata);
 
 
 /*
+let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
+    let words = "";
+    let start = "";
+    let tempshiny = false;
+
+    args.forEach(term => {
+      if (star.test(term))
+        tempshiny = true;
+      
+      term = term.replace(/[^A-Za-z0-9']/gi, "");
+      term = term.replace(/galar/gi, "Galarian");
+      term = term.replace(/alola/gi, "Alolan");
+      term = term.replace(/gmax/gi, "Gigantamax");
+  
+      words += "\\b" + term + "\\b\|";
+      start += "^" + term + "\|";
+    });
+    console.log(args);
+
+    let shiny = settings.shinypkmnonly? true : tempshiny;
+
+  
+    let wordreg = new RegExp(words.substring(0, words.lastIndexOf("\|")), "gi");
+
+    let startreg = new RegExp(start.substring(0, start.lastIndexOf("\|")), "gi");
+
+  
+    let form = pokelists.forms.find(form => (wordreg.test(form)));
+
+    if (!form)
+    {
+      let pkmn = pokemonlist.find(mon => (wordreg.test(mon.name)));
+      if (!pkmn)
+        return null;
+
+      else
+        return {pkmn: pkmn, form: form, shiny: shiny};
+    }
+
+    else if (pokelists.noncosmeticforms.includes(form))
+    {
+      let formreg = new RegExp("\\w+(?= " + form + ")\|" + "(?<=" + form + " \\w+)", "gi");
+
+      let tempmon = pokemonlist.filter(mon => (formreg.test(mon.name)))
+      if (!tempmon || tempmon.length < 1)
+        return null;
+
+
+      let joinargs = args.join(" ");
+      console.log(joinargs);
+
+      let pkmnName = joinargs.replace(formsreg, "").trim();
+      console.log(pkmnName)
+
+      let pkmnreg = new RegExp(pkmnName, "gi");
+      console.log(pkmnreg)
+
+      let pkmn = tempmon.find(mon => (pkmnreg.test(mon.name)));
+
+      if (!pkmn)
+        return null;
+
+
+      return {pkmn: pkmn, form: form, shiny: shiny};
+    }
+
+    else
+    {
+      let pkmn = pokemonlist.find(mon => (wordreg.test(mon.name) && mon.forms.includes(form)));
+
+      if (!pkmn)
+        return null
+
+      else
+        return {pkmn: pkmn, form: form, shiny: shiny};
+    }
+    
+let name = "";
+  if (args.length >= 1)
+    args = args.join("");
+
+  name = args.replace(nonAlpha, "").toLowerCase();
+  let cform = name.match(cosmeticForms).find(form => {return form != ''});
+
+  if (cform)
+  {
+    name = name.replace(cosmeticForms, "");
+    if (cform == "gmax")
+      cform = "gigantamax";
+  }
+
+  if (flag == "pkmn")
+  {
+    let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
+    let pkmn = pokemonlist.find(x => {
+      let nameMatch = x.name.replace(nonAlpha, "").toLowerCase() == name;
+      let formMatch = cform? x.forms.some(form => {return form.replace(/ /g, '').toLowerCase() == cform}) : true;
+      return nameMatch && formMatch;
+    });
+    
+    if (!pkmn)
+      return null;
+
+    */
+    //let shiny = settings.shinypkmnonly? true : args.match(/\*/g);
+    /*
+    return {
+      pkmn: pkmn,
+      cform: cform,
+      shiny: shiny
+    }
+  }
+
+  else if (flag == "ball")
+  {
+    return balls.find(x => {
+      return x.name.replace(nonAlpha, "").toLowerCase().startsWith(name);
+    });
+  }
+
+  else if (flag == "den")
+  {
+    return dens.find(den => {
+      return den.den == name;
+    });
+  }
+
+  else
+    return null;
+    
 const dens = JSON.parse(data);
 dens.forEach(den => {
   let newDen = new Object;

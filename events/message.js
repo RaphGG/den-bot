@@ -9,7 +9,7 @@ module.exports = (client, message) => {
 
   if (message.content.indexOf(guildConf.prefix) !== 0) return;
 
-  const args = message.content.slice(guildConf.prefix.length).trim().split(/ /g);
+  const args = message.content.slice(guildConf.prefix.length).trim().split(/ |-/g);
   const command = args.shift().toLowerCase();
 
   const cmd = client.commands.get(command);

@@ -48,5 +48,5 @@ fs.readdir("./commands/", (err, files) => {
     client.commands.set(commandName, props);
   });
 });
-client.login(config.token);
+client.login(config.tokentest);
 // TEST SETUP

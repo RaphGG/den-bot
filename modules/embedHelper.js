@@ -100,25 +100,26 @@ const colorFinder = (pkmn) => {
 const imageFinder = (pkmnObj) => {
   let name = pkmnObj.pkmn.name.replace(/[^A-Za-z0-9-]/g, "").toLowerCase();
 
-  if (!pkmnObj.cform && !pkmnObj.shiny)
+  if (!pkmnObj.cosmetic && !pkmnObj.shiny)
   {
     return `https://raphgg.github.io/den-bot/data/sprites/pokemon/normal/${name}.gif`;
   }
 
-  else if (pkmnObj.cform && !pkmnObj.shiny)
+  else if (pkmnObj.cosmetic && !pkmnObj.shiny)
   {
-    name = name + '-' + pkmnObj.cform;
+    name = name + '-' + pkmnObj.form.toLowerCase();
+    console.log(name);
     return `https://raphgg.github.io/den-bot/data/sprites/pokemon/normal/${name}.gif`;
   }
 
-  else if (!pkmnObj.cform && pkmnObj.shiny)
+  else if (!pkmnObj.cosmetic && pkmnObj.shiny)
   {
     return `https://raphgg.github.io/den-bot/data/sprites/pokemon/shiny/${name}.gif`;
   }
 
   else
   {
-    name = name + '-' + pkmnObj.cform;
+    name = name + '-' + pkmnObj.form.toLowerCase();
     return `https://raphgg.github.io/den-bot/data/sprites/pokemon/shiny/${name}.gif`;
   }
 }
@@ -133,8 +134,9 @@ exports.createEmbed = (flag, client, args) => {
   if (flag == "top4")
   {
     let pkmnObj = args[0];
+    console.log(pkmnObj);
     let bestBalls = args[1];
-    let gmax = pkmnObj.cform == "gigantamax";
+    let gmax = pkmnObj.form == "Gigantamax";
     let description = gmax? `The best balls for catching G-Max ${pkmnObj.pkmn.name} are:` : `The best balls for catching ${pkmnObj.pkmn.name} are:`;
 
     embed.setImage(imageFinder(pkmnObj));
@@ -165,8 +167,9 @@ exports.createEmbed = (flag, client, args) => {
   else if (flag == "ball")
   {
     let pkmnObj = args[0];
+    console.log(pkmnObj);
     let ball = args[1];
-    let gmax = (pkmnObj.cform == "gigantamax")? "G-Max" : ""; 
+    let gmax = (pkmnObj.form == "Gigantamax")? "G-Max" : ""; 
     let promo = pkmnObj.promo? `\nPromo Probability is: ${pkmnObj.promoCatchProb}` : "";
     embed.setTitle(`Probability of catching ${gmax} ${pkmnObj.pkmn.name} with a ${ball.name} is: ${pkmnObj.catchProb}`);
 
@@ -187,6 +190,7 @@ exports.createEmbed = (flag, client, args) => {
 
   else if (flag == "dex")
   {
+    console.log(args)
     let pkmn = args.pkmn;
     
     // Edge Color & Image
@@ -224,6 +228,7 @@ exports.createEmbed = (flag, client, args) => {
     let miscInfo = genderRatio + "\n" + heightWeight + "\n" + catchRate + "\n" + gen + "\n" + egg;
     if (pkmn.forms.length > 0)
     {
+      
       let forms = "\`";
       pkmn.forms.forEach(form => {
         forms = forms + form + ', ';
