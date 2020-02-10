@@ -98,7 +98,9 @@ const colorFinder = (pkmn) => {
 // pkmnObj. Utilizes pkparaiso's & project pokemon's sprites at
 // the moment. Subject to change [TODO].
 const imageFinder = (pkmnObj) => {
-  let name = pkmnObj.pkmn.name.replace(/[^A-Za-z0-9-]/g, "").toLowerCase();
+  let name = pkmnObj.pkmn.name.replace(/[^A-Za-z0-9- ]/g, "").toLowerCase();
+  name = name.replace(/ /gi, "-");
+  console.log(name);
 
   if (!pkmnObj.cosmetic && !pkmnObj.shiny)
   {
@@ -107,7 +109,7 @@ const imageFinder = (pkmnObj) => {
 
   else if (pkmnObj.cosmetic && !pkmnObj.shiny)
   {
-    name = name + '-' + pkmnObj.form.toLowerCase();
+    name = name + '-' + pkmnObj.form.replace(/ /gi, "-").toLowerCase();
     console.log(name);
     return `https://raphgg.github.io/den-bot/data/sprites/pokemon/normal/${name}.gif`;
   }
@@ -119,7 +121,7 @@ const imageFinder = (pkmnObj) => {
 
   else
   {
-    name = name + '-' + pkmnObj.form.toLowerCase();
+    name = name + '-' + pkmnObj.form.replace(/ /gi, "-").toLowerCase();
     return `https://raphgg.github.io/den-bot/data/sprites/pokemon/shiny/${name}.gif`;
   }
 }
