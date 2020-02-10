@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const botspeech = require("./botspeech.js");
+const pokelists = require("../data/lists.js");
 // TODO: Finish Comments.
 
 // Edge colors for Discord rich embed message. They correspond
@@ -98,8 +99,7 @@ const colorFinder = (pkmn) => {
 // pkmnObj. Utilizes pkparaiso's & project pokemon's sprites at
 // the moment. Subject to change [TODO].
 const imageFinder = (pkmnObj) => {
-  let name = pkmnObj.pkmn.name.replace(/[^A-Za-z0-9- ]/g, "").toLowerCase();
-  name = name.replace(/ /gi, "-");
+  let name = pkmnObj.pkmn.name.replace(/[^A-Za-z0-9 ]/gi, "").replace(/ /gi, "-").toLowerCase();
   console.log(name);
 
   if (!pkmnObj.cosmetic && !pkmnObj.shiny)
@@ -232,7 +232,8 @@ exports.createEmbed = (flag, client, args) => {
     {
       
       let forms = "\`";
-      pkmn.forms.forEach(form => {
+      let formlist = pokelists.variousForms.get(pkmn.name) || pkmn.forms; 
+      formlist.forEach(form => {
         forms = forms + form + ', ';
       });
       forms = forms.slice(0, forms.lastIndexOf(', ')) + '\`';
