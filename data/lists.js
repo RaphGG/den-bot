@@ -2097,7 +2097,7 @@ exports.enby = ["Magnemite",
 // Exclusion/Filters/Keywords Begin
 exports.moonPkmn = ["Nidoran", "Nidorina", "Nidoqueen", "Nidoran", "Nidorino", "Nidoking", "Cleffa", "Clefairy", "Clefable", "Igglybuff", "Jigglypuff", "Wigglytuff", "Munna", "Musharna"];
 exports.excludedBalls = ["Timer Ball", "Quick Ball", "Master Ball", "Level Ball", "Lure Ball", "Nest Ball", "Dive Ball", "Dream Ball", "Heavy Ball", "Love Ball"];
-exports.promoPkmn = ["Applin", "Milcery", "Rolycoly", "Flapple", "Carkol", "Coalossal", "Lapras", "Appletun"];
+exports.promoPkmn = ["Milcery", "Kingler", "Morgrem", "Grimmsnarl", "Hattrem", "Hatterene", "Orbeetle", "Toxtricity"];
 exports.gmaxPkmn = ["Charizard", "Butterfree", "Pikachu", "Meowth", "Machamp", "Gengar", "Kingler", "Lapras", "Eevee", "Snorlax", "Garbodor", "Melmetal", "Corviknight", "Orbeetle", "Drednaw", "Coalossal", "Flapple", "Appletun", "Sandaconda", "Toxtricity", "Centiskorch", "Hatterene", "Grimmsnarl", "Alcremie", "Copperajah", "Duraludon"];
 exports.edgeCasesForms = ["Hangry", "Noice"];
 exports.megaPkmn= ['Venusaur','Blastoise','Charizard','Beedrill','Pidgeot','Alakazam','Slowbro','Gengar','Kangaskhan','Pinsir','Gyarados','Aerodactyl','Mewtwo','Ampharos','Steelix','Scizor','Heracross','Houndoom','Tyranitar','Sceptile','Blaziken','Swampert','Gardevoir','Sableye','Mawile','Aggron','Medicham','Manectric','Sharpedo','Camerupt','Altaria','Banette','Absol','Glalie','Salamence','Metagross','Latias','Latios','Rayquaza','Lopunny','Garchomp','Lucario','Abomasnow','Gallade','Audino','Diancie']

@@ -310,8 +310,11 @@ exports.createEmbed = (flag, client, args) => {
       .map(pkmn => {return pkmn.name})
       .join("\n");
 
-    embed.addField("Sword HA:", swordHa, true);
-    embed.addField("Shield HA:", shieldHa, true);
+    if (swordHa.length > 1)
+      embed.addField("Sword HA:", swordHa, true);
+
+    if (shieldHa.length > 1)
+      embed.addField("Shield HA:", shieldHa, true);
 
     return embed;
   }
