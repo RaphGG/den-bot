@@ -16,7 +16,6 @@ exports.run = (client, message, args) => {
 
   else
   {
-
     let ball = pokedata.fetch("ball", args.slice(args.length - 1));
     if (ball)
     {
@@ -46,67 +45,4 @@ exports.run = (client, message, args) => {
       }
     }
   }
-
-  /*
-  else if (args.length == 1)
-  {
-    let pkmnObj = pokedata.fetch("pkmn", args, settings);
-    if (!pkmnObj)
-      return message.channel.send(botspeech.pkmnNotFound);
-
-    else
-    {
-      let bestBalls = calc.bestBalls(pkmnObj);
-      let embed = embedHelper.createEmbed("top4", client, [pkmnObj, bestBalls]);
-      return message.channel.send(embed);
-    }
-  }
-
-  else if (args.length == 2)
-  {
-    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 1), settings);
-    let pkmnObj2 = pokedata.fetch("pkmn", args, settings)
-    let ball = pokedata.fetch("ball", args.slice(1));
-
-    if (pkmnObj)
-    {
-      if (!ball)
-        return message.channel.send(botspeech.ballNotFound);
-
-      else
-      {
-        calc.bestBall(pkmnObj, ball);
-        return message.channel.send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]));
-      }
-    }
-
-    else if (pkmnObj2)
-    {
-      let bestBalls = calc.bestBalls(pkmnObj2);
-      let embed = embedHelper.createEmbed("top4", client, [pkmnObj2, bestBalls]);
-      return message.channel.send(embed);
-    }
-
-    else
-      return message.channel.send(botspeech.pkmnNotFound);
-  }
-
-  else if (args.length == 3)
-  {
-    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 2), settings);
-    let ball = pokedata.fetch("ball", args.slice(2));
-    
-    if (!pkmnObj)
-      return message.channel.send(botspeech.pkmnNotFound);
-
-    else if (!ball)
-      return message.channel.send(botspeech.ballNotFound);
-
-    else
-    {
-      calc.bestBall(pkmnObj, ball);
-      return message.channel.send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]));
-    }
-  }
-  */
 }

@@ -100,7 +100,7 @@ const colorFinder = (pkmn) => {
 // the moment. Subject to change [TODO].
 const imageFinder = (pkmnObj) => {
   let name = pkmnObj.pkmn.name.replace(/[^A-Za-z0-9 ]/gi, "").replace(/ /gi, "-").toLowerCase();
-  console.log(name);
+  //console.log(name);
 
   if (!pkmnObj.cosmetic && !pkmnObj.shiny)
   {
@@ -110,7 +110,7 @@ const imageFinder = (pkmnObj) => {
   else if (pkmnObj.cosmetic && !pkmnObj.shiny)
   {
     name = name + '-' + pkmnObj.form.replace(/ /gi, "-").toLowerCase();
-    console.log(name);
+    //console.log(name);
     return `https://raphgg.github.io/den-bot/data/sprites/pokemon/normal/${name}.gif`;
   }
 
@@ -136,7 +136,7 @@ exports.createEmbed = (flag, client, args) => {
   if (flag == "top4")
   {
     let pkmnObj = args[0];
-    console.log(pkmnObj);
+    //console.log(pkmnObj);
     let bestBalls = args[1];
     let gmax = pkmnObj.form == "Gigantamax";
     let description = gmax? `The best balls for catching G-Max ${pkmnObj.pkmn.name} are:` : `The best balls for catching ${pkmnObj.pkmn.name} are:`;
@@ -169,7 +169,7 @@ exports.createEmbed = (flag, client, args) => {
   else if (flag == "ball")
   {
     let pkmnObj = args[0];
-    console.log(pkmnObj);
+    //console.log(pkmnObj);
     let ball = args[1];
     let gmax = (pkmnObj.form == "Gigantamax")? "G-Max" : ""; 
     let promo = pkmnObj.promo? `\nPromo Probability is: ${pkmnObj.promoCatchProb}` : "";
@@ -192,7 +192,7 @@ exports.createEmbed = (flag, client, args) => {
 
   else if (flag == "dex")
   {
-    console.log(args)
+    //console.log(args)
     let pkmn = args.pkmn;
     
     // Edge Color & Image
