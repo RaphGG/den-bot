@@ -194,13 +194,9 @@ exports.createEmbed = (flag, client, args) => {
     embed.setImage(imageFinder(args));
 
     // Types (Title)
-    let type1 = client.emojis.find(x => {
-      return x.name == pkmn.type1;
-    });
+    let type1 = client.emojis.find(x => (x.name == `Type${pkmn.type1}`));
 
-    let type2 = client.emojis.find(x => {
-      return x.name == pkmn.type2;
-    });
+    let type2 = client.emojis.find(x => (x.name == `Type${pkmn.type2}`));
 
     let types = type2? type1 + " " + type2 : type1;
 
