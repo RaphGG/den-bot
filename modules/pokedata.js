@@ -12,74 +12,97 @@ const balls = JSON.parse(data);
 data = fs.readFileSync("./data/dens.json");
 const dens = JSON.parse(data);
 
-
-var denPokemon = pokemon.filter(x => {
+const denPokemon = pokemon.filter(x => {
   return pokelists.denPokemon.includes(x.name);
 });
 
-var nonAlpha = new RegExp(/[^A-Za-z0-9]/, 'g');
-let reg = "";
-pokelists.cosmeticForms.forEach(form => {
-  reg = reg + form.replace(/ /g, '') + '|';
-});
+let formsStr = "";
+pokelists.forms.forEach(form => (formsStr += "\\b" + form + "\\b\|"));
 
-var cosmeticForms = new RegExp(reg, 'gi');
+const formsEx = new RegExp(formsStr, "gi");
+const starEx = new RegExp(/\*/, "gi");
 
+// Pokè-Data Fetch function for the bot. Utilizes Regex to break down passed
+// arguments and then search for and return a Pokèmon Obj, Den Obj, or Ball Obj.
+// Regexs are marked with an Ex at the end of their var names.
 exports.fetch = (flag, args, settings) => {
-
-  let name = "";
-  if (args.length >= 1)
-    args = args.join("");
-
-  name = args.replace(nonAlpha, "").toLowerCase();
-  let cform = name.match(cosmeticForms).find(form => {return form != ''});
-
-  if (cform)
-  {
-    name = name.replace(cosmeticForms, "");
-    if (cform == "gmax")
-      cform = "gigantamax";
-  }
 
   if (flag == "pkmn")
   {
-    let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
-    let pkmn = pokemonlist.find(x => {
-      let nameMatch = x.name.replace(nonAlpha, "").toLowerCase() == name;
-      let formMatch = cform? x.forms.some(form => {return form.replace(/ /g, '').toLowerCase() == cform}) : true;
-      return nameMatch && formMatch;
-    });
-    
-    if (!pkmn)
-      return null;
+    // Retrieves the Pkmn Name from the list of passed arguments.
+    let pkmnarg = args.join(" ")
+      .replace(formsEx, "")
+      .replace(/[\W]/gi, "");
 
-    let shiny = settings.shinypkmnonly? true : args.match(/\*/g);
-    return {
-      pkmn: pkmn,
-      cform: cform,
-      shiny: shiny
+    console.log(pkmnarg);
+    if (pkmnarg == "") return null;
+
+    let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
+    let shiny = starEx.test(args.join()) || settings.shinypkmnonly;
+
+    let pkmnEx = new RegExp(pkmnarg, "gi");
+    console.log(pkmnEx);
+
+    let pkmn = pokemonlist.find(pkmn => (pkmnEx.test(pkmn.name.replace(/[\W]/gi, ""))));
+    console.log(pkmn);
+
+    if (!pkmn) return null;
+
+    else if (args.length == 1)
+      return {pkmn: pkmn, form: null, cosmetic: false, shiny: shiny};
+
+    else
+    {
+      let noncosStr = "";
+      let cosStr = "";
+      let forms = args.join(" ").match(formsEx).filter(match => (match != ''));
+      
+      if (forms.length == 0)
+        return {pkmn: pkmn, form: null, cosmetic: false, shiny: shiny};
+      console.log(forms)
+
+      forms.forEach(form => {
+        form = form.replace(/galar\b/gi, "Galarian");
+        form = form.replace(/alola\b/gi, "Alolan");
+        form = form.replace(/gmax\b/gi, "Gigantamax");
+        noncosStr += `${pkmn.name} (?=${form})|(?<=${form}) ${pkmn.name}|`;
+        cosStr += `\\b${form}\\b|`;
+      });
+
+      let cosEx = new RegExp(cosStr.substring(0, cosStr.lastIndexOf("|")), "gi");
+      console.log(cosEx);
+
+      let form = pkmn.forms.find(form => (cosEx.test(form)));
+      console.log(form);
+
+      if (!form)
+        return {pkmn: pkmn, form: null, cosmetic: false, shiny: shiny}
+
+      let noncosEx = new RegExp(noncosStr.substring(0, noncosStr.lastIndexOf("|")), "gi");
+      console.log(noncosEx);
+
+      let pkmnform = pokemonlist.find(pkmn => (noncosEx.test(pkmn.name)));
+      console.log(pkmnform);
+
+      if (pkmnform)
+        return {pkmn: pkmnform, form: form, cosmetic: false, shiny: shiny};
+
+      return {pkmn: pkmn, form: form, cosmetic: true, shiny: shiny};
     }
   }
 
   else if (flag == "ball")
   {
-    return balls.find(x => {
-      return x.name.replace(nonAlpha, "").toLowerCase().startsWith(name);
-    });
+    let ballreg = new RegExp(args, "gi");
+    return balls.find(ball => (ballreg.test(ball.name)))
   }
 
   else if (flag == "den")
   {
-    return dens.find(den => {
-      return den.den == name;
-    });
+    let denreg = new RegExp(args, "gi");
+    return dens.find(den => (denreg.test(den.den)))
   }
-
-  else
-    return null;
 }
 
 exports.balls = balls;
 exports.dens = dens;
-exports.nonAlpha = nonAlpha;
-exports.cosmeticForms = cosmeticForms;

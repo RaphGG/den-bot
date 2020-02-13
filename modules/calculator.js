@@ -100,7 +100,8 @@ const setModifiers = (pkmn) => {
 exports.bestBalls = (pkmnObj) => { 
   pkmnObj.catchProb = [];
   pkmnObj.promoCatchProb = [];
-  let gmax = pkmnObj.cform == "gigantamax";
+  let gmax = pkmnObj.form == "Gigantamax";
+  //console.log("form: " + pkmnObj.form)
   pkmnObj.promo = (pokelists.promoPkmn.includes(pkmnObj.pkmn.name)) && (gmax);
 
   setModifiers(pkmnObj.pkmn);
@@ -137,7 +138,7 @@ exports.bestBalls = (pkmnObj) => {
 exports.bestBall = (pkmnObj, ball) => {
   setModifiers(pkmnObj.pkmn);
 
-  let gmax = pkmnObj.cform == "gigantamax";
+  let gmax = pkmnObj.form == "Gigantamax";
 
   let catchProb = capProbRange(pkmnObj.pkmn, ball, gmax, false);
 

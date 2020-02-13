@@ -1,9 +1,274 @@
 const fs = require("fs");
-const data = fs.readFileSync("./data/dens.json");
-const dens = JSON.parse(data);
+const pokelists = require("../data/lists.js");
 
 let arr = [];
 
+pokelists.formJson.forEach(pkmn => {
+  arr = arr.concat(pkmn.forms);
+});
+
+let set = new Set;
+
+arr.forEach(e => (set.add(e)));
+let p = [];
+set.forEach(e => (p.push(e)))
+
+
+let newdata = JSON.stringify(p);
+fs.writeFileSync("./data/test.json", newdata);
+
+
+
+/*
+
+2nd Iteration of Catch Command Handler
+else if (args.length == 1)
+  {
+    let pkmnObj = pokedata.fetch("pkmn", args, settings);
+    if (!pkmnObj)
+      return message.channel.send(botspeech.pkmnNotFound);
+
+    else
+    {
+      let bestBalls = calc.bestBalls(pkmnObj);
+      let embed = embedHelper.createEmbed("top4", client, [pkmnObj, bestBalls]);
+      return message.channel.send(embed);
+    }
+  }
+
+  else if (args.length == 2)
+  {
+    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 1), settings);
+    let pkmnObj2 = pokedata.fetch("pkmn", args, settings)
+    let ball = pokedata.fetch("ball", args.slice(1));
+
+    if (pkmnObj)
+    {
+      if (!ball)
+        return message.channel.send(botspeech.ballNotFound);
+
+      else
+      {
+        calc.bestBall(pkmnObj, ball);
+        return message.channel.send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]));
+      }
+    }
+
+    else if (pkmnObj2)
+    {
+      let bestBalls = calc.bestBalls(pkmnObj2);
+      let embed = embedHelper.createEmbed("top4", client, [pkmnObj2, bestBalls]);
+      return message.channel.send(embed);
+    }
+
+    else
+      return message.channel.send(botspeech.pkmnNotFound);
+  }
+
+  else if (args.length == 3)
+  {
+    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 2), settings);
+    let ball = pokedata.fetch("ball", args.slice(2));
+    
+    if (!pkmnObj)
+      return message.channel.send(botspeech.pkmnNotFound);
+
+    else if (!ball)
+      return message.channel.send(botspeech.ballNotFound);
+
+    else
+    {
+      calc.bestBall(pkmnObj, ball);
+      return message.channel.send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]));
+    }
+  }
+
+    First RegEx Attempt at Pokedata Fetch
+    let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
+    let shiny = settings.shinypkmnonly;
+    let form = null;
+    let pkmn = null;
+
+    args.forEach(term => {
+      shiny = shiny || star.test(term);
+      term = term.replace(/[^A-Za-z0-9']/gi, "");
+      term = term.replace(/galar\b/gi, "Galarian");
+      term = term.replace(/alola\b/gi, "Alolan");
+      term = term.replace(/gmax/gi, "Gigantamax");
+      let regex = new RegExp("\\b" + term + "\\b", "gi");
+      console.log(regex);
+
+      let maybeform = pokelists.forms.find(form => (regex.test(form)));
+      form = form || maybeform;
+      console.log(form);
+      if (maybeform) return;
+
+      let maybepkmn = pokemonlist.find(pkmn => (regex.test(pkmn.name)));
+      pkmn = pkmn || maybepkmn;
+      console.log(pkmn);
+    });
+
+    if (!pkmn)
+      return null;
+
+    else
+    {
+      if (!form)
+        return {pkmn: pkmn, form: form, cosmetic: false, shiny: shiny};
+
+      else
+      {
+        if (!pkmn.forms.includes(form))
+          return null;
+
+        else if (!pokelists.noncosmeticforms.includes(form))
+          return {pkmn: pkmn, form: form, cosmetic: true, shiny: shiny};
+
+        let formreg = new RegExp(pkmn.name + "(?= " + form + ")\|" + "(?<=" + form + " )" + pkmn.name, "gi");
+        console.log(formreg);
+
+        let formpkmn = pokemonlist.find(pkmn => (formreg.test(pkmn.name)));
+        if (!formpkmn)
+          return null;
+
+        else
+          return {pkmn: formpkmn, form: form, cosmetic: false, shiny: shiny};
+      }
+    }
+
+
+    Initial Pokedata Fetch (No RegEx)
+let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
+    let words = "";
+    let start = "";
+    let tempshiny = false;
+
+    args.forEach(term => {
+      if (star.test(term))
+        tempshiny = true;
+      
+      term = term.replace(/[^A-Za-z0-9']/gi, "");
+      term = term.replace(/galar/gi, "Galarian");
+      term = term.replace(/alola/gi, "Alolan");
+      term = term.replace(/gmax/gi, "Gigantamax");
+  
+      words += "\\b" + term + "\\b\|";
+      start += "^" + term + "\|";
+    });
+    console.log(args);
+
+    let shiny = settings.shinypkmnonly? true : tempshiny;
+
+  
+    let wordreg = new RegExp(words.substring(0, words.lastIndexOf("\|")), "gi");
+
+    let startreg = new RegExp(start.substring(0, start.lastIndexOf("\|")), "gi");
+
+  
+    let form = pokelists.forms.find(form => (wordreg.test(form)));
+
+    if (!form)
+    {
+      let pkmn = pokemonlist.find(mon => (wordreg.test(mon.name)));
+      if (!pkmn)
+        return null;
+
+      else
+        return {pkmn: pkmn, form: form, shiny: shiny};
+    }
+
+    else if (pokelists.noncosmeticforms.includes(form))
+    {
+      let formreg = new RegExp("\\w+(?= " + form + ")\|" + "(?<=" + form + " \\w+)", "gi");
+
+      let tempmon = pokemonlist.filter(mon => (formreg.test(mon.name)))
+      if (!tempmon || tempmon.length < 1)
+        return null;
+
+
+      let joinargs = args.join(" ");
+      console.log(joinargs);
+
+      let pkmnName = joinargs.replace(formsreg, "").trim();
+      console.log(pkmnName)
+
+      let pkmnreg = new RegExp(pkmnName, "gi");
+      console.log(pkmnreg)
+
+      let pkmn = tempmon.find(mon => (pkmnreg.test(mon.name)));
+
+      if (!pkmn)
+        return null;
+
+
+      return {pkmn: pkmn, form: form, shiny: shiny};
+    }
+
+    else
+    {
+      let pkmn = pokemonlist.find(mon => (wordreg.test(mon.name) && mon.forms.includes(form)));
+
+      if (!pkmn)
+        return null
+
+      else
+        return {pkmn: pkmn, form: form, shiny: shiny};
+    }
+    
+let name = "";
+  if (args.length >= 1)
+    args = args.join("");
+
+  name = args.replace(nonAlpha, "").toLowerCase();
+  let cform = name.match(cosmeticForms).find(form => {return form != ''});
+
+  if (cform)
+  {
+    name = name.replace(cosmeticForms, "");
+    if (cform == "gmax")
+      cform = "gigantamax";
+  }
+
+  if (flag == "pkmn")
+  {
+    let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
+    let pkmn = pokemonlist.find(x => {
+      let nameMatch = x.name.replace(nonAlpha, "").toLowerCase() == name;
+      let formMatch = cform? x.forms.some(form => {return form.replace(/ /g, '').toLowerCase() == cform}) : true;
+      return nameMatch && formMatch;
+    });
+    
+    if (!pkmn)
+      return null;
+
+    */
+    //let shiny = settings.shinypkmnonly? true : args.match(/\*/g);
+    /*
+    return {
+      pkmn: pkmn,
+      cform: cform,
+      shiny: shiny
+    }
+  }
+
+  else if (flag == "ball")
+  {
+    return balls.find(x => {
+      return x.name.replace(nonAlpha, "").toLowerCase().startsWith(name);
+    });
+  }
+
+  else if (flag == "den")
+  {
+    return dens.find(den => {
+      return den.den == name;
+    });
+  }
+
+  else
+    return null;
+    
+const dens = JSON.parse(data);
 dens.forEach(den => {
   let newDen = new Object;
 
@@ -15,8 +280,6 @@ dens.forEach(den => {
 
 let newdata = JSON.stringify(arr);
 fs.writeFileSync("./data/newdens.json", newdata);
-
-/*
 
       pkmn.dens.sword.forEach(den => {
         swordDens = swordDens + `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
