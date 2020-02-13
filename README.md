@@ -10,7 +10,7 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 * Quick and fully featured access to latest Pokèmon Data, such as: Base Stats / Abilities / Den Locations / And more!
 * Fully implemented catch rate calculator for Pokèmon encountered in raids.
 * Fast Den Information look-up including Pokémon lists and Hidden Ability availability.
-* Configurable settings to allow Server Admins to automate the role pinging process.
+* Configurable settings to allow Server Admins to automate role pinging.
 
 ## Commands
 * `[ ]` Indicate Required Fields
@@ -19,8 +19,8 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 
 | Command       | Arguments                | Descrition                                                                 |
 |---------------|--------------------------|----------------------------------------------------------------------------|
-| `%catch`      | `[Pokèmon]-(Form) (Ball)`| Shows a detailed summary of catch rates for a given Pokèmon & Ball         |
-| `%den`        | `[Den #] \| [Pokèmon]`   | Shows a list of Pokèmon that belong to a den including their HAs           |
+| `%catch`      | `[Pokèmon] (Form) (Ball)`| Shows a detailed summary of catch rates for a given Pokèmon & Ball         |
+| `%den`        | `[Den #] | [Pokèmon]`    | Shows a list of Pokèmon that belong to a den including their HAs           |
 | `%pokedex`    | `[Pokèmon]`              | Shows a detailed summary of a Pokèmon's latest Statistics (Gen 8 / Gen 7)  |
 | `%ping`       | `[Role]`                 | Pings the specified role without setting it to be pingable by everyone     |
 | `%showconf`   |                          | Displays the server's current bot settings in a JSON Format                |

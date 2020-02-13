@@ -29,8 +29,8 @@ exports.setconfNoArg = "```Please enter a configuration property to set followed
 // Help Commands
 exports.nonAdminCommands = "{{prefix}}help";
 exports.adminCommands = "{{prefix}}help\n{{prefix}}ping [First word of pingable role]\n{{prefix}}setconf [prefix | adminroles | pingroles] [nonalpha char | roles]\n{{prefix}}showconf\n{{prefix}}resetconf";
-exports.pokeCommands = "{{prefix}}den [Den Number | Pokémon Name]\n{{prefix}}catch [Pokémon Name] (Form Name) (Ball Name)\n{{prefix}}pokedex [Pokémon Name]-(Form Name)\nForm Names Include gmax, galar, alola, etc.";
-exports.commandDescription = "[ ] Indicate required fields.\n( ) Indicate optional fields.\nUse * for shiny sprites.";
+exports.pokeCommands = "{{prefix}}den [Den Number | Pokémon Name]\n{{prefix}}catch [Pokémon Name] (Form Name) (Ball Name)\n{{prefix}}pokedex [Pokémon Name] (Form Name)\nForm Names Include gmax, galar, alola, etc.";
+exports.commandDescription = "[ ] Indicate required fields.\n( ) Indicate optional fields.\nUse * for shiny sprites.\n*Catch Rates are calculated under Raid Specific Conditions: Levels 30-70, 1 HP, and no status modifiers.*";
 exports.presence = "Serving up smiles in {{guildcount}} guilds!";
 
 // Dilapidated

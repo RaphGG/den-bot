@@ -34,17 +34,17 @@ exports.fetch = (flag, args, settings) => {
       .replace(formsEx, "")
       .replace(/[\W]/gi, "");
 
-    console.log(pkmnarg);
+    //console.log(pkmnarg);
     if (pkmnarg == "") return null;
 
     let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
     let shiny = starEx.test(args.join()) || settings.shinypkmnonly;
 
     let pkmnEx = new RegExp(pkmnarg, "gi");
-    console.log(pkmnEx);
+    //console.log(pkmnEx);
 
     let pkmn = pokemonlist.find(pkmn => (pkmnEx.test(pkmn.name.replace(/[\W]/gi, ""))));
-    console.log(pkmn);
+    //console.log(pkmn);
 
     if (!pkmn) return null;
 
@@ -59,7 +59,7 @@ exports.fetch = (flag, args, settings) => {
       
       if (forms.length == 0)
         return {pkmn: pkmn, form: null, cosmetic: false, shiny: shiny};
-      console.log(forms)
+      //console.log(forms)
 
       forms.forEach(form => {
         form = form.replace(/galar\b/gi, "Galarian");
@@ -70,19 +70,19 @@ exports.fetch = (flag, args, settings) => {
       });
 
       let cosEx = new RegExp(cosStr.substring(0, cosStr.lastIndexOf("|")), "gi");
-      console.log(cosEx);
+      //console.log(cosEx);
 
       let form = pkmn.forms.find(form => (cosEx.test(form)));
-      console.log(form);
+      //console.log(form);
 
       if (!form)
         return {pkmn: pkmn, form: null, cosmetic: false, shiny: shiny}
 
       let noncosEx = new RegExp(noncosStr.substring(0, noncosStr.lastIndexOf("|")), "gi");
-      console.log(noncosEx);
+      //console.log(noncosEx);
 
       let pkmnform = pokemonlist.find(pkmn => (noncosEx.test(pkmn.name)));
-      console.log(pkmnform);
+      //console.log(pkmnform);
 
       if (pkmnform)
         return {pkmn: pkmnform, form: form, cosmetic: false, shiny: shiny};
