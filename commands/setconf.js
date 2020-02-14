@@ -7,7 +7,9 @@ exports.run = (client, message, args) => {
     return settings.roles.adminroles.find(adminrole => {return adminrole.id == role.id});
   });
 
-  if (!isAdmin)
+  let isOwner = message.member.id == settings.ownerID;
+
+  if (!isAdmin && !isOwner)
     return message.reply(botspeech.permNotFound);
 
   if (!args || args.length < 2)
@@ -17,6 +19,9 @@ exports.run = (client, message, args) => {
   let roles = value.join(" ").split(/, |,/g);
 
   let isAlpha = value.join("").match(/[A-Za-z0-9]/gi);
+
+  if (prop == "ownerID")
+    return message.reply(botspeech.configNoChange);
 
   if (prop == "prefix" && isAlpha)
     return message.reply(botspeech.requiredPrefix);

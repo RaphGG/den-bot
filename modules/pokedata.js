@@ -93,13 +93,15 @@ exports.fetch = (flag, args, settings) => {
 
   else if (flag == "ball")
   {
-    let ballreg = new RegExp(args, "gi");
+    let str = args.join("").replace(/[\W]/, "");
+    let ballreg = new RegExp(str, "gi");
     return balls.find(ball => (ballreg.test(ball.name)))
   }
 
   else if (flag == "den")
   {
-    let denreg = new RegExp(args, "gi");
+    let str = args.join("").replace(/[\W]/, "");
+    let denreg = new RegExp(str, "gi");
     return dens.find(den => (denreg.test(den.den)))
   }
 }

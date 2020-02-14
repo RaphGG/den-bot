@@ -11,7 +11,9 @@ exports.run = (client, message) => {
       });
     });
 
-    if (!isAdmin)
+    let isOwner = message.member.id == settings.ownerID;
+
+    if (!isAdmin && !isOwner)
       return message.reply(botspeech.permNotFound);
 
     client.settings.delete(message.guild.id);
@@ -32,13 +34,15 @@ exports.run = (client, message) => {
   });
 
   const defaultSettings = {
+    ownerID: message.guild.ownerID,
     prefix:"%",
+    denpkmnonly:false,
+    shinypkmnonly:false,
     roles:{
       adminroles:adminroles,
       pingroles:pingroles
-    },
-    denpkmnonly:false,
-    shinypkmnonly:false
+    }
+
   }
 
   client.settings.set(message.guild.id, defaultSettings);

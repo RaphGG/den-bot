@@ -207,6 +207,9 @@ exports.createEmbed = (flag, client, args) => {
     let types = type2? type1 + " " + type2 : type1;
 
     // Title
+    let pkmnNoForm = args.cosmetic? pkmn.name : pkmn.name.replace(noncos, "");
+    let dexId = pkmn.dexId < 100; 
+    let titleUrl = pkmn.generation == "SwordShield"? `https://serebii.net/pokedex-swsh/${pkmnNoForm.toLowerCase()}/` : `https://serebii.net/pokedex-sm/${pkmn.dexId}.shtml`;
     let title = `**__#${pkmn.dexId} • ${pkmn.name} __**` + types;
     embed.setTitle(title);
 
@@ -328,36 +331,76 @@ exports.createEmbed = (flag, client, args) => {
     let pkmnObj = args[0];
     let pkmn = pkmnObj.pkmn;
     let denArr = args[1];
-    let shieldArr = denArr
-      .filter(den => (pkmn.dens.shield.includes(den.den)))
-      .filter(den => (den.shield.some(mon => (mon.name == pkmn.name && mon.ability.startsWith("Hidden")))))
-      .map(den => (den.den));
 
-    let swordArr = denArr
-      .filter(den => (pkmn.dens.sword.includes(den.den)))
-      .filter(den => (den.sword.some(mon => (mon.name == pkmn.name && mon.ability.startsWith("Hidden")))))
-      .map(den => (den.den));
+    let gmax = pkmnObj.form == "Gigantamax";
+    let hidden = pkmn.abilities.abilityH;
+
+    let shieldFltr = denArr.filter(den => (pkmn.dens.shield.includes(den.den)));
+    let swordFltr = denArr.filter(den => (pkmn.dens.sword.includes(den.den)));
 
     embed.setColor(colorFinder(pkmn));
     embed.setThumbnail(imageFinder(pkmnObj));
 
-    embed.setTitle(`${pkmn.name} is in the following dens: `);
+    var shieldHa = [];
+    var swordHa = [];
+
+    var shieldArr = [];
+    var swordArr = [];
+
+    if (gmax)
+    {
+      shieldArr = shieldFltr
+        .filter(den => (den.shield.some(mon => (mon.name == pkmn.name && mon.gigantamax))))
+        .map(den => (den.den));
+
+      swordArr = swordFltr
+        .filter(den => (den.sword.some(mon => (mon.name == pkmn.name && mon.gigantamax))))
+        .map(den => (den.den));
+
+      embed.setTitle(`G-Max ${pkmn.name} is in the following dens:`);
+    }
+
+    else if (hidden)
+    {
+      shieldHa = shieldFltr
+        .filter(den => (den.shield.some(mon => (mon.name == pkmn.name && mon.ability.startsWith("Hidden")))))
+        .map(den => (den.den));
+
+      swordHa = swordFltr
+        .filter(den => (den.sword.some(mon => (mon.name == pkmn.name && mon.ability.startsWith("Hidden")))))
+        .map(den => (den.den));
+
+      shieldArr = pkmn.dens.shield.filter(den => (!shieldHa.includes(den)));
+      swordArr = pkmn.dens.sword.filter(den => (!swordHa.includes(den)));
+      embed.setTitle(`${pkmn.name} is in the following dens: `);
+    }
+
+    else
+    {
+      shieldArr = shieldFltr.map(den => (den.den));
+      swordArr = swordFltr.map(den => (den.den));
+      embed.setTitle(`${pkmn.name} is in the following dens: `);
+    }
 
     let dens = "";
     if (pkmn.dens.sword.length > 0)
     {
       let swordDens = "**Sword:** ";
-      let nonHa = pkmn.dens.sword.filter(den => (!swordArr.includes(den)));
-      nonHa.forEach(den => {
-        swordDens += `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
-      });
-
-      if (swordArr.length > 0)
-        swordDens += 'HA: ';
+      if (gmax && hidden) swordDens += 'HA: ';
 
       swordArr.forEach(den => {
         swordDens += `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
       });
+
+      if (swordHa.length > 0)
+      {
+        swordDens += 'HA: ';
+
+        swordHa.forEach(den => {
+          swordDens += `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
+        });
+      }
+
       swordDens = swordDens.slice(0, swordDens.lastIndexOf(', '));
       dens += swordDens + '\n';
     }
@@ -365,17 +408,21 @@ exports.createEmbed = (flag, client, args) => {
     if (pkmn.dens.shield.length > 0)
     {
       let shieldDens = "**Shield:** ";
-      let nonHa = pkmn.dens.shield.filter(den => (!shieldArr.includes(den)));
-      nonHa.forEach(den => {
-        shieldDens += `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
-      });
-
-      if (shieldArr.length > 0)
-        shieldDens += 'HA: ';
+      if (gmax && hidden) shieldDens += 'HA: ';
 
       shieldArr.forEach(den => {
         shieldDens += `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
       });
+
+      if (shieldHa.length > 0)
+      {
+        shieldDens += 'HA: ';
+
+        shieldHa.forEach(den => {
+          shieldDens += `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
+        });
+      }
+
 
       shieldDens = shieldDens.slice(0, shieldDens.lastIndexOf(', '));
       dens += shieldDens + '\n';
@@ -396,6 +443,8 @@ exports.createEmbed = (flag, client, args) => {
     embed.setAuthor(client.user.username, client.user.avatarURL);
     embed.setColor(14315906);
     embed.setTimestamp();
+    embed.setTitle("Credits:")
+    embed.setThumbnail("")
   }
 
   else if (flag == "help")
