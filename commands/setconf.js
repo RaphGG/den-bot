@@ -58,7 +58,7 @@ exports.run = (client, message, args) => {
 
     try
     {
-      fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(defaultSettings));
+      fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(settings));
     }
     catch(error)
     {
@@ -99,7 +99,7 @@ exports.run = (client, message, args) => {
 
     try
     {
-      fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(defaultSettings));
+      fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(settings));
     }
     catch(error)
     {
@@ -116,7 +116,7 @@ exports.run = (client, message, args) => {
 
   try
   {
-    fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(defaultSettings));
+    fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(settings));
   }
   catch(error)
   {
