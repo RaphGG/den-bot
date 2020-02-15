@@ -1,4 +1,5 @@
 const botspeech = require("../modules/botspeech.js");
+const fs = require("fs");
 
 exports.run = (client, message, args) => {
   let settings = client.settings.get(message.guild.id);
@@ -7,7 +8,9 @@ exports.run = (client, message, args) => {
     return settings.roles.adminroles.find(adminrole => {return adminrole.id == role.id});
   });
 
-  if (!isAdmin)
+  let isOwner = message.member.id == settings.ownerID;
+
+  if (!isAdmin && !isOwner)
     return message.reply(botspeech.permNotFound);
 
   if (!args || args.length < 2)
@@ -17,6 +20,9 @@ exports.run = (client, message, args) => {
   let roles = value.join(" ").split(/, |,/g);
 
   let isAlpha = value.join("").match(/[A-Za-z0-9]/gi);
+
+  if (prop == "ownerID")
+    return message.reply(botspeech.configNoChange);
 
   if (prop == "prefix" && isAlpha)
     return message.reply(botspeech.requiredPrefix);
@@ -49,6 +55,16 @@ exports.run = (client, message, args) => {
     if (addedRoles.length == 0)
       return message.channel.send(botspeech.noRolesAdded);
 
+
+    try
+    {
+      fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(defaultSettings));
+    }
+    catch(error)
+    {
+      console.error(error);
+    }
+
     return message.channel.send(botspeech.addAdminRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
   }
 
@@ -80,6 +96,16 @@ exports.run = (client, message, args) => {
     if (addedRoles.length == 0)
       return message.channel.send(botspeech.noRolesAdded);
 
+
+    try
+    {
+      fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(defaultSettings));
+    }
+    catch(error)
+    {
+      console.error(error);
+    }
+
     return message.channel.send(botspeech.addPingRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
   }
 
@@ -87,6 +113,15 @@ exports.run = (client, message, args) => {
     return message.channel.send(botspeech.guildConfNotFound);
 
   settings[prop] = value.join(" ");
+
+  try
+  {
+    fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(defaultSettings));
+  }
+  catch(error)
+  {
+    console.error(error);
+  }
 
   return message.channel.send(`Guild configuration item ${prop} has been set to: \n\`${value.join(" ")}\``);
 }

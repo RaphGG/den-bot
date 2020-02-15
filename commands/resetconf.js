@@ -1,4 +1,5 @@
 const botspeech = require("../modules/botspeech.js");
+const fs = require("fs");
 
 exports.run = (client, message) => {
   let settings = client.settings.get(message.guild.id);
@@ -11,7 +12,9 @@ exports.run = (client, message) => {
       });
     });
 
-    if (!isAdmin)
+    let isOwner = message.member.id == settings.ownerID;
+
+    if (!isAdmin && !isOwner)
       return message.reply(botspeech.permNotFound);
 
     client.settings.delete(message.guild.id);
@@ -32,15 +35,25 @@ exports.run = (client, message) => {
   });
 
   const defaultSettings = {
+    ownerID: message.guild.ownerID,
     prefix:"%",
+    denpkmnonly:false,
+    shinypkmnonly:false,
     roles:{
       adminroles:adminroles,
       pingroles:pingroles
-    },
-    denpkmnonly:false,
-    shinypkmnonly:false
+    }
+
   }
 
   client.settings.set(message.guild.id, defaultSettings);
+  try
+  {
+    fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(defaultSettings));
+  }
+  catch(error)
+  {
+    console.error(error);
+  }
   return client.settings.get(message.guild.id);
 }

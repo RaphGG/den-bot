@@ -3,6 +3,8 @@ const botspeech = require("../modules/botspeech.js");
 
 exports.run = (client, message, args) => {
   let settings = client.settings.get(message.guild.id);
+
+  let isOwner = message.member.id == settings.ownerID;
   
   let isAdmin = message.member.roles.some(role => {
     return settings.roles.adminroles.find(adminrole => {
@@ -10,7 +12,7 @@ exports.run = (client, message, args) => {
     });
   });
 
-  if (!isAdmin)
+  if (!isAdmin && !isOwner)
     return message.reply(botspeech.permNotFound);
 
   else if (!args || args.length < 1)
