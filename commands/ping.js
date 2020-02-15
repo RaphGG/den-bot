@@ -48,7 +48,14 @@ exports.run = (client, message, args) => {
             updated.setMentionable(false, "Role has been pinged.")
           }, 5000);
         })
-        .catch(err => console.log(err));
+        .catch(err => {
+          console.log(err);
+          if (err.message == 'Missing Permissions')
+            return message.channel.send(botspeech.rolePlacement.replace(/{{role}}/gi, rolePing.name));
+
+          else
+            return message.channel.send(botspeech.pingError);
+        });
     }
   }
 }

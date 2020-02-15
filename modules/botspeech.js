@@ -19,6 +19,8 @@ exports.addAdminRoles = "The following roles have been added as admin roles: {{r
 exports.addPingRoles = "The following roles have been added as pingable roles: {{roles}}";
 exports.noRolesAdded = "No roles have been added.";
 exports.configNoChange = "These configuration setting cannot be changed.";
+exports.rolePlacement = "The {{role}} role is below this bot's role. Please move this bot's role above {{role}} to be able to ping it.";
+exports.pingError = "Error with the pinging process. Contact a server admin.";
 
 // No Arg Calls -> May format with command structure
 exports.pingNoArg = "```Please enter a role to ping.```";
@@ -28,8 +30,8 @@ exports.reloadNoArg = "```Please enter a command to reload.```";
 exports.setconfNoArg = "```Please enter a configuration property to set followed by the desired setting.```";
 
 // Help Commands
-exports.nonAdminCommands = "{{prefix}}help";
-exports.adminCommands = "{{prefix}}help\n{{prefix}}ping [First word of pingable role]\n{{prefix}}setconf [prefix | adminroles | pingroles] [nonalpha char | roles]\n{{prefix}}showconf\n{{prefix}}resetconf";
+exports.nonAdminCommands = "{{prefix}}help\n{{prefix}}latency";
+exports.adminCommands = "{{prefix}}help\n{{prefix}}latency\n{{prefix}}ping [First word of pingable role]\n{{prefix}}setconf [prefix | adminroles | pingroles] [nonalpha char | roles]\n{{prefix}}showconf\n{{prefix}}resetconf";
 exports.pokeCommands = "{{prefix}}den [Den Number | Pokémon Name]\n{{prefix}}catch [Pokémon Name] (Form Name) (Ball Name)\n{{prefix}}pokedex [Pokémon Name] (Form Name)\nForm Names Include gmax, galar, alola, etc.";
 exports.commandDescription = "[ ] Indicate required fields.\n( ) Indicate optional fields.\nUse * for shiny sprites.\n*Catch Rates are calculated under Raid Specific Conditions: Levels 30-70, 1 HP, and no status modifiers.*";
 exports.presence = "Serving up smiles in {{guildcount}} guilds!";

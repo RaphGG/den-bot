@@ -37,8 +37,8 @@ exports.fetch = (flag, args, settings) => {
     //console.log(pkmnarg);
     if (pkmnarg == "") return null;
 
-    let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
-    let shiny = starEx.test(args.join()) || settings.shinypkmnonly;
+    let pokemonlist = settings.denpkmnonly == "true"? denPokemon : pokemon;
+    let shiny = starEx.test(args.join()) || settings.shinypkmnonly == "true";
 
     let pkmnEx = new RegExp(pkmnarg, "gi");
     //console.log(pkmnEx);
