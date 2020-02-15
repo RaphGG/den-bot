@@ -1,4 +1,5 @@
 const botspeech = require("../modules/botspeech.js");
+const fs = require("fs");
 
 exports.run = (client, message, args) => {
   let settings = client.settings.get(message.guild.id);
@@ -54,6 +55,16 @@ exports.run = (client, message, args) => {
     if (addedRoles.length == 0)
       return message.channel.send(botspeech.noRolesAdded);
 
+
+    try
+    {
+      fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(defaultSettings));
+    }
+    catch(error)
+    {
+      console.error(error);
+    }
+
     return message.channel.send(botspeech.addAdminRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
   }
 
@@ -85,6 +96,16 @@ exports.run = (client, message, args) => {
     if (addedRoles.length == 0)
       return message.channel.send(botspeech.noRolesAdded);
 
+
+    try
+    {
+      fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(defaultSettings));
+    }
+    catch(error)
+    {
+      console.error(error);
+    }
+
     return message.channel.send(botspeech.addPingRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
   }
 
@@ -92,6 +113,15 @@ exports.run = (client, message, args) => {
     return message.channel.send(botspeech.guildConfNotFound);
 
   settings[prop] = value.join(" ");
+
+  try
+  {
+    fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(defaultSettings));
+  }
+  catch(error)
+  {
+    console.error(error);
+  }
 
   return message.channel.send(`Guild configuration item ${prop} has been set to: \n\`${value.join(" ")}\``);
 }

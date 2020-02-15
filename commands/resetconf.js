@@ -1,4 +1,5 @@
 const botspeech = require("../modules/botspeech.js");
+const fs = require("fs");
 
 exports.run = (client, message) => {
   let settings = client.settings.get(message.guild.id);
@@ -46,5 +47,13 @@ exports.run = (client, message) => {
   }
 
   client.settings.set(message.guild.id, defaultSettings);
+  try
+  {
+    fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(defaultSettings));
+  }
+  catch(error)
+  {
+    console.error(error);
+  }
   return client.settings.get(message.guild.id);
 }

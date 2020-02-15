@@ -32,6 +32,14 @@ fs.readdir("./events/", (err, files) => {
 client.commands = new Map();
 client.settings = new Map();
 
+let fldr = fs.readdirSync("./data/settings");
+
+fldr.forEach(file => {
+  let data = fs.readFileSync(`./data/settings/${file}`);
+  let setting = JSON.parse(data);
+  client.settings.set(file.replace(".json", ""), setting);
+});
+
 // Command loader to map commands as above into a Discord.js Collection 
 // which is held by the client (bot)
 fs.readdir("./commands/", (err, files) => {
@@ -48,5 +56,5 @@ fs.readdir("./commands/", (err, files) => {
     client.commands.set(commandName, props);
   });
 });
-client.login(config.tokentest);
+client.login(config.token);
 // TEST SETUP
