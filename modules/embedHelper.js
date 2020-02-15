@@ -207,9 +207,12 @@ exports.createEmbed = (flag, client, args) => {
     let types = type2? type1 + " " + type2 : type1;
 
     // Title
+    /*
     let pkmnNoForm = args.cosmetic? pkmn.name : pkmn.name.replace(noncos, "");
     let dexId = pkmn.dexId < 100; 
     let titleUrl = pkmn.generation == "SwordShield"? `https://serebii.net/pokedex-swsh/${pkmnNoForm.toLowerCase()}/` : `https://serebii.net/pokedex-sm/${pkmn.dexId}.shtml`;
+    */
+
     let title = `**__#${pkmn.dexId} • ${pkmn.name} __**` + types;
     embed.setTitle(title);
 
