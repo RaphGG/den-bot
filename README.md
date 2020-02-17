@@ -20,7 +20,7 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 | Command       | Arguments                | Descrition                                                                 |
 |---------------|--------------------------|----------------------------------------------------------------------------|
 | `%catch`      | `[Pokèmon] (Form) (Ball)`| Shows a detailed summary of catch rates for a given Pokèmon & Ball         |
-| `%den`        | `[Den #] | [Pokèmon]`    | Shows a list of Pokèmon that belong to a den including their HAs           |
+| `%den`        | `[Den #] / [Pokèmon]`    | Shows a list of Pokèmon that belong to a den including their HAs           |
 | `%pokedex`    | `[Pokèmon]`              | Shows a detailed summary of a Pokèmon's latest Statistics (Gen 8 / Gen 7)  |
 | `%ping`       | `[Role]`                 | Pings the specified role without setting it to be pingable by everyone     |
 | `%showconf`   |                          | Displays the server's current bot settings in a JSON Format                |
