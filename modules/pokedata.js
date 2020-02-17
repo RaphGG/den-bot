@@ -19,7 +19,12 @@ const denPokemon = pokemon.filter(x => {
 let formsStr = "";
 pokelists.forms.forEach(form => (formsStr += "\\b" + form + "\\b|"));
 
+/*
+let ballStr = "";
+pokelists.ballNames.forEach(ball => (ballStr += "\\b" + ball.replace(/ ball/gi, "") + "\\b"));
+*/
 const formsEx = new RegExp(formsStr, "gi");
+// const ballsEx = new RegExp(ballStr, "gi");
 const starEx = new RegExp(/\*/, "gi");
 
 // Pokè-Data Fetch function for the bot. Utilizes Regex to break down passed
@@ -76,7 +81,7 @@ exports.fetch = (flag, args, settings) => {
       // console.log(form);
 
       if (!form)
-        return {pkmn: pkmn, form: null, cosmetic: false, shiny: shiny}
+        return { pkmn: pkmn, form: null, cosmetic: false, shiny: shiny }
 
       const noncosEx = new RegExp(noncosStr.substring(0, noncosStr.lastIndexOf("|")), "gi");
       // console.log(noncosEx);
@@ -93,7 +98,8 @@ exports.fetch = (flag, args, settings) => {
 
   else if (flag == "ball")
   {
-    const str = args.join("").replace(/[\W]/, "");
+    const str = args.join("").replace(/[\W]/, "").replace(/ball/gi, "");
+    console.log(str);
     const ballreg = new RegExp(str, "gi");
     return balls.find(ball => (ballreg.test(ball.name)));
   }

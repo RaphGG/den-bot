@@ -28,6 +28,7 @@ exports.catchNoArg = "```Please enter a Pokémon to catch followed by a ball of 
 exports.denNoArg = "```Please enter either a Den Number or a Pokémon to fetch.```";
 exports.reloadNoArg = "```Please enter a command to reload.```";
 exports.setconfNoArg = "```Please enter a configuration property to set followed by the desired setting.```";
+exports.ballNoArg = "```Please enter a Pokè-Ball name.```";
 
 // Help Commands
 exports.nonAdminCommands = "{{prefix}}help\n{{prefix}}latency";

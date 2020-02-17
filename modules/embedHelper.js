@@ -436,7 +436,7 @@ exports.createEmbed = (flag, client, args) => {
     return embed;
   }
 
-  else if (flag == "balls")
+  else if (flag == "ballinfo")
   {
     // Not yet implemented
     return;
