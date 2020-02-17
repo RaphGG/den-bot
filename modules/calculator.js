@@ -65,8 +65,6 @@ const setModifiers = (pkmn) => {
   const loveBall = pkmn.genderRatio != "100% ⚲" && pkmn.genderRatio != "100% ♀" && pkmn.genderRatio != "100% ♂";
   const beastBall = pokelists.ultraBeasts.includes(pkmn.name);
 
-  pokedata.balls.find(x => x.name == "Net Ball").modifier = netBall? 3.5 : 1;
-
   if (pkmn.weight >= 300)
     pokedata.balls.find(x => x.name == "Heavy Ball").modifier = 30;
 
@@ -78,6 +76,10 @@ const setModifiers = (pkmn) => {
 
   else
     pokedata.balls.find(x => x.name == "Heavy Ball").modifier = -20;
+
+  const nb = pokedata.balls.find(x => x.name == "Net Ball");
+  nb.modifier = netBall? 3.5 : 1;
+  nb.assumption = netBall;
 
   const fb = pokedata.balls.find(x => x.name == "Fast Ball");
   fb.modifier = fastBall? 4 : 1;
