@@ -35,7 +35,13 @@ exports.adminCommands = "{{prefix}}help\n{{prefix}}latency\n{{prefix}}ping [Firs
 exports.pokeCommands = "{{prefix}}den [Den Number | Pokémon Name]\n{{prefix}}catch [Pokémon Name] (Form Name) (Ball Name)\n{{prefix}}pokedex [Pokémon Name] (Form Name)\nForm Names Include gmax, galar, alola, etc.";
 exports.commandDescription = "[ ] Indicate required fields.\n( ) Indicate optional fields.\nUse * for shiny sprites.\n*Catch Rates are calculated under Raid Specific Conditions: Levels 30-70, 1 HP, and no status modifiers.*";
 exports.presence = "Serving up smiles in {{guildcount}} guilds!";
+exports.helpSupport = "[Need more help? Join Alcremie-B's support server!](https://discord.gg/ZZU77fz)";
 
+// Credits
+exports.creditsDescription = "Many thanks to everyone listed below, as without them this bot wouldn't be possible:";
+exports.creditsExternal = "[Serebii](https://Serebii.net) & [Bulbapedia](https://Bulbapedia.bulbagarden.net) for their mass wealth of Pokèmon information and their dedication to host it.";
+exports.creditsSprites = "[PkParaíso](https://pkparaiso.com) & [Ian Clail](https://www.smogon.com/forums/threads/sun-moon-sprite-project.3577711/) (Layell) for their lovely sprite work on 1300+ Pokèmon & Forms.";
+exports.creditsOthers = "Rhode & All of the people over at [Pokèmon Raiders](https://discordapp.com/invite/pokemonraiders) for the idea & their kindliness.";
 // Dilapidated
 
 // Not Yet Implemented

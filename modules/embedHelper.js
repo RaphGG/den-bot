@@ -448,7 +448,13 @@ exports.createEmbed = (flag, client, args) => {
     embed.setColor(14315906);
     embed.setTimestamp();
     embed.setTitle("Credits:");
-    embed.setThumbnail("");
+    embed.setThumbnail("https://raphgg.github.io/den-bot/data/readme/froslass-credits.gif");
+    embed.setDescription(botspeech.creditsDescription);
+    embed.addField("External Resources:", botspeech.creditsExternal);
+    embed.addField("Sprite Work:", botspeech.creditsSprites);
+    embed.addField("Others:", botspeech.creditsOthers);
+
+    return embed;
   }
 
   else if (flag == "help")
@@ -465,6 +471,9 @@ exports.createEmbed = (flag, client, args) => {
 
     else
       embed.addField("User Commands:", botspeech.nonAdminCommands.replace(/{{prefix}}/g, args[1]));
+
+
+    embed.addField("Support Server:", botspeech.helpSupport);
 
     return embed;
   }

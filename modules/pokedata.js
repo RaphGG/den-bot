@@ -17,7 +17,7 @@ const denPokemon = pokemon.filter(x => {
 });
 
 let formsStr = "";
-pokelists.forms.forEach(form => (formsStr += "\\b" + form + "\\b\|"));
+pokelists.forms.forEach(form => (formsStr += "\\b" + form + "\\b|"));
 
 const formsEx = new RegExp(formsStr, "gi");
 const starEx = new RegExp(/\*/, "gi");

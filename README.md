@@ -2,7 +2,7 @@
 A Pokèmon statistics Discord bot with the intended purpose of facilitating Max Raid Battles in Pokèmon Sword & Pokèmon Shield.
 
 ## Discord Usage
-[Invite](https://discordapp.com/api/oauth2/authorize?client_id=663505910580248587&permissions=334888256&scope=bot) to your own Discord Server!
+[Invite](https://discordapp.com/api/oauth2/authorize?client_id=663505910580248587&permissions=334888256&scope=bot) Alcremie-B to your own Discord Server!
 
 [Join](https://discordapp.com/invite/pokemonraiders) Alcremie-B's original server to test out the bot and enjoy some raids!
 
@@ -59,8 +59,12 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 
 ![Pokedex Froslass](https://raphgg.github.io/den-bot/data/readme/pokedexfroslass.png)
 
+## Support & Progress
+* [Join](https://discord.gg/ZZU77fz) Alcremie-B's support server to test, get help, and give feedback for the bot!
+* [Follow](https://app.gitkraken.com/glo/board/XjQu3nV7egARKaLs) Alcremie-B's progress and updates on its Gitkraken Glo Board!
+
 ## Credits
 * Many thanks to everyone listed below as without them this bot wouldn't be possible:
 - * [Serebii](https://Serebii.net) & [Bulbapedia](https://bulbapedia.bulbagarden.net/) for their mass wealth of Pokémon information and their dedication to host it.
-- * [PkParaíso](https://pkparaiso.com) & [Ian Clail](https://www.smogon.com/forums/threads/sun-moon-sprite-project.3577711/) [Layell] for their sprite work.
+- * [PkParaíso](https://pkparaiso.com) & [Ian Clail](https://www.smogon.com/forums/threads/sun-moon-sprite-project.3577711/) [Layell] for their lovely sprite work on over 1300 different Pokèmon & Forms.
 - * Rhode & All of the people over at [Pokémon Raiders](https://discordapp.com/invite/pokemonraiders) for the idea & kindliness.
