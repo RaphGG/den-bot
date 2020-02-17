@@ -1,14 +1,20 @@
 const botspeech = require("../modules/botspeech.js");
 const fs = require("fs");
 
+// Set Guild Specific Configurations Command Handler:
+// Allows server admins / owner to set guild specific
+// settings for the bot to utilize. Those being shiny
+// sprites only, admin-roles, ping-roles, etc.
 exports.run = (client, message, args) => {
-  let settings = client.settings.get(message.guild.id);
+  const settings = client.settings.get(message.guild.id);
 
-  let isAdmin = message.member.roles.some(role => {
-    return settings.roles.adminroles.find(adminrole => {return adminrole.id == role.id});
+  const isAdmin = message.member.roles.some(role => {
+    return settings.roles.adminroles.find(adminrole => {
+      return adminrole.id == role.id;
+    });
   });
 
-  let isOwner = message.member.id == settings.ownerID;
+  const isOwner = message.member.id == settings.ownerID;
 
   if (!isAdmin && !isOwner)
     return message.reply(botspeech.permNotFound);
@@ -17,9 +23,9 @@ exports.run = (client, message, args) => {
     return message.reply(botspeech.setconfNoArg);
 
   const [prop, ...value] = args;
-  let roles = value.join(" ").split(/, |,/g);
+  const roles = value.join(" ").split(/, |,/g);
 
-  let isAlpha = value.join("").match(/[A-Za-z0-9]/gi);
+  const isAlpha = value.join("").match(/[A-Za-z0-9]/gi);
 
   if (prop == "ownerID")
     return message.reply(botspeech.configNoChange);
@@ -29,21 +35,21 @@ exports.run = (client, message, args) => {
 
   if (prop == "adminroles")
   {
-    let addedRoles = [];
+    const addedRoles = [];
     roles.forEach(rolename => {
-      let role = message.guild.roles.find(role => {
+      const role = message.guild.roles.find(role => {
         return role.name.toLowerCase() == rolename.toLowerCase();
       });
-      
+
       if (!role)
         return;
 
-      let x = {
+      const x = {
         name: role.name,
         id: role.id
-      }
+      };
 
-      let prexistingRoles = settings.roles.adminroles.filter(role => (role.id === x.id));
+      const prexistingRoles = settings.roles.adminroles.filter(role => (role.id === x.id));
 
       if (prexistingRoles.length >= 1)
         return;
@@ -70,21 +76,21 @@ exports.run = (client, message, args) => {
 
   if (prop == "pingroles")
   {
-    let addedRoles = [];
+    const addedRoles = [];
     roles.forEach(rolename => {
-      let role = message.guild.roles.find(role => {
+      const role = message.guild.roles.find(role => {
         return role.name.toLowerCase() == rolename.toLowerCase();
       });
-      
+
       if (!role)
         return;
 
-      let x = {
+      const x = {
         name: role.name,
         id: role.id
-      }
+      };
 
-      let prexistingRoles = settings.roles.pingroles.filter(role => (role.id === x.id));
+      const prexistingRoles = settings.roles.pingroles.filter(role => (role.id === x.id));
 
       if (prexistingRoles.length >= 1)
         return;
@@ -95,7 +101,6 @@ exports.run = (client, message, args) => {
 
     if (addedRoles.length == 0)
       return message.channel.send(botspeech.noRolesAdded);
-
 
     try
     {
@@ -124,4 +129,4 @@ exports.run = (client, message, args) => {
   }
 
   return message.channel.send(`Guild configuration item ${prop} has been set to: \n\`${value.join(" ")}\``);
-}
+};

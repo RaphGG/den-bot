@@ -1,12 +1,14 @@
 const botspeech = require("../modules/botspeech.js");
-// TODO: Finish Comments.
 
+// Reload Command Handler: Reloads require caches / map entries
+// for a given command. Useful for dev work without restarting node process.
+// Bot Owner only command.
 exports.run = (client, message, args) => {
 
   // isBotOwner
   if (!(message.member.id == client.config.owner))
     return message.reply(botspeech.permNotFound);
-  
+
   if (!args || args.length < 1)
     return message.reply(botspeech.reloadNoArg);
 
@@ -24,4 +26,4 @@ exports.run = (client, message, args) => {
     client.commands.set(commandName, props);
     message.reply(`The command ${commandName} has been reloaded.`);
   }
-}
+};

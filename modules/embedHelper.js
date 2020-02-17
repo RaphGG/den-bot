@@ -78,14 +78,14 @@ const pkmnEmbedColors = [
     "type":"Steel",
     "color":12236497
   }
-]
+];
 
 // Footer credit for each embed the bot makes.
 const footerCred = "Alcremie-B - by Droopy";
 
 // Color finder using json pkmn's type.
 const colorFinder = (pkmn) => {
-  let color = pkmnEmbedColors.find(x => {
+  const color = pkmnEmbedColors.find(x => {
     return x.type == pkmn.type1;
   });
   if (!color)
@@ -93,14 +93,14 @@ const colorFinder = (pkmn) => {
 
   else
     return color.color;
-}
+};
 
 // Image finder using the shiny & cosmetic form properties of the
 // pkmnObj. Utilizes pkparaiso's & project pokemon's sprites at
 // the moment. Subject to change [TODO].
 const imageFinder = (pkmnObj) => {
   let name = pkmnObj.pkmn.name.replace(/[^A-Za-z0-9 ]/gi, "").replace(/ /gi, "-").toLowerCase();
-  //console.log(name);
+  // console.log(name);
 
   if (!pkmnObj.cosmetic && !pkmnObj.shiny)
   {
@@ -110,7 +110,7 @@ const imageFinder = (pkmnObj) => {
   else if (pkmnObj.cosmetic && !pkmnObj.shiny)
   {
     name = name + '-' + pkmnObj.form.replace(/ /gi, "-").toLowerCase();
-    //console.log(name);
+    // console.log(name);
     return `https://raphgg.github.io/den-bot/data/sprites/pokemon/normal/${name}.gif`;
   }
 
@@ -124,32 +124,32 @@ const imageFinder = (pkmnObj) => {
     name = name + '-' + pkmnObj.form.replace(/ /gi, "-").toLowerCase();
     return `https://raphgg.github.io/den-bot/data/sprites/pokemon/shiny/${name}.gif`;
   }
-}
+};
 
 // Exported polymorphic embed creator method. Uses flag to discern
 // what message to create. Args may be [pkmnObj], [pkmnObj, bestBalls].
 // TODO: Finish this method.
 exports.createEmbed = (flag, client, args) => {
-  let embed = new Discord.RichEmbed();
+  const embed = new Discord.RichEmbed();
   embed.setFooter(footerCred, client.user.avatarURL);
 
   if (flag == "top4")
   {
-    let pkmnObj = args[0];
-    //console.log(pkmnObj);
-    let bestBalls = args[1];
-    let gmax = pkmnObj.form == "Gigantamax";
-    let description = gmax? `The best balls for catching G-Max ${pkmnObj.pkmn.name} are:` : `The best balls for catching ${pkmnObj.pkmn.name} are:`;
+    const pkmnObj = args[0];
+    // console.log(pkmnObj);
+    const bestBalls = args[1];
+    const gmax = pkmnObj.form == "Gigantamax";
+    const description = gmax? `The best balls for catching G-Max ${pkmnObj.pkmn.name} are:` : `The best balls for catching ${pkmnObj.pkmn.name} are:`;
 
     embed.setImage(imageFinder(pkmnObj));
     embed.setColor(colorFinder(pkmnObj.pkmn));
-  
+
     embed.setTitle("Best Catch Rates");
     embed.setDescription(description);
 
     let ballPercents = "";
     let promoPercents = "";
-    let standardPercents = `\nStandard Balls (Poke/Luxury/Premier): \`${pkmnObj.pbCatchProb}\``;
+    const standardPercents = `\nStandard Balls (Poke/Luxury/Premier): \`${pkmnObj.pbCatchProb}\``;
 
     bestBalls.forEach((ball, i) => {
       ballPercents = ballPercents + `\n${ball.name}: ${pkmnObj.catchProb[i]}`;
@@ -165,14 +165,14 @@ exports.createEmbed = (flag, client, args) => {
 
     return embed;
   }
-  
+
   else if (flag == "ball")
   {
-    let pkmnObj = args[0];
-    //console.log(pkmnObj);
-    let ball = args[1];
-    let gmax = (pkmnObj.form == "Gigantamax")? "G-Max" : ""; 
-    let promo = pkmnObj.promo? `\nPromo Probability is: ${pkmnObj.promoCatchProb}` : "";
+    const pkmnObj = args[0];
+    // console.log(pkmnObj);
+    const ball = args[1];
+    const gmax = (pkmnObj.form == "Gigantamax")? "G-Max" : "";
+    const promo = pkmnObj.promo? `\nPromo Probability is: ${pkmnObj.promoCatchProb}` : "";
     embed.setTitle(`Probability of catching ${gmax} ${pkmnObj.pkmn.name} with a ${ball.name} is: ${pkmnObj.catchProb}`);
 
     let emoji = "";
@@ -192,36 +192,36 @@ exports.createEmbed = (flag, client, args) => {
 
   else if (flag == "dex")
   {
-    //console.log(args)
-    let pkmn = args.pkmn;
-    
+    // console.log(args)
+    const pkmn = args.pkmn;
+
     // Edge Color & Image
     embed.setColor(colorFinder(pkmn));
     embed.setImage(imageFinder(args));
 
     // Types (Title)
-    let type1 = client.emojis.find(x => (x.name == `Type${pkmn.type1}`));
+    const type1 = client.emojis.find(x => (x.name == `Type${pkmn.type1}`));
 
-    let type2 = client.emojis.find(x => (x.name == `Type${pkmn.type2}`));
+    const type2 = client.emojis.find(x => (x.name == `Type${pkmn.type2}`));
 
-    let types = type2? type1 + " " + type2 : type1;
+    const types = type2? type1 + " " + type2 : type1;
 
     // Title
     /*
     let pkmnNoForm = args.cosmetic? pkmn.name : pkmn.name.replace(noncos, "");
-    let dexId = pkmn.dexId < 100; 
+    let dexId = pkmn.dexId < 100;
     let titleUrl = pkmn.generation == "SwordShield"? `https://serebii.net/pokedex-swsh/${pkmnNoForm.toLowerCase()}/` : `https://serebii.net/pokedex-sm/${pkmn.dexId}.shtml`;
     */
 
-    let title = `**__#${pkmn.dexId} • ${pkmn.name} __**` + types;
+    const title = `**__#${pkmn.dexId} • ${pkmn.name} __**` + types;
     embed.setTitle(title);
 
     // Misc. Info
-    let genderRatio = `Gender Ratio: \`${pkmn.genderRatio}\``;
-    let heightWeight = `Height/Weight: \`${pkmn.height}m\` / \`${pkmn.weight}kg\``;
-    //let weight = `Weight: \`${pkmn.weight}kg\``;
-    let catchRate = `Catch Rate: \`${pkmn.catchRate}\``;
-    let gen = `Generation: \`${pkmn.generation}\``;
+    const genderRatio = `Gender Ratio: \`${pkmn.genderRatio}\``;
+    const heightWeight = `Height/Weight: \`${pkmn.height}m\` / \`${pkmn.weight}kg\``;
+    // let weight = `Weight: \`${pkmn.weight}kg\``;
+    const catchRate = `Catch Rate: \`${pkmn.catchRate}\``;
+    const gen = `Generation: \`${pkmn.generation}\``;
     let egg = `Egg Groups: \`${pkmn.eggGroup1}`;
     if (pkmn.eggGroup2)
       egg = egg + `, ${pkmn.eggGroup2}\``;
@@ -232,41 +232,41 @@ exports.createEmbed = (flag, client, args) => {
     let miscInfo = genderRatio + "\n" + heightWeight + "\n" + catchRate + "\n" + gen + "\n" + egg;
     if (pkmn.forms.length > 0)
     {
-      
-      let forms = "\`";
-      let formlist = pokelists.variousForms.get(pkmn.name) || pkmn.forms; 
+
+      let forms = "`";
+      const formlist = pokelists.variousForms.get(pkmn.name) || pkmn.forms;
       formlist.forEach(form => {
         forms = forms + form + ', ';
       });
-      forms = forms.slice(0, forms.lastIndexOf(', ')) + '\`';
-    
-      //embed.addField("Forms", forms, true);
+      forms = forms.slice(0, forms.lastIndexOf(', ')) + '`';
+
+      // embed.addField("Forms", forms, true);
       miscInfo = miscInfo + "\nForms: " + forms;
     }
 
     embed.addField("Misc. Info", miscInfo, true);
 
     // Base Stats
-    let statHeader1 = `__\`HP     Atk     Def\`__`;
-    let statHeader2 = `__\`SpA    SpD     Spe\`__`;
+    const statHeader1 = `__\`HP     Atk     Def\`__`;
+    const statHeader2 = `__\`SpA    SpD     Spe\`__`;
 
-    let baseStats1 = `\`${pkmn.baseStats.hp.toString().padEnd(7, " ")}${pkmn.baseStats.atk.toString().padEnd(8, " ")}${pkmn.baseStats.def.toString().padEnd(3, " ")}\``;
+    const baseStats1 = `\`${pkmn.baseStats.hp.toString().padEnd(7, " ")}${pkmn.baseStats.atk.toString().padEnd(8, " ")}${pkmn.baseStats.def.toString().padEnd(3, " ")}\``;
 
-    let baseStats2 = `\`${pkmn.baseStats.spA.toString().padEnd(7, " ")}${pkmn.baseStats.spD.toString().padEnd(8, " ")}${pkmn.baseStats.spe.toString().padEnd(3, " ")}\``;
+    const baseStats2 = `\`${pkmn.baseStats.spA.toString().padEnd(7, " ")}${pkmn.baseStats.spD.toString().padEnd(8, " ")}${pkmn.baseStats.spe.toString().padEnd(3, " ")}\``;
 
 
-    let baseStatTotal = `__\`Total: ${pkmn.baseStats.tot}\`__`;
+    const baseStatTotal = `__\`Total: ${pkmn.baseStats.tot}\`__`;
 
-    let baseStats = statHeader1 + "\n" + baseStats1 + "\n" + statHeader2 + "\n" + baseStats2 + "\n" + baseStatTotal;
+    const baseStats = statHeader1 + "\n" + baseStats1 + "\n" + statHeader2 + "\n" + baseStats2 + "\n" + baseStatTotal;
     embed.addField("Base Stats", baseStats, true);
 
 
     // Abilities
-    let ab2 = pkmn.abilities.ability2? `\nAbility 2: \`${pkmn.abilities.ability2}\`` : "";
+    const ab2 = pkmn.abilities.ability2? `\nAbility 2: \`${pkmn.abilities.ability2}\`` : "";
 
-    let abH = pkmn.abilities.abilityH? `\nHidden Ability: \`${pkmn.abilities.abilityH}\`` : "";
+    const abH = pkmn.abilities.abilityH? `\nHidden Ability: \`${pkmn.abilities.abilityH}\`` : "";
 
-    let abilities = `Ability 1: \`${pkmn.abilities.ability1}\`` + ab2 + abH;
+    const abilities = `Ability 1: \`${pkmn.abilities.ability1}\`` + ab2 + abH;
 
     embed.addField("Abilities", abilities, true);
 
@@ -274,22 +274,22 @@ exports.createEmbed = (flag, client, args) => {
     let dens = "";
     if (pkmn.dens.sword.length > 0)
     {
-      let swordDens = "Sword: \`";
+      let swordDens = "Sword: `";
       pkmn.dens.sword.forEach(den => {
         swordDens = swordDens + den + ', ';
       });
-      swordDens = swordDens.slice(0, swordDens.lastIndexOf(', ')) + '\`';
-    
+      swordDens = swordDens.slice(0, swordDens.lastIndexOf(', ')) + '`';
+
       dens = dens + swordDens;
     }
 
     if (pkmn.dens.shield.length > 0)
     {
-      let shieldDens = "\nShield: \`";
+      let shieldDens = "\nShield: `";
       pkmn.dens.shield.forEach(den => {
         shieldDens = shieldDens + den + ', ';
       });
-      shieldDens = shieldDens.slice(0, shieldDens.lastIndexOf(', ')) + '\`';
+      shieldDens = shieldDens.slice(0, shieldDens.lastIndexOf(', ')) + '`';
       dens = dens + shieldDens;
     }
 
@@ -302,22 +302,22 @@ exports.createEmbed = (flag, client, args) => {
 
   else if (flag == "den")
   {
-    let color = args.den >= 43 ? 12390624 : 10231623;
+    const color = args.den >= 43 ? 12390624 : 10231623;
     embed.setColor(color);
     embed.setImage(`https://raphgg.github.io/den-bot/data/dens/den${args.den}.png`);
 
     embed.setTitle(`Den ${args.den}:`);
-    embed.setURL(`https://www.serebii.net/swordshield/maxraidbattles/den${args.den}.shtml`)
-    let swordHa = args.sword.filter(pkmn => {
+    embed.setURL(`https://www.serebii.net/swordshield/maxraidbattles/den${args.den}.shtml`);
+    const swordHa = args.sword.filter(pkmn => {
       return pkmn.ability.startsWith("Hidden");
     })
-    .map(pkmn => {return pkmn.name})
+    .map(pkmn => {return pkmn.name;})
     .join("\n");
 
-    let shieldHa = args.shield.filter(pkmn => {
+    const shieldHa = args.shield.filter(pkmn => {
         return pkmn.ability.startsWith("Hidden");
       })
-      .map(pkmn => {return pkmn.name})
+      .map(pkmn => {return pkmn.name;})
       .join("\n");
 
     if (swordHa.length > 1)
@@ -331,24 +331,24 @@ exports.createEmbed = (flag, client, args) => {
 
   else if (flag == "denPkmn")
   {
-    let pkmnObj = args[0];
-    let pkmn = pkmnObj.pkmn;
-    let denArr = args[1];
+    const pkmnObj = args[0];
+    const pkmn = pkmnObj.pkmn;
+    const denArr = args[1];
 
-    let gmax = pkmnObj.form == "Gigantamax";
-    let hidden = pkmn.abilities.abilityH;
+    const gmax = pkmnObj.form == "Gigantamax";
+    const hidden = pkmn.abilities.abilityH;
 
-    let shieldFltr = denArr.filter(den => (pkmn.dens.shield.includes(den.den)));
-    let swordFltr = denArr.filter(den => (pkmn.dens.sword.includes(den.den)));
+    const shieldFltr = denArr.filter(den => (pkmn.dens.shield.includes(den.den)));
+    const swordFltr = denArr.filter(den => (pkmn.dens.sword.includes(den.den)));
 
     embed.setColor(colorFinder(pkmn));
     embed.setThumbnail(imageFinder(pkmnObj));
 
-    var shieldHa = [];
-    var swordHa = [];
+    let shieldHa = [];
+    let swordHa = [];
 
-    var shieldArr = [];
-    var swordArr = [];
+    let shieldArr = [];
+    let swordArr = [];
 
     if (gmax)
     {
@@ -438,7 +438,8 @@ exports.createEmbed = (flag, client, args) => {
 
   else if (flag == "balls")
   {
-    
+    // Not yet implemented
+    return;
   }
 
   else if (flag == "credits")
@@ -446,8 +447,8 @@ exports.createEmbed = (flag, client, args) => {
     embed.setAuthor(client.user.username, client.user.avatarURL);
     embed.setColor(14315906);
     embed.setTimestamp();
-    embed.setTitle("Credits:")
-    embed.setThumbnail("")
+    embed.setTitle("Credits:");
+    embed.setThumbnail("");
   }
 
   else if (flag == "help")
@@ -462,9 +463,9 @@ exports.createEmbed = (flag, client, args) => {
     if (args[0])
       embed.addField("User Commands:", botspeech.adminCommands.replace(/{{prefix}}/g, args[1]));
 
-    else 
+    else
       embed.addField("User Commands:", botspeech.nonAdminCommands.replace(/{{prefix}}/g, args[1]));
 
     return embed;
   }
-}
+};
