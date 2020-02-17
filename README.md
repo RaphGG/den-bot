@@ -17,7 +17,7 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 * `( )` Indicate Optional Fields
 * Use * on Pokèmon Fields for shiny sprites
 
-| Command       | Arguments                | Descrition                                                                 |
+| Command       | Arguments                | Description                                                                |
 |---------------|--------------------------|----------------------------------------------------------------------------|
 | `%catch`      | `[Pokèmon] (Form) (Ball)`| Shows a detailed summary of catch rates for a given Pokèmon & Ball         |
 | `%den`        | `[Den #] / [Pokèmon]`    | Shows a list of Pokèmon that belong to a den including their HAs           |
@@ -25,7 +25,7 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 | `%ping`       | `[Role]`                 | Pings the specified role without setting it to be pingable by everyone     |
 | `%showconf`   |                          | Displays the server's current bot settings in a JSON Format                |
 | `%setconf`    | `[Setting] [Value(s)]`   | Sets the specified setting's value(s)                                      |
-| `resetconf`   |                          | Resets the server's current bot settings to default                        |
+| `%resetconf`  |                          | Resets the server's current bot settings to default                        |
 | `%help`       |                          | Displays a help message with this table of commands                        |
 | `%credits`    |                          | Displays a credit and thanks message                                       |
 
