@@ -9,6 +9,8 @@ exports.run = (client, message, args) => {
     return message.channel.send(botspeech.ballNoArg);
 
   const ball = pokedata.fetch("ball", args);
+  if (!ball)
+    return message.channel.send(botspeech.ballNotFound);
 
   const embed = embedHelper.createEmbed("ballinfo", client, ball);
 

@@ -99,7 +99,7 @@ exports.fetch = (flag, args, settings) => {
   else if (flag == "ball")
   {
     const str = args.join("").replace(/[\W]/, "").replace(/ball/gi, "");
-    console.log(str);
+    // console.log(str);
     const ballreg = new RegExp(str, "gi");
     return balls.find(ball => (ballreg.test(ball.name)));
   }

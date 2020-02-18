@@ -83,6 +83,11 @@ const pkmnEmbedColors = [
 // Footer credit for each embed the bot makes.
 const footerCred = "Alcremie-B - by Droopy";
 
+let formsStr = "";
+pokelists.noncosmeticforms.forEach(form => (formsStr += " " + form + "|" + form + " |"));
+
+const formsEx = new RegExp(formsStr, "gi");
+
 // Color finder using json pkmn's type.
 const colorFinder = (pkmn) => {
   const color = pkmnEmbedColors.find(x => {
@@ -169,7 +174,6 @@ exports.createEmbed = (flag, client, args) => {
   else if (flag == "ball")
   {
     const pkmnObj = args[0];
-    // console.log(pkmnObj);
     const ball = args[1];
     const gmax = (pkmnObj.form == "Gigantamax")? "G-Max" : "";
     const promo = pkmnObj.promo? `\nPromo Probability is: ${pkmnObj.promoCatchProb}` : "";
@@ -207,11 +211,12 @@ exports.createEmbed = (flag, client, args) => {
     const types = type2? type1 + " " + type2 : type1;
 
     // Title
-    /*
-    let pkmnNoForm = args.cosmetic? pkmn.name : pkmn.name.replace(noncos, "");
-    let dexId = pkmn.dexId < 100;
-    let titleUrl = pkmn.generation == "SwordShield"? `https://serebii.net/pokedex-swsh/${pkmnNoForm.toLowerCase()}/` : `https://serebii.net/pokedex-sm/${pkmn.dexId}.shtml`;
-    */
+    const pkmnNoForm = args.cosmetic? pkmn.name : pkmn.name.replace(formsEx, "");
+    const dexId = `${pkmn.dexId}`.padStart(3, "0");
+    const titleUrl = pkmn.generation == "SwordShield"? `https://serebii.net/pokedex-swsh/${pkmnNoForm.toLowerCase()}/` : `https://serebii.net/pokedex-sm/${dexId}.shtml`;
+
+
+    embed.setURL(titleUrl);
 
     const title = `**__#${pkmn.dexId} • ${pkmn.name} __**` + types;
     embed.setTitle(title);
@@ -438,8 +443,31 @@ exports.createEmbed = (flag, client, args) => {
 
   else if (flag == "ballinfo")
   {
-    // Not yet implemented
-    return;
+    const ballurl = `https://serebii.net/itemdex/${args.name.replace(" ", "").toLowerCase()}.shtml`;
+
+    embed.setURL(ballurl);
+    embed.setTitle(`**__${args.name}__**`);
+
+    const url = `https://raphgg.github.io/den-bot/data/sprites/balls/${args.name.replace(/ ball/gi, "").toLowerCase()}.png`;
+    embed.setThumbnail(url);
+
+    const mod = args.varModifier || args.modifier;
+
+    const desp = `**Ball Modifier:** \`${mod}x\`\n**Ball Conditions:** \`${args.conditions}\`\n**Ball Effects:** \`${args.effect}\``;
+    embed.setDescription(desp);
+    embed.setColor(args.color);
+    return embed;
+  }
+
+  else if (flag == "natures")
+  {
+    embed.setAuthor(client.user.username, client.user.avatarURL);
+    embed.setColor(14315906);
+    embed.setTitle("Pokémon Natures Chart: (From Bulbapedia)");
+    embed.setURL("https://bulbapedia.bulbagarden.net/wiki/Nature");
+    embed.setImage("https://raphgg.github.io/den-bot/data/icons/natures.PNG");
+
+    return embed;
   }
 
   else if (flag == "credits")

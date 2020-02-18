@@ -40,8 +40,8 @@ const capProbRange = (pkmn, ball, gFlag, pFlag) => {
   let pkmnCatchRate = gFlag? 3 : pkmn.catchRate;
   pkmnCatchRate = pFlag? 20 : pkmnCatchRate;
 
-  const modCatchRate0 = catchRate(maxhp0, 1, pkmnCatchRate, ball.modifier);
-  const modCatchRate31 = catchRate(maxhp31, 1, pkmnCatchRate, ball.modifier);
+  const modCatchRate0 = catchRate(maxhp0, 1, pkmnCatchRate, ball.setmod);
+  const modCatchRate31 = catchRate(maxhp31, 1, pkmnCatchRate, ball.setmod);
 
   const shakeProb0 = shakeProb(modCatchRate0);
   const shakeProb31 = shakeProb(modCatchRate31);
@@ -58,6 +58,7 @@ const capProbRange = (pkmn, ball, gFlag, pFlag) => {
 // Method to set modifier for all balls in pokedata.balls given a pkmn.
 // TODO: Seperate from pokedata instance.
 const setModifiers = (pkmn) => {
+  pokedata.balls.forEach(ball => (ball.setmod = ball.modifier));
 
   const netBall = pkmn.type1 == "Bug" || pkmn.type1 == "Water" || pkmn.type2 == "Bug" || pkmn.type2 == "Water";
   const fastBall = pkmn.baseStats.spe >= 100;
@@ -66,35 +67,35 @@ const setModifiers = (pkmn) => {
   const beastBall = pokelists.ultraBeasts.includes(pkmn.name);
 
   if (pkmn.weight >= 300)
-    pokedata.balls.find(x => x.name == "Heavy Ball").modifier = 30;
+    pokedata.balls.find(x => x.name == "Heavy Ball").setmod = 30;
 
   else if (pkmn.weight >= 200)
-    pokedata.balls.find(x => x.name == "Heavy Ball").modifier = 20;
+    pokedata.balls.find(x => x.name == "Heavy Ball").setmod = 20;
 
   else if (pkmn.weight >= 100)
-    pokedata.balls.find(x => x.name == "Heavy Ball").modifier = 0;
+    pokedata.balls.find(x => x.name == "Heavy Ball").setmod = 0;
 
   else
-    pokedata.balls.find(x => x.name == "Heavy Ball").modifier = -20;
+    pokedata.balls.find(x => x.name == "Heavy Ball").setmod = -20;
 
   const nb = pokedata.balls.find(x => x.name == "Net Ball");
-  nb.modifier = netBall? 3.5 : 1;
+  nb.setmod = netBall? 3.5 : 1;
   nb.assumption = netBall;
 
   const fb = pokedata.balls.find(x => x.name == "Fast Ball");
-  fb.modifier = fastBall? 4 : 1;
+  fb.setmod = fastBall? 4 : 1;
   fb.assumption = fastBall;
 
   const mb = pokedata.balls.find(x => x.name == "Moon Ball");
-  mb.modifier = moonBall? 4 : 1;
+  mb.setmod = moonBall? 4 : 1;
   mb.assumption = moonBall;
 
   const lb = pokedata.balls.find(x => x.name == "Love Ball");
-  lb.modifier = loveBall? 8 : 1;
+  lb.setmod = loveBall? 8 : 1;
   lb.assumption = loveBall;
 
   const bb = pokedata.balls.find(x => x.name == "Beast Ball");
-  bb.modifier = beastBall? 5 : 0.1;
+  bb.setmod = beastBall? 5 : 0.1;
   bb.assumption = beastBall;
 };
 
@@ -110,9 +111,9 @@ exports.bestBalls = (pkmnObj) => {
   const bestBalls = pokedata.balls
     .filter(x => {
       const notExcludedBall = !pokelists.excludedBalls.includes(x.name);
-      return x.modifier > 1 && notExcludedBall;
+      return x.setmod > 1 && notExcludedBall;
     })
-    .sort((x, y) => y.modifier - x.modifier)
+    .sort((x, y) => y.setmod - x.setmod)
     .slice(0, 4);
 
   bestBalls.forEach(ball => {
