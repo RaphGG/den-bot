@@ -28,14 +28,21 @@ exports.catchNoArg = "```Please enter a Pokémon to catch followed by a ball of 
 exports.denNoArg = "```Please enter either a Den Number or a Pokémon to fetch.```";
 exports.reloadNoArg = "```Please enter a command to reload.```";
 exports.setconfNoArg = "```Please enter a configuration property to set followed by the desired setting.```";
+exports.ballNoArg = "```Please enter a Pokè-Ball name.```";
 
 // Help Commands
-exports.nonAdminCommands = "{{prefix}}help\n{{prefix}}latency";
-exports.adminCommands = "{{prefix}}help\n{{prefix}}latency\n{{prefix}}ping [First word of pingable role]\n{{prefix}}setconf [prefix | adminroles | pingroles] [nonalpha char | roles]\n{{prefix}}showconf\n{{prefix}}resetconf";
-exports.pokeCommands = "{{prefix}}den [Den Number | Pokémon Name]\n{{prefix}}catch [Pokémon Name] (Form Name) (Ball Name)\n{{prefix}}pokedex [Pokémon Name] (Form Name)\nForm Names Include gmax, galar, alola, etc.";
+exports.nonAdminCommands = "{{prefix}}help\n{{prefix}}latency\n{{prefix}}credits";
+exports.adminCommands = "{{prefix}}help\n{{prefix}}latency\n{{prefix}}credits\n{{prefix}}ping [First word of pingable role]\n{{prefix}}setconf [prefix | adminroles | pingroles] [nonalpha char | roles]\n{{prefix}}showconf\n{{prefix}}resetconf";
+exports.pokeCommands = "{{prefix}}den [Den Number | Pokémon Name]\n{{prefix}}catch [Pokémon Name] (Form Name) (Ball Name)\n{{prefix}}pokedex [Pokémon Name] (Form Name)\n{{prefix}}ball [Ball Name]\n{{prefix}}natures\nForm Names Include gmax, galar, alola, etc.";
 exports.commandDescription = "[ ] Indicate required fields.\n( ) Indicate optional fields.\nUse * for shiny sprites.\n*Catch Rates are calculated under Raid Specific Conditions: Levels 30-70, 1 HP, and no status modifiers.*";
 exports.presence = "Serving up smiles in {{guildcount}} guilds!";
+exports.helpSupport = "[Need more help? Join Alcremie-B's support server!](https://discord.gg/ZZU77fz)";
 
+// Credits
+exports.creditsDescription = "Many thanks to everyone listed below, as without them this bot wouldn't be possible:";
+exports.creditsExternal = "[Serebii](https://Serebii.net) & [Bulbapedia](https://Bulbapedia.bulbagarden.net) for their mass wealth of Pokèmon information and their dedication to host it.";
+exports.creditsSprites = "[PkParaíso](https://pkparaiso.com) & [Ian Clail](https://www.smogon.com/forums/threads/sun-moon-sprite-project.3577711/) (Layell) for their lovely sprite work on 1300+ Pokèmon & Forms.";
+exports.creditsOthers = "Rhode & All of the people over at [Pokèmon Raiders](https://discordapp.com/invite/pokemonraiders) for the idea & their kindliness.";
 // Dilapidated
 
 // Not Yet Implemented

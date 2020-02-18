@@ -4,7 +4,7 @@ module.exports = (client, message) => {
   if (!message.guild || message.author.bot) return;
 
   let guildConf = client.settings.get(message.guild.id);
-  if (!guildConf) 
+  if (!guildConf)
     guildConf = defaultSettings.run(client, message);
 
   if (message.content.indexOf(guildConf.prefix) !== 0) return;

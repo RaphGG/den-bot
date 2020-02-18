@@ -2,13 +2,12 @@ const botspeech = require("../modules/botspeech.js");
 // TODO: Finish Comments.
 
 exports.run = (client, message, args) => {
-  let settings = client.settings.get(message.guild.id);
+  const settings = client.settings.get(message.guild.id);
 
-  let isOwner = message.member.id == settings.ownerID;
-  
-  let isAdmin = message.member.roles.some(role => {
+  const isOwner = message.member.id == settings.ownerID;
+  const isAdmin = message.member.roles.some(role => {
     return settings.roles.adminroles.find(adminrole => {
-      return adminrole.id == role.id
+      return adminrole.id == role.id;
     });
   });
 
@@ -20,18 +19,18 @@ exports.run = (client, message, args) => {
 
   else
   {
-    let findRole = args[0].toLowerCase();
+    const findRole = args[0].toLowerCase();
 
-    let rolePing = message.guild.roles.find(role => {
-      return role.name.toLowerCase().startsWith(findRole) && (settings.roles.pingroles.find(pingrole => {return pingrole.id == role.id}));
+    const rolePing = message.guild.roles.find(role => {
+      return role.name.toLowerCase().startsWith(findRole) && (settings.roles.pingroles.find(pingrole => (pingrole.id == role.id)));
     });
 
     if (!rolePing)
     {
-      let pingroles = [];
-      settings.roles.pingroles.forEach(role => {pingroles.push(role.name)});
+      const pingroles = [];
+      settings.roles.pingroles.forEach(role => (pingroles.push(role.name)));
 
-      let roles = pingroles.join(", ");
+      const roles = pingroles.join(", ");
       return message.channel.send(botspeech.roleNotFound.replace(`{{roles}}`, roles));
     }
 
@@ -58,4 +57,4 @@ exports.run = (client, message, args) => {
         });
     }
   }
-}
+};
