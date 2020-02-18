@@ -2,7 +2,7 @@
 A Pokèmon statistics Discord bot with the intended purpose of facilitating Max Raid Battles in Pokèmon Sword & Pokèmon Shield.
 
 ## Discord Usage
-[Invite](https://discordapp.com/api/oauth2/authorize?client_id=663505910580248587&permissions=334888256&scope=bot) to your own Discord Server!
+[Invite](https://discordapp.com/api/oauth2/authorize?client_id=663505910580248587&permissions=334888256&scope=bot) Alcremie-B to your own Discord Server!
 
 [Join](https://discordapp.com/invite/pokemonraiders) Alcremie-B's original server to test out the bot and enjoy some raids!
 
@@ -23,7 +23,7 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 | `%den`        | `[Den #] / [Pokèmon]`    | Shows a list of Pokèmon that belong to a den including their HAs           |
 | `%pokedex`    | `[Pokèmon]`              | Shows a detailed summary of a Pokèmon's latest Statistics (Gen 8 / Gen 7)  |
 | `%ball`       | `[Ball]`                 | Shows a summary of a Poké-Ball's statistics                                |
-| `%natures`    |                          | Displays a in-depth Pokémon natures chart from Bulbapedia                  |
+| `%natures`    |                          | Displays an in-depth Pokémon natures chart from Bulbapedia                 |
 | `%ping`       | `[Role]`                 | Pings the specified role without setting it to be pingable by everyone     |
 | `%showconf`   |                          | Displays the server's current bot settings in a JSON Format                |
 | `%setconf`    | `[Setting] [Value(s)]`   | Sets the specified setting's value(s)                                      |
