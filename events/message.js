@@ -7,6 +7,22 @@ module.exports = (client, message) => {
   if (!guildConf)
     guildConf = defaultSettings.run(client, message);
 
+  const isAdmin = message.member.roles.some(role => {
+    return guildConf.roles.adminroles.find(adminrole => {
+      return adminrole.id == role.id;
+    });
+  });
+
+  const isOwner = message.member.id == guildConf.ownerID;
+
+  if (guildConf.restrictedchannels.length > 0)
+  {
+    const restrictedchannel = guildConf.restrictedchannels.find(channel => (channel.id == message.channel.id));
+
+    if (!restrictedchannel && !isOwner && !isAdmin)
+      return;
+  }
+
   if (message.content.indexOf(guildConf.prefix) !== 0) return;
 
   const args = message.content.slice(guildConf.prefix.length).trim().split(/ /g);

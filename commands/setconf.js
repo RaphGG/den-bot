@@ -23,7 +23,7 @@ exports.run = (client, message, args) => {
     return message.reply(botspeech.setconfNoArg);
 
   const [prop, ...value] = args;
-  const roles = value.join(" ").split(/, |,/g);
+  const values = value.join(" ").split(/, |,/g);
 
   const isAlpha = value.join("").match(/[A-Za-z0-9]/gi);
 
@@ -36,7 +36,7 @@ exports.run = (client, message, args) => {
   if (prop == "adminroles")
   {
     const addedRoles = [];
-    roles.forEach(rolename => {
+    values.forEach(rolename => {
       const role = message.guild.roles.find(role => {
         return role.name.toLowerCase() == rolename.toLowerCase();
       });
@@ -77,7 +77,7 @@ exports.run = (client, message, args) => {
   if (prop == "pingroles")
   {
     const addedRoles = [];
-    roles.forEach(rolename => {
+    values.forEach(rolename => {
       const role = message.guild.roles.find(role => {
         return role.name.toLowerCase() == rolename.toLowerCase();
       });
@@ -112,6 +112,45 @@ exports.run = (client, message, args) => {
     }
 
     return message.channel.send(botspeech.addPingRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
+  }
+
+  if (prop == "restrictedchannels")
+  {
+    const addedChannels = [];
+    values.forEach(name => {
+
+      const channel = message.guild.channels.find(channel => (channel.name.toLowerCase() == name.toLowerCase() && channel.type == "text"));
+
+      if (!channel)
+        return;
+
+      const x = {
+        name: channel.name,
+        id: channel.id
+      };
+
+      const prexistingChans = settings.restrictedchannels.filter(channel => (channel.id === x.id));
+
+      if (prexistingChans.length >= 1)
+        return;
+
+      settings.restrictedchannels.push(x);
+      addedChannels.push(channel.name);
+    });
+
+    if (addedChannels.length == 0)
+      return message.channel.send(botspeech.noChannelsAdded);
+
+    try
+    {
+      fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(settings));
+    }
+    catch(error)
+    {
+      console.error(error);
+    }
+
+    return message.channel.send(botspeech.addChannels.replace(/{{channels}}/g, addedChannels.join(", ")));
   }
 
   if (typeof settings[prop] == 'undefined')

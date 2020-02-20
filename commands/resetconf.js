@@ -22,10 +22,12 @@ exports.run = (client, message) => {
       return message.reply(botspeech.permNotFound);
 
     client.settings.delete(message.guild.id);
+    message.channel.send(botspeech.configReset);
   }
 
   const adminroles = [];
   const pingroles = [];
+  const restrictedchannels = [];
 
   // Search for server admin roles.
   message.guild.roles.forEach(role => {
@@ -44,6 +46,7 @@ exports.run = (client, message) => {
     prefix:"%",
     denpkmnonly:false,
     shinypkmnonly:false,
+    restrictedchannels:restrictedchannels,
     roles:{
       adminroles:adminroles,
       pingroles:pingroles
