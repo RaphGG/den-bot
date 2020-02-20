@@ -13,14 +13,16 @@ exports.guildConfNotFound = "No Guild configuration was found.";
 // User Help Messages
 exports.disclaimerMsg = "Ball conditions met: {{condcheck}}";
 exports.noRaidEff = "(No effect on raids)";
-exports.requiredPrefix = "Please enter a Non-Alphanumeric prefix to be used with the bot.";
-exports.configReset = "The Guild Configurations for this server have been reset.";
+exports.requiredPrefix = "`Please enter a Non-Alphanumeric prefix to be used with the bot.`";
+exports.configReset = "`The Guild Configurations for this server have been reset.`";
 exports.addAdminRoles = "The following roles have been added as admin roles: {{roles}}";
 exports.addPingRoles = "The following roles have been added as pingable roles: {{roles}}";
-exports.noRolesAdded = "No roles have been added.";
-exports.configNoChange = "These configuration setting cannot be changed.";
+exports.noRolesAdded = "`No roles have been added and/or found.`";
+exports.configNoChange = "`These configuration setting cannot be changed.`";
 exports.rolePlacement = "The {{role}} role is below this bot's role. Please move this bot's role above {{role}} to be able to ping it.";
-exports.pingError = "Error with the pinging process. Contact a server admin.";
+exports.pingError = "`Error with the pinging process. Contact a server admin.`";
+exports.noChannelsAdded = "`No channels have been restricted and/or found.`";
+exports.addChannels = "Alcremie-B has been restricted to the following channels: {{channels}}.";
 
 // No Arg Calls -> May format with command structure
 exports.pingNoArg = "```Please enter a role to ping.```";
