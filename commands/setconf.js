@@ -27,7 +27,7 @@ exports.run = (client, message, args) => {
 
   const isAlpha = value.join("").match(/[A-Za-z0-9]/gi);
 
-  if (prop == "ownerID")
+  if (prop == "ownerID" || prop == "roles")
     return message.reply(botspeech.configNoChange);
 
   if (prop == "prefix" && isAlpha)

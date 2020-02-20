@@ -43,7 +43,7 @@ fldr.forEach(file => {
   client.settings.set(file.replace(".json", ""), setting);
 });
 
-// Command loader to map commands as above into a Discord.js Collection 
+// Command loader to map commands as above into a Discord.js Collection
 // which is held by the client (bot)
 fs.readdir("./commands/", (err, files) => {
   if (err) return console.log(err);
