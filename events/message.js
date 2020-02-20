@@ -7,6 +7,8 @@ module.exports = (client, message) => {
   if (!guildConf)
     guildConf = defaultSettings.run(client, message);
 
+  if (message.content.indexOf(guildConf.prefix) !== 0) return;
+
   const isAdmin = message.member.roles.some(role => {
     return guildConf.roles.adminroles.find(adminrole => {
       return adminrole.id == role.id;
@@ -22,8 +24,6 @@ module.exports = (client, message) => {
     if (!restrictedchannel && !isOwner && !isAdmin)
       return;
   }
-
-  if (message.content.indexOf(guildConf.prefix) !== 0) return;
 
   const args = message.content.slice(guildConf.prefix.length).trim().split(/ /g);
   const command = args.shift().toLowerCase();
