@@ -7,19 +7,42 @@ module.exports = (client, message) => {
   if (!guildConf)
     guildConf = defaultSettings.run(client, message);
 
-  const isAdmin = message.member.roles.some(role => {
+  if (message.content.indexOf(guildConf.prefix) !== 0) return;
+
+  const guild = client.guilds.get(message.guild.id);
+  if (!guild.available) return;
+
+  const ownerOrAdmin = guild.fetchMember(message.author).then(member => {
+    console.log(member);
+    const isAdmin = member.roles.some(role => {
+      return guildConf.roles.adminroles.find(adminrole => {
+        return adminrole.id == role.id;
+      });
+    });
+
+    const isOwner = member.id == guildConf.ownerID;
+
+    return isAdmin || isOwner;
+  })
+  .catch(() => (console.error(`No Member Fetched.`)));
+
+  /*
+  if (!guildMember) return;
+
+  const isAdmin = guildMember.roles.some(role => {
     return guildConf.roles.adminroles.find(adminrole => {
       return adminrole.id == role.id;
     });
   });
 
   const isOwner = message.member.id == guildConf.ownerID;
+  */
 
   if (guildConf.restrictedchannels.length > 0)
   {
     const restrictedchannel = guildConf.restrictedchannels.find(channel => (channel.id == message.channel.id));
 
-    if (!restrictedchannel && !isOwner && !isAdmin)
+    if (!restrictedchannel && !ownerOrAdmin)
       return;
   }
 
