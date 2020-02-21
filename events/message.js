@@ -9,7 +9,11 @@ module.exports = (client, message) => {
 
   if (message.content.indexOf(guildConf.prefix) !== 0) return;
 
-  const isAdmin = message.member.roles.some(role => {
+  const guild = client.guilds.get(message.guild.id);
+
+  const guildMember = message.member || guild.members.get(message.author.id);
+
+  const isAdmin = guildMember.roles.some(role => {
     return guildConf.roles.adminroles.find(adminrole => {
       return adminrole.id == role.id;
     });
