@@ -3,6 +3,9 @@ const fs = require("fs");
 
 // Reset Guild Specific Configurations Command Handler:
 exports.run = (client, message) => {
+  const guild = client.guilds.get(message.guild.id);
+  if (!guild.available) return console.error(`Guild Not Available.`);
+
   const settings = client.settings.get(message.guild.id);
 
   // If settings already exist, delete them from settings
@@ -10,15 +13,16 @@ exports.run = (client, message) => {
   // new settings.
   if (settings)
   {
-    const isAdmin = message.member.roles.some(role => {
-      return settings.roles.adminroles.find(adminrole => {
-        return adminrole.id == role.id;
-      });
-    });
+    const ownerOrAdmin = guild.fetchMember(message.author)
+      .then(member => {
+        const isAO = member.hasPermission(0x00000008, false, null, true);
+        const isAdmin = settings.roles.adminroles.some(role => (member.roles.get(role)));
 
-    const isOwner = message.member.id == settings.ownerID;
+        return isAO || isAdmin;
+      })
+      .catch(error => (console.error(`No Member Fetched.\nError: ${error}`)));
 
-    if (!isAdmin && !isOwner)
+    if (!ownerOrAdmin)
       return message.reply(botspeech.permNotFound);
 
     client.settings.delete(message.guild.id);
@@ -30,19 +34,18 @@ exports.run = (client, message) => {
   const restrictedchannels = [];
 
   // Search for server admin roles.
-  message.guild.roles.forEach(role => {
+  guild.roles.tap((role, id) => {
     if (role.hasPermission(0x00000008))
     {
-      const x = {
+      const adminrole = {
         name: role.name,
-        id: role.id
+        id: id
       };
-      adminroles.push(x);
+      adminroles.push(adminrole);
     }
   });
 
   const defaultSettings = {
-    ownerID: message.guild.ownerID,
     prefix:"%",
     denpkmnonly:false,
     shinypkmnonly:false,
@@ -54,7 +57,7 @@ exports.run = (client, message) => {
   };
 
   // Set defaults in settings map & try to save to file.
-  client.settings.set(message.guild.id, defaultSettings);
+  client.settings.set(guild.id, defaultSettings);
   try
   {
     fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(defaultSettings));
@@ -63,5 +66,6 @@ exports.run = (client, message) => {
   {
     console.error(error);
   }
+
   return client.settings.get(message.guild.id);
 };

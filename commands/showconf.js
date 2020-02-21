@@ -4,17 +4,21 @@ const botspeech = require("../modules/botspeech.js");
 // Displays bot's current configuration settings in a
 // JSON format.
 exports.run = (client, message) => {
+  const guild = client.guilds.get(message.guild.id);
+  if (!guild.available) return console.error(`Guild Not Available.`);
+
   const settings = client.settings.get(message.guild.id);
 
-  const isOwner = message.member.id == settings.ownerID;
+  const ownerOrAdmin = guild.fetchMember(message.author)
+    .then(member => {
+      const isAO = member.hasPermission(0x00000008, false, null, true);
+      const isAdmin = settings.roles.adminroles.some(role => (member.roles.get(role)));
 
-  const isAdmin = message.member.roles.some(role => {
-    return settings.roles.adminroles.find(adminrole => {
-      return adminrole.id == role.id;
-    });
-  });
+      return isAO || isAdmin;
+    })
+    .catch(error => (console.error(`No Member Fetched.\nError: ${error}`)));
 
-  if (!isAdmin && !isOwner)
+  if (!ownerOrAdmin)
     return message.reply(botspeech.permNotFound);
 
   const configProps = JSON.stringify(settings, null, 1);

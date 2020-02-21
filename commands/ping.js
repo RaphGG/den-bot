@@ -1,17 +1,26 @@
 const botspeech = require("../modules/botspeech.js");
 // TODO: Finish Comments.
 
+const startsOrIs = (str1, str2) => {
+  return str1.toLowerCase().startsWith(str2.toLowerCase()) || str1.toLowerCase() == str2.toLowerCase();
+};
+
 exports.run = (client, message, args) => {
+  const guild = client.guilds.get(message.guild.id);
+  if (!guild.available) return console.error(`Guild Not Available.`);
+
   const settings = client.settings.get(message.guild.id);
 
-  const isOwner = message.member.id == settings.ownerID;
-  const isAdmin = message.member.roles.some(role => {
-    return settings.roles.adminroles.find(adminrole => {
-      return adminrole.id == role.id;
-    });
-  });
+  const ownerOrAdmin = guild.fetchMember(message.author)
+    .then(member => {
+      const isAO = member.hasPermission(0x00000008, false, null, true);
+      const isAdmin = settings.roles.adminroles.some(role => (member.roles.get(role)));
 
-  if (!isAdmin && !isOwner)
+      return isAO || isAdmin;
+    })
+    .catch(error => (console.error(`No Member Fetched.\nError: ${error}`)));
+
+  if (!ownerOrAdmin)
     return message.reply(botspeech.permNotFound);
 
   else if (!args || args.length < 1)
@@ -19,42 +28,38 @@ exports.run = (client, message, args) => {
 
   else
   {
-    const findRole = args[0].toLowerCase();
+    const pingroles = settings.roles.pingroles.map(role => (role.name)).join(", ");
 
-    const rolePing = message.guild.roles.find(role => {
-      return role.name.toLowerCase().startsWith(findRole) && (settings.roles.pingroles.find(pingrole => (pingrole.id == role.id)));
-    });
+    const rolename = args.join(" ");
 
-    if (!rolePing)
-    {
-      const pingroles = [];
-      settings.roles.pingroles.forEach(role => (pingroles.push(role.name)));
+    const pingrole = settings.roles.pingroles.find(role => (startsOrIs(role.name, rolename)));
 
-      const roles = pingroles.join(", ");
-      return message.channel.send(botspeech.roleNotFound.replace(`{{roles}}`, roles));
-    }
+    if (!pingrole)
+      return message.channel.send(botspeech.roleNotFound.replace(`{{roles}}`, pingroles));
 
-    else
-    {
-      rolePing.setMentionable(true, "Role to be pinged.")
-        .then(updated => {
-          message.channel.send(`${updated} *(requested by ${message.member})*`);
-          message.delete();
-          return updated;
-        })
-        .then(updated => {
-          setTimeout(() => {
-            updated.setMentionable(false, "Role has been pinged.")
-          }, 5000);
-        })
-        .catch(err => {
-          console.log(err);
-          if (err.message == 'Missing Permissions')
-            return message.channel.send(botspeech.rolePlacement.replace(/{{role}}/gi, rolePing.name));
+    const guildrole = guild.roles.get(pingrole.id);
 
-          else
-            return message.channel.send(botspeech.pingError);
-        });
-    }
+    if (!guildrole)
+      return message.channel.send(botspeech.roleNotFound.replace(`{{roles}}`, pingroles));
+
+    guildrole.setMentionable(true, "Role to be pinged.")
+      .then(updated => {
+        guild.fetchMember(message.author.id)
+          .then(member => (message.channel.send(`${updated} *(requested by ${member})*`)))
+          .catch(error => (console.error(`Member Fetch Error: ${error}`)));
+      })
+      .then(updated => {
+        setTimeout(() => {
+          updated.setMentionable(false, "Role has been pinged.")
+        }, 5000);
+      })
+      .catch(error => {
+        console.error(`Role Ping Error: ${error}\nGuild ID: ${guild.id}`);
+        if (error.message == "Missing Permissions")
+          return message.channel.send(botspeech.rolePlacement.replace(/{{role}}/gi, guildrole.name));
+
+        else
+          return message.channel.send(botspeech.pingError);
+      });
   }
 };

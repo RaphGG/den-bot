@@ -6,17 +6,21 @@ const fs = require("fs");
 // settings for the bot to utilize. Those being shiny
 // sprites only, admin-roles, ping-roles, etc.
 exports.run = (client, message, args) => {
+  const guild = client.guilds.get(message.guild.id);
+  if (!guild.available) return console.error(`Guild Not Available.`);
+
   const settings = client.settings.get(message.guild.id);
 
-  const isAdmin = message.member.roles.some(role => {
-    return settings.roles.adminroles.find(adminrole => {
-      return adminrole.id == role.id;
-    });
-  });
+  const ownerOrAdmin = guild.fetchMember(message.author)
+    .then(member => {
+      const isAO = member.hasPermission(0x00000008, false, null, true);
+      const isAdmin = settings.roles.adminroles.some(role => (member.roles.get(role)));
 
-  const isOwner = message.member.id == settings.ownerID;
+      return isAO || isAdmin;
+    })
+    .catch(error => (console.error(`No Member Fetched.\nError: ${error}`)));
 
-  if (!isAdmin && !isOwner)
+  if (!ownerOrAdmin)
     return message.reply(botspeech.permNotFound);
 
   if (!args || args.length < 2)
@@ -27,7 +31,7 @@ exports.run = (client, message, args) => {
 
   const isAlpha = value.join("").match(/[A-Za-z0-9]/gi);
 
-  if (prop == "ownerID" || prop == "roles")
+  if (prop == "roles")
     return message.reply(botspeech.configNoChange);
 
   if (prop == "prefix" && isAlpha)
@@ -37,30 +41,25 @@ exports.run = (client, message, args) => {
   {
     const addedRoles = [];
     values.forEach(rolename => {
-      const role = message.guild.roles.find(role => {
-        return role.name.toLowerCase() == rolename.toLowerCase();
-      });
 
-      if (!role)
-        return;
+      const guildrole = guild.roles.find(role => (role.name.toLowerCase() == rolename.toLowerCase()));
 
-      const x = {
-        name: role.name,
-        id: role.id
+      if (!guildrole) return;
+
+      const adminrole = {
+        name: guildrole.name,
+        id: guildrole.id
       };
 
-      const prexistingRoles = settings.roles.adminroles.filter(role => (role.id === x.id));
-
-      if (prexistingRoles.length >= 1)
+      if (settings.roles.adminroles.some(role => (role.id == adminrole.id)))
         return;
 
-      settings.roles.adminroles.push(x);
-      addedRoles.push(role.name);
+      settings.roles.adminroles.push(adminrole);
+      addedRoles.push(adminrole.name);
     });
 
     if (addedRoles.length == 0)
       return message.channel.send(botspeech.noRolesAdded);
-
 
     try
     {
@@ -78,25 +77,22 @@ exports.run = (client, message, args) => {
   {
     const addedRoles = [];
     values.forEach(rolename => {
-      const role = message.guild.roles.find(role => {
-        return role.name.toLowerCase() == rolename.toLowerCase();
-      });
 
-      if (!role)
-        return;
+      const guildrole = guild.roles.find(role => (role.name.toLowerCase() == rolename.toLowerCase())
+      );
 
-      const x = {
-        name: role.name,
-        id: role.id
+      if (!guildrole) return;
+
+      const pingrole = {
+        name: guildrole.name,
+        id: guildrole.id
       };
 
-      const prexistingRoles = settings.roles.pingroles.filter(role => (role.id === x.id));
-
-      if (prexistingRoles.length >= 1)
+      if (settings.roles.pingroles.some(role => (role.id == pingrole.id)))
         return;
 
-      settings.roles.pingroles.push(x);
-      addedRoles.push(role.name);
+      settings.roles.pingroles.push(pingrole);
+      addedRoles.push(pingrole.name);
     });
 
     if (addedRoles.length == 0)
@@ -119,23 +115,20 @@ exports.run = (client, message, args) => {
     const addedChannels = [];
     values.forEach(name => {
 
-      const channel = message.guild.channels.find(channel => (channel.name.toLowerCase() == name.toLowerCase() && channel.type == "text"));
+      const guildchan = guild.channels.find(channel => (channel.name.toLowerCase() == name.toLowerCase() && channel.type == "text"));
 
-      if (!channel)
-        return;
+      if (!guildchan) return;
 
-      const x = {
-        name: channel.name,
-        id: channel.id
+      const rchan = {
+        name: guildchan.name,
+        id: guildchan.id
       };
 
-      const prexistingChans = settings.restrictedchannels.filter(channel => (channel.id === x.id));
-
-      if (prexistingChans.length >= 1)
+      if (settings.restrictedchannels.some(chan => (chan.id == rchan.id)))
         return;
 
-      settings.restrictedchannels.push(x);
-      addedChannels.push(channel.name);
+      settings.restrictedchannels.push(rchan);
+      addedChannels.push(rchan.name);
     });
 
     if (addedChannels.length == 0)

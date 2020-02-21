@@ -3,35 +3,33 @@ const defaultSettings = require("../commands/resetconf.js");
 module.exports = (client, message) => {
   if (!message.guild || message.author.bot) return;
 
-  let guildConf = client.settings.get(message.guild.id);
-  if (!guildConf)
-    guildConf = defaultSettings.run(client, message);
-
-  if (message.content.indexOf(guildConf.prefix) !== 0) return;
-
   const guild = client.guilds.get(message.guild.id);
+  if (!guild.available) return console.error(`Guild Not Available.`);
 
-  const guildMember = message.member || guild.members.get(message.author.id);
+  let settings = client.settings.get(guild.id);
+  if (!settings)
+    settings = defaultSettings.run(client, message);
 
-  if (!guildMember) return;
+  if (message.content.indexOf(settings.prefix) !== 0) return;
 
-  const isAdmin = guildMember.roles.some(role => {
-    return guildConf.roles.adminroles.find(adminrole => {
-      return adminrole.id == role.id;
-    });
-  });
+  const ownerOrAdmin = guild.fetchMember(message.author)
+    .then(member => {
+      const isAO = member.hasPermission(0x00000008, false, null, true);
+      const isAdmin = settings.roles.adminroles.some(role => (member.roles.get(role)));
 
-  const isOwner = message.member.id == guildConf.ownerID;
+      return isAO || isAdmin;
+    })
+    .catch(error => (console.error(`No Member Fetched.\nError: ${error}`)));
 
-  if (guildConf.restrictedchannels.length > 0)
+  if (settings.restrictedchannels.length > 0)
   {
-    const restrictedchannel = guildConf.restrictedchannels.find(channel => (channel.id == message.channel.id));
+    const restrictedchannel = settings.restrictedchannels.find(channel => (channel.id == message.channel.id));
 
-    if (!restrictedchannel && !isOwner && !isAdmin)
+    if (!restrictedchannel && !ownerOrAdmin)
       return;
   }
 
-  const args = message.content.slice(guildConf.prefix.length).trim().split(/ /g);
+  const args = message.content.slice(settings.prefix.length).trim().split(/ /g);
   const command = args.shift().toLowerCase();
 
   const cmd = client.commands.get(command);

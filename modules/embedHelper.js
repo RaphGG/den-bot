@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const { RichEmbed } = require("discord.js");
 const botspeech = require("./botspeech.js");
 const pokelists = require("../data/lists.js");
 // TODO: Finish Comments.
@@ -135,7 +135,7 @@ const imageFinder = (pkmnObj) => {
 // what message to create. Args may be [pkmnObj], [pkmnObj, bestBalls].
 // TODO: Finish this method.
 exports.createEmbed = (flag, client, args) => {
-  const embed = new Discord.RichEmbed();
+  const embed = new RichEmbed();
   embed.setFooter(footerCred, client.user.avatarURL);
 
   if (flag == "top4")
@@ -485,6 +485,18 @@ exports.createEmbed = (flag, client, args) => {
     return embed;
   }
 
+  else if (flag == "invite")
+  {
+    embed.setAuthor(client.user.username, client.user.avatarURL);
+    embed.setColor(14315906);
+    embed.setTimestamp();
+    embed.setThumbnail("https://raphgg.github.io/den-bot/data/readme/alcremieinvite.gif");
+    embed.setTitle("Alcremie-B Invite Link");
+    embed.setDescription(botspeech.inviteDescription);
+
+    return embed;
+  }
+
   else if (flag == "help")
   {
     embed.setAuthor(client.user.username, client.user.avatarURL);
@@ -501,7 +513,7 @@ exports.createEmbed = (flag, client, args) => {
       embed.addField("User Commands:", botspeech.nonAdminCommands.replace(/{{prefix}}/g, args[1]));
 
 
-    embed.addField("Support Server:", botspeech.helpSupport);
+    embed.addField("Support:", botspeech.helpSupport);
 
     return embed;
   }
