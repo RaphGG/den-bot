@@ -13,6 +13,8 @@ module.exports = (client, message) => {
 
   const guildMember = message.member || guild.members.get(message.author.id);
 
+  if (!guildMember) return;
+
   const isAdmin = guildMember.roles.some(role => {
     return guildConf.roles.adminroles.find(adminrole => {
       return adminrole.id == role.id;
