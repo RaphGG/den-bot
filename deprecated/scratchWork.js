@@ -21,6 +21,69 @@ fs.writeFileSync("./data/test.json", newdata);
 
 /*
 
+    else
+    {
+      rolePing.setMentionable(true, "Role to be pinged.")
+        .then(updated => {
+          message.channel.send(`${updated} *(requested by ${message.member})*`);
+          message.delete();
+          return updated;
+        })
+        .then(updated => {
+          setTimeout(() => {
+            updated.setMentionable(false, "Role has been pinged.")
+          }, 5000);
+        })
+        .catch(err => {
+          console.error(err);
+          console.error(`Guild ID: ${message.guild.id}`);
+          if (err.message == 'Missing Permissions')
+            return message.channel.send(botspeech.rolePlacement.replace(/{{role}}/gi, rolePing.name));
+
+          else
+            return message.channel.send(botspeech.pingError);
+        });
+    }
+
+    const findRole = args[0].toLowerCase();
+
+    const rolePing = message.guild.roles.find(role => {
+      return role.name.toLowerCase().startsWith(findRole) && (settings.roles.pingroles.find(pingrole => (pingrole.id == role.id)));
+    });
+
+    if (!rolePing)
+    {
+      const pingroles = [];
+      settings.roles.pingroles.forEach(role => (pingroles.push(role.name)));
+
+      const roles = pingroles.join(", ");
+      return message.channel.send(botspeech.roleNotFound.replace(`{{roles}}`, roles));
+    }
+
+  const ownerOrAdmin = guild.fetchMember(message.author)
+    .then(member => {
+      console.log(member);
+      const isAdmin = member.roles.some(role => {
+        return guildConf.roles.adminroles.find(adminrole => {
+          return adminrole.id == role.id;
+        });
+      });
+
+      const isOwner = member.id == guildConf.ownerID;
+
+      return isAdmin || isOwner;
+    })
+    .catch(() => (console.error(`No Member Fetched.`)));
+  if (!guildMember) return;
+
+  const isAdmin = guildMember.roles.some(role => {
+    return guildConf.roles.adminroles.find(adminrole => {
+      return adminrole.id == role.id;
+    });
+  });
+
+  const isOwner = message.member.id == guildConf.ownerID;
+
 2nd Iteration of Catch Command Handler
 else if (args.length == 1)
   {

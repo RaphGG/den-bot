@@ -6,7 +6,7 @@ const botspeech = require("../modules/botspeech.js");
 exports.run = (client, message, args) => {
 
   // isBotOwner
-  if (!(message.member.id == client.config.owner))
+  if (!(message.author.id == client.config.owner))
     return message.reply(botspeech.permNotFound);
 
   if (!args || args.length < 1)

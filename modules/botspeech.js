@@ -19,7 +19,7 @@ exports.addAdminRoles = "The following roles have been added as admin roles: {{r
 exports.addPingRoles = "The following roles have been added as pingable roles: {{roles}}";
 exports.noRolesAdded = "`No roles have been added and/or found.`";
 exports.configNoChange = "`These configuration setting cannot be changed.`";
-exports.rolePlacement = "The {{role}} role is below this bot's role. Please move this bot's role above {{role}} to be able to ping it.";
+exports.rolePlacement = "The {{role}} role may be below this Alcremie-B's bot role. Please make sure Alcremie-B has the manage roles permission and that her role is above {{role}} to be able to ping it.";
 exports.pingError = "`Error with the pinging process. Contact a server admin.`";
 exports.noChannelsAdded = "`No channels have been restricted and/or found.`";
 exports.addChannels = "Alcremie-B has been restricted to the following channels: {{channels}}.";
@@ -33,18 +33,21 @@ exports.setconfNoArg = "```Please enter a configuration property to set followed
 exports.ballNoArg = "```Please enter a Pokè-Ball name.```";
 
 // Help Commands
-exports.nonAdminCommands = "{{prefix}}help\n{{prefix}}latency\n{{prefix}}credits";
-exports.adminCommands = "{{prefix}}help\n{{prefix}}latency\n{{prefix}}credits\n{{prefix}}ping [First word of pingable role]\n{{prefix}}setconf [prefix | adminroles | pingroles] [nonalpha char | roles]\n{{prefix}}showconf\n{{prefix}}resetconf";
+exports.nonAdminCommands = "{{prefix}}help\n{{prefix}}invite\n{{prefix}}latency\n{{prefix}}credits";
+exports.adminCommands = "{{prefix}}help\n{{prefix}}invite\n{{prefix}}latency\n{{prefix}}credits\n{{prefix}}ping [Role]\n{{prefix}}setconf [prefix | adminroles | pingroles | restrictedchannels] [New Setting]\n{{prefix}}showconf\n{{prefix}}resetconf";
 exports.pokeCommands = "{{prefix}}den [Den Number | Pokémon Name]\n{{prefix}}catch [Pokémon Name] (Form Name) (Ball Name)\n{{prefix}}pokedex [Pokémon Name] (Form Name)\n{{prefix}}ball [Ball Name]\n{{prefix}}natures\nForm Names Include gmax, galar, alola, etc.";
 exports.commandDescription = "[ ] Indicate required fields.\n( ) Indicate optional fields.\nUse * for shiny sprites.\n*Catch Rates are calculated under Raid Specific Conditions: Levels 30-70, 1 HP, and no status modifiers.*";
 exports.presence = "Serving up smiles in {{guildcount}} guilds!";
-exports.helpSupport = "[Need more help? Join Alcremie-B's support server!](https://discord.gg/ZZU77fz)";
+exports.helpSupport = "[Need more help? Join Alcremie-B's support server!](https://discord.gg/ZZU77fz)\n[Want Alcremie-B in your server? Click here to invite!](https://discordapp.com/api/oauth2/authorize?client_id=663505910580248587&permissions=0&scope=bot)";
 
 // Credits
 exports.creditsDescription = "Many thanks to everyone listed below, as without them this bot wouldn't be possible:";
 exports.creditsExternal = "[Serebii](https://Serebii.net) & [Bulbapedia](https://Bulbapedia.bulbagarden.net) for their mass wealth of Pokèmon information and their dedication to host it.";
 exports.creditsSprites = "[PkParaíso](https://pkparaiso.com) & [Ian Clail](https://www.smogon.com/forums/threads/sun-moon-sprite-project.3577711/) (Layell) for their lovely sprite work on 1300+ Pokèmon & Forms.";
 exports.creditsOthers = "Rhode & All of the people over at [Pokèmon Raiders](https://discordapp.com/invite/pokemonraiders) for the idea & their kindliness.";
+
+// Invites
+exports.inviteDescription = "Thank you so much for wanting Alcremie-B in your server! Below you'll find a link to add Alcremie-B without any permissions. If you'd like to use the %ping command, make sure to give Alcremie-B the Manage Roles Permission once she's there! Enjoy!\n[Click Here!](https://discordapp.com/api/oauth2/authorize?client_id=663505910580248587&permissions=0&scope=bot)";
 // Dilapidated
 
 // Not Yet Implemented

@@ -29,6 +29,7 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 | `%setconf`    | `[Setting] [Value(s)]`   | Sets the specified setting's value(s)                                      |
 | `%resetconf`  |                          | Resets the server's current bot settings to default                        |
 | `%help`       |                          | Displays a help message with this table of commands                        |
+| `%invite`     |                          | Displays a thank you message along with an Alcremie-B invite link          |
 | `%latency`    |                          | Pings the bot's & discord's API and returns the latency in milliseconds    |
 | `%credits`    |                          | Displays a credit and thanks message                                       |
 
