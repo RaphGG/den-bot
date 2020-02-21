@@ -1,4 +1,4 @@
-modules.exports = {
+module.exports = {
   apps: [{
     name: "Alcremie-B",
     script: "./index.js",
