@@ -47,10 +47,12 @@ exports.run = (client, message, args) => {
         guild.fetchMember(message.author.id)
           .then(member => (message.channel.send(`${updated} *(requested by ${member})*`)))
           .catch(error => (console.error(`Member Fetch Error: ${error}`)));
+
+        return updated;
       })
       .then(updated => {
         setTimeout(() => {
-          updated.setMentionable(false, "Role has been pinged.")
+          updated.setMentionable(false, "Role has been pinged.");
         }, 5000);
       })
       .catch(error => {

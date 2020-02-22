@@ -72,11 +72,8 @@ const setModifiers = (pkmn) => {
   else if (pkmn.weight >= 200)
     pokedata.balls.find(x => x.name == "Heavy Ball").setmod = 20;
 
-  else if (pkmn.weight >= 100)
-    pokedata.balls.find(x => x.name == "Heavy Ball").setmod = 0;
-
   else
-    pokedata.balls.find(x => x.name == "Heavy Ball").setmod = -20;
+    pokedata.balls.find(x => x.name == "Heavy Ball").setmod = 1;
 
   const nb = pokedata.balls.find(x => x.name == "Net Ball");
   nb.setmod = netBall? 3.5 : 1;
