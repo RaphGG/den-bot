@@ -451,6 +451,10 @@ exports.createEmbed = (flag, client, args) => {
     const url = `https://raphgg.github.io/den-bot/data/sprites/balls/${args.name.replace(/ ball/gi, "").toLowerCase()}.png`;
     embed.setThumbnail(url);
 
+    const aniUrl = `https://raphgg.github.io/den-bot/data/sprites/balls/${args.name.replace(/ ball/gi, "").toLowerCase()}.gif`;
+
+    embed.setImage(aniUrl);
+
     const mod = args.varModifier || args.modifier;
 
     const desp = `**Ball Modifier:** \`${mod}x\`\n**Ball Conditions:** \`${args.conditions}\`\n**Ball Effects:** \`${args.effect}\``;
