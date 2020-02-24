@@ -34,28 +34,39 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 The bot has a selection of configuration settings that can be changed by the server owner or a registered server admin. The full list of settings along with examples on how to use them are listed below:
 
   `%setconf prefix (Non-alphanumeric Character)`
-
+  
   Sets the bot's prefix for your server to a given character: `%setconf prefix !`
+  
+  ___
 
   `setconf denpkmnonly (true | false)`
-
+  
   Toggles between fetching Pokèmon statistics from only those that can appear in Sword and Shield Max Raid Dens: `%setconf denpkmnonly true`
+  
+  ___
 
   `%setconf shinypkmnonly (true | false)`
-
+  
   Toggles between displaying shiny Pokèmon sprites only: `%setconf shinypkmnonly true`
-
+  ___
+  
   `%setconf restrictedchannels (channel-one, channel-two, etc)`
-
+  
   Restricts Alcremie-B to only respond in the channels listed. Alcremie-B will respond to server admins and server owner regardless of this setting: `%setconf restrictedchannels alcremie-test, botspam`
+  
+  ___
 
   `%setconf adminroles (Admin Role 1, Admin Role 2, Etc.)`
-
+  
   Allows specified roles to access Alcremie-B's admin only commands (setconf, showconf, resetconf, ping): `%setconf adminroles Admin Role 1, Admin Role 2`
+  
+  ___
 
   `%setconf pingroles (Ping Role 1, Ping Role 2, Etc.)` (Obsolete following newest Discord Update)
   
   Allows specified roles to be pinged by the `%ping` command: `%setconf pingroles Ping Role 1`
+  
+  ___
 
 The following is what `%showconf` would look like after performing each of the above example commands:
 
