@@ -1,17 +1,13 @@
 const fs = require("fs");
 
-let path = "./data/sprites/pokemon/shiny/"
+let path = "./data/sprites/newgifs/";
 
-let normals = fs.readdirSync(path);
+let balls = fs.readdirSync(path);
 
-normals.forEach(mon => {
-  let search = mon.search(/-trim\b/gi);
-  if (search == -1)
-    return;
+balls.forEach(ball => {
 
-  let newmon = mon.replace(/-trim\b/gi, "");
-  console.log(newmon);
+  let newball = ball.replace(/ Ball/gi, "").toLowerCase();
+  console.log(newball);
 
-
-  fs.renameSync(path + mon, path + newmon);
+  fs.renameSync(path + ball, path + newball);
 })
