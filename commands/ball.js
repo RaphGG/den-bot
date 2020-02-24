@@ -1,8 +1,19 @@
+exports = {
+  name: "Pokè-Ball Info Command",
+  cmdName: "ball",
+  aliases: ["balls"],
+  description: "Reports the bot's average ping latency and message response time.",
+  args: false,
+  guildOnly: false,
+  run: run(),
+};
+
+
 const embedHelper = require("../modules/embedHelper.js");
 const botspeech = require("../modules/botspeech.js");
 const pokedata = require("../modules/pokedata.js");
 
-exports.run = (client, message, args) => {
+const run = (client, message, args) => {
   // const settings = client.settings.get(message.guild.id);
 
   if (!args || args.length < 1)

@@ -1,3 +1,12 @@
+exports = {
+  name: "Den Information Command",
+  cmdName: "den",
+  description: "Reports the bot's average ping latency and message response time.",
+  args: false,
+  guildOnly: false,
+  run: run(),
+};
+
 const botspeech = require("../modules/botspeech.js");
 const pokedata = require("../modules/pokedata.js");
 const embedHelper = require("../modules/embedHelper.js");
@@ -5,7 +14,7 @@ const embedHelper = require("../modules/embedHelper.js");
 
 // Den Command Handler: Utilizes Pokedata's fetch and EmbedHelper's
 // createEmbed to deliver an embed with corresponding den information.
-exports.run = (client, message, args) => {
+const run = (client, message, args) => {
   const settings = client.settings.get(message.guild.id);
 
   // No arg check.

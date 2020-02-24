@@ -1,8 +1,16 @@
+exports = {
+  name: "Help Command",
+  cmdName: "help",
+  description: "Delivers a dynamic RichEmbed with a help message on a given command.",
+  args: false,
+  guildOnly: false,
+  run: run(),
+};
 const embedHelper = require("../modules/embedHelper.js");
 
 // Help Command Handler: Delivers bot's help message
 // depending on the type of user that requested it (Non-Admin / Admin).
-exports.run = (client, message) => {
+const run = (client, message) => {
   const guild = client.guilds.get(message.guild.id);
   if (!guild.available) return console.error(`Guild Not Available.`);
 

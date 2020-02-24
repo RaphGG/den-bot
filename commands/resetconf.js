@@ -1,8 +1,19 @@
+exports = {
+  name: "Reset Guild Configuration",
+  cmdName: "resetconf",
+  aliases: ["reset"],
+  description: "Resets the bot's active configuration settings for this server to default values.",
+  args: false,
+  guildOnly: true,
+  run: run(),
+};
+
+
 const botspeech = require("../modules/botspeech.js");
 const fs = require("fs");
 
 // Reset Guild Specific Configurations Command Handler:
-exports.run = (client, message) => {
+const run = (client, message) => {
   const guild = client.guilds.get(message.guild.id);
   if (!guild.available) return console.error(`Guild Not Available.`);
 

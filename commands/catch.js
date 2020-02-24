@@ -1,3 +1,13 @@
+exports = {
+  name: "Pokèmon Catch Rate Command",
+  cmdName: "catch",
+  aliases: ["rate"],
+  description: "Reports the bot's average ping latency and message response time.",
+  args: false,
+  guildOnly: false,
+  run: run(),
+};
+
 const calc = require("../modules/calculator.js");
 const botspeech = require("../modules/botspeech.js");
 const pokedata = require("../modules/pokedata.js");
@@ -7,7 +17,7 @@ const embedHelper = require("../modules/embedHelper.js");
 // createEmbed, and Calulator's bestBalls functions to compute
 // catch probabilities for given pokemon, and deliver them in
 // a neat embed.
-exports.run = (client, message, args) => {
+const run = (client, message, args) => {
   const settings = client.settings.get(message.guild.id);
 
   // No arg check.

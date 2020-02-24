@@ -1,9 +1,16 @@
+exports = {
+  name: "Show Guild Configuration",
+  cmdName: "showconf",
+  aliases: ["show"],
+  description: "Shows the bot's active configuration settings for this server in JSON",
+  args: false,
+  guildOnly: true,
+  run: run(),
+};
+
 const botspeech = require("../modules/botspeech.js");
 
-// Show Configuration Settings Command Handler:
-// Displays bot's current configuration settings in a
-// JSON format.
-exports.run = (client, message) => {
+const run = (client, message) => {
   const guild = client.guilds.get(message.guild.id);
   if (!guild.available) return console.error(`Guild Not Available.`);
 

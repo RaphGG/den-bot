@@ -21,6 +21,42 @@ fs.writeFileSync("./data/test.json", newdata);
 
 /*
 
+  if (prop == "pingroles")
+  {
+    const addedRoles = [];
+    values.forEach(rolename => {
+
+      const guildrole = guild.roles.find(role => (role.name.toLowerCase() == rolename.toLowerCase())
+      );
+
+      if (!guildrole) return;
+
+      const pingrole = {
+        name: guildrole.name,
+        id: guildrole.id
+      };
+
+      if (settings.roles.pingroles.some(role => (role.id == pingrole.id)))
+        return;
+
+      settings.roles.pingroles.push(pingrole);
+      addedRoles.push(pingrole.name);
+    });
+
+    if (addedRoles.length == 0)
+      return message.channel.send(botspeech.noRolesAdded);
+
+    try
+    {
+      fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(settings));
+    }
+    catch(error)
+    {
+      console.error(error);
+    }
+
+    return message.channel.send(botspeech.addPingRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
+  }
     else
     {
       rolePing.setMentionable(true, "Role to be pinged.")

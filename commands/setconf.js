@@ -1,11 +1,19 @@
+exports = {
+  name: "Set Guild Configuration",
+  cmdName: "setconf",
+  aliases: ["set"],
+  description: "Sets a server specific bot configuration setting to given value(s).",
+  args: true,
+  example: "{{prefix}}setconf",
+  guildOnly: true,
+  run: run(),
+};
+
 const botspeech = require("../modules/botspeech.js");
 const fs = require("fs");
 
-// Set Guild Specific Configurations Command Handler:
-// Allows server admins / owner to set guild specific
-// settings for the bot to utilize. Those being shiny
-// sprites only, admin-roles, ping-roles, etc.
-exports.run = (client, message, args) => {
+
+const run = (client, message, args) => {
   const guild = client.guilds.get(message.guild.id);
   if (!guild.available) return console.error(`Guild Not Available.`);
 
@@ -23,16 +31,10 @@ exports.run = (client, message, args) => {
   if (!ownerOrAdmin)
     return message.reply(botspeech.permNotFound);
 
-  if (!args || args.length < 2)
-    return message.reply(botspeech.setconfNoArg);
-
   const [prop, ...value] = args;
   const values = value.join(" ").split(/, |,/g);
 
   const isAlpha = value.join("").match(/[A-Za-z0-9]/gi);
-
-  if (prop == "roles")
-    return message.reply(botspeech.configNoChange);
 
   if (prop == "prefix" && isAlpha)
     return message.reply(botspeech.requiredPrefix);
@@ -71,43 +73,6 @@ exports.run = (client, message, args) => {
     }
 
     return message.channel.send(botspeech.addAdminRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
-  }
-
-  if (prop == "pingroles")
-  {
-    const addedRoles = [];
-    values.forEach(rolename => {
-
-      const guildrole = guild.roles.find(role => (role.name.toLowerCase() == rolename.toLowerCase())
-      );
-
-      if (!guildrole) return;
-
-      const pingrole = {
-        name: guildrole.name,
-        id: guildrole.id
-      };
-
-      if (settings.roles.pingroles.some(role => (role.id == pingrole.id)))
-        return;
-
-      settings.roles.pingroles.push(pingrole);
-      addedRoles.push(pingrole.name);
-    });
-
-    if (addedRoles.length == 0)
-      return message.channel.send(botspeech.noRolesAdded);
-
-    try
-    {
-      fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(settings));
-    }
-    catch(error)
-    {
-      console.error(error);
-    }
-
-    return message.channel.send(botspeech.addPingRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
   }
 
   if (prop == "restrictedchannels")
@@ -162,3 +127,8 @@ exports.run = (client, message, args) => {
 
   return message.channel.send(`Guild configuration item ${prop} has been set to: \n\`${value.join(" ")}\``);
 };
+
+// Set Guild Specific Configurations Command Handler:
+// Allows server admins / owner to set guild specific
+// settings for the bot to utilize. Those being shiny
+// sprites only, admin-roles, ping-roles, etc.
