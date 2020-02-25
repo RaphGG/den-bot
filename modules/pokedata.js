@@ -98,7 +98,7 @@ exports.fetch = (flag, args, settings) => {
 
   else if (flag == "ball")
   {
-    const str = args.join("").replace(/[\W]/, "").replace(/ball/gi, "");
+    const str = args.join("").replace(/[\W]/g, "").replace(/ball/gi, "");
     // console.log(str);
     const ballreg = new RegExp(str, "gi");
     return balls.find(ball => (ballreg.test(ball.name)));
@@ -106,7 +106,8 @@ exports.fetch = (flag, args, settings) => {
 
   else if (flag == "den")
   {
-    const str = args.join("").replace(/[\W]/, "");
+    const str = args.join("").replace(/[\W]/g, "");
+    // console.log(str);
     const denreg = new RegExp(str, "gi");
     return dens.find(den => (denreg.test(den.den)));
   }
