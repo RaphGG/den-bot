@@ -23,5 +23,5 @@ exports.run = (client, message) => {
 
   const configProps = JSON.stringify(settings, null, 1);
 
-  return message.channel.send(`The following are the server's current configurations:\n\`\`\`${configProps}\`\`\``);
+  return message.channel.send(`The following are the server's current configurations:\n\`\`\`json\n${configProps}\`\`\``);
 };
