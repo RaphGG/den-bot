@@ -1,12 +1,15 @@
-exports = {
+module.exports = {
   name: "Bot API Latency",
   cmdName: "latency",
   aliases: ["ping"],
   description: "Reports the bot's average ping latency and message response time.",
   args: false,
   guildOnly: false,
+  adminOnly: false,
   cooldown: 10,
-  run: run(),
+  run(client, message, args, settings) {
+    run(client, message);
+  }
 };
 
 const run = (client, message) => {

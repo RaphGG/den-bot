@@ -1,11 +1,14 @@
-exports = {
+module.exports = {
   name: "Credits Command",
   cmdName: "credits",
   aliases: ["credit"],
-  description: "Reports the bot's average ping latency and message response time.",
+  description: "Displays a credit and thanks message.",
   args: false,
   guildOnly: false,
-  run: run(),
+  adminOnly: false,
+  run(client, message, args, settings) {
+    run(client, message);
+  }
 };
 
 const embedHelper = require("../modules/embedHelper.js");

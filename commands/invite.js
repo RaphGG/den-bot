@@ -1,14 +1,18 @@
-exports = {
+module.exports = {
   name: "Invite Link",
   cmdName: "invite",
   aliases: ["link"],
-  description: "Delivers a RichEmbed with a link to invite Alcremie-B to any server.",
+  description: "Delivers an Alcremie-B invite link to allow Alcremie-B to join your server.",
   args: false,
   guildOnly: false,
-  run: run(),
+  adminOnly: false,
+  run(client, message, args, settings) {
+    run(client, message);
+  }
 };
 
 const embedHelper = require("../modules/embedHelper.js");
+
 const run = (client, message) => {
   const embed = embedHelper.createEmbed("invite", client);
   return message.channel.send(embed);

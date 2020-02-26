@@ -1,23 +1,21 @@
-exports = {
+module.exports = {
   name: "Pokè-Ball Info Command",
   cmdName: "ball",
   aliases: ["balls"],
-  description: "Reports the bot's average ping latency and message response time.",
-  args: false,
+  description: "Shows a summary of a Poké-Ball’s statistics",
+  args: 1,
   guildOnly: false,
-  run: run(),
+  adminOnly: false,
+  run(client, message, args, settings) {
+    run(client, message, args);
+  }
 };
-
 
 const embedHelper = require("../modules/embedHelper.js");
 const botspeech = require("../modules/botspeech.js");
 const pokedata = require("../modules/pokedata.js");
 
 const run = (client, message, args) => {
-  // const settings = client.settings.get(message.guild.id);
-
-  if (!args || args.length < 1)
-    return message.channel.send(botspeech.ballNoArg);
 
   const ball = pokedata.fetch("ball", args);
   if (!ball)

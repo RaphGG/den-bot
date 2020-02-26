@@ -21,6 +21,69 @@ fs.writeFileSync("./data/test.json", newdata);
 
 /*
 
+const guild = client.guilds.get(message.guild.id);
+  if (!guild.available) return console.error(`Guild Not Available.`);
+
+  let settings = client.settings.get(guild.id);
+  if (!settings)
+    settings = defaultSettings.run(client, message);
+
+  if (message.content.indexOf(settings.prefix) !== 0) return;
+
+  const ownerOrAdmin = await guild.fetchMember(message.author)
+    .then(member => {
+      const isAO = member.hasPermission(0x00000008, false, null, true);
+      const isAdmin = settings.roles.adminroles.some(role => (member.roles.get(role)));
+
+      return isAO || isAdmin;
+    })
+    .catch(error => (console.error(`No Member Fetched.\nError: ${error}`)));
+
+  if (settings.restrictedchannels.length > 0)
+  {
+    const restrictedchannel = settings.restrictedchannels.find(channel => (channel.id == message.channel.id));
+
+    if (!restrictedchannel && !ownerOrAdmin)
+      return;
+  }
+
+  const args = message.content.slice(settings.prefix.length).trim().split(/ /g);
+  const commandName = args.shift().toLowerCase();
+
+  // if (!client.commands.has(commandName)) return;
+
+  const command = client.commands.get(commandName)
+    || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+
+  if (!command) return;
+
+  console.log(`Command Found: ${command.args}`);
+  console.log(`Truthy: ${!args.length || args.length < command.args}`);
+
+  if (command.args && (!args.length || args.length < command.args))
+    return message.channel.send(botspeech[`${command.cmdName}NoArg`]);
+
+  try
+  {
+    command.run(client, message, args);
+  }
+  catch (error)
+  {
+    console.error(`Command failed to execute with error: ${error}`);
+  }
+
+
+  guild.roles.tap((role, id) => {
+    if (role.hasPermission(0x00000008))
+    {
+      const adminrole = {
+        name: role.name,
+        id: id
+      };
+      adminroles.push(adminrole);
+    }
+  });
+
   if (prop == "pingroles")
   {
     const addedRoles = [];

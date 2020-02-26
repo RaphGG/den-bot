@@ -1,10 +1,13 @@
-exports = {
+module.exports = {
   name: "Bot Owner Reload Function",
   cmdName: "reload",
   description: "Reloads cached modules. Useful for dev work without killing node process.",
-  args: true,
+  args: 1,
   guildOnly: false,
-  run: run(),
+  adminOnly: true,
+  run(client, message, args, settings) {
+    run(client, message, args);
+  }
 };
 
 const botspeech = require("../modules/botspeech.js");
@@ -17,9 +20,6 @@ const run = (client, message, args) => {
   // isBotOwner
   if (!(message.author.id == client.config.owner))
     return message.reply(botspeech.permNotFound);
-
-  if (!args || args.length < 1)
-    return message.reply(botspeech.reloadNoArg);
 
   const commandName = args[0];
 

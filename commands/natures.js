@@ -1,11 +1,14 @@
-exports = {
+module.exports = {
   name: "Natures Chart",
   cmdName: "natures",
   aliases: ["nature"],
-  description: "Delivers a RichEmbed with a chart of Pokèmon natures.",
+  description: "Displays an in-depth Pokémon natures chart from Bulbapedia.",
   args: false,
   guildOnly: false,
-  run: run(),
+  adminOnly: false,
+  run(client, message, args, settings) {
+    run(client, message);
+  }
 };
 
 const embedHelper = require("../modules/embedHelper.js");

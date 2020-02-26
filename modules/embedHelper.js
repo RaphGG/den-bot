@@ -88,6 +88,8 @@ pokelists.noncosmeticforms.forEach(form => (formsStr += " " + form + "|" + form 
 
 const formsEx = new RegExp(formsStr, "gi");
 
+const edgecases = ["Mr Mime", "Mr Rime", "Galarian Mr Mime"];
+
 // Color finder using json pkmn's type.
 const colorFinder = (pkmn) => {
   const color = pkmnEmbedColors.find(x => {
@@ -211,10 +213,13 @@ exports.createEmbed = (flag, client, args) => {
     const types = type2? type1 + " " + type2 : type1;
 
     // Title
-    const pkmnNoForm = args.cosmetic? pkmn.name : pkmn.name.replace(formsEx, "");
+    let pkmnNoForm = args.cosmetic? pkmn.name : pkmn.name.replace(formsEx, "");
+
+    if (edgecases.includes(pkmn.name))
+      pkmnNoForm = pkmnNoForm.slice(0, 2) + "." + pkmnNoForm.slice(3);
+
     const dexId = `${pkmn.dexId}`.padStart(3, "0");
     const titleUrl = pkmn.generation == "SwordShield"? `https://serebii.net/pokedex-swsh/${pkmnNoForm.toLowerCase()}/` : `https://serebii.net/pokedex-sm/${dexId}.shtml`;
-
 
     embed.setURL(titleUrl);
 
@@ -508,13 +513,21 @@ exports.createEmbed = (flag, client, args) => {
     embed.setTimestamp();
     embed.setTitle("All Bot Commands:");
     embed.setDescription(botspeech.commandDescription);
-    embed.addField("Pokémon Commands:", botspeech.pokeCommands.replace(/{{prefix}}/g, args[1]));
+    embed.addField("Pokémon Commands:", botspeech.pokeCommands.replace(/{{prefix}}/g, args));
+
+    embed.addField("User Commands:", botspeech.userCommands.replace(/{{prefix}}/g, args));
+
+    embed.addField("Admin & Guild Commands:", botspeech.adminCommands.replace(/{{prefix}}/g, args));
+
+    /*
 
     if (args[0])
       embed.addField("User Commands:", botspeech.adminCommands.replace(/{{prefix}}/g, args[1]));
 
     else
       embed.addField("User Commands:", botspeech.nonAdminCommands.replace(/{{prefix}}/g, args[1]));
+
+      */
 
 
     embed.addField("Support:", botspeech.helpSupport);
