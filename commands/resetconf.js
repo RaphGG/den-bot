@@ -2,7 +2,7 @@ const botspeech = require("../modules/botspeech.js");
 const fs = require("fs");
 
 // Reset Guild Specific Configurations Command Handler:
-exports.run = (client, message) => {
+exports.run = async (client, message) => {
   const guild = client.guilds.get(message.guild.id);
   if (!guild.available) return console.error(`Guild Not Available.`);
 
@@ -13,7 +13,7 @@ exports.run = (client, message) => {
   // new settings.
   if (settings)
   {
-    const ownerOrAdmin = guild.fetchMember(message.author)
+    const ownerOrAdmin = await guild.fetchMember(message.author)
       .then(member => {
         const isAO = member.hasPermission(0x00000008, false, null, true);
         const isAdmin = settings.roles.adminroles.some(role => (member.roles.get(role)));
