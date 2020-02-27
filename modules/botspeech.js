@@ -2,21 +2,19 @@
 exports.pkmnNotFound = "```The Pokémon requested was not found.```";
 exports.ballNotFound = "```The Pokè-Ball requested was not found.```";
 exports.ballOrPkmnNotFound = "```Either the Pokèmon, Pokè-Ball, or both requested were not found.```";
-exports.commandNotFound = "```The requested command was not found.```";
+exports.cmdNotFound = "```The requested command was not found.```";
 exports.permNotFound = "you do not have the permissions to use this command.";
 exports.guildConfNotFound = "```The requested guild configuration setting was not found.```";
 
-
-exports.guildOnlyCmd = "```This command is only available in guilds.```";
-
-// User Help Messages
+// User Interface Messages
 exports.requiredPrefix = "```Please enter a Non-Alphanumeric prefix to be used with the bot.```";
 exports.configReset = "```The Guild Configurations for this server have been reset.```";
+exports.guildOnlyCmd = "```This command is only available in guilds.```";
 
 exports.noChannelsAdded = "```No channels have been restricted and/or found.```";
 exports.addChannels = "Alcremie-B has been restricted to the following channels: {{channels}}.";
 
-// No Arg Calls -> May format with command structure
+// No Arg Calls
 exports.ballNoArg = "```Please enter a Pokè-Ball.```";
 exports.catchNoArg = "```Please enter a Pokémon to catch followed by a Pokè-Ball of your choice.```";
 exports.denNoArg = "```Please enter either a Den Number or a Pokémon to fetch.```";
@@ -71,8 +69,6 @@ exports.configNoChange = "```These configuration setting cannot be changed.```";
 exports.rolePlacement = "The {{role}} role may be below this Alcremie-B's bot role. Please make sure Alcremie-B has the manage roles permission and that her role is above {{role}} to be able to ping it.";
 
 */
-
-
 
 // Not Yet Implemented
 // \n{{prefix}}balls (Ball Name | Pokémon Name)

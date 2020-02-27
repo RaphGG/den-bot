@@ -4,8 +4,8 @@ module.exports = {
   aliases: ["set"],
   description: "Sets a server specific bot configuration setting to given value(s).",
   args: 2,
-  example: "{{prefix}}setconf",
   guildOnly: true,
+  adminOnly: true,
   run(client, message, args, settings) {
     run(client, message, args, settings);
   }

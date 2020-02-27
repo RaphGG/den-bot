@@ -18,8 +18,15 @@ let newdata = JSON.stringify(p);
 fs.writeFileSync("./data/test.json", newdata);
 
 
-
 /*
+
+
+    if (args[0])
+      embed.addField("User Commands:", botspeech.adminCommands.replace(/{{prefix}}/g, args[1]));
+
+    else
+      embed.addField("User Commands:", botspeech.nonAdminCommands.replace(/{{prefix}}/g, args[1]));
+
 
 const guild = client.guilds.get(message.guild.id);
   if (!guild.available) return console.error(`Guild Not Available.`);

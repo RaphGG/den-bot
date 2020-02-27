@@ -1,6 +1,6 @@
 module.exports = {
-  cmdName: "pokedex",
   name: "Pokèmon Pokèdex Command",
+  cmdName: "pokedex",
   aliases: ["dex"],
   description: "Shows a detailed summary of a Pokèmon’s latest Statistics (Gen 8 / Gen 7).",
   args: 1,

@@ -27,6 +27,9 @@ const run = (client, message, args, settings) => {
   if (!command)
     return message.channel.send(botspeech.cmdNotFound);
 
-  return message.channel.send(`Dev`);
+
+  const embed = embedHelper.createEmbed("helpcmd", client, command);
+
+  return message.channel.send(embed);
 
 };

@@ -519,18 +519,18 @@ exports.createEmbed = (flag, client, args) => {
 
     embed.addField("Admin & Guild Commands:", botspeech.adminCommands.replace(/{{prefix}}/g, args));
 
-    /*
-
-    if (args[0])
-      embed.addField("User Commands:", botspeech.adminCommands.replace(/{{prefix}}/g, args[1]));
-
-    else
-      embed.addField("User Commands:", botspeech.nonAdminCommands.replace(/{{prefix}}/g, args[1]));
-
-      */
-
-
     embed.addField("Support:", botspeech.helpSupport);
+
+    return embed;
+  }
+
+  else if (flag == "helpcmd")
+  {
+    // embed.setAuthor(client.user.username, client.user.avatarURL);
+    embed.setColor(14315906);
+    embed.setTimestamp();
+    embed.setTitle(args.name);
+    embed.setDescription(args.description);
 
     return embed;
   }

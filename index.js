@@ -32,7 +32,7 @@ fs.readdir("./events/", (err, files) => {
 client.commands = new Discord.Collection();
 client.settings = new Map();
 
-fs.readdir("./data/settings", (err, files) => {
+fs.readdir("./data/settings/", (err, files) => {
   if (err) return console.error(err);
 
   console.log(`Loading Guild Settings for ${files.length} Guilds.`);
@@ -40,7 +40,7 @@ fs.readdir("./data/settings", (err, files) => {
   files.forEach(file => {
     const data = fs.readFileSync(`./data/settings/${file}`);
     const setting = JSON.parse(data);
-    const guildId = file.split(".")[0]
+    const guildId = file.split(".")[0];
     client.settings.set(guildId, setting);
   });
 

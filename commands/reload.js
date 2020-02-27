@@ -5,7 +5,7 @@ module.exports = {
   args: 1,
   guildOnly: false,
   adminOnly: true,
-  run(client, message, args, settings) {
+  run(client, message, args) {
     run(client, message, args);
   }
 };

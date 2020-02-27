@@ -2,12 +2,12 @@ module.exports = {
   name: "Bot API Latency",
   cmdName: "latency",
   aliases: ["ping"],
-  description: "Reports the bot's average ping latency and message response time.",
+  description: "Reports the bot's average heartbeat latency and message response time.",
   args: false,
   guildOnly: false,
   adminOnly: false,
   cooldown: 10,
-  run(client, message, args, settings) {
+  run(client, message) {
     run(client, message);
   }
 };
