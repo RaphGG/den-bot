@@ -47,7 +47,7 @@ module.exports = async (client, message) => {
     return message.channel.send(botspeech.guildOnlyCmd);
 
   if (command.adminOnly && !ownerOrAdmin)
-    return message.channel.send(botspeech.permNotFound);
+    return message.channel.reply(botspeech.permNotFound);
 
   if (!cooldowns.has(command.cmdName))
     cooldowns.set(command.cmdName, new Discord.Collection());
