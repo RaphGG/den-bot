@@ -1,12 +1,12 @@
 // Out with the old and in with the new.
 
 // Module/Config/API Imports
-const { Client } = require("discord.js");
+const Discord = require("discord.js");
 const config = require("./config.json");
 const fs = require("fs");
 
 // Bot Creation
-const client = new Client();
+const client = new Discord.Client();
 client.config = config;
 
 // Event loader with client.on setup in a for loop. No need for repeated code.
@@ -29,18 +29,22 @@ fs.readdir("./events/", (err, files) => {
 
 // Mapping commands as (K, V) -> (CommandName, CommandModule).
 // Mapping guild specific settings as (K, V) -> (GuildID, SettingsJSON).
-client.commands = new Map();
+client.commands = new Discord.Collection();
 client.settings = new Map();
 
-if (!fs.existsSync("./data/settings"))
-  fs.mkdirSync("./data/settings");
+fs.readdir("./data/settings/", (err, files) => {
+  if (err) return console.error(err);
 
-const fldr = fs.readdirSync("./data/settings");
+  console.log(`Loading Guild Settings for ${files.length} Guilds.`);
 
-fldr.forEach(file => {
-  const data = fs.readFileSync(`./data/settings/${file}`);
-  const setting = JSON.parse(data);
-  client.settings.set(file.replace(".json", ""), setting);
+  files.forEach(file => {
+    const data = fs.readFileSync(`./data/settings/${file}`);
+    const setting = JSON.parse(data);
+    const guildId = file.split(".")[0];
+    client.settings.set(guildId, setting);
+  });
+
+  console.log(`Finished Loading Guild Settings for ${files.length} Guilds.`);
 });
 
 // Command loader to map commands as above into a Discord.js Collection

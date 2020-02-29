@@ -1,25 +1,19 @@
-const botspeech = require("../modules/botspeech.js");
+module.exports = {
+  name: "Show Guild Configuration Command",
+  cmdName: "showconf",
+  aliases: ["show"],
+  description: "Shows the bot's active configuration settings for this server in JSON",
+  args: false,
+  usage: "{{prefix}}showconf",
+  example: "{{prefix}}showconf",
+  guildOnly: true,
+  adminOnly: true,
+  run(client, message, args, settings) {
+    run(message, settings);
+  }
+};
 
-// Show Configuration Settings Command Handler:
-// Displays bot's current configuration settings in a
-// JSON format.
-exports.run = async (client, message) => {
-  const guild = client.guilds.get(message.guild.id);
-  if (!guild.available) return console.error(`Guild Not Available.`);
-
-  const settings = client.settings.get(message.guild.id);
-
-  const ownerOrAdmin = await guild.fetchMember(message.author)
-    .then(member => {
-      const isAO = member.hasPermission(0x00000008, false, null, true);
-      const isAdmin = settings.roles.adminroles.some(role => (member.roles.get(role)));
-
-      return isAO || isAdmin;
-    })
-    .catch(error => (console.error(`No Member Fetched.\nError: ${error}`)));
-
-  if (!ownerOrAdmin)
-    return message.reply(botspeech.permNotFound);
+const run = (message, settings) => {
 
   const configProps = JSON.stringify(settings, null, 1);
 

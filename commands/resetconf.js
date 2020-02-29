@@ -1,63 +1,34 @@
+module.exports = {
+  name: "Reset Guild Configuration Command",
+  cmdName: "resetconf",
+  aliases: ["reset"],
+  description: "Resets the bot's active configuration settings for this server to default values.",
+  args: false,
+  usage: "{{prefix}}resetconf",
+  example: "{{prefix}}resetconf",
+  guildOnly: true,
+  adminOnly: true,
+  run(client, message) {
+    run(client, message);
+  }
+};
+
 const botspeech = require("../modules/botspeech.js");
 const fs = require("fs");
 
 // Reset Guild Specific Configurations Command Handler:
-exports.run = async (client, message) => {
-  const guild = client.guilds.get(message.guild.id);
-  if (!guild.available) return console.error(`Guild Not Available.`);
+const run = (client, message) => {
+  client.settings.delete(message.guild.id);
 
-  const settings = client.settings.get(message.guild.id);
-
-  // If settings already exist, delete them from settings
-  // map and revert them to default. Otherwise set brand
-  // new settings.
-  if (settings)
-  {
-    const ownerOrAdmin = await guild.fetchMember(message.author)
-      .then(member => {
-        const isAO = member.hasPermission(0x00000008, false, null, true);
-        const isAdmin = settings.roles.adminroles.some(role => (member.roles.get(role)));
-
-        return isAO || isAdmin;
-      })
-      .catch(error => (console.error(`No Member Fetched.\nError: ${error}`)));
-
-    if (!ownerOrAdmin)
-      return message.reply(botspeech.permNotFound);
-
-    client.settings.delete(message.guild.id);
-    message.channel.send(botspeech.configReset);
-  }
-
-  const adminroles = [];
-  const pingroles = [];
-  const restrictedchannels = [];
-
-  // Search for server admin roles.
-  guild.roles.tap((role, id) => {
-    if (role.hasPermission(0x00000008))
-    {
-      const adminrole = {
-        name: role.name,
-        id: id
-      };
-      adminroles.push(adminrole);
-    }
-  });
-
+  // Set defaults in settings map & try to save to file.
   const defaultSettings = {
     prefix:"%",
     denpkmnonly:false,
     shinypkmnonly:false,
-    restrictedchannels:restrictedchannels,
-    roles:{
-      adminroles:adminroles,
-      pingroles:pingroles
-    }
+    restrictedchannels:[],
   };
 
-  // Set defaults in settings map & try to save to file.
-  client.settings.set(guild.id, defaultSettings);
+  client.settings.set(message.guild.id, defaultSettings);
   try
   {
     fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(defaultSettings));
@@ -67,5 +38,6 @@ exports.run = async (client, message) => {
     console.error(error);
   }
 
-  return client.settings.get(message.guild.id);
+  return message.channel.send(botspeech.configReset);
+
 };

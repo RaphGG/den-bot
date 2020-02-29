@@ -1,3 +1,5 @@
+// OBSOLETE
+
 const botspeech = require("../modules/botspeech.js");
 // TODO: Finish Comments.
 

@@ -1,25 +1,38 @@
+module.exports = {
+  name: "Help Command",
+  cmdName: "help",
+  aliases: [],
+  description: "Delivers a handy help message with a table of commands.",
+  args: false,
+  usage: "{{prefix}}help (Command)",
+  example: "{{prefix}}help\n{{prefix}}help catch",
+  guildOnly: false,
+  adminOnly: false,
+  run(client, message, args, settings) {
+    run(client, message, args, settings);
+  }
+};
 const embedHelper = require("../modules/embedHelper.js");
+const botspeech = require("../modules/botspeech.js");
 
 // Help Command Handler: Delivers bot's help message
 // depending on the type of user that requested it (Non-Admin / Admin).
-exports.run = async (client, message) => {
-  const guild = client.guilds.get(message.guild.id);
-  if (!guild.available) return console.error(`Guild Not Available.`);
+const run = (client, message, args, settings) => {
+  if (!args.length)
+  {
+    const embed = embedHelper.createEmbed("help", client, settings.prefix);
+    return message.channel.send(embed);
+  }
 
-  const settings = client.settings.get(message.guild.id);
+  const name = args[0].toLowerCase();
+  const command = client.commands.get(name) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(name));
 
-  // Settings retrieval & Permissions check for corresponding
-  // help embed.
-  const ownerOrAdmin = await guild.fetchMember(message.author)
-    .then(member => {
-      const isAO = member.hasPermission(0x00000008, false, null, true);
-      const isAdmin = settings.roles.adminroles.some(role => (member.roles.get(role)));
+  if (!command)
+    return message.channel.send(botspeech.cmdNotFound);
 
-      return isAO || isAdmin;
-    })
-    .catch(error => (console.error(`No Member Fetched.\nError: ${error}`)));
 
-  const prefix = settings.prefix;
-  const embed = embedHelper.createEmbed("help", client, [ownerOrAdmin, prefix]);
+  const embed = embedHelper.createEmbed("helpcmd", client, [command, settings.prefix]);
+
   return message.channel.send(embed);
+
 };

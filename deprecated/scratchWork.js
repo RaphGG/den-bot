@@ -18,9 +18,231 @@ let newdata = JSON.stringify(p);
 fs.writeFileSync("./data/test.json", newdata);
 
 
-
 /*
 
+  if (message.channel.type == 'dm')
+  {
+    if (!message.content.startsWith('%')) return;
+    // console.log(`Inside a dm with message: ${message.content}`);
+    const args = message.content.slice(1).trim().split(/ /g);
+    const commandName = args.shift().toLowerCase();
+    // console.log(`Inside a dm with commandName: ${commandName}`);
+
+    const command = client.commands.get(commandName)
+      || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+
+    // console.log(`Inside a dm with command: ${command}`);
+
+    if (!command || command.guildOnly) return;
+
+    if (command.args && (!args.length || args.length < command.args))
+      return message.channel.send(botspeech[`${command.cmdName}NoArg`]);
+
+    if (!cooldowns.has(command.cmdName))
+      cooldowns.set(command.cmdName, new Discord.Collection());
+
+    const now = Date.now();
+    const timestamps = cooldowns.get(command.cmdName);
+    const cooldownAmt = (command.cooldown || 3) * 1000;
+
+    if (timestamps.has(message.author.id))
+    {
+      const expTime = timestamps.get(message.author.id) + cooldownAmt;
+
+      if (now < expTime)
+      {
+        const timeLeft = (expTime - now) / 1000;
+        return message.reply(`Please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.cmdName}\` command`);
+      }
+    }
+
+    timestamps.set(message.author.id, now);
+    setTimeout(() => timestamps.delete(message.author.id), cooldownAmt);
+
+    try
+    {
+      command.run(client, message, args, client.config.settings);
+    }
+    catch (error)
+    {
+      console.error(`Command failed to execute.\nError: ${error}`);
+    }
+  }
+
+  else if (message.channel.type == 'text')
+  {
+    const guild = client.guilds.get(message.guild.id);
+    if (!guild.available)
+      return console.error(`Guild Not Available.\nGuild ID: ${guild.id}`);
+
+    let settings = client.settings.get(guild.id);
+    if (!settings)
+      settings = setDefault(client, guild.id);
+
+    if (!message.content.startsWith(settings.prefix)) return;
+
+    const ownerOrAdmin = await isOwnerOrAdmin(message.author, guild, settings);
+
+    if (settings.restrictedchannels.length > 0)
+    {
+      const restrictedchannel = settings.restrictedchannels.find(channel => (channel.id == message.channel.id));
+
+      if (!restrictedchannel && !ownerOrAdmin) return;
+    }
+
+    const args = message.content
+      .slice(settings.prefix.length)
+      .trim()
+      .split(/ /g);
+
+    const commandName = args.shift().toLowerCase();
+
+    const command = client.commands.get(commandName)
+      || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+
+    if (!command || (command.adminOnly && !ownerOrAdmin)) return;
+
+    if (command.args && (!args.length || args.length < command.args))
+      return message.channel.send(botspeech[`${command.cmdName}NoArg`]);
+
+    // console.log(settings);
+
+    if (!cooldowns.has(command.cmdName))
+      cooldowns.set(command.cmdName, new Discord.Collection());
+
+    const now = Date.now();
+    const timestamps = cooldowns.get(command.cmdName);
+    const cooldownAmt = (command.cooldown || 3) * 1000;
+
+    if (timestamps.has(message.author.id))
+    {
+      const expTime = timestamps.get(message.author.id) + cooldownAmt;
+
+      if (now < expTime)
+      {
+        const timeLeft = (expTime - now) / 1000;
+        return message.reply(`Please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.cmdName}\` command`);
+      }
+    }
+
+    timestamps.set(message.author.id, now);
+    setTimeout(() => timestamps.delete(message.author.id), cooldownAmt);
+
+    try
+    {
+      command.run(client, message, args, settings);
+    }
+    catch (error)
+    {
+      console.error(`Command failed to execute.\nError: ${error}`);
+    }
+  }
+    if (args[0])
+      embed.addField("User Commands:", botspeech.adminCommands.replace(/{{prefix}}/g, args[1]));
+
+    else
+      embed.addField("User Commands:", botspeech.nonAdminCommands.replace(/{{prefix}}/g, args[1]));
+
+
+const guild = client.guilds.get(message.guild.id);
+  if (!guild.available) return console.error(`Guild Not Available.`);
+
+  let settings = client.settings.get(guild.id);
+  if (!settings)
+    settings = defaultSettings.run(client, message);
+
+  if (message.content.indexOf(settings.prefix) !== 0) return;
+
+  const ownerOrAdmin = await guild.fetchMember(message.author)
+    .then(member => {
+      const isAO = member.hasPermission(0x00000008, false, null, true);
+      const isAdmin = settings.roles.adminroles.some(role => (member.roles.get(role)));
+
+      return isAO || isAdmin;
+    })
+    .catch(error => (console.error(`No Member Fetched.\nError: ${error}`)));
+
+  if (settings.restrictedchannels.length > 0)
+  {
+    const restrictedchannel = settings.restrictedchannels.find(channel => (channel.id == message.channel.id));
+
+    if (!restrictedchannel && !ownerOrAdmin)
+      return;
+  }
+
+  const args = message.content.slice(settings.prefix.length).trim().split(/ /g);
+  const commandName = args.shift().toLowerCase();
+
+  // if (!client.commands.has(commandName)) return;
+
+  const command = client.commands.get(commandName)
+    || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+
+  if (!command) return;
+
+  console.log(`Command Found: ${command.args}`);
+  console.log(`Truthy: ${!args.length || args.length < command.args}`);
+
+  if (command.args && (!args.length || args.length < command.args))
+    return message.channel.send(botspeech[`${command.cmdName}NoArg`]);
+
+  try
+  {
+    command.run(client, message, args);
+  }
+  catch (error)
+  {
+    console.error(`Command failed to execute with error: ${error}`);
+  }
+
+
+  guild.roles.tap((role, id) => {
+    if (role.hasPermission(0x00000008))
+    {
+      const adminrole = {
+        name: role.name,
+        id: id
+      };
+      adminroles.push(adminrole);
+    }
+  });
+
+  if (prop == "pingroles")
+  {
+    const addedRoles = [];
+    values.forEach(rolename => {
+
+      const guildrole = guild.roles.find(role => (role.name.toLowerCase() == rolename.toLowerCase())
+      );
+
+      if (!guildrole) return;
+
+      const pingrole = {
+        name: guildrole.name,
+        id: guildrole.id
+      };
+
+      if (settings.roles.pingroles.some(role => (role.id == pingrole.id)))
+        return;
+
+      settings.roles.pingroles.push(pingrole);
+      addedRoles.push(pingrole.name);
+    });
+
+    if (addedRoles.length == 0)
+      return message.channel.send(botspeech.noRolesAdded);
+
+    try
+    {
+      fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(settings));
+    }
+    catch(error)
+    {
+      console.error(error);
+    }
+
+    return message.channel.send(botspeech.addPingRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
+  }
     else
     {
       rolePing.setMentionable(true, "Role to be pinged.")

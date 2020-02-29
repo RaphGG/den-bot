@@ -88,6 +88,8 @@ pokelists.noncosmeticforms.forEach(form => (formsStr += " " + form + "|" + form 
 
 const formsEx = new RegExp(formsStr, "gi");
 
+const edgecases = ["Mr Mime", "Mr Rime", "Galarian Mr Mime"];
+
 // Color finder using json pkmn's type.
 const colorFinder = (pkmn) => {
   const color = pkmnEmbedColors.find(x => {
@@ -211,10 +213,13 @@ exports.createEmbed = (flag, client, args) => {
     const types = type2? type1 + " " + type2 : type1;
 
     // Title
-    const pkmnNoForm = args.cosmetic? pkmn.name : pkmn.name.replace(formsEx, "");
+    let pkmnNoForm = args.cosmetic? pkmn.name : pkmn.name.replace(formsEx, "");
+
+    if (edgecases.includes(pkmn.name))
+      pkmnNoForm = pkmnNoForm.slice(0, 2) + "." + pkmnNoForm.slice(3);
+
     const dexId = `${pkmn.dexId}`.padStart(3, "0");
     const titleUrl = pkmn.generation == "SwordShield"? `https://serebii.net/pokedex-swsh/${pkmnNoForm.toLowerCase()}/` : `https://serebii.net/pokedex-sm/${dexId}.shtml`;
-
 
     embed.setURL(titleUrl);
 
@@ -507,17 +512,40 @@ exports.createEmbed = (flag, client, args) => {
     embed.setColor(14315906);
     embed.setTimestamp();
     embed.setTitle("All Bot Commands:");
+    embed.setURL(`https://raphgg.github.io/den-bot`);
     embed.setDescription(botspeech.commandDescription);
-    embed.addField("Pokémon Commands:", botspeech.pokeCommands.replace(/{{prefix}}/g, args[1]));
+    embed.addField("Pokémon Commands:", botspeech.pokeCommands.replace(/{{prefix}}/g, args));
 
-    if (args[0])
-      embed.addField("User Commands:", botspeech.adminCommands.replace(/{{prefix}}/g, args[1]));
+    embed.addField("User Commands:", botspeech.userCommands.replace(/{{prefix}}/g, args));
 
-    else
-      embed.addField("User Commands:", botspeech.nonAdminCommands.replace(/{{prefix}}/g, args[1]));
-
+    embed.addField("Admin & Guild Commands:", botspeech.adminCommands.replace(/{{prefix}}/g, args));
 
     embed.addField("Support:", botspeech.helpSupport);
+
+    return embed;
+  }
+
+  else if (flag == "helpcmd")
+  {
+    const cmd = args[0];
+    const prefix = args[1];
+    // embed.setAuthor(client.user.username, client.user.avatarURL);
+    embed.setColor(14315906);
+    embed.setTimestamp();
+    embed.setTitle(`Help Page for ${cmd.name}`);
+    embed.setURL(`https://raphgg.github.io/den-bot`);
+    embed.setDescription(cmd.description);
+
+    if (cmd.aliases && cmd.aliases.length > 0)
+      embed.addField("Aliases:", cmd.aliases.join(", "), true);
+
+    const cooldown = cmd.cooldown || 3;
+    embed.addField("Cooldown:", `\`${cooldown}\` Second(s)`, true);
+    embed.addField("Usage:", cmd.usage.replace(/{{prefix}}/gi, prefix), true);
+    embed.addField("Examples:", cmd.example.replace(/{{prefix}}/gi, prefix), true);
+
+    embed.addField("Guild/Admin Only:", `Guild Only: \`${cmd.guildOnly}\`\nAdmin Only: \`${cmd.adminOnly}\``, true);
+
 
     return embed;
   }

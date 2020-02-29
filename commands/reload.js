@@ -1,16 +1,28 @@
+module.exports = {
+  name: "Bot Owner Reload Command",
+  cmdName: "reload",
+  aliases: [],
+  description: "Reloads cached modules. Useful for dev work without killing node process.",
+  args: 1,
+  usage: "{{prefix}}reload (Command)",
+  example: "{{prefix}}reload pokedex",
+  guildOnly: false,
+  adminOnly: true,
+  run(client, message, args) {
+    run(client, message, args);
+  }
+};
+
 const botspeech = require("../modules/botspeech.js");
 
 // Reload Command Handler: Reloads require caches / map entries
 // for a given command. Useful for dev work without restarting node process.
 // Bot Owner only command.
-exports.run = (client, message, args) => {
+const run = (client, message, args) => {
 
   // isBotOwner
   if (!(message.author.id == client.config.owner))
     return message.reply(botspeech.permNotFound);
-
-  if (!args || args.length < 1)
-    return message.reply(botspeech.reloadNoArg);
 
   const commandName = args[0];
 
