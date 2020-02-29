@@ -1,9 +1,11 @@
 module.exports = {
-  name: "Set Guild Configuration",
+  name: "Set Guild Configuration Command",
   cmdName: "setconf",
   aliases: ["set"],
   description: "Sets a server specific bot configuration setting to given value(s).",
   args: 2,
+  usage: "{{prefix}}setconf prefix [New Prefix]\n{{prefix}}setconf restrictedchannels [Channels]",
+  example: "{{prefix}}setconf prefix $\n{{prefix}}set restrictedchannels channel-1, channel-2",
   guildOnly: true,
   adminOnly: true,
   run(client, message, args, settings) {

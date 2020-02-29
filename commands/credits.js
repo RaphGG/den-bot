@@ -4,6 +4,8 @@ module.exports = {
   aliases: ["credit"],
   description: "Displays a credit and thanks message.",
   args: false,
+  usage: "{{prefix}}credits",
+  example: "{{prefix}}credits",
   guildOnly: false,
   adminOnly: false,
   run(client, message) {

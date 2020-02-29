@@ -1,9 +1,11 @@
 module.exports = {
-  name: "Show Guild Configuration",
+  name: "Show Guild Configuration Command",
   cmdName: "showconf",
   aliases: ["show"],
   description: "Shows the bot's active configuration settings for this server in JSON",
   args: false,
+  usage: "{{prefix}}showconf",
+  example: "{{prefix}}showconf",
   guildOnly: true,
   adminOnly: true,
   run(client, message, args, settings) {

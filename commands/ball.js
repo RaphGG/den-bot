@@ -4,6 +4,8 @@ module.exports = {
   aliases: ["balls"],
   description: "Shows a summary of a Poké-Ball’s statistics",
   args: 1,
+  usage: "{{prefix}}ball [Poké-Ball Name]",
+  example: "{{prefix}}ball beast",
   guildOnly: false,
   adminOnly: false,
   run(client, message, args) {

@@ -1,8 +1,11 @@
 module.exports = {
-  name: "Bot Owner Reload Function",
+  name: "Bot Owner Reload Command",
   cmdName: "reload",
+  aliases: [],
   description: "Reloads cached modules. Useful for dev work without killing node process.",
   args: 1,
+  usage: "{{prefix}}reload (Command)",
+  example: "{{prefix}}reload pokedex",
   guildOnly: false,
   adminOnly: true,
   run(client, message, args) {

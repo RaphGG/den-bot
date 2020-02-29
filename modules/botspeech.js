@@ -23,9 +23,9 @@ exports.reloadNoArg = "```Please enter a command to reload.```";
 exports.setconfNoArg = "```Please enter a configuration property to set followed by the desired setting.```";
 
 // Help Commands
-exports.userCommands = "{{prefix}}help\n{{prefix}}invite\n{{prefix}}latency\n{{prefix}}credits";
+exports.userCommands = "{{prefix}}help (Command)\n{{prefix}}invite\n{{prefix}}latency\n{{prefix}}credits";
 
-exports.adminCommands = "{{prefix}}setconf [prefix | restrictedchannels] [New Setting]\n{{prefix}}showconf\n{{prefix}}resetconf";
+exports.adminCommands = "{{prefix}}setconf [prefix | restrictedchannels] [New Prefix | Restricted Channels]\n{{prefix}}showconf\n{{prefix}}resetconf";
 
 exports.pokeCommands = "{{prefix}}den [Den Number | Pokémon Name]\n{{prefix}}catch [Pokémon Name] (Form Name) (Ball Name)\n{{prefix}}pokedex [Pokémon Name] (Form Name)\n{{prefix}}ball [Ball Name]\n{{prefix}}natures\nForm Names Include gmax, galar, alola, etc.";
 

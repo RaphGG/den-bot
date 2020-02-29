@@ -1,9 +1,11 @@
 module.exports = {
-  name: "Invite Link",
+  name: "Invite Link Command",
   cmdName: "invite",
   aliases: ["link"],
   description: "Delivers an Alcremie-B invite link to allow Alcremie-B to join your server.",
   args: false,
+  usage: "{{prefix}}invite",
+  example: "{{prefix}}invite",
   guildOnly: false,
   adminOnly: false,
   run(client, message) {

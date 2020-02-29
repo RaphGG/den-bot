@@ -1,9 +1,11 @@
 module.exports = {
-  name: "Reset Guild Configuration",
+  name: "Reset Guild Configuration Command",
   cmdName: "resetconf",
   aliases: ["reset"],
   description: "Resets the bot's active configuration settings for this server to default values.",
   args: false,
+  usage: "{{prefix}}resetconf",
+  example: "{{prefix}}resetconf",
   guildOnly: true,
   adminOnly: true,
   run(client, message) {

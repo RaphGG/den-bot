@@ -4,6 +4,8 @@ module.exports = {
   aliases: ["rate"],
   description: "Shows a detailed summary of catch rates for a given Pokèmon & Ball.",
   args: 1,
+  usage: "{{prefix}}catch [Pokémon Name] (Form) (Poké-Ball)",
+  example: "{{prefix}}catch zard gmax lux",
   guildOnly: false,
   adminOnly: false,
   run(client, message, args, settings) {

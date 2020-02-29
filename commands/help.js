@@ -1,8 +1,11 @@
 module.exports = {
   name: "Help Command",
   cmdName: "help",
+  aliases: [],
   description: "Delivers a handy help message with a table of commands.",
   args: false,
+  usage: "{{prefix}}help (Command)",
+  example: "{{prefix}}help\n{{prefix}}help catch",
   guildOnly: false,
   adminOnly: false,
   run(client, message, args, settings) {
@@ -28,7 +31,7 @@ const run = (client, message, args, settings) => {
     return message.channel.send(botspeech.cmdNotFound);
 
 
-  const embed = embedHelper.createEmbed("helpcmd", client, command);
+  const embed = embedHelper.createEmbed("helpcmd", client, [command, settings.prefix]);
 
   return message.channel.send(embed);
 

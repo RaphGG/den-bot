@@ -512,6 +512,7 @@ exports.createEmbed = (flag, client, args) => {
     embed.setColor(14315906);
     embed.setTimestamp();
     embed.setTitle("All Bot Commands:");
+    embed.setURL(`https://raphgg.github.io/den-bot`);
     embed.setDescription(botspeech.commandDescription);
     embed.addField("Pokémon Commands:", botspeech.pokeCommands.replace(/{{prefix}}/g, args));
 
@@ -526,11 +527,25 @@ exports.createEmbed = (flag, client, args) => {
 
   else if (flag == "helpcmd")
   {
+    const cmd = args[0];
+    const prefix = args[1];
     // embed.setAuthor(client.user.username, client.user.avatarURL);
     embed.setColor(14315906);
     embed.setTimestamp();
-    embed.setTitle(args.name);
-    embed.setDescription(args.description);
+    embed.setTitle(`Help Page for ${cmd.name}`);
+    embed.setURL(`https://raphgg.github.io/den-bot`);
+    embed.setDescription(cmd.description);
+
+    if (cmd.aliases && cmd.aliases.length > 0)
+      embed.addField("Aliases:", cmd.aliases.join(", "), true);
+
+    const cooldown = cmd.cooldown || 3;
+    embed.addField("Cooldown:", `\`${cooldown}\` Second(s)`, true);
+    embed.addField("Usage:", cmd.usage.replace(/{{prefix}}/gi, prefix), true);
+    embed.addField("Examples:", cmd.example.replace(/{{prefix}}/gi, prefix), true);
+
+    embed.addField("Guild/Admin Only:", `Guild Only: \`${cmd.guildOnly}\`\nAdmin Only: \`${cmd.adminOnly}\``, true);
+
 
     return embed;
   }
