@@ -1,4 +1,4 @@
-# Image Hosting Website for the Alcremie-B Discord Bot ![Bot PFP](https://raphgg.github.io/den-bot/data/icons/botpfp.png "Lovely Baby")
+# Alcremie-B Discord Bot ![Bot PFP](https://raphgg.github.io/den-bot/data/icons/botpfp.png "Lovely Baby")
 A Pokèmon statistics Discord bot with the intended purpose of facilitating Max Raid Battles in Pokèmon Sword & Pokèmon Shield.
 
 
