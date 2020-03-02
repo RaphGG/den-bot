@@ -1,8 +1,12 @@
-# Image Hosting Website for the Alcremie-B Discord Bot ![Bot PFP](https://raphgg.github.io/den-bot/data/icons/botpfp.png "Lovely Baby")
+# Alcremie-B Discord Bot ![Bot PFP](https://raphgg.github.io/den-bot/data/icons/botpfp.png "Lovely Baby")
 A Pokèmon statistics Discord bot with the intended purpose of facilitating Max Raid Battles in Pokèmon Sword & Pokèmon Shield.
 
-## Discord Usage
+## Discord Usage & Top.gg
 [Invite](https://discordapp.com/api/oauth2/authorize?client_id=663505910580248587&permissions=0&scope=bot "Alcremie-B w/ No Permissions") Alcremie-B to your own Discord Server!
+
+[Upvote](https://top.gg/bot/663505910580248587/vote "Thanks for voting!") Alcremie-B on Top.gg so that others can see it!
+
+![Alcremie-B Widget](https://top.gg/api/widget/663505910580248587.svg)
 
 ## Features 
 * Quick and fully featured access to latest Pokèmon Data, such as: Base Stats / Abilities / Den Locations / And more!
