@@ -21,18 +21,26 @@ const run = (client, message, args, settings) => {
   if (!args.length)
   {
     const embed = embedHelper.createEmbed("help", client, settings.prefix);
-    return message.channel.send(embed);
+    message.channel.send(embed)
+      .then()
+      .catch(console.error);
+    return;
   }
 
   const name = args[0].toLowerCase();
   const command = client.commands.get(name) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(name));
 
   if (!command)
-    return message.channel.send(botspeech.cmdNotFound);
-
+  {
+    message.channel.send(botspeech.cmdNotFound)
+      .then()
+      .catch(console.error);
+    return;
+  }
 
   const embed = embedHelper.createEmbed("helpcmd", client, [command, settings.prefix]);
-
-  return message.channel.send(embed);
-
+  message.channel.send(embed)
+    .then()
+    .catch(console.error);
+  return;
 };

@@ -44,10 +44,20 @@ module.exports = async (client, message) => {
   if (!command) return;
 
   if (command.guildOnly && message.channel.type != "text")
-    return message.channel.send(botspeech.guildOnlyCmd);
+  {
+    message.channel.send(botspeech.guildOnlyCmd)
+      .then()
+      .catch(console.error);
+    return;
+  }
 
   if (command.adminOnly && !ownerOrAdmin)
-    return message.channel.reply(botspeech.permNotFound);
+  {
+    message.reply(botspeech.permNotFound)
+      .then()
+      .catch(console.error);
+    return;
+  }
 
   if (!cooldowns.has(command.cmdName))
     cooldowns.set(command.cmdName, new Discord.Collection());
@@ -63,7 +73,10 @@ module.exports = async (client, message) => {
     if (now < expTime)
     {
       const timeLeft = (expTime - now) / 1000;
-      return message.reply(`Please wait ${timeLeft.toFixed(1)} more second(s) before re-using the \`${command.cmdName}\` command.`);
+      message.reply(`Please wait ${timeLeft.toFixed(1)} more second(s) before re-using the \`${command.cmdName}\` command.`)
+        .then()
+        .catch(console.error);
+      return;
     }
   }
 

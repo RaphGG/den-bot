@@ -17,5 +17,8 @@ const embedHelper = require("../modules/embedHelper.js");
 
 const run = (client, message) => {
   const embed = embedHelper.createEmbed("natures", client);
-  return message.channel.send(embed);
+  message.channel.send(embed)
+    .then()
+    .catch(console.error);
+  return;
 };

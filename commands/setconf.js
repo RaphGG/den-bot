@@ -62,7 +62,10 @@ const run = (client, message, args, settings) => {
       console.error(error);
     }
 
-    return message.channel.send(botspeech.addChannels.replace(/{{channels}}/g, addedChannels.join(", ")));
+    message.channel.send(botspeech.addChannels.replace(/{{channels}}/g, addedChannels.join(", ")))
+      .then()
+      .catch(console.error);
+    return;
   }
 
   else if (typeof settings[prop] == 'undefined')
@@ -79,7 +82,10 @@ const run = (client, message, args, settings) => {
     console.error(error);
   }
 
-  return message.channel.send(`Guild configuration item ${prop} has been set to: \n\`${value.join(" ")}\``);
+  message.channel.send(`Guild configuration item ${prop} has been set to: \n\`${value.join(" ")}\``)
+    .then()
+    .catch(console.error);
+  return;
 };
 
 // Set Guild Specific Configurations Command Handler:

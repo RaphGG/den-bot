@@ -38,6 +38,9 @@ const run = (client, message) => {
     console.error(error);
   }
 
-  return message.channel.send(botspeech.configReset);
+  message.channel.send(botspeech.configReset)
+    .then()
+    .catch(console.error);
+  return;
 
 };

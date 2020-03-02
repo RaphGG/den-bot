@@ -22,13 +22,23 @@ const run = (client, message, args) => {
 
   // isBotOwner
   if (!(message.author.id == client.config.owner))
-    return message.reply(botspeech.permNotFound);
+  {
+    message.reply(botspeech.permNotFound)
+      .then()
+      .catch(console.error);
+    return;
+  }
 
   const commandName = args[0];
 
   // Check if the command exists and is valid
   if (!client.commands.has(commandName))
-    return message.reply(botspeech.commandNotFound);
+  {
+    message.reply(botspeech.commandNotFound)
+      .then()
+      .catch(console.error);
+    return;
+  }
 
   else
   {
@@ -36,6 +46,8 @@ const run = (client, message, args) => {
     client.commands.delete(commandName);
     const props = require(`./${commandName}.js`);
     client.commands.set(commandName, props);
-    message.reply(`The command ${commandName} has been reloaded.`);
+    message.reply(`The command ${commandName} has been reloaded.`)
+      .then()
+      .catch(console.error);
   }
 };
