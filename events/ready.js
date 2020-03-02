@@ -2,6 +2,7 @@ const botspeech = require("../modules/botspeech.js");
 const DBL = require("dblapi.js");
 
 module.exports = (client) => {
+  /*
   const dbl = new DBL(client.config.tokenDBL, client);
   dbl.on("posted", () => (console.log("Server count posted!")));
 
@@ -15,7 +16,7 @@ module.exports = (client) => {
   setInterval(() => {
     dbl.postStats(client.guilds.size);
   }, 1800 * 1000);
-
+  */
   return console.log("I am ready!");
 };
 

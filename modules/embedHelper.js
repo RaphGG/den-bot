@@ -1,4 +1,4 @@
-const { RichEmbed } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const botspeech = require("./botspeech.js");
 const pokelists = require("../data/lists.js");
 // TODO: Finish Comments.
@@ -137,7 +137,7 @@ const imageFinder = (pkmnObj) => {
 // what message to create. Args may be [pkmnObj], [pkmnObj, bestBalls].
 // TODO: Finish this method.
 exports.createEmbed = (flag, client, args) => {
-  const embed = new RichEmbed();
+  const embed = new MessageEmbed();
   embed.setFooter(footerCred, client.user.avatarURL);
 
   if (flag == "top4")
