@@ -56,18 +56,6 @@ The bot has a selection of configuration settings that can be changed by the ser
   
   ___
 
-  `%setconf adminroles (Admin Role 1, Admin Role 2, Etc.)`
-  
-  Allows specified roles to access Alcremie-B's admin only commands (setconf, showconf, resetconf, ping): `%setconf adminroles Admin Role 1, Admin Role 2`
-  
-  ___
-
-  `%setconf pingroles (Ping Role 1, Ping Role 2, Etc.)` (Obsolete following newest Discord Update)
-  
-  Allows specified roles to be pinged by the `%ping` command: `%setconf pingroles Ping Role 1`
-  
-  ___
-
 The following is what `%showconf` would look like after performing each of the above example commands:
 
 ```json
@@ -85,25 +73,7 @@ The following is what `%showconf` would look like after performing each of the a
    "name": "botspam",
    "id": "ID#"
   }
- ],
- "roles": {
-  "adminroles": [
-   {
-    "name": "Admin Role 1",
-    "id": "ID#"
-   },
-   {
-    "name": "Admin Role 2",
-    "id": "ID#"
-   }
-  ],
-  "pingroles": [
-    {
-      "name": "Ping Role 1",
-      "id": "ID#"
-    }
-  ]
- }
+ ]
 }
 
 ```
