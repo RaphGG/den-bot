@@ -20,7 +20,6 @@ module.exports = (client) => {
 };
 
 const setPresence = async (client, num) => {
-  console.log(num);
   switch (num)
   {
     case 0:
