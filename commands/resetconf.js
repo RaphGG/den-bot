@@ -39,7 +39,7 @@ const run = (client, message) => {
   }
 
   message.channel.send(botspeech.configReset)
-    .then(console.log)
+    .then()
     .catch(console.error);
   return;
 

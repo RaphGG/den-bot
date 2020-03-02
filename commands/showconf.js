@@ -18,7 +18,7 @@ const run = (message, settings) => {
   const configProps = JSON.stringify(settings, null, 1);
 
   message.channel.send(`The following are the server's current configurations:\n\`\`\`json\n${configProps}\`\`\``)
-    .then(console.log)
+    .then()
     .catch(console.error);
   return;
 };

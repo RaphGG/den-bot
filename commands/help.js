@@ -22,7 +22,7 @@ const run = (client, message, args, settings) => {
   {
     const embed = embedHelper.createEmbed("help", client, settings.prefix);
     message.channel.send(embed)
-      .then(console.log)
+      .then()
       .catch(console.error);
     return;
   }
@@ -33,14 +33,14 @@ const run = (client, message, args, settings) => {
   if (!command)
   {
     message.channel.send(botspeech.cmdNotFound)
-      .then(console.log)
+      .then()
       .catch(console.error);
     return;
   }
 
   const embed = embedHelper.createEmbed("helpcmd", client, [command, settings.prefix]);
   message.channel.send(embed)
-    .then(console.log)
+    .then()
     .catch(console.error);
   return;
 };

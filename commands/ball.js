@@ -23,7 +23,7 @@ const run = (client, message, args) => {
   if (!ball)
   {
     message.channel.send(botspeech.ballNotFound)
-      .then(console.log)
+      .then()
       .catch(console.error);
 
     return;
@@ -31,7 +31,7 @@ const run = (client, message, args) => {
 
   const embed = embedHelper.createEmbed("ballinfo", client, ball);
   message.channel.send(embed)
-    .then(console.log)
+    .then()
     .catch(console.error);
 
   return;

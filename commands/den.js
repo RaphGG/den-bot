@@ -31,7 +31,7 @@ const run = (client, message, args, settings) => {
   {
     const embed = embedHelper.createEmbed("den", client, den);
     message.channel.send(embed)
-      .then(console.log)
+      .then()
       .catch(console.error);
     return;
   }
@@ -42,14 +42,14 @@ const run = (client, message, args, settings) => {
     if (pkmn.dens.sword.length == 0 && pkmn.dens.shield.length == 0)
     {
       message.channel.send(`**${pkmn.name}** is not in any current dens.`)
-        .then(console.log)
+        .then()
         .catch(console.error);
       return;
     }
 
     const embed = embedHelper.createEmbed("denPkmn", client, [pkmnObj, pokedata.dens]);
     message.channel.send(embed)
-      .then(console.log)
+      .then()
       .catch(console.error);
     return;
   }
@@ -57,7 +57,7 @@ const run = (client, message, args, settings) => {
   else
   {
     message.channel.send(botspeech.denNoArg)
-      .then(console.log)
+      .then()
       .catch(console.error);
     return;
   }

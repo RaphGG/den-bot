@@ -28,7 +28,7 @@ const run = (client, message, args, settings) => {
   if (pkmnObj)
   {
     message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj))
-      .then(console.log)
+      .then()
       .catch(console.error);
     return;
   }
@@ -36,7 +36,7 @@ const run = (client, message, args, settings) => {
   else
   {
     message.channel.send(botspeech.pkmnNotFound)
-      .then(console.log)
+      .then()
       .catch(console.error);
     return;
   }

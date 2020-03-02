@@ -22,6 +22,6 @@ const run = (client, message) => {
   const responseTime = Math.round(Date.now() - message.createdTimestamp);
 
   message.channel.send(`API Ping: \`${apiPing}ms\`\nResponse Time: \`${responseTime}ms\``)
-    .then(console.log)
+    .then()
     .catch(console.error);
 };

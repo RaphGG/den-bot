@@ -34,7 +34,7 @@ const run = (client, message, args, settings) => {
     if (!pkmnObj)
     {
       message.channel.send(botspeech.pkmnNotFound)
-        .then(console.log)
+        .then()
         .catch(console.error);
       return;
     }
@@ -43,7 +43,7 @@ const run = (client, message, args, settings) => {
     {
       calc.bestBall(pkmnObj, ball);
       message.channel.send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]))
-        .then(console.log)
+        .then()
         .catch(console.error);
       return;
     }
@@ -57,7 +57,7 @@ const run = (client, message, args, settings) => {
     if (!pkmnObj)
     {
       message.channel.send(botspeech.ballOrPkmnNotFound)
-        .then(console.log)
+        .then()
         .catch(console.error);
       return;
     }
@@ -67,7 +67,7 @@ const run = (client, message, args, settings) => {
       const bestBalls = calc.bestBalls(pkmnObj);
       const embed = embedHelper.createEmbed("top4", client, [pkmnObj, bestBalls]);
       message.channel.send(embed)
-        .then(console.log)
+        .then()
         .catch(console.error);
       return;
     }

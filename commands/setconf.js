@@ -63,7 +63,7 @@ const run = (client, message, args, settings) => {
     }
 
     message.channel.send(botspeech.addChannels.replace(/{{channels}}/g, addedChannels.join(", ")))
-      .then(console.log)
+      .then()
       .catch(console.error);
     return;
   }
@@ -83,7 +83,7 @@ const run = (client, message, args, settings) => {
   }
 
   message.channel.send(`Guild configuration item ${prop} has been set to: \n\`${value.join(" ")}\``)
-    .then(console.log)
+    .then()
     .catch(console.error);
   return;
 };

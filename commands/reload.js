@@ -24,7 +24,7 @@ const run = (client, message, args) => {
   if (!(message.author.id == client.config.owner))
   {
     message.reply(botspeech.permNotFound)
-      .then(console.log)
+      .then()
       .catch(console.error);
     return;
   }
@@ -35,7 +35,7 @@ const run = (client, message, args) => {
   if (!client.commands.has(commandName))
   {
     message.reply(botspeech.commandNotFound)
-      .then(console.log)
+      .then()
       .catch(console.error);
     return;
   }
@@ -47,7 +47,7 @@ const run = (client, message, args) => {
     const props = require(`./${commandName}.js`);
     client.commands.set(commandName, props);
     message.reply(`The command ${commandName} has been reloaded.`)
-      .then(console.log)
+      .then()
       .catch(console.error);
   }
 };
