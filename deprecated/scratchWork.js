@@ -21,6 +21,21 @@ fs.writeFileSync("./data/test.json", newdata);
 /*
 
 
+const botspeech = require("../modules/botspeech.js");
+const DBL = require("dblapi.js");
+
+module.exports = (client, message) => {
+  const dbl = new DBL(client.config.tokenDBL, client);
+  dbl.hasVoted(message.author.id)
+    .then(voted => (voted))
+    .then(voted => {
+      if (voted) return message.reply(botspeech.voted);
+
+      return message.channel.send(botspeech.noVote);
+    })
+    .catch(console.error);
+};
+
 const presenceCycle = (client, num) => {
   setTimeout(() => {
     setRandomPresence(client, num);
