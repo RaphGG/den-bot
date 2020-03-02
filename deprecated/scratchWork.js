@@ -20,6 +20,13 @@ fs.writeFileSync("./data/test.json", newdata);
 
 /*
 
+
+const presenceCycle = (client, num) => {
+  setTimeout(() => {
+    setRandomPresence(client, num);
+    presenceCycle(client, ++num % 3);
+  }, 120 * 1000);
+};
   if (message.channel.type == 'dm')
   {
     if (!message.content.startsWith('%')) return;

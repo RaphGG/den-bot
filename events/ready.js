@@ -1,28 +1,39 @@
 const botspeech = require("../modules/botspeech.js");
+const DBL = require("dblapi.js");
 
 module.exports = (client) => {
-  setRandomPresence(client, 0);
+  const dbl = new DBL(client.config.tokenDBL, client);
+  dbl.on("posted", () => (console.log("Server count posted!")));
 
-  presenceCycle(client, 1);
+  let num = -1;
+  setPresence(client, 0);
+  setInterval(() => {
+    setPresence(client, ++num%4);
+  }, 120 * 1000);
+
+  dbl.postStats(client.guilds.size);
+  setInterval(() => {
+    dbl.postStats(client.guilds.size);
+  }, 1800 * 1000);
 
   return console.log("I am ready!");
 };
 
-const presenceCycle = (client, num) => {
-  setTimeout(() => {
-    setRandomPresence(client, num);
-    presenceCycle(client, ++num % 3);
-  }, 120 * 1000);
-};
-
-const setRandomPresence = (client, num) => {
+const setPresence = async (client, num) => {
+  console.log(num);
   switch (num)
   {
     case 0:
-      return client.user.setActivity(botspeech.presenceSmiles.replace(/{{count}}/, client.guilds.size));
+      await client.user.setActivity(botspeech.presenceSmiles.replace(/{{count}}/, client.guilds.size), { type:"PLAYING" });
+      return;
     case 1:
-      return client.user.setActivity(botspeech.presenceChannels.replace(/{{count}}/, client.channels.size));
+      await client.user.setActivity(botspeech.presenceChannels.replace(/{{count}}/, client.channels.size), { type:"WATCHING" });
+      return;
     case 2:
-      return client.user.setActivity(botspeech.presenceUsers.replace(/{{count}}/, client.users.size));
+      await client.user.setActivity(botspeech.presenceUsers.replace(/{{count}}/, client.users.size), { type:"PLAYING" });
+      return;
+    case 3:
+      await client.user.setActivity(botspeech.presenceInvite, { type:"LISTENING" });
+      return;
   }
 };

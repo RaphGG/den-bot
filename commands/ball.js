@@ -21,9 +21,18 @@ const run = (client, message, args) => {
 
   const ball = pokedata.fetch("ball", args);
   if (!ball)
-    return message.channel.send(botspeech.ballNotFound);
+  {
+    message.channel.send(botspeech.ballNotFound)
+      .then(console.log)
+      .catch(console.error);
+
+    return;
+  }
 
   const embed = embedHelper.createEmbed("ballinfo", client, ball);
+  message.channel.send(embed)
+    .then(console.log)
+    .catch(console.error);
 
-  return message.channel.send(embed);
+  return;
 };

@@ -32,12 +32,20 @@ const run = (client, message, args, settings) => {
     args.pop();
     const pkmnObj = pokedata.fetch("pkmn", args, settings);
     if (!pkmnObj)
-      return message.channel.send(botspeech.pkmnNotFound);
+    {
+      message.channel.send(botspeech.pkmnNotFound)
+        .then(console.log)
+        .catch(console.error);
+      return;
+    }
 
     else
     {
       calc.bestBall(pkmnObj, ball);
-      return message.channel.send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]));
+      message.channel.send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]))
+        .then(console.log)
+        .catch(console.error);
+      return;
     }
   }
 
@@ -47,13 +55,21 @@ const run = (client, message, args, settings) => {
     // Catch Rate Embed.
     const pkmnObj = pokedata.fetch("pkmn", args, settings);
     if (!pkmnObj)
-      return message.channel.send(botspeech.ballOrPkmnNotFound);
+    {
+      message.channel.send(botspeech.ballOrPkmnNotFound)
+        .then(console.log)
+        .catch(console.error);
+      return;
+    }
 
     else
     {
       const bestBalls = calc.bestBalls(pkmnObj);
       const embed = embedHelper.createEmbed("top4", client, [pkmnObj, bestBalls]);
-      return message.channel.send(embed);
+      message.channel.send(embed)
+        .then(console.log)
+        .catch(console.error);
+      return;
     }
   }
 };

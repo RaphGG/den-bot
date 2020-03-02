@@ -48,8 +48,10 @@ exports.inviteDescription = "Thank you so much for wanting Alcremie-B in your se
 
 // Presences
 exports.presenceSmiles = "Serving up smiles in {{count}} guilds!";
-exports.presenceChannels = "Watching max raid battles in {{count}} channels!";
-exports.presenceUsers = "Playing Pokèmon Sword and Shield with {{count}} trainers!";
+exports.presenceChannels = "Max Raid Battles in {{count}} channels!";
+exports.presenceUsers = "Pokèmon Sword and Shield with {{count}} trainers!";
+exports.presenceInvite = "Use %invite to invite me to your server!";
+
 
 /*
 Dilapidated
@@ -68,6 +70,13 @@ exports.noRolesAdded = "```No roles have been added and/or found.```";
 exports.configNoChange = "```These configuration setting cannot be changed.```";
 exports.rolePlacement = "The {{role}} role may be below this Alcremie-B's bot role. Please make sure Alcremie-B has the manage roles permission and that her role is above {{role}} to be able to ping it.";
 
+const presenceSmiles = { name: "Serving up smiles in {{count}} guilds!", type:"PLAYING" };
+
+const presenceChannels = { name:"Max Raid Battles in {{count}} channels!", type:"WATCHING" };
+const presenceUsers = { name:"Pokèmon Sword and Shield with {{count}} trainers!", type:"PLAYING" };
+const presenceInvite = { name:"Use %invite to invite me to your server!", type:"LISTENING" };
+
+exports.presences = [presenceSmiles, presenceChannels, presenceUsers, presenceInvite];
 */
 
 // Not Yet Implemented

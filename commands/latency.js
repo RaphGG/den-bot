@@ -21,5 +21,7 @@ const run = (client, message) => {
   // This will round the response time between when the message was received and when the message was sent
   const responseTime = Math.round(Date.now() - message.createdTimestamp);
 
-  message.channel.send(`API Ping: \`${apiPing}ms\`\nResponse Time: \`${responseTime}ms\``);
+  message.channel.send(`API Ping: \`${apiPing}ms\`\nResponse Time: \`${responseTime}ms\``)
+    .then(console.log)
+    .catch(console.error);
 };

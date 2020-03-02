@@ -26,8 +26,18 @@ const run = (client, message, args, settings) => {
   const pkmnObj = pokedata.fetch("pkmn", args, settings);
 
   if (pkmnObj)
-    return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj));
+  {
+    message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj))
+      .then(console.log)
+      .catch(console.error);
+    return;
+  }
 
   else
-    return message.channel.send(botspeech.pkmnNotFound);
+  {
+    message.channel.send(botspeech.pkmnNotFound)
+      .then(console.log)
+      .catch(console.error);
+    return;
+  }
 };
