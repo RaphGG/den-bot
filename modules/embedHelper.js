@@ -19,14 +19,11 @@ const edgecases = ["Mr Mime", "Mr Rime", "Galarian Mr Mime"];
 
 // Color finder using json pkmn's type.
 const colorFinder = (pkmn) => {
-  const color = pkmnEmbedColors.find(x => {
-    return x.type == pkmn.type1;
-  });
-  if (!color)
-    return 12236497;
+  const type = pokelists.types.find(t => (pkmn.type1 == t.name));
+  console.log(type);
+  if (!type) return 12236497;
 
-  else
-    return color.color;
+  return type.color;
 };
 
 // Image finder using the shiny & cosmetic form properties of the
