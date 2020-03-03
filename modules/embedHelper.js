@@ -29,7 +29,7 @@ const colorFinder = (pkmn) => {
 // Image finder using the shiny & cosmetic form properties of the
 // pkmnObj. Utilizes pkparaiso's & project pokemon's sprites at
 // the moment. Subject to change [TODO].
-const imageFinder = (pkmnObj) => {
+exports.imageFinder = (pkmnObj) => {
   let name = pkmnObj.pkmn.name.replace(/[^A-Za-z0-9 ]/gi, "").replace(/ /gi, "-").toLowerCase();
   // console.log(name);
 
@@ -72,7 +72,7 @@ exports.createEmbed = (flag, client, args) => {
     const gmax = pkmnObj.form == "Gigantamax";
     const description = gmax? `The best balls for catching G-Max ${pkmnObj.pkmn.name} are:` : `The best balls for catching ${pkmnObj.pkmn.name} are:`;
 
-    embed.setImage(imageFinder(pkmnObj));
+    embed.setImage(this.imageFinder(pkmnObj));
     embed.setColor(colorFinder(pkmnObj.pkmn));
 
     embed.setTitle("Best Catch Rates");
@@ -114,7 +114,7 @@ exports.createEmbed = (flag, client, args) => {
       emoji = ball.assumption? "✅" : "⛔";
 
     embed.setDescription(`Ball condition met: ${emoji}` + `${promo}`);
-    embed.setThumbnail(imageFinder(pkmnObj));
+    embed.setThumbnail(this.imageFinder(pkmnObj));
     embed.setColor(colorFinder(pkmnObj.pkmn));
 
     return embed;
@@ -127,7 +127,7 @@ exports.createEmbed = (flag, client, args) => {
 
     // Edge Color & Image
     embed.setColor(colorFinder(pkmn));
-    embed.setImage(imageFinder(args));
+    embed.setImage(this.imageFinder(args));
 
     // Types (Title)
     const type1 = client.emojis.find(x => (x.name == `Type${pkmn.type1}`));
@@ -276,7 +276,7 @@ exports.createEmbed = (flag, client, args) => {
     const swordFltr = denArr.filter(den => (pkmn.dens.sword.includes(den.den)));
 
     embed.setColor(colorFinder(pkmn));
-    embed.setThumbnail(imageFinder(pkmnObj));
+    embed.setThumbnail(this.imageFinder(pkmnObj));
 
     let shieldHa = [];
     let swordHa = [];
@@ -399,6 +399,140 @@ exports.createEmbed = (flag, client, args) => {
     embed.setTitle("Pokémon Natures Chart: (From Bulbapedia)");
     embed.setURL("https://bulbapedia.bulbagarden.net/wiki/Nature");
     embed.setImage("https://raphgg.github.io/den-bot/data/icons/natures.PNG");
+
+    return embed;
+  }
+
+  else if (flag == "types")
+  {
+    const type1 = args[0];
+    const type2 = args[1];
+
+    const atktimes4 = [];
+    const atktimes2 = [];
+    const atktimes1 = [];
+    const atktimes0 = [];
+    const atktimes05 = [];
+    const atktimes025 = [];
+
+    const deftimes4 = [];
+    const deftimes2 = [];
+    const deftimes1 = [];
+    const deftimes0 = [];
+    const deftimes05 = [];
+    const deftimes025 = [];
+
+    embed.setTitle(type1.name);
+    embed.setColor(type1.color);
+
+    Object.keys(type1.atk).forEach(prop => {
+      if (type2)
+      {
+        switch (type1.atk[prop] * type2.atk[prop])
+        {
+          case 4:
+            atktimes4.push(prop);
+            break;
+          case 2:
+            atktimes2.push(prop);
+            break;
+          case 1:
+            atktimes1.push(prop);
+            break;
+          case 0:
+            atktimes0.push(prop);
+            break;
+          case 0.5:
+            atktimes05.push(prop);
+            break;
+          case 0.25:
+            atktimes025.push(prop);
+            break;
+        }
+      }
+      else
+      {
+        switch (type1.atk[prop])
+        {
+          case 4:
+            atktimes4.push(prop);
+            break;
+          case 2:
+            atktimes2.push(prop);
+            break;
+          case 1:
+            atktimes1.push(prop);
+            break;
+          case 0:
+            atktimes0.push(prop);
+            break;
+          case 0.5:
+            atktimes05.push(prop);
+            break;
+          case 0.25:
+            atktimes025.push(prop);
+            break;
+        }
+      }
+    });
+
+    Object.keys(type1.def).forEach(prop => {
+      if (type2)
+      {
+        switch (type1.def[prop] * type2.def[prop])
+        {
+          case 4:
+            deftimes4.push(prop);
+            break;
+          case 2:
+            deftimes2.push(prop);
+            break;
+          case 1:
+            deftimes1.push(prop);
+            break;
+          case 0:
+            deftimes0.push(prop);
+            break;
+          case 0.5:
+            deftimes05.push(prop);
+            break;
+          case 0.25:
+            deftimes025.push(prop);
+            break;
+        }
+      }
+      else
+      {
+        switch (type1.def[prop])
+        {
+          case 4:
+            deftimes4.push(prop);
+            break;
+          case 2:
+            deftimes2.push(prop);
+            break;
+          case 1:
+            deftimes1.push(prop);
+            break;
+          case 0:
+            deftimes0.push(prop);
+            break;
+          case 0.5:
+            deftimes05.push(prop);
+            break;
+          case 0.25:
+            deftimes025.push(prop);
+            break;
+        }
+      }
+    });
+
+    const off = `4x: \`${atktimes4.join(" ")}\` \n2x: \`${atktimes2}\` \n1x: \`${atktimes1}\` \n0x: \`${atktimes0}\` \n0.5x: \`${atktimes05}\` \n0.25x: \`${atktimes025}\``;
+    const def = `4x: \`${deftimes4}\` \n2x: \`${deftimes2}\` \n1x: \`${deftimes1}\` \n0x: \`${deftimes0}\` \n0.5x: \`${deftimes05}\` \n0.25x: \`${deftimes025}\``;
+
+    embed.addField("Offensive:", off);
+
+    embed.addField("Defensive:", def);
 
     return embed;
   }

@@ -2833,7 +2833,7 @@ exports.types = [
       Dark:1,
       Fairy:1
     },
-    color:11911871
+    color:10922870
   },
   {
     name:"Fire",
@@ -2877,7 +2877,7 @@ exports.types = [
       Dark:1,
       Fairy:0.5
     },
-    color:16714481
+    color:16724480
   },
   {
     name:"Water",
@@ -2921,7 +2921,7 @@ exports.types = [
       Dark:1,
       Fairy:1
     },
-    color:6916183
+    color:6916083
   },
   {
     name:"Grass",
@@ -2965,7 +2965,7 @@ exports.types = [
       Dark:1,
       Fairy:1
     },
-    color:4771433
+    color:4772433
   },
   {
     name:"Electric",
@@ -3053,7 +3053,7 @@ exports.types = [
       Dark:2,
       Fairy:1
     },
-    color:16714351
+    color:16724352
   },
   {
     name:"Ice",
@@ -3185,7 +3185,7 @@ exports.types = [
       Dark:0.5,
       Fairy:2
     },
-    color:7614774
+    color:7624774
   },
   {
     name:"Fairy",
@@ -3229,7 +3229,7 @@ exports.types = [
       Dark:0.5,
       Fairy:1
     },
-    color:16714178
+    color:16724178
   },
   {
     name:"Fighting",
@@ -3273,7 +3273,7 @@ exports.types = [
       Dark:0.5,
       Fairy:2
     },
-    color:11197114
+    color:10297114
   },
   {
     name:"Flying",
@@ -3317,7 +3317,7 @@ exports.types = [
       Dark:1,
       Fairy:1
     },
-    color:11831111
+    color:11830002
   },
   {
     name:"Poison",
@@ -3361,7 +3361,7 @@ exports.types = [
       Dark:1,
       Fairy:0.5
     },
-    color:11671944
+    color:11670944
   },
   {
     name:"Ground",
@@ -3405,7 +3405,7 @@ exports.types = [
       Dark:1,
       Fairy:1
     },
-    color:14991114
+    color:14992224
   },
   {
     name:"Rock",
@@ -3449,7 +3449,7 @@ exports.types = [
       Dark:1,
       Fairy:1
     },
-    color:11131713
+    color:12231723
   },
   {
     name:"Bug",
@@ -3493,7 +3493,7 @@ exports.types = [
       Dark:1,
       Fairy:1
     },
-    color:11413595
+    color:10403595
   },
   {
     name:"Ghost",
@@ -3581,7 +3581,7 @@ exports.types = [
       Dark:1,
       Fairy:0.5
     },
-    color:11136497
+    color:12236497
   }
 ];
 

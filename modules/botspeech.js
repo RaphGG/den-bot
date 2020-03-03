@@ -5,6 +5,7 @@ exports.ballOrPkmnNotFound = "```Either the Pokèmon, Pokè-Ball, or both reques
 exports.cmdNotFound = "```The requested command was not found.```";
 exports.permNotFound = "you do not have the permissions to use this command.";
 exports.guildConfNotFound = "```The requested guild configuration setting was not found.```";
+exports.typesNotFound == "```The requested type(s) was not found.```";
 
 // User Interface Messages
 exports.requiredPrefix = "```Please enter a Non-Alphanumeric prefix to be used with the bot.```";
@@ -21,6 +22,8 @@ exports.denNoArg = "```Please enter either a Den Number or a Pokémon to fetch.`
 exports.pokedexNoArg = "```Please enter a Pokèmon name.```";
 exports.reloadNoArg = "```Please enter a command to reload.```";
 exports.setconfNoArg = "```Please enter a configuration property to set followed by the desired setting.```";
+exports.spriteNoArg = "```Please enter a Pokémon name.```";
+exports.typeNoArg = "```Please enter a Pokémon type.```";
 
 // Help Commands
 exports.userCommands = "{{prefix}}help (Command)\n{{prefix}}invite\n{{prefix}}latency\n{{prefix}}credits";
