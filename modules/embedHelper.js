@@ -3,9 +3,6 @@ const botspeech = require("./botspeech.js");
 const pokelists = require("../data/lists.js");
 // TODO: Finish Comments.
 
-// Edge colors for Discord rich embed message. They correspond
-// to their respective type colors.
-
 
 // Footer credit for each embed the bot makes.
 const footerCred = "Alcremie-B - by Droopy";
@@ -20,10 +17,156 @@ const edgecases = ["Mr Mime", "Mr Rime", "Galarian Mr Mime"];
 // Color finder using json pkmn's type.
 const colorFinder = (pkmn) => {
   const type = pokelists.types.find(t => (pkmn.type1 == t.name));
-  console.log(type);
   if (!type) return 12236497;
 
   return type.color;
+};
+
+const typeValues = (type1, type2) => {
+  let atktimes4 = "";
+  let atktimes2 = "";
+  // let atktimes1 = "";
+  let atktimes0 = "";
+  let atktimes05 = "";
+  let atktimes025 = "";
+
+  let atk2times4 = "";
+  let atk2times2 = "";
+  // let atk2times1 = "";
+  let atk2times0 = "";
+  let atk2times05 = "";
+  let atk2times025 = "";
+
+  let deftimes4 = "";
+  let deftimes2 = "";
+  // let deftimes1 = "";
+  let deftimes0 = "";
+  let deftimes05 = "";
+  let deftimes025 = "";
+
+  Object.keys(type1.atk).forEach(prop => {
+    const switchOn = type2? type1.def[prop] * type2.def[prop] : type1.def[prop];
+
+    switch (type1.atk[prop])
+    {
+      case 4:
+        atktimes4 += `${prop}, `;
+        break;
+      case 2:
+        atktimes2 += `${prop}, `;
+        break;
+      // case 1:
+        // atktimes1 += `${prop}, `;
+        // break;
+      case 0:
+        atktimes0 += `${prop}, `;
+        break;
+      case 0.5:
+        atktimes05 += `${prop}, `;
+        break;
+      case 0.25:
+        atktimes025 += `${prop}, `;
+        break;
+      default:
+        break;
+    }
+
+    if (type2)
+    {
+      switch (type2.atk[prop])
+      {
+        case 4:
+          atk2times4 += `${prop}, `;
+          break;
+        case 2:
+          atk2times2 += `${prop}, `;
+          break;
+        // case 1:
+          // atk2times1 += `${prop}, `;
+          // break;
+        case 0:
+          atk2times0 += `${prop}, `;
+          break;
+        case 0.5:
+          atk2times05 += `${prop}, `;
+          break;
+        case 0.25:
+          atk2times025 += `${prop}, `;
+          break;
+        default:
+          break;
+      }
+    }
+
+    switch (switchOn)
+    {
+      case 4:
+        deftimes4 += `${prop}, `;
+        break;
+      case 2:
+        deftimes2 += `${prop}, `;
+        break;
+      // case 1:
+        // deftimes1 += `${prop}, `;
+        // break;
+      case 0:
+        deftimes0 += `${prop}, `;
+        break;
+      case 0.5:
+        deftimes05 += `${prop}, `;
+        break;
+      case 0.25:
+        deftimes025 += `${prop}, `;
+        break;
+      default:
+        break;
+    }
+  });
+
+  atktimes4 = atktimes4 != ""? `4x: \`${atktimes4.slice(0, atktimes4.lastIndexOf(", "))}\`\n`:"";
+
+  atktimes2 = atktimes2 != ""? `2x: \`${atktimes2.slice(0, atktimes2.lastIndexOf(", "))}\`\n`:"";
+
+  // atktimes1 = atktimes1 != ""? `1x: \`${atktimes1.slice(0, atktimes1.lastIndexOf(", "))}\`\n`:"";
+
+  atktimes0 = atktimes0 != ""? `0x: \`${atktimes0.slice(0, atktimes0.lastIndexOf(", "))}\`\n`:"";
+
+  atktimes05 = atktimes05 != ""? `0.5x: \`${atktimes05.slice(0, atktimes05.lastIndexOf(", "))}\`\n`:"";
+
+  atktimes025 = atktimes025 != ""? `0.25x: \`${atktimes025.slice(0, atktimes025.lastIndexOf(", "))}\`\n`:"";
+
+  atk2times4 = atk2times4 != ""? `4x: \`${atk2times4.slice(0, atk2times4.lastIndexOf(", "))}\`\n`:"";
+
+  atk2times2 = atk2times2 != ""? `2x: \`${atk2times2.slice(0, atk2times2.lastIndexOf(", "))}\`\n`:"";
+
+  // atk2times1 = atk2times1 != ""? `1x: \`${atk2times1.slice(0, atk2times1.lastIndexOf(", "))}\`\n`:"";
+
+  atk2times0 = atk2times0 != ""? `0x: \`${atk2times0.slice(0, atk2times0.lastIndexOf(", "))}\`\n`:"";
+
+  atk2times05 = atk2times05 != ""? `0.5x: \`${atk2times05.slice(0, atk2times05.lastIndexOf(", "))}\`\n`:"";
+
+  atk2times025 = atk2times025 != ""? `0.25x: \`${atk2times025.slice(0, atk2times025.lastIndexOf(", "))}\`\n`:"";
+
+
+  deftimes4 = deftimes4 != ""? `4x: \`${deftimes4.slice(0, deftimes4.lastIndexOf(", "))}\`\n`:"";
+
+  deftimes2 = deftimes2 != ""? `2x: \`${deftimes2.slice(0, deftimes2.lastIndexOf(", "))}\`\n`:"";
+
+  // deftimes1 = deftimes1 != ""? `1x: \`${deftimes1.slice(0, deftimes1.lastIndexOf(", "))}\`\n`:"";
+
+  deftimes0 = deftimes0 != ""? `0x: \`${deftimes0.slice(0, deftimes0.lastIndexOf(", "))}\`\n`:"";
+
+  deftimes05 = deftimes05 != ""? `0.5x: \`${deftimes05.slice(0, deftimes05.lastIndexOf(", "))}\`\n`:"";
+
+  deftimes025 = deftimes025 != ""? `0.25x: \`${deftimes025.slice(0, deftimes025.lastIndexOf(", "))}\`\n`:"";
+
+  const off = `${atktimes4}${atktimes2}${atktimes0}${atktimes05}${atktimes025}`;
+
+  const off2 = `${atk2times4}${atk2times2}${atk2times0}${atk2times05}${atk2times025}`;
+
+  const def = `${deftimes4}${deftimes2}${deftimes0}${deftimes05}${deftimes025}`;
+
+  return { off1:off, off2:off2, def:def };
 };
 
 // Image finder using the shiny & cosmetic form properties of the
@@ -407,132 +550,21 @@ exports.createEmbed = (flag, client, args) => {
   {
     const type1 = args[0];
     const type2 = args[1];
-
-    const atktimes4 = [];
-    const atktimes2 = [];
-    const atktimes1 = [];
-    const atktimes0 = [];
-    const atktimes05 = [];
-    const atktimes025 = [];
-
-    const deftimes4 = [];
-    const deftimes2 = [];
-    const deftimes1 = [];
-    const deftimes0 = [];
-    const deftimes05 = [];
-    const deftimes025 = [];
-
-    embed.setTitle(type1.name);
+    const title = type2? `${type1.name} / ${type2.name}`: type1.name;
+    const offTitle = type2? `${type1.name} Offensive` : `Offensive`;
+    const off2Title = type2? `${type2.name} Offensive` : "";
+    embed.setTitle(title);
+    embed.setURL(`https://bulbapedia.bulbagarden.net/wiki/${type1.name}_(type)`);
     embed.setColor(type1.color);
 
-    Object.keys(type1.atk).forEach(prop => {
-      if (type2)
-      {
-        switch (type1.atk[prop] * type2.atk[prop])
-        {
-          case 4:
-            atktimes4.push(prop);
-            break;
-          case 2:
-            atktimes2.push(prop);
-            break;
-          case 1:
-            atktimes1.push(prop);
-            break;
-          case 0:
-            atktimes0.push(prop);
-            break;
-          case 0.5:
-            atktimes05.push(prop);
-            break;
-          case 0.25:
-            atktimes025.push(prop);
-            break;
-        }
-      }
-      else
-      {
-        switch (type1.atk[prop])
-        {
-          case 4:
-            atktimes4.push(prop);
-            break;
-          case 2:
-            atktimes2.push(prop);
-            break;
-          case 1:
-            atktimes1.push(prop);
-            break;
-          case 0:
-            atktimes0.push(prop);
-            break;
-          case 0.5:
-            atktimes05.push(prop);
-            break;
-          case 0.25:
-            atktimes025.push(prop);
-            break;
-        }
-      }
-    });
+    const typeVals = typeValues(type1, type2);
+    // console.log(typeVals);
 
-    Object.keys(type1.def).forEach(prop => {
-      if (type2)
-      {
-        switch (type1.def[prop] * type2.def[prop])
-        {
-          case 4:
-            deftimes4.push(prop);
-            break;
-          case 2:
-            deftimes2.push(prop);
-            break;
-          case 1:
-            deftimes1.push(prop);
-            break;
-          case 0:
-            deftimes0.push(prop);
-            break;
-          case 0.5:
-            deftimes05.push(prop);
-            break;
-          case 0.25:
-            deftimes025.push(prop);
-            break;
-        }
-      }
-      else
-      {
-        switch (type1.def[prop])
-        {
-          case 4:
-            deftimes4.push(prop);
-            break;
-          case 2:
-            deftimes2.push(prop);
-            break;
-          case 1:
-            deftimes1.push(prop);
-            break;
-          case 0:
-            deftimes0.push(prop);
-            break;
-          case 0.5:
-            deftimes05.push(prop);
-            break;
-          case 0.25:
-            deftimes025.push(prop);
-            break;
-        }
-      }
-    });
+    embed.addField(offTitle, typeVals.off1);
 
-    const off = `4x: \`${atktimes4.join(" ")}\` \n2x: \`${atktimes2}\` \n1x: \`${atktimes1}\` \n0x: \`${atktimes0}\` \n0.5x: \`${atktimes05}\` \n0.25x: \`${atktimes025}\``;
-    const def = `4x: \`${deftimes4}\` \n2x: \`${deftimes2}\` \n1x: \`${deftimes1}\` \n0x: \`${deftimes0}\` \n0.5x: \`${deftimes05}\` \n0.25x: \`${deftimes025}\``;
+    if (type2) embed.addField(off2Title, typeVals.off2);
 
-    embed.addField("Offensive:", off);
-
-    embed.addField("Defensive:", def);
+    embed.addField("Defensive:", typeVals.def);
 
     return embed;
   }

@@ -121,7 +121,7 @@ exports.fetch = (flag, args, settings) => {
       .split(" ");
 
     const type1 = pokelists.types.find(type => (type.name.toLowerCase() == str[0]));
-    console.log(`type1: \n${type1}`);
+    // console.log(`type1: \n${type1}`);
 
     if (!type1) return null;
 
@@ -130,7 +130,7 @@ exports.fetch = (flag, args, settings) => {
     else
     {
       const type2 = pokelists.types.find(type => (type.name.toLowerCase() == str[1]));
-      console.log(`type2: \n${type2}`);
+      // console.log(`type2: \n${type2}`);
 
       if (!type2) return [type1];
 

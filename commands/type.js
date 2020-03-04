@@ -15,9 +15,17 @@ module.exports = {
 
 const embedHelper = require("../modules/embedHelper.js");
 const pokedata = require("../modules/pokedata.js");
+const botspeech = require("../modules/botspeech.js");
 
 const run = (client, message, args, settings) => {
   const types = pokedata.fetch("types", args, settings);
+  if (!types)
+  {
+    message.channel.send(botspeech.typesNotFound)
+      .then()
+      .catch(console.error);
+    return;
+  }
   const embed = embedHelper.createEmbed("types", client, types);
 
   message.channel.send(embed)
