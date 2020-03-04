@@ -26,7 +26,8 @@ A Pokèmon statistics Discord bot with the intended purpose of facilitating Max 
 | `%pokedex`    | `[Pokèmon]`              | Shows a detailed summary of a Pokèmon's latest Statistics (Gen 8 / Gen 7)  |
 | `%ball`       | `[Ball]`                 | Shows a summary of a Poké-Ball's statistics                                |
 | `%natures`    |                          | Displays an in-depth Pokémon natures chart from Bulbapedia                 |
-| `%ping`       | `[Role]`                 | Pings the specified role without setting it to be pingable by everyone     |
+| `%sprite`     |                          | Displays a Pokèmon's latest in-game sprite                                 |
+| `%types`      |                          | Displays an in-depth type effectiveness chart                              |
 | `%showconf`   |                          | Displays the server's current bot settings in a JSON Format                |
 | `%setconf`    | `[Setting] [Value(s)]`   | Sets the specified setting's value(s)                                      |
 | `%resetconf`  |                          | Resets the server's current bot settings to default                        |
