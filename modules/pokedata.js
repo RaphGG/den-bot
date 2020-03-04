@@ -111,6 +111,32 @@ exports.fetch = (flag, args, settings) => {
     const denreg = new RegExp(str, "gi");
     return dens.find(den => (denreg.test(den.den)));
   }
+
+  else if (flag == "types")
+  {
+    const str = args
+      .join(" ")
+      .replace(/[^A-Za-z0-9 ]/gi, "")
+      .toLowerCase()
+      .split(" ");
+
+    const type1 = pokelists.types.find(type => (type.name.toLowerCase() == str[0]));
+    // console.log(`type1: \n${type1}`);
+
+    if (!type1) return null;
+
+    else if (args.length < 2) return [type1];
+
+    else
+    {
+      const type2 = pokelists.types.find(type => (type.name.toLowerCase() == str[1]));
+      // console.log(`type2: \n${type2}`);
+
+      if (!type2) return [type1];
+
+      else return [type1, type2];
+    }
+  }
 };
 
 exports.balls = balls;

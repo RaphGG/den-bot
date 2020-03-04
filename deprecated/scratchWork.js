@@ -1,3 +1,350 @@
+const types = [
+  normal = ,
+  fighting = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  flying = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  poison = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  ground = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  rock = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  bug = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  ghost = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  steel = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  fire = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  water = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  grass = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  electric = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  psychic = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  ice = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  dragon = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  dark = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+  fairy = {
+normal:1,
+fighting:1,
+flying:1,
+poison:1,
+ground:1,
+rock:0.5,
+bug:1,
+ghost:0,
+steel:0.5,
+fire:1,
+water:1,
+grass:1,
+electric:1,
+psychic:1,
+ice:1,
+dragon:1,
+dark:1,
+fairy:1
+  },
+];
+
+
+/*
+
 const fs = require("fs");
 const pokelists = require("../data/lists.js");
 
@@ -18,152 +365,149 @@ let newdata = JSON.stringify(p);
 fs.writeFileSync("./data/test.json", newdata);
 
 
-/*
-
-
 const botspeech = require("../modules/botspeech.js");
 const DBL = require("dblapi.js");
 
 module.exports = (client, message) => {
   const dbl = new DBL(client.config.tokenDBL, client);
   dbl.hasVoted(message.author.id)
-    .then(voted => (voted))
-    .then(voted => {
-      if (voted) return message.reply(botspeech.voted);
+.then(voted => (voted))
+.then(voted => {
+  if (voted) return message.reply(botspeech.voted);
 
-      return message.channel.send(botspeech.noVote);
-    })
-    .catch(console.error);
+  return message.channel.send(botspeech.noVote);
+})
+.catch(console.error);
 };
 
 const presenceCycle = (client, num) => {
   setTimeout(() => {
-    setRandomPresence(client, num);
-    presenceCycle(client, ++num % 3);
+setRandomPresence(client, num);
+presenceCycle(client, ++num % 3);
   }, 120 * 1000);
 };
   if (message.channel.type == 'dm')
   {
-    if (!message.content.startsWith('%')) return;
-    // console.log(`Inside a dm with message: ${message.content}`);
-    const args = message.content.slice(1).trim().split(/ /g);
-    const commandName = args.shift().toLowerCase();
-    // console.log(`Inside a dm with commandName: ${commandName}`);
+if (!message.content.startsWith('%')) return;
+// console.log(`Inside a dm with message: ${message.content}`);
+const args = message.content.slice(1).trim().split(/ /g);
+const commandName = args.shift().toLowerCase();
+// console.log(`Inside a dm with commandName: ${commandName}`);
 
-    const command = client.commands.get(commandName)
-      || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+const command = client.commands.get(commandName)
+  || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
-    // console.log(`Inside a dm with command: ${command}`);
+// console.log(`Inside a dm with command: ${command}`);
 
-    if (!command || command.guildOnly) return;
+if (!command || command.guildOnly) return;
 
-    if (command.args && (!args.length || args.length < command.args))
-      return message.channel.send(botspeech[`${command.cmdName}NoArg`]);
+if (command.args && (!args.length || args.length < command.args))
+  return message.channel.send(botspeech[`${command.cmdName}NoArg`]);
 
-    if (!cooldowns.has(command.cmdName))
-      cooldowns.set(command.cmdName, new Discord.Collection());
+if (!cooldowns.has(command.cmdName))
+  cooldowns.set(command.cmdName, new Discord.Collection());
 
-    const now = Date.now();
-    const timestamps = cooldowns.get(command.cmdName);
-    const cooldownAmt = (command.cooldown || 3) * 1000;
+const now = Date.now();
+const timestamps = cooldowns.get(command.cmdName);
+const cooldownAmt = (command.cooldown || 3) * 1000;
 
-    if (timestamps.has(message.author.id))
-    {
-      const expTime = timestamps.get(message.author.id) + cooldownAmt;
+if (timestamps.has(message.author.id))
+{
+  const expTime = timestamps.get(message.author.id) + cooldownAmt;
 
-      if (now < expTime)
-      {
-        const timeLeft = (expTime - now) / 1000;
-        return message.reply(`Please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.cmdName}\` command`);
-      }
-    }
+  if (now < expTime)
+  {
+const timeLeft = (expTime - now) / 1000;
+return message.reply(`Please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.cmdName}\` command`);
+  }
+}
 
-    timestamps.set(message.author.id, now);
-    setTimeout(() => timestamps.delete(message.author.id), cooldownAmt);
+timestamps.set(message.author.id, now);
+setTimeout(() => timestamps.delete(message.author.id), cooldownAmt);
 
-    try
-    {
-      command.run(client, message, args, client.config.settings);
-    }
-    catch (error)
-    {
-      console.error(`Command failed to execute.\nError: ${error}`);
-    }
+try
+{
+  command.run(client, message, args, client.config.settings);
+}
+catch (error)
+{
+  console.error(`Command failed to execute.\nError: ${error}`);
+}
   }
 
   else if (message.channel.type == 'text')
   {
-    const guild = client.guilds.get(message.guild.id);
-    if (!guild.available)
-      return console.error(`Guild Not Available.\nGuild ID: ${guild.id}`);
+const guild = client.guilds.get(message.guild.id);
+if (!guild.available)
+  return console.error(`Guild Not Available.\nGuild ID: ${guild.id}`);
 
-    let settings = client.settings.get(guild.id);
-    if (!settings)
-      settings = setDefault(client, guild.id);
+let settings = client.settings.get(guild.id);
+if (!settings)
+  settings = setDefault(client, guild.id);
 
-    if (!message.content.startsWith(settings.prefix)) return;
+if (!message.content.startsWith(settings.prefix)) return;
 
-    const ownerOrAdmin = await isOwnerOrAdmin(message.author, guild, settings);
+const ownerOrAdmin = await isOwnerOrAdmin(message.author, guild, settings);
 
-    if (settings.restrictedchannels.length > 0)
-    {
-      const restrictedchannel = settings.restrictedchannels.find(channel => (channel.id == message.channel.id));
+if (settings.restrictedchannels.length > 0)
+{
+  const restrictedchannel = settings.restrictedchannels.find(channel => (channel.id == message.channel.id));
 
-      if (!restrictedchannel && !ownerOrAdmin) return;
-    }
+  if (!restrictedchannel && !ownerOrAdmin) return;
+}
 
-    const args = message.content
-      .slice(settings.prefix.length)
-      .trim()
-      .split(/ /g);
+const args = message.content
+  .slice(settings.prefix.length)
+  .trim()
+  .split(/ /g);
 
-    const commandName = args.shift().toLowerCase();
+const commandName = args.shift().toLowerCase();
 
-    const command = client.commands.get(commandName)
-      || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+const command = client.commands.get(commandName)
+  || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
-    if (!command || (command.adminOnly && !ownerOrAdmin)) return;
+if (!command || (command.adminOnly && !ownerOrAdmin)) return;
 
-    if (command.args && (!args.length || args.length < command.args))
-      return message.channel.send(botspeech[`${command.cmdName}NoArg`]);
+if (command.args && (!args.length || args.length < command.args))
+  return message.channel.send(botspeech[`${command.cmdName}NoArg`]);
 
-    // console.log(settings);
+// console.log(settings);
 
-    if (!cooldowns.has(command.cmdName))
-      cooldowns.set(command.cmdName, new Discord.Collection());
+if (!cooldowns.has(command.cmdName))
+  cooldowns.set(command.cmdName, new Discord.Collection());
 
-    const now = Date.now();
-    const timestamps = cooldowns.get(command.cmdName);
-    const cooldownAmt = (command.cooldown || 3) * 1000;
+const now = Date.now();
+const timestamps = cooldowns.get(command.cmdName);
+const cooldownAmt = (command.cooldown || 3) * 1000;
 
-    if (timestamps.has(message.author.id))
-    {
-      const expTime = timestamps.get(message.author.id) + cooldownAmt;
+if (timestamps.has(message.author.id))
+{
+  const expTime = timestamps.get(message.author.id) + cooldownAmt;
 
-      if (now < expTime)
-      {
-        const timeLeft = (expTime - now) / 1000;
-        return message.reply(`Please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.cmdName}\` command`);
-      }
-    }
-
-    timestamps.set(message.author.id, now);
-    setTimeout(() => timestamps.delete(message.author.id), cooldownAmt);
-
-    try
-    {
-      command.run(client, message, args, settings);
-    }
-    catch (error)
-    {
-      console.error(`Command failed to execute.\nError: ${error}`);
-    }
+  if (now < expTime)
+  {
+const timeLeft = (expTime - now) / 1000;
+return message.reply(`Please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.cmdName}\` command`);
   }
-    if (args[0])
-      embed.addField("User Commands:", botspeech.adminCommands.replace(/{{prefix}}/g, args[1]));
+}
 
-    else
-      embed.addField("User Commands:", botspeech.nonAdminCommands.replace(/{{prefix}}/g, args[1]));
+timestamps.set(message.author.id, now);
+setTimeout(() => timestamps.delete(message.author.id), cooldownAmt);
+
+try
+{
+  command.run(client, message, args, settings);
+}
+catch (error)
+{
+  console.error(`Command failed to execute.\nError: ${error}`);
+}
+  }
+if (args[0])
+  embed.addField("User Commands:", botspeech.adminCommands.replace(/{{prefix}}/g, args[1]));
+
+else
+  embed.addField("User Commands:", botspeech.nonAdminCommands.replace(/{{prefix}}/g, args[1]));
 
 
 const guild = client.guilds.get(message.guild.id);
@@ -171,25 +515,25 @@ const guild = client.guilds.get(message.guild.id);
 
   let settings = client.settings.get(guild.id);
   if (!settings)
-    settings = defaultSettings.run(client, message);
+settings = defaultSettings.run(client, message);
 
   if (message.content.indexOf(settings.prefix) !== 0) return;
 
   const ownerOrAdmin = await guild.fetchMember(message.author)
-    .then(member => {
-      const isAO = member.hasPermission(0x00000008, false, null, true);
-      const isAdmin = settings.roles.adminroles.some(role => (member.roles.get(role)));
+.then(member => {
+  const isAO = member.hasPermission(0x00000008, false, null, true);
+  const isAdmin = settings.roles.adminroles.some(role => (member.roles.get(role)));
 
-      return isAO || isAdmin;
-    })
-    .catch(error => (console.error(`No Member Fetched.\nError: ${error}`)));
+  return isAO || isAdmin;
+})
+.catch(error => (console.error(`No Member Fetched.\nError: ${error}`)));
 
   if (settings.restrictedchannels.length > 0)
   {
-    const restrictedchannel = settings.restrictedchannels.find(channel => (channel.id == message.channel.id));
+const restrictedchannel = settings.restrictedchannels.find(channel => (channel.id == message.channel.id));
 
-    if (!restrictedchannel && !ownerOrAdmin)
-      return;
+if (!restrictedchannel && !ownerOrAdmin)
+  return;
   }
 
   const args = message.content.slice(settings.prefix.length).trim().split(/ /g);
@@ -198,7 +542,7 @@ const guild = client.guilds.get(message.guild.id);
   // if (!client.commands.has(commandName)) return;
 
   const command = client.commands.get(commandName)
-    || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
   if (!command) return;
 
@@ -206,124 +550,124 @@ const guild = client.guilds.get(message.guild.id);
   console.log(`Truthy: ${!args.length || args.length < command.args}`);
 
   if (command.args && (!args.length || args.length < command.args))
-    return message.channel.send(botspeech[`${command.cmdName}NoArg`]);
+return message.channel.send(botspeech[`${command.cmdName}NoArg`]);
 
   try
   {
-    command.run(client, message, args);
+command.run(client, message, args);
   }
   catch (error)
   {
-    console.error(`Command failed to execute with error: ${error}`);
+console.error(`Command failed to execute with error: ${error}`);
   }
 
 
   guild.roles.tap((role, id) => {
-    if (role.hasPermission(0x00000008))
-    {
-      const adminrole = {
-        name: role.name,
-        id: id
-      };
-      adminroles.push(adminrole);
-    }
+if (role.hasPermission(0x00000008))
+{
+  const adminrole = {
+name: role.name,
+id: id
+  };
+  adminroles.push(adminrole);
+}
   });
 
   if (prop == "pingroles")
   {
-    const addedRoles = [];
-    values.forEach(rolename => {
+const addedRoles = [];
+values.forEach(rolename => {
 
-      const guildrole = guild.roles.find(role => (role.name.toLowerCase() == rolename.toLowerCase())
-      );
+  const guildrole = guild.roles.find(role => (role.name.toLowerCase() == rolename.toLowerCase())
+  );
 
-      if (!guildrole) return;
+  if (!guildrole) return;
 
-      const pingrole = {
-        name: guildrole.name,
-        id: guildrole.id
-      };
+  const pingrole = {
+name: guildrole.name,
+id: guildrole.id
+  };
 
-      if (settings.roles.pingroles.some(role => (role.id == pingrole.id)))
-        return;
+  if (settings.roles.pingroles.some(role => (role.id == pingrole.id)))
+return;
 
-      settings.roles.pingroles.push(pingrole);
-      addedRoles.push(pingrole.name);
-    });
+  settings.roles.pingroles.push(pingrole);
+  addedRoles.push(pingrole.name);
+});
 
-    if (addedRoles.length == 0)
-      return message.channel.send(botspeech.noRolesAdded);
+if (addedRoles.length == 0)
+  return message.channel.send(botspeech.noRolesAdded);
 
-    try
-    {
-      fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(settings));
-    }
-    catch(error)
-    {
-      console.error(error);
-    }
+try
+{
+  fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(settings));
+}
+catch(error)
+{
+  console.error(error);
+}
 
-    return message.channel.send(botspeech.addPingRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
+return message.channel.send(botspeech.addPingRoles.replace(/{{roles}}/g, addedRoles.join(", ")));
   }
-    else
-    {
-      rolePing.setMentionable(true, "Role to be pinged.")
-        .then(updated => {
-          message.channel.send(`${updated} *(requested by ${message.member})*`);
-          message.delete();
-          return updated;
-        })
-        .then(updated => {
-          setTimeout(() => {
-            updated.setMentionable(false, "Role has been pinged.")
-          }, 5000);
-        })
-        .catch(err => {
-          console.error(err);
-          console.error(`Guild ID: ${message.guild.id}`);
-          if (err.message == 'Missing Permissions')
-            return message.channel.send(botspeech.rolePlacement.replace(/{{role}}/gi, rolePing.name));
+else
+{
+  rolePing.setMentionable(true, "Role to be pinged.")
+.then(updated => {
+  message.channel.send(`${updated} *(requested by ${message.member})*`);
+  message.delete();
+  return updated;
+})
+.then(updated => {
+  setTimeout(() => {
+updated.setMentionable(false, "Role has been pinged.")
+  }, 5000);
+})
+.catch(err => {
+  console.error(err);
+  console.error(`Guild ID: ${message.guild.id}`);
+  if (err.message == 'Missing Permissions')
+return message.channel.send(botspeech.rolePlacement.replace(/{{role}}/gi, rolePing.name));
 
-          else
-            return message.channel.send(botspeech.pingError);
-        });
-    }
+  else
+return message.channel.send(botspeech.pingError);
+});
+}
 
-    const findRole = args[0].toLowerCase();
+const findRole = args[0].toLowerCase();
 
-    const rolePing = message.guild.roles.find(role => {
-      return role.name.toLowerCase().startsWith(findRole) && (settings.roles.pingroles.find(pingrole => (pingrole.id == role.id)));
-    });
+const rolePing = message.guild.roles.find(role => {
+  return role.name.toLowerCase().startsWith(findRole) && (settings.roles.pingroles.find(pingrole => (pingrole.id == role.id)));
+});
 
-    if (!rolePing)
-    {
-      const pingroles = [];
-      settings.roles.pingroles.forEach(role => (pingroles.push(role.name)));
+if (!rolePing)
+{
+  const pingroles = [];
+  settings.roles.pingroles.forEach(role => (pingroles.push(role.name)));
 
-      const roles = pingroles.join(", ");
-      return message.channel.send(botspeech.roleNotFound.replace(`{{roles}}`, roles));
-    }
+  const roles = pingroles.join(", ");
+  return message.channel.send(botspeech.roleNotFound.replace(`{{roles}}`, roles));
+}
 
   const ownerOrAdmin = guild.fetchMember(message.author)
-    .then(member => {
-      console.log(member);
-      const isAdmin = member.roles.some(role => {
-        return guildConf.roles.adminroles.find(adminrole => {
-          return adminrole.id == role.id;
-        });
-      });
+.then(member => {
+  console.log(member);
+  const isAdmin = member.roles.some(role => {
+return guildConf.roles.adminroles.find(adminrole => {
+  return adminrole.id == role.id;
+});
+  });
 
-      const isOwner = member.id == guildConf.ownerID;
+  const isOwner = member.id == guildConf.ownerID;
 
-      return isAdmin || isOwner;
-    })
-    .catch(() => (console.error(`No Member Fetched.`)));
+  return isAdmin || isOwner;
+})
+.catch(() => (console.error(`No Member Fetched.`)));
   if (!guildMember) return;
 
   const isAdmin = guildMember.roles.some(role => {
-    return guildConf.roles.adminroles.find(adminrole => {
-      return adminrole.id == role.id;
-    });
+return guildConf.roles.adminroles.find(adminrole => {
+  return adminrole.id == role.id;
+});
   });
 
   const isOwner = message.member.id == guildConf.ownerID;
@@ -331,250 +675,250 @@ const guild = client.guilds.get(message.guild.id);
 2nd Iteration of Catch Command Handler
 else if (args.length == 1)
   {
-    let pkmnObj = pokedata.fetch("pkmn", args, settings);
-    if (!pkmnObj)
-      return message.channel.send(botspeech.pkmnNotFound);
+let pkmnObj = pokedata.fetch("pkmn", args, settings);
+if (!pkmnObj)
+  return message.channel.send(botspeech.pkmnNotFound);
 
-    else
-    {
-      let bestBalls = calc.bestBalls(pkmnObj);
-      let embed = embedHelper.createEmbed("top4", client, [pkmnObj, bestBalls]);
-      return message.channel.send(embed);
-    }
+else
+{
+  let bestBalls = calc.bestBalls(pkmnObj);
+  let embed = embedHelper.createEmbed("top4", client, [pkmnObj, bestBalls]);
+  return message.channel.send(embed);
+}
   }
 
   else if (args.length == 2)
   {
-    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 1), settings);
-    let pkmnObj2 = pokedata.fetch("pkmn", args, settings)
-    let ball = pokedata.fetch("ball", args.slice(1));
+let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 1), settings);
+let pkmnObj2 = pokedata.fetch("pkmn", args, settings)
+let ball = pokedata.fetch("ball", args.slice(1));
 
-    if (pkmnObj)
-    {
-      if (!ball)
-        return message.channel.send(botspeech.ballNotFound);
+if (pkmnObj)
+{
+  if (!ball)
+return message.channel.send(botspeech.ballNotFound);
 
-      else
-      {
-        calc.bestBall(pkmnObj, ball);
-        return message.channel.send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]));
-      }
-    }
+  else
+  {
+calc.bestBall(pkmnObj, ball);
+return message.channel.send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]));
+  }
+}
 
-    else if (pkmnObj2)
-    {
-      let bestBalls = calc.bestBalls(pkmnObj2);
-      let embed = embedHelper.createEmbed("top4", client, [pkmnObj2, bestBalls]);
-      return message.channel.send(embed);
-    }
+else if (pkmnObj2)
+{
+  let bestBalls = calc.bestBalls(pkmnObj2);
+  let embed = embedHelper.createEmbed("top4", client, [pkmnObj2, bestBalls]);
+  return message.channel.send(embed);
+}
 
-    else
-      return message.channel.send(botspeech.pkmnNotFound);
+else
+  return message.channel.send(botspeech.pkmnNotFound);
   }
 
   else if (args.length == 3)
   {
-    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 2), settings);
-    let ball = pokedata.fetch("ball", args.slice(2));
-    
-    if (!pkmnObj)
-      return message.channel.send(botspeech.pkmnNotFound);
+let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 2), settings);
+let ball = pokedata.fetch("ball", args.slice(2));
 
-    else if (!ball)
-      return message.channel.send(botspeech.ballNotFound);
+if (!pkmnObj)
+  return message.channel.send(botspeech.pkmnNotFound);
 
-    else
-    {
-      calc.bestBall(pkmnObj, ball);
-      return message.channel.send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]));
-    }
+else if (!ball)
+  return message.channel.send(botspeech.ballNotFound);
+
+else
+{
+  calc.bestBall(pkmnObj, ball);
+  return message.channel.send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]));
+}
   }
 
-    First RegEx Attempt at Pokedata Fetch
-    let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
-    let shiny = settings.shinypkmnonly;
-    let form = null;
-    let pkmn = null;
-
-    args.forEach(term => {
-      shiny = shiny || star.test(term);
-      term = term.replace(/[^A-Za-z0-9']/gi, "");
-      term = term.replace(/galar\b/gi, "Galarian");
-      term = term.replace(/alola\b/gi, "Alolan");
-      term = term.replace(/gmax/gi, "Gigantamax");
-      let regex = new RegExp("\\b" + term + "\\b", "gi");
-      console.log(regex);
-
-      let maybeform = pokelists.forms.find(form => (regex.test(form)));
-      form = form || maybeform;
-      console.log(form);
-      if (maybeform) return;
-
-      let maybepkmn = pokemonlist.find(pkmn => (regex.test(pkmn.name)));
-      pkmn = pkmn || maybepkmn;
-      console.log(pkmn);
-    });
-
-    if (!pkmn)
-      return null;
-
-    else
-    {
-      if (!form)
-        return {pkmn: pkmn, form: form, cosmetic: false, shiny: shiny};
-
-      else
-      {
-        if (!pkmn.forms.includes(form))
-          return null;
-
-        else if (!pokelists.noncosmeticforms.includes(form))
-          return {pkmn: pkmn, form: form, cosmetic: true, shiny: shiny};
-
-        let formreg = new RegExp(pkmn.name + "(?= " + form + ")\|" + "(?<=" + form + " )" + pkmn.name, "gi");
-        console.log(formreg);
-
-        let formpkmn = pokemonlist.find(pkmn => (formreg.test(pkmn.name)));
-        if (!formpkmn)
-          return null;
-
-        else
-          return {pkmn: formpkmn, form: form, cosmetic: false, shiny: shiny};
-      }
-    }
-
-
-    Initial Pokedata Fetch (No RegEx)
+First RegEx Attempt at Pokedata Fetch
 let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
-    let words = "";
-    let start = "";
-    let tempshiny = false;
+let shiny = settings.shinypkmnonly;
+let form = null;
+let pkmn = null;
 
-    args.forEach(term => {
-      if (star.test(term))
-        tempshiny = true;
-      
-      term = term.replace(/[^A-Za-z0-9']/gi, "");
-      term = term.replace(/galar/gi, "Galarian");
-      term = term.replace(/alola/gi, "Alolan");
-      term = term.replace(/gmax/gi, "Gigantamax");
+args.forEach(term => {
+  shiny = shiny || star.test(term);
+  term = term.replace(/[^A-Za-z0-9']/gi, "");
+  term = term.replace(/galar\b/gi, "Galarian");
+  term = term.replace(/alola\b/gi, "Alolan");
+  term = term.replace(/gmax/gi, "Gigantamax");
+  let regex = new RegExp("\\b" + term + "\\b", "gi");
+  console.log(regex);
+
+  let maybeform = pokelists.forms.find(form => (regex.test(form)));
+  form = form || maybeform;
+  console.log(form);
+  if (maybeform) return;
+
+  let maybepkmn = pokemonlist.find(pkmn => (regex.test(pkmn.name)));
+  pkmn = pkmn || maybepkmn;
+  console.log(pkmn);
+});
+
+if (!pkmn)
+  return null;
+
+else
+{
+  if (!form)
+return {pkmn: pkmn, form: form, cosmetic: false, shiny: shiny};
+
+  else
+  {
+if (!pkmn.forms.includes(form))
+  return null;
+
+else if (!pokelists.noncosmeticforms.includes(form))
+  return {pkmn: pkmn, form: form, cosmetic: true, shiny: shiny};
+
+let formreg = new RegExp(pkmn.name + "(?= " + form + ")\|" + "(?<=" + form + " )" + pkmn.name, "gi");
+console.log(formreg);
+
+let formpkmn = pokemonlist.find(pkmn => (formreg.test(pkmn.name)));
+if (!formpkmn)
+  return null;
+
+else
+  return {pkmn: formpkmn, form: form, cosmetic: false, shiny: shiny};
+  }
+}
+
+
+Initial Pokedata Fetch (No RegEx)
+let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
+let words = "";
+let start = "";
+let tempshiny = false;
+
+args.forEach(term => {
+  if (star.test(term))
+tempshiny = true;
   
-      words += "\\b" + term + "\\b\|";
-      start += "^" + term + "\|";
-    });
-    console.log(args);
+  term = term.replace(/[^A-Za-z0-9']/gi, "");
+  term = term.replace(/galar/gi, "Galarian");
+  term = term.replace(/alola/gi, "Alolan");
+  term = term.replace(/gmax/gi, "Gigantamax");
+  
+  words += "\\b" + term + "\\b\|";
+  start += "^" + term + "\|";
+});
+console.log(args);
 
-    let shiny = settings.shinypkmnonly? true : tempshiny;
+let shiny = settings.shinypkmnonly? true : tempshiny;
 
   
-    let wordreg = new RegExp(words.substring(0, words.lastIndexOf("\|")), "gi");
+let wordreg = new RegExp(words.substring(0, words.lastIndexOf("\|")), "gi");
 
-    let startreg = new RegExp(start.substring(0, start.lastIndexOf("\|")), "gi");
+let startreg = new RegExp(start.substring(0, start.lastIndexOf("\|")), "gi");
 
   
-    let form = pokelists.forms.find(form => (wordreg.test(form)));
+let form = pokelists.forms.find(form => (wordreg.test(form)));
 
-    if (!form)
-    {
-      let pkmn = pokemonlist.find(mon => (wordreg.test(mon.name)));
-      if (!pkmn)
-        return null;
+if (!form)
+{
+  let pkmn = pokemonlist.find(mon => (wordreg.test(mon.name)));
+  if (!pkmn)
+return null;
 
-      else
-        return {pkmn: pkmn, form: form, shiny: shiny};
-    }
+  else
+return {pkmn: pkmn, form: form, shiny: shiny};
+}
 
-    else if (pokelists.noncosmeticforms.includes(form))
-    {
-      let formreg = new RegExp("\\w+(?= " + form + ")\|" + "(?<=" + form + " \\w+)", "gi");
+else if (pokelists.noncosmeticforms.includes(form))
+{
+  let formreg = new RegExp("\\w+(?= " + form + ")\|" + "(?<=" + form + " \\w+)", "gi");
 
-      let tempmon = pokemonlist.filter(mon => (formreg.test(mon.name)))
-      if (!tempmon || tempmon.length < 1)
-        return null;
-
-
-      let joinargs = args.join(" ");
-      console.log(joinargs);
-
-      let pkmnName = joinargs.replace(formsreg, "").trim();
-      console.log(pkmnName)
-
-      let pkmnreg = new RegExp(pkmnName, "gi");
-      console.log(pkmnreg)
-
-      let pkmn = tempmon.find(mon => (pkmnreg.test(mon.name)));
-
-      if (!pkmn)
-        return null;
+  let tempmon = pokemonlist.filter(mon => (formreg.test(mon.name)))
+  if (!tempmon || tempmon.length < 1)
+return null;
 
 
-      return {pkmn: pkmn, form: form, shiny: shiny};
-    }
+  let joinargs = args.join(" ");
+  console.log(joinargs);
 
-    else
-    {
-      let pkmn = pokemonlist.find(mon => (wordreg.test(mon.name) && mon.forms.includes(form)));
+  let pkmnName = joinargs.replace(formsreg, "").trim();
+  console.log(pkmnName)
 
-      if (!pkmn)
-        return null
+  let pkmnreg = new RegExp(pkmnName, "gi");
+  console.log(pkmnreg)
 
-      else
-        return {pkmn: pkmn, form: form, shiny: shiny};
-    }
-    
+  let pkmn = tempmon.find(mon => (pkmnreg.test(mon.name)));
+
+  if (!pkmn)
+return null;
+
+
+  return {pkmn: pkmn, form: form, shiny: shiny};
+}
+
+else
+{
+  let pkmn = pokemonlist.find(mon => (wordreg.test(mon.name) && mon.forms.includes(form)));
+
+  if (!pkmn)
+return null
+
+  else
+return {pkmn: pkmn, form: form, shiny: shiny};
+}
+
 let name = "";
   if (args.length >= 1)
-    args = args.join("");
+args = args.join("");
 
   name = args.replace(nonAlpha, "").toLowerCase();
   let cform = name.match(cosmeticForms).find(form => {return form != ''});
 
   if (cform)
   {
-    name = name.replace(cosmeticForms, "");
-    if (cform == "gmax")
-      cform = "gigantamax";
+name = name.replace(cosmeticForms, "");
+if (cform == "gmax")
+  cform = "gigantamax";
   }
 
   if (flag == "pkmn")
   {
-    let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
-    let pkmn = pokemonlist.find(x => {
-      let nameMatch = x.name.replace(nonAlpha, "").toLowerCase() == name;
-      let formMatch = cform? x.forms.some(form => {return form.replace(/ /g, '').toLowerCase() == cform}) : true;
-      return nameMatch && formMatch;
-    });
-    
-    if (!pkmn)
-      return null;
+let pokemonlist = settings.denpkmnonly? denPokemon : pokemon;
+let pkmn = pokemonlist.find(x => {
+  let nameMatch = x.name.replace(nonAlpha, "").toLowerCase() == name;
+  let formMatch = cform? x.forms.some(form => {return form.replace(/ /g, '').toLowerCase() == cform}) : true;
+  return nameMatch && formMatch;
+});
 
-    */
-    //let shiny = settings.shinypkmnonly? true : args.match(/\*/g);
-    /*
-    return {
-      pkmn: pkmn,
-      cform: cform,
-      shiny: shiny
-    }
+if (!pkmn)
+  return null;
+
+*/
+//let shiny = settings.shinypkmnonly? true : args.match(/\*/g);
+/*
+return {
+  pkmn: pkmn,
+  cform: cform,
+  shiny: shiny
+}
   }
 
   else if (flag == "ball")
   {
-    return balls.find(x => {
-      return x.name.replace(nonAlpha, "").toLowerCase().startsWith(name);
-    });
+return balls.find(x => {
+  return x.name.replace(nonAlpha, "").toLowerCase().startsWith(name);
+});
   }
 
   else if (flag == "den")
   {
-    return dens.find(den => {
-      return den.den == name;
-    });
+return dens.find(den => {
+  return den.den == name;
+});
   }
 
   else
-    return null;
-    
+return null;
+
 const dens = JSON.parse(data);
 dens.forEach(den => {
   let newDen = new Object;
@@ -588,61 +932,61 @@ dens.forEach(den => {
 let newdata = JSON.stringify(arr);
 fs.writeFileSync("./data/newdens.json", newdata);
 
-      pkmn.dens.sword.forEach(den => {
-        swordDens = swordDens + `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
-      });
-      
-    
-      dens = dens + swordDens + '\n';
-      if (swordArr.length > 0)
-        dens += '\nHA: ' + swordArr.join(", ") + '\n';
+  pkmn.dens.sword.forEach(den => {
+swordDens = swordDens + `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
+  });
+  
 
-      pkmn.dens.shield.forEach(den => {
-        shieldDens = shieldDens + `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
-      });
-      
-      dens = dens + shieldDens;
+  dens = dens + swordDens + '\n';
+  if (swordArr.length > 0)
+dens += '\nHA: ' + swordArr.join(", ") + '\n';
 
-      if (shieldArr.length > 0)
-        dens += '\nHA: ' + shieldArr.join(", ") + '\n';
+  pkmn.dens.shield.forEach(den => {
+shieldDens = shieldDens + `[${den}](https://www.serebii.net/swordshield/maxraidbattles/den${den}.shtml)` + ', ';
+  });
+  
+  dens = dens + shieldDens;
+
+  if (shieldArr.length > 0)
+dens += '\nHA: ' + shieldArr.join(", ") + '\n';
 
 
 if (args[0] > 1 && args[0] < 93)
-     return message.reply(`Den ${args[0]} has the following Pokémon: `, {files: [`./data/dens/den${args[0]}.png`]});
+ return message.reply(`Den ${args[0]} has the following Pokémon: `, {files: [`./data/dens/den${args[0]}.png`]});
 
-    let pkmnObj = pokedata.fetch("pkmn", args, settings);
+let pkmnObj = pokedata.fetch("pkmn", args, settings);
 
-    if (!pkmnObj)
-      return message.channel.send(botspeech.denNoArg);
+if (!pkmnObj)
+  return message.channel.send(botspeech.denNoArg);
 
-    let pkmn = pkmnObj.pkmn;
+let pkmn = pkmnObj.pkmn;
 
-    if (pkmn.dens.sword.length == 0 && pkmn.dens.shield.length == 0)
-      return message.channel.send(`**${pkmn.name}** is not in any current dens.`);
+if (pkmn.dens.sword.length == 0 && pkmn.dens.shield.length == 0)
+  return message.channel.send(`**${pkmn.name}** is not in any current dens.`);
 
-    let dens = "";
-    if (pkmn.dens.sword.length > 0)
-    {
-      let swordDens = "Sword: \`";
-      pkmn.dens.sword.forEach(den => {
-        swordDens = swordDens + den + ', ';
-      });
-      swordDens = swordDens.slice(0, swordDens.lastIndexOf(', ')) + '\`';
-    
-      dens = dens + swordDens + '\n';
-    }
+let dens = "";
+if (pkmn.dens.sword.length > 0)
+{
+  let swordDens = "Sword: \`";
+  pkmn.dens.sword.forEach(den => {
+swordDens = swordDens + den + ', ';
+  });
+  swordDens = swordDens.slice(0, swordDens.lastIndexOf(', ')) + '\`';
 
-    if (pkmn.dens.shield.length > 0)
-    {
-      let shieldDens = "Shield: \`";
-      pkmn.dens.shield.forEach(den => {
-        shieldDens = shieldDens + den + ', ';
-      });
-      shieldDens = shieldDens.slice(0, shieldDens.lastIndexOf(', ')) + '\`';
-      dens = dens + shieldDens;
-    }
+  dens = dens + swordDens + '\n';
+}
 
-    return message.channel.send(`**${pkmn.name}** is in the following dens:\n${dens}`);
+if (pkmn.dens.shield.length > 0)
+{
+  let shieldDens = "Shield: \`";
+  pkmn.dens.shield.forEach(den => {
+shieldDens = shieldDens + den + ', ';
+  });
+  shieldDens = shieldDens.slice(0, shieldDens.lastIndexOf(', ')) + '\`';
+  dens = dens + shieldDens;
+}
+
+return message.channel.send(`**${pkmn.name}** is in the following dens:\n${dens}`);
 const Discord = require("discord.js");
 const config = require("./config.json");
 // Bot Creation
@@ -658,12 +1002,12 @@ fs.readdir("./events/", (err, files) => {
   console.log(`Loading ${files.length} events:`);
 
   files.forEach((file, i) => {
-    if (!file.endsWith("js")) return;
+if (!file.endsWith("js")) return;
 
-    const event = require(`./events/${file}`);
-    let eventName = file.split(".")[0];
-    console.log(`Attempting to load event ${i+1} of ${files.length}: ${eventName}`);
-    client.on(eventName, event.bind(null, client));
+const event = require(`./events/${file}`);
+let eventName = file.split(".")[0];
+console.log(`Attempting to load event ${i+1} of ${files.length}: ${eventName}`);
+client.on(eventName, event.bind(null, client));
   });
 });
 
@@ -678,12 +1022,12 @@ fs.readdir("./commands/", (err, files) => {
   console.log(`Loading ${files.length} commands:`);
 
   files.forEach((file, i) => {
-    if (!file.endsWith("js")) return;
+if (!file.endsWith("js")) return;
 
-    let props = require(`./commands/${file}`);
-    let commandName = file.split(".")[0];
-    console.log(`Attempting to load command ${i+1} of ${files.length}: ${commandName}`);
-    client.commands.set(commandName, props);
+let props = require(`./commands/${file}`);
+let commandName = file.split(".")[0];
+console.log(`Attempting to load command ${i+1} of ${files.length}: ${commandName}`);
+client.commands.set(commandName, props);
   });
 });
 client.login(config.tokentest);
@@ -691,8 +1035,8 @@ client.login(config.tokentest);
 exports.errHandler = (flag, args) => {
   if (flag == "notFounds")
   {
-    let msg = "";
-    args.forEach()
+let msg = "";
+args.forEach()
   } 
 }
 
@@ -701,7 +1045,7 @@ exports.run = (client, message, args) => {
   if(!args || args.length < 1) return message.reply("Must provide a command name to reload.");
   const commandName = args[0];
   if(!client.commands.has(commandName)) {
-    return message.reply("That command does not exist");
+return message.reply("That command does not exist");
   }
   // the path is relative to the *current folder*, so just ./filename.js
   delete require.cache[require.resolve(`./${commandName}.js`)];
@@ -720,26 +1064,26 @@ let m = new Map();
 const pokeraiders = {
   prefix: "%",
   roles:{
-    owner:"648749959205879836",
-    admin:"666443360483147808",
-    mod:"648749558616162314",
-    adminroles:["648749959205879836","666443360483147808","648749558616162314"],
-    giveaway:"659252943622635526",
-    shiny:"658892950717202452",
-    pingableroles:["659252943622635526","658892950717202452"]
+owner:"648749959205879836",
+admin:"666443360483147808",
+mod:"648749558616162314",
+adminroles:["648749959205879836","666443360483147808","648749558616162314"],
+giveaway:"659252943622635526",
+shiny:"658892950717202452",
+pingableroles:["659252943622635526","658892950717202452"]
   }
 }
 
 const pokeraiders = {
   prefix: "%",
   roles:{
-    owner:"648749959205879836",
-    admin:"666443360483147808",
-    mod:"648749558616162314",
-    adminroles:["648749959205879836","666443360483147808","648749558616162314"],
-    giveaway:"659252943622635526",
-    shiny:"658892950717202452",
-    pingableroles:["659252943622635526","658892950717202452"]
+owner:"648749959205879836",
+admin:"666443360483147808",
+mod:"648749558616162314",
+adminroles:["648749959205879836","666443360483147808","648749558616162314"],
+giveaway:"659252943622635526",
+shiny:"658892950717202452",
+pingableroles:["659252943622635526","658892950717202452"]
   },
   denOnly:true
 }
@@ -747,13 +1091,13 @@ client.settings.set("648747323190542338", pokeraiders);
 
 const denbot = {
   roles:{
-      owner:"666283334418169879",
-      admin:"666465912802639882",
-      mod:"666283270215958538",
-      adminroles:["666283334418169879","666465912802639882","666283270215958538"],
-      giveaway:"666283431147077642",
-      shiny:"666283386943438850",
-      pingableroles:["666283431147077642","666283386943438850"]
+  owner:"666283334418169879",
+  admin:"666465912802639882",
+  mod:"666283270215958538",
+  adminroles:["666283334418169879","666465912802639882","666283270215958538"],
+  giveaway:"666283431147077642",
+  shiny:"666283386943438850",
+  pingableroles:["666283431147077642","666283386943438850"]
   },
   denOnly:false
 }
@@ -764,29 +1108,29 @@ client.settings.set("663506927912878091", denbot);
 
   else if (args.length == 1)
   {
-    let pkmnObj = pokedata.fetch("pkmn", args, settings);
+let pkmnObj = pokedata.fetch("pkmn", args, settings);
 
-    if (!pkmnObj.pkmn)
-      return message.channel.send(botspeech.pkmnNotFound);
+if (!pkmnObj.pkmn)
+  return message.channel.send(botspeech.pkmnNotFound);
 
-    else
-      return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj));
+else
+  return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj));
   }
 
   else if (args.length == 2)
   {
-    let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 1), settings);
-    let pkmnObj2 = pokedata.fetch("pkmn", args, settings);
-    pkmnObj.shiny = args[1].match(/shiny/gi);
+let pkmnObj = pokedata.fetch("pkmn", args.slice(0, 1), settings);
+let pkmnObj2 = pokedata.fetch("pkmn", args, settings);
+pkmnObj.shiny = args[1].match(/shiny/gi);
 
-    if (pkmnObj.pkmn)
-      return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj));
+if (pkmnObj.pkmn)
+  return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj));
 
-    else if (pkmnObj2.pkmn)
-      return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj2));
+else if (pkmnObj2.pkmn)
+  return message.channel.send(embedHelper.createEmbed("dex", client, pkmnObj2));
 
-    else
-      return message.channel.send(botspeech.pkmnNotFound);
+else
+  return message.channel.send(botspeech.pkmnNotFound);
   }
   
 
@@ -813,47 +1157,47 @@ client.on("message", async (message) => {
 // Alright. Let's make a command! This one changes the value of any key
   // in the configuration.
   if(command === "setconf") {
-    // Command is admin only, let's grab the admin value: 
-    const adminRole = message.guild.roles.find("name", guildConf.adminRole);
-    if(!adminRole) return message.reply("Administrator Role Not Found");
-    
-    // Then we'll exit if the user is not admin
-    if(!message.member.roles.has(adminRole.id)) {
-      return message.reply("You're not an admin, sorry!");
-    }
-    
-    // Let's get our key and value from the arguments. 
-    // This is array destructuring, by the way. 
-    const [prop, ...value] = args;
-    // Example: 
-    // prop: "prefix"
-    // value: ["+"]
-    // (yes it's an array, we join it further down!)
-    
-    // We can check that the key exists to avoid having multiple useless, 
-    // unused keys in the config:
-    if(!client.settings.has(message.guild.id, prop)) {
-      return message.reply("This key is not in the configuration.");
-    }
-    
-    // Now we can finally change the value. Here we only have strings for values 
-    // so we won't bother trying to make sure it's the right type and such. 
-    client.settings.set(message.guild.id, value.join(" "), prop);
-    
-    // We can confirm everything's done to the client.
-    message.channel.send(`Guild configuration item ${prop} has been changed to:\n\`${value.join(" ")}\``);
+// Command is admin only, let's grab the admin value: 
+const adminRole = message.guild.roles.find("name", guildConf.adminRole);
+if(!adminRole) return message.reply("Administrator Role Not Found");
+
+// Then we'll exit if the user is not admin
+if(!message.member.roles.has(adminRole.id)) {
+  return message.reply("You're not an admin, sorry!");
+}
+
+// Let's get our key and value from the arguments. 
+// This is array destructuring, by the way. 
+const [prop, ...value] = args;
+// Example: 
+// prop: "prefix"
+// value: ["+"]
+// (yes it's an array, we join it further down!)
+
+// We can check that the key exists to avoid having multiple useless, 
+// unused keys in the config:
+if(!client.settings.has(message.guild.id, prop)) {
+  return message.reply("This key is not in the configuration.");
+}
+
+// Now we can finally change the value. Here we only have strings for values 
+// so we won't bother trying to make sure it's the right type and such. 
+client.settings.set(message.guild.id, value.join(" "), prop);
+
+// We can confirm everything's done to the client.
+message.channel.send(`Guild configuration item ${prop} has been changed to:\n\`${value.join(" ")}\``);
   }
 
   if(command === "showconf") {
-    let configProps = Object.keys(guildConf).map(prop => {
-      return `${prop}  :  ${guildConf[prop]}\n`;
-    });
-    message.channel.send(`The following are the server's current configuration:
-    \`\`\`${configProps}\`\`\``);
+let configProps = Object.keys(guildConf).map(prop => {
+  return `${prop}  :  ${guildConf[prop]}\n`;
+});
+message.channel.send(`The following are the server's current configuration:
+\`\`\`${configProps}\`\`\``);
   }
 
-    else if (!rolePing.name.startsWith("Shiny") && !rolePing.name.startsWith("Giveaway"))
-      return message.channel.send(botspeech.pingableRoles);
+else if (!rolePing.name.startsWith("Shiny") && !rolePing.name.startsWith("Giveaway"))
+  return message.channel.send(botspeech.pingableRoles);
 let pkmnCatchRate = new Array();
 let allPkmn = new Array();
 
@@ -867,12 +1211,12 @@ tokens = output.split(/ +/g);
 tokens.forEach((token, i) => {
   if (i % 3 == 2)
   {
-    let poke = {
-      id:Number.parseInt(tokens[i-2]),
-      name:tokens[i-1],
-      catchRate:Number.parseInt(token)
-    }
-    pkmnCatchRate.push(poke);
+let poke = {
+  id:Number.parseInt(tokens[i-2]),
+  name:tokens[i-1],
+  catchRate:Number.parseInt(token)
+}
+pkmnCatchRate.push(poke);
   }
 });
 
@@ -885,8 +1229,8 @@ const calculator = (pkmn, ball) => {
   
   let ballList = new Array();
   let balls = {
-    name:"",
-    catchRate:""
+name:"",
+catchRate:""
   }
 
   return ballList;
@@ -915,11 +1259,11 @@ fs.readdir("./events/", (err, files) => {
   if (err) return console.log(err);
   
   files.forEach(file => {
-    if (!file.endsWith("js")) return;
+if (!file.endsWith("js")) return;
 
-    const event = require(`./events/${file}`);
-    let eventName = file.split(".")[0];
-    client.on(eventName, event.bind(null, client));
+const event = require(`./events/${file}`);
+let eventName = file.split(".")[0];
+client.on(eventName, event.bind(null, client));
   });
 });
 
@@ -929,12 +1273,12 @@ fs.readdir("./commands/", (err, files) => {
   if (err) return console.log(err);
 
   files.forEach(file => {
-    if (!file.endsWith("js")) return;
+if (!file.endsWith("js")) return;
 
-    let props = require(`./commands/${file}`);
-    let commandName = file.split(".")[0];
-    console.log(`Attempting to load command: ${commandName}`);
-    client.commands.set(commandName, props);
+let props = require(`./commands/${file}`);
+let commandName = file.split(".")[0];
+console.log(`Attempting to load command: ${commandName}`);
+client.commands.set(commandName, props);
   });
 });
 
@@ -973,53 +1317,53 @@ client.on("message", (message) => {
 
   if (command === "den")
   {
-    if (args.length == 0 || (args[0].valueOf() > 93 || args[0].valueOf() < 1))
-    {
-      message.channel.send("Please enter a den number within the range of 1-93.");
-      //message.delete();
-      return;
-    }
+if (args.length == 0 || (args[0].valueOf() > 93 || args[0].valueOf() < 1))
+{
+  message.channel.send("Please enter a den number within the range of 1-93.");
+  //message.delete();
+  return;
+}
 
-    message.reply(`Den ${args[0]} has the following Pokémon: `, {files: [`./data/dens/den${args[0]}.png`]});
-    //message.delete();
+message.reply(`Den ${args[0]} has the following Pokémon: `, {files: [`./data/dens/den${args[0]}.png`]});
+//message.delete();
   }
 
   else if (command === "ping")
   {
-    let adminRole = message.guild.roles.find(role => role.name == "Admin");
-    if (!message.member.roles.has(adminRole.id))
-    {
-      console.log("Admin?");
-      return;
-    }
+let adminRole = message.guild.roles.find(role => role.name == "Admin");
+if (!message.member.roles.has(adminRole.id))
+{
+  console.log("Admin?");
+  return;
+}
 
-    if (args.length == 0)
-    {
-      message.channel.send("Please enter a role to ping.");
-      return;
-    }
+if (args.length == 0)
+{
+  message.channel.send("Please enter a role to ping.");
+  return;
+}
 
-    let myRole = message.guild.roles.find(role => role.name == args[0]);
-    myRole.setMentionable(true, "Role to be pinged.");
-    message.channel.send(`${myRole}`).then(() => {
-      myRole.setMentionable(false, "Role has been Pinged.")});
-    return;
+let myRole = message.guild.roles.find(role => role.name == args[0]);
+myRole.setMentionable(true, "Role to be pinged.");
+message.channel.send(`${myRole}`).then(() => {
+  myRole.setMentionable(false, "Role has been Pinged.")});
+return;
   }
 
   else if (command === "catch")
   {
-    let calc = require("./modules/calculator.js");
-    if (args.length == 0)
-    {
-      message.channel.send("Please enter a Pokémon to catch followed by a ball of your choice.");
-      return;
-    }
+let calc = require("./modules/calculator.js");
+if (args.length == 0)
+{
+  message.channel.send("Please enter a Pokémon to catch followed by a ball of your choice.");
+  return;
+}
 
-    else if (args.length == 1)
-    {
-      let mon = pokemon.find((pk) => {return pk.name.toLowerCase() == args[0].toLowerCase()});
-      console.log(mon);
-    }
+else if (args.length == 1)
+{
+  let mon = pokemon.find((pk) => {return pk.name.toLowerCase() == args[0].toLowerCase()});
+  console.log(mon);
+}
   }
 
   else
@@ -1046,8 +1390,8 @@ if (gigaKeywords.includes(args[0].toLowerCase()))
   let pkmn = ingamePkmn.find(x => {return x.name.toLowerCase() == args[1].toLowerCase()});
   if (pkmn == null)
   {
-    message.channel.send(pkmnNotFound);
-    return;
+message.channel.send(pkmnNotFound);
+return;
   }
 
   let messageToSend = bestBallsCalc(pkmn, true);
@@ -1066,15 +1410,15 @@ else if (possiblePkmn != null)
 else if (ballName != null)
 {
   let pkmn = ingamePkmn.find(x => {
-    return x.name.toLowerCase() == args[0].toLowerCase();
+return x.name.toLowerCase() == args[0].toLowerCase();
   });
 
   let ball = ballFinder(ballName);
 
   if (pkmn == null)
   {
-    message.channel.send(pkmnNotFound);
-    return;
+message.channel.send(pkmnNotFound);
+return;
   }
 
   let messageToSend = bestBallCalc(pkmn, ball, false);
@@ -1093,42 +1437,42 @@ if (gigaKeywords.includes(args[0].toLowerCase()))
 {
   let possiblePkmnName = (args[1] + " " + args[2]).toLowerCase();
   let possiblePkmn = ingamePkmn.find(x => {
-    return x.name.toLowerCase() == possiblePkmnName
+return x.name.toLowerCase() == possiblePkmnName
   });
   let pkmn = ingamePkmn.find(x => {
-    return x.name.toLowerCase() == args[1].toLowerCase();
+return x.name.toLowerCase() == args[1].toLowerCase();
   });
 
   if (pkmn == null && possiblePkmn == null)
   {
-    message.channel.send(pkmnNotFound);
-    return;
+message.channel.send(pkmnNotFound);
+return;
   }
 
   else if (pkmn)
   {
-    let ballName = ballNames.find(name => {
-      return name.toLowerCase() == args[2].toLowerCase();
-    });
+let ballName = ballNames.find(name => {
+  return name.toLowerCase() == args[2].toLowerCase();
+});
 
-    if (ballName == null)
-    {
-      message.channel.send(ballNotFound);
-      return;
-    }
+if (ballName == null)
+{
+  message.channel.send(ballNotFound);
+  return;
+}
 
-    let ball = ballFinder(ballName);
+let ball = ballFinder(ballName);
 
-    let messageToSend = bestBallCalc(pkmn, ball, true);
+let messageToSend = bestBallCalc(pkmn, ball, true);
 
-    message.channel.send(messageToSend);
+message.channel.send(messageToSend);
   }
 
   else
   {
-    let messageToSend = bestBallsCalc(possiblePkmn, true);
-    message.channel.send(messageToSend);
-    return;
+let messageToSend = bestBallsCalc(possiblePkmn, true);
+message.channel.send(messageToSend);
+return;
   }
 }
 
@@ -1157,113 +1501,113 @@ pokemon.forEach(x => {
   let formIndex = x.name.indexOf("-");
   let tempName = x.name;
   if (formIndex+1)
-    tempName = x.name.slice(0, formIndex);
+tempName = x.name.slice(0, formIndex);
 
   if (egg.Monster.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Monster";
-    else
-      x.eggGroup1 = "Monster";
+if (x.eggGroup1)
+  x.eggGroup2 = "Monster";
+else
+  x.eggGroup1 = "Monster";
   }
 
   if (egg.Humanlike.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Human-Like";
-    else
-      x.eggGroup1 = "Human-Like";
+if (x.eggGroup1)
+  x.eggGroup2 = "Human-Like";
+else
+  x.eggGroup1 = "Human-Like";
   }
   if (egg.Water1.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Water 1";
-    else
-      x.eggGroup1 = "Water 1";
+if (x.eggGroup1)
+  x.eggGroup2 = "Water 1";
+else
+  x.eggGroup1 = "Water 1";
   }
   if (egg.Water2.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Water 2";
-    else
-      x.eggGroup1 = "Water 2";
+if (x.eggGroup1)
+  x.eggGroup2 = "Water 2";
+else
+  x.eggGroup1 = "Water 2";
   }
   if (egg.Water3.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Water 3";
-    else
-      x.eggGroup1 = "Water 3";
+if (x.eggGroup1)
+  x.eggGroup2 = "Water 3";
+else
+  x.eggGroup1 = "Water 3";
   }
   if (egg.Bug.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Bug";
-    else
-      x.eggGroup1 = "Bug";
+if (x.eggGroup1)
+  x.eggGroup2 = "Bug";
+else
+  x.eggGroup1 = "Bug";
   }
   if (egg.Mineral.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Mineral";
-    else
-      x.eggGroup1 = "Mineral";
+if (x.eggGroup1)
+  x.eggGroup2 = "Mineral";
+else
+  x.eggGroup1 = "Mineral";
   }
   if (egg.Flying.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Flying";
-    else
-      x.eggGroup1 = "Flying";
+if (x.eggGroup1)
+  x.eggGroup2 = "Flying";
+else
+  x.eggGroup1 = "Flying";
   }
   if (egg.Amorphous.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Amorphous";
-    else
-      x.eggGroup1 = "Amorphous";
+if (x.eggGroup1)
+  x.eggGroup2 = "Amorphous";
+else
+  x.eggGroup1 = "Amorphous";
   }
   if (egg.Field.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Field";
-    else
-      x.eggGroup1 = "Field";
+if (x.eggGroup1)
+  x.eggGroup2 = "Field";
+else
+  x.eggGroup1 = "Field";
   }
   if (egg.Fairy.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Fairy";
-    else
-      x.eggGroup1 = "Fairy";
+if (x.eggGroup1)
+  x.eggGroup2 = "Fairy";
+else
+  x.eggGroup1 = "Fairy";
   }
   if (egg.Ditto.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Ditto";
-    else
-      x.eggGroup1 = "Ditto";
+if (x.eggGroup1)
+  x.eggGroup2 = "Ditto";
+else
+  x.eggGroup1 = "Ditto";
   }
   if (egg.Grass.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Grass";
-    else
-      x.eggGroup1 = "Grass";
+if (x.eggGroup1)
+  x.eggGroup2 = "Grass";
+else
+  x.eggGroup1 = "Grass";
   }
   if (egg.Dragon.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Dragon";
-    else
-      x.eggGroup1 = "Dragon";
+if (x.eggGroup1)
+  x.eggGroup2 = "Dragon";
+else
+  x.eggGroup1 = "Dragon";
   }
   if (egg.Undiscovered.includes(tempName) && (!x.eggGroup1 || !x.eggGroup2))
   {
-    if (x.eggGroup1)
-      x.eggGroup2 = "Undiscovered";
-    else
-      x.eggGroup1 = "Undiscovered";
+if (x.eggGroup1)
+  x.eggGroup2 = "Undiscovered";
+else
+  x.eggGroup1 = "Undiscovered";
   }
 });
 
@@ -1274,31 +1618,31 @@ pokemon.forEach(x => {
   let formIndex = x.name.indexOf("-");
   let tempName = x.name;
   if (formIndex+1)
-    tempName = x.name.slice(0, formIndex);
+tempName = x.name.slice(0, formIndex);
 
   if (ratio.maleOnly.includes(tempName))
-    x.genderRatio = "100% ♂";
+x.genderRatio = "100% ♂";
 
   if (ratio.fem1male7.includes(tempName))
-    x.genderRatio = "87.5% ♂ : 12.5% ♀";
+x.genderRatio = "87.5% ♂ : 12.5% ♀";
 
   if (ratio.fem1male3.includes(tempName))
-    x.genderRatio = "75% ♂ : 25% ♀";
+x.genderRatio = "75% ♂ : 25% ♀";
 
   if (ratio.fem1male1.includes(tempName))
-    x.genderRatio = "50% ♂ : 50% ♀";
+x.genderRatio = "50% ♂ : 50% ♀";
 
   if (ratio.fem3male1.includes(tempName))
-    x.genderRatio = "25% ♂ : 75% ♀";
+x.genderRatio = "25% ♂ : 75% ♀";
 
   if (ratio.fem7male1.includes(tempName))
-    x.genderRatio = "12.5% ♂ : 87.5% ♀";
+x.genderRatio = "12.5% ♂ : 87.5% ♀";
 
   if (ratio.femOnly.includes(tempName))
-    x.genderRatio = "100% ♀";
+x.genderRatio = "100% ♀";
 
   if (ratio.enby.includes(tempName))
-    x.genderRatio = "100% ⚲";
+x.genderRatio = "100% ⚲";
 });
 
 console.log(pokemon);
@@ -1314,35 +1658,35 @@ pokemon.forEach(x => {
 pokemon.forEach(x => {
   let p = pokeSON.find(y => {return y.name == x.name});
   if (!p)
-    return;
+return;
 
   let den = p.dens.split("/");
   if (den.length <= 1)
   {
-    if (den[0].startsWith("Sword"))
-    {
-      let ds = den[0].slice(5).trim().split(/ +g/);
-      x.dens.sword = ds;
-    }
-    else if (den[0].startsWith("Shield"))
-    {
-      let ds = den[0].slice(6).trim().split(/ +g/);
-      x.dens.shield = ds;
-    }
-    else
-    {
-      let ds = den[0].trim().split(/ +g/);
-      x.dens.sword = ds;
-      x.dens.shield = ds;
-    }
+if (den[0].startsWith("Sword"))
+{
+  let ds = den[0].slice(5).trim().split(/ +g/);
+  x.dens.sword = ds;
+}
+else if (den[0].startsWith("Shield"))
+{
+  let ds = den[0].slice(6).trim().split(/ +g/);
+  x.dens.shield = ds;
+}
+else
+{
+  let ds = den[0].trim().split(/ +g/);
+  x.dens.sword = ds;
+  x.dens.shield = ds;
+}
   }
   else
   {
-    let ds = den[0].slice(5).trim().split(/ +g/);
-    x.dens.sword = ds;
+let ds = den[0].slice(5).trim().split(/ +g/);
+x.dens.sword = ds;
 
-    ds = den[1].slice(6).trim().split(/ +g/);
-    x.dens.shield = ds;
+ds = den[1].slice(6).trim().split(/ +g/);
+x.dens.shield = ds;
   }
 
 });
@@ -1353,7 +1697,7 @@ pokemon.forEach(x => {
   x.forms = [];
   let p = pokeSON.find(y => {return y.name == x.name});
   if (!p)
-    return;
+return;
 
   x.forms = p.forms;
 });
@@ -1363,10 +1707,10 @@ console.log(pokemon);
 
 denPokemon.forEach(mon => {
   if (mon.dens.sword.length >= 1)
-    mon.dens.sword = mon.dens.sword[0].match(/\b\d{1}\b|\b\d{2}\b/g);
+mon.dens.sword = mon.dens.sword[0].match(/\b\d{1}\b|\b\d{2}\b/g);
 
   if (mon.dens.shield.length >= 1)
-    mon.dens.shield = mon.dens.shield[0].match(/\b\d{1}\b|\b\d{2}\b/g);
+mon.dens.shield = mon.dens.shield[0].match(/\b\d{1}\b|\b\d{2}\b/g);
 });
 
 let newdata = JSON.stringify(pokemon);
@@ -1376,20 +1720,20 @@ fs.writeFileSync("./data/ver7pokemon.json", newdata);
 
   switch (flag)
   {
-    case "pkmn":
-      return pokemon.find(x => {
-        let nameMatch = x.name.replace(nonAlpha, "").toLowerCase() == name;
-        let formMatch = cform? x.forms.some(form => {return form.toLowerCase() == cform}) : true;
-        return nameMatch && formMatch;
-      });
+case "pkmn":
+  return pokemon.find(x => {
+let nameMatch = x.name.replace(nonAlpha, "").toLowerCase() == name;
+let formMatch = cform? x.forms.some(form => {return form.toLowerCase() == cform}) : true;
+return nameMatch && formMatch;
+  });
 
-    case "ball":
-      return balls.find(x => {
-        return x.name.replace(nonAlpha, "").toLowerCase().startsWith(name);
-      });
+case "ball":
+  return balls.find(x => {
+return x.name.replace(nonAlpha, "").toLowerCase().startsWith(name);
+  });
 
-    default:
-      return null;
+default:
+  return null;
   }
   
 
@@ -1397,277 +1741,277 @@ fs.writeFileSync("./data/ver7pokemon.json", newdata);
 
   else if (args.length == 1)
   {
-    let pkmn = pokedata.fetch("pkmn", args);
+let pkmn = pokedata.fetch("pkmn", args);
 
-    if (!pkmn)
-      return message.channel.send(botspeech.pkmnNotFound);
+if (!pkmn)
+  return message.channel.send(botspeech.pkmnNotFound);
 
-    else if (args[0].match(/-gmax|-gigantamax/))
-      return message.channel.send(calc.bestBallsMsg(pkmn, true, catchEmbed));
+else if (args[0].match(/-gmax|-gigantamax/))
+  return message.channel.send(calc.bestBallsMsg(pkmn, true, catchEmbed));
 
-    else
-      return message.channel.send(calc.bestBallsMsg(pkmn, false, catchEmbed));
+else
+  return message.channel.send(calc.bestBallsMsg(pkmn, false, catchEmbed));
   }
 
   else if (args.length == 2)
   {
-    let pkmn = pokedata.fetch("pkmn", args.slice(0, 1));
-    let pkmn2 = pokedata.fetch("pkmn", args);
+let pkmn = pokedata.fetch("pkmn", args.slice(0, 1));
+let pkmn2 = pokedata.fetch("pkmn", args);
 
-    if (pkmn)
-    {
-      let ball = pokedata.fetch("ball", args.slice(1, 2));
-      let gmax = args[0].match(/-gmax|-gigantamax/);
+if (pkmn)
+{
+  let ball = pokedata.fetch("ball", args.slice(1, 2));
+  let gmax = args[0].match(/-gmax|-gigantamax/);
 
-      if (gmax)
-      {
-        if (ball)
-          return message.channel.send(calc.bestBallMsg(pkmn, ball, true));
+  if (gmax)
+  {
+if (ball)
+  return message.channel.send(calc.bestBallMsg(pkmn, ball, true));
 
-        else 
-      }
-        return message.channel.send(calc.bestBallMsg(pkmn, ball, false));
+else 
+  }
+return message.channel.send(calc.bestBallMsg(pkmn, ball, false));
 
-      else if (gmax)
-      {
-        if (!gmaxForm)
-          return message.channel.send(botspeech.gmaxNotFound);
+  else if (gmax)
+  {
+if (!gmaxForm)
+  return message.channel.send(botspeech.gmaxNotFound);
 
-        return message.channel.send(calc.bestBallsMsg(pkmn, true, catchEmbed));
-      }
+return message.channel.send(calc.bestBallsMsg(pkmn, true, catchEmbed));
+  }
 
-      else
-        return message.channel.send(botspeech.argNotFound + '\n' + botspeech.catchExample2 + '\`\`\`');
-    }
+  else
+return message.channel.send(botspeech.argNotFound + '\n' + botspeech.catchExample2 + '\`\`\`');
+}
 
-    else if (pkmn2)
-      return message.channel.send(calc.bestBallsMsg(pkmn2, false, catchEmbed));
+else if (pkmn2)
+  return message.channel.send(calc.bestBallsMsg(pkmn2, false, catchEmbed));
 
-    else
-      return message.channel.send(botspeech.pkmnNotFound);
+else
+  return message.channel.send(botspeech.pkmnNotFound);
   }
 
   else if (args.length == 3)
   {
-    let pkmn = pokedata.fetch("pkmn", args.slice(0, 1));
-    let pkmn2 = pokedata.fetch("pkmn", args.slice(0, 2));
+let pkmn = pokedata.fetch("pkmn", args.slice(0, 1));
+let pkmn2 = pokedata.fetch("pkmn", args.slice(0, 2));
 
-    if (pkmn)
-    {
-      let ball = pokedata.fetch("ball", args.slice(1, 2));
-      let gmax = pokeLists.gigaKeywords.includes(args[2].toLowerCase());
-      let gmaxForm = pkmn.forms.includes("Gigantamax");
+if (pkmn)
+{
+  let ball = pokedata.fetch("ball", args.slice(1, 2));
+  let gmax = pokeLists.gigaKeywords.includes(args[2].toLowerCase());
+  let gmaxForm = pkmn.forms.includes("Gigantamax");
 
-      if (!ball)
-        return message.channel.send(botspeech.ballNotFound);
+  if (!ball)
+return message.channel.send(botspeech.ballNotFound);
 
-      else if (gmax)
-      {
-        if (!gmaxForm)
-          return message.channel.send(botspeech.gmaxNotFound);
+  else if (gmax)
+  {
+if (!gmaxForm)
+  return message.channel.send(botspeech.gmaxNotFound);
 
-        return message.channel.send(calc.bestBallMsg(pkmn, ball, true));
-      }
+return message.channel.send(calc.bestBallMsg(pkmn, ball, true));
+  }
 
-      else
-        return message.channel.send(botspeech.argNotFound + '\n' + botspeech.catchExample3 + '\`\`\`');
-    }
+  else
+return message.channel.send(botspeech.argNotFound + '\n' + botspeech.catchExample3 + '\`\`\`');
+}
 
-    else if (pkmn2)
-    {
-      let ball = pokedata.fetch("ball", args.slice(2, 3));
-      let gmax = pokeLists.gigaKeywords.includes(args[2].toLowerCase());
-      let gmaxForm = pkmn.forms.includes("Gigantamax");
+else if (pkmn2)
+{
+  let ball = pokedata.fetch("ball", args.slice(2, 3));
+  let gmax = pokeLists.gigaKeywords.includes(args[2].toLowerCase());
+  let gmaxForm = pkmn.forms.includes("Gigantamax");
 
-      if (!ball)
-        return message.channel.send(botspeech.ballNotFound);
+  if (!ball)
+return message.channel.send(botspeech.ballNotFound);
 
-      else if (gmax)
-      {
-        if (!gmaxForm)
-          return message.channel.send(botspeech.gmaxNotFound);
+  else if (gmax)
+  {
+if (!gmaxForm)
+  return message.channel.send(botspeech.gmaxNotFound);
 
-        return message.channel.send(calc.bestBallsMsg(pkmn2, true, catchEmbed));
-      }
+return message.channel.send(calc.bestBallsMsg(pkmn2, true, catchEmbed));
+  }
 
-      else
-        return message.channel.send(botspeech.argNotFound);
-    }
+  else
+return message.channel.send(botspeech.argNotFound);
+}
 
-    else
-      return message.channel.send(botspeech.pkmnNotFound);
+else
+  return message.channel.send(botspeech.pkmnNotFound);
   }
 
   else if (args.length == 4)
   {
-    let pkmn = pokedata.fetch("pkmn", args.slice(0, 2));
-    let ball = pokedata.fetch("ball", args.slice(2, 3));
-    let gmax = pokeLists.gigaKeywords.includes(args[3].toLowerCase());
-    let gmaxForm = pkmn.forms.includes("Gigantamax");
+let pkmn = pokedata.fetch("pkmn", args.slice(0, 2));
+let ball = pokedata.fetch("ball", args.slice(2, 3));
+let gmax = pokeLists.gigaKeywords.includes(args[3].toLowerCase());
+let gmaxForm = pkmn.forms.includes("Gigantamax");
 
-    if (!pkmn)
-      return message.channel.send(botspeech.pkmnNotFound);
+if (!pkmn)
+  return message.channel.send(botspeech.pkmnNotFound);
 
-    else if (!ball)
-      return message.channel.send(botspeech.ballNotFound);
+else if (!ball)
+  return message.channel.send(botspeech.ballNotFound);
 
-    else if (gmax)
-    {
-      if (!gmaxForm)
-        return message.channel.send(botspeech.gmaxNotFound);
-      
-      return message.channel.send(calc.bestBallMsg(pkmn, ball, true));
-    }
+else if (gmax)
+{
+  if (!gmaxForm)
+return message.channel.send(botspeech.gmaxNotFound);
+  
+  return message.channel.send(calc.bestBallMsg(pkmn, ball, true));
+}
 
-    return message.channel.send(botspeech.argNotFound + '\`\`\`');
+return message.channel.send(botspeech.argNotFound + '\`\`\`');
   }
 }
 
 
   else if (args.length == 1)
   {
-    let pkmn = pokedata.fetch("pkmn", args);
+let pkmn = pokedata.fetch("pkmn", args);
 
-    if (!pkmn)
-      return message.channel.send(botspeech.pkmnNotFound);
+if (!pkmn)
+  return message.channel.send(botspeech.pkmnNotFound);
 
-    return message.channel.send( calc.bestBallsMsg(pkmn, false, catchEmbed) );
+return message.channel.send( calc.bestBallsMsg(pkmn, false, catchEmbed) );
   }
 
   else if (args.length == 2)
   {
-    let pkmn = pokedata.fetch("pkmn", args[0]);
-    let pkmn2 = pokedata.fetch("pkmn", args);
+let pkmn = pokedata.fetch("pkmn", args[0]);
+let pkmn2 = pokedata.fetch("pkmn", args);
 
-    if (pkmn)
-    {
-      let ball = pokedata.fetch("ball", args[1])
-      let gmax = botspeech.gigaKeywords.includes(args[1].toLowerCase());
-      let gmaxForm = pkmn.forms.includes("Gigantamax");
-      if (gmax && gmaxForm)
-        return message.channel.send(calc.bestBallsMsg(pkmn, true, catchEmbed));
+if (pkmn)
+{
+  let ball = pokedata.fetch("ball", args[1])
+  let gmax = botspeech.gigaKeywords.includes(args[1].toLowerCase());
+  let gmaxForm = pkmn.forms.includes("Gigantamax");
+  if (gmax && gmaxForm)
+return message.channel.send(calc.bestBallsMsg(pkmn, true, catchEmbed));
 
-      else if (ball)
-        return message.channel.send(calc.bestBallMsg(pkmn, ball, false));
+  else if (ball)
+return message.channel.send(calc.bestBallMsg(pkmn, ball, false));
 
-      else
-        return message.channel.send(botspeech.argNotFound);
-    }
+  else
+return message.channel.send(botspeech.argNotFound);
+}
 
-    else if (pkmn2)
-      return message.channel.send(calc.bestBallsMsg(pkmn2, false, catchEmbed));
+else if (pkmn2)
+  return message.channel.send(calc.bestBallsMsg(pkmn2, false, catchEmbed));
 
-    else
-      return message.channel.send(botspeech.pkmnNotFound);
+else
+  return message.channel.send(botspeech.pkmnNotFound);
   }
 
   else if (args.length == 3)
   {
-    let pkmn = pokedata.fetch("pkmn", args[0]);
-    let pkmn = pokedata.fetch("pkmn", args.slice(0, 1));
+let pkmn = pokedata.fetch("pkmn", args[0]);
+let pkmn = pokedata.fetch("pkmn", args.slice(0, 1));
 
-    if (pkmn)
-    {
-      let ball = pokedata.fetch("ball", args[1]);
-      let gmax = botspeech.gigaKeywords.includes(args[2].toLowerCase());
-      let gmaxForm = pkmn.forms.includes("Gigantamax");
+if (pkmn)
+{
+  let ball = pokedata.fetch("ball", args[1]);
+  let gmax = botspeech.gigaKeywords.includes(args[2].toLowerCase());
+  let gmaxForm = pkmn.forms.includes("Gigantamax");
 
-      if (!ball)
-        return message.channel.send(botspeech.ballNotFound);
+  if (!ball)
+return message.channel.send(botspeech.ballNotFound);
 
-      
-    }
+  
+}
 
-    else if (pkmn2)
-    {
-      let ball = pokedata.fetch("ball", args[2]);
-      let gmax = botspeech.gigaKeywords.includes(args[2].toLowerCase());
-      let gmaxForm = pkmn.forms.includes("Gigantamax");
+else if (pkmn2)
+{
+  let ball = pokedata.fetch("ball", args[2]);
+  let gmax = botspeech.gigaKeywords.includes(args[2].toLowerCase());
+  let gmaxForm = pkmn.forms.includes("Gigantamax");
 
-      if (gmax && gmaxForm)
-        return message.channel.send(calc.bestBallsMsg(pkmn2, true, catchEmbed));
+  if (gmax && gmaxForm)
+return message.channel.send(calc.bestBallsMsg(pkmn2, true, catchEmbed));
 
-      else if (ball)
-        return message.channel.send(calc.bestBallMsg(pkmn2, ball, false));
-      
-      else
-        return message.channel.send(botspeech.argNotFound);
-    }
+  else if (ball)
+return message.channel.send(calc.bestBallMsg(pkmn2, ball, false));
+  
+  else
+return message.channel.send(botspeech.argNotFound);
+}
 
-    else
-      return message.channel.send(botspeech.pkmnNotFound);
+else
+  return message.channel.send(botspeech.pkmnNotFound);
   }
 
   else if (args.length == 4)
   {
-    let pkmn = pokedata.fetch("pkmn", args[0]);
-    let pkmn2 = pokedata.fetch("pkmn", args.slice(0, 1));
+let pkmn = pokedata.fetch("pkmn", args[0]);
+let pkmn2 = pokedata.fetch("pkmn", args.slice(0, 1));
 
-    if (pkmn)
-    {
-      let ballName = (args[1] + " " + args[2]).toLowerCase();
-      let ball = calc.ballFinder(ballName);
+if (pkmn)
+{
+  let ballName = (args[1] + " " + args[2]).toLowerCase();
+  let ball = calc.ballFinder(ballName);
 
-      if (!ball)
-        return message.channel.send(botspeech.ballNotFound);
+  if (!ball)
+return message.channel.send(botspeech.ballNotFound);
 
-      else if (!botspeech.gigaKeywords.includes(args[3].toLowerCase()))
-        return message.channel.send(botspeech.argNotFound);
+  else if (!botspeech.gigaKeywords.includes(args[3].toLowerCase()))
+return message.channel.send(botspeech.argNotFound);
 
-      else
-        return message.channel.send( calc.bestBallMsg(pkmn, ball, true) );
-    }
+  else
+return message.channel.send( calc.bestBallMsg(pkmn, ball, true) );
+}
 
-    else if (pkmn2)
-    {
-      let ballName = args[2].toLowerCase();
-      let ballName2 = (args[2] + " " + args[3]).toLowerCase();
+else if (pkmn2)
+{
+  let ballName = args[2].toLowerCase();
+  let ballName2 = (args[2] + " " + args[3]).toLowerCase();
 
-      let ball = calc.ballFinder(ballName);
-      let ball2 = calc.ballFinder(ballName2);
+  let ball = calc.ballFinder(ballName);
+  let ball2 = calc.ballFinder(ballName2);
 
-      if (ball2)
-        return message.channel.send( calc.bestBallMsg(pkmn2, ball2, false) );
+  if (ball2)
+return message.channel.send( calc.bestBallMsg(pkmn2, ball2, false) );
 
-      else if (ball)
-      {
-        if (botspeech.gigaKeywords.includes(args[3].toLowerCase()))
-          return message.channel.send( calc.bestBallMsg(pkmn2, ball, true) );
+  else if (ball)
+  {
+if (botspeech.gigaKeywords.includes(args[3].toLowerCase()))
+  return message.channel.send( calc.bestBallMsg(pkmn2, ball, true) );
 
-        else
-          message.channel.send(botspeech.argNotFound);
-      }
+else
+  message.channel.send(botspeech.argNotFound);
+  }
 
-      else
-        return message.channel.send(botspeech.ballNotFound);
-    }
+  else
+return message.channel.send(botspeech.ballNotFound);
+}
 
-    else
-      return message.channel.send(botspeech.pkmnNotFound);
+else
+  return message.channel.send(botspeech.pkmnNotFound);
   }
 
   else if (args.length == 5)
   {
-    let pkmnName = (args[0] + " " + args[1]).toLowerCase();
+let pkmnName = (args[0] + " " + args[1]).toLowerCase();
 
-    let pkmn = pokedata.pokemon.find(x => {
-      return x.name.toLowerCase() == pkmnName
-    });
+let pkmn = pokedata.pokemon.find(x => {
+  return x.name.toLowerCase() == pkmnName
+});
 
-    let ballName = (args[2] + " " + args[3]).toLowerCase();
-    let ball = calc.ballFinder(ballName);
+let ballName = (args[2] + " " + args[3]).toLowerCase();
+let ball = calc.ballFinder(ballName);
 
-    if (!pkmn)
-      return message.channel.send(botspeech.pkmnNotFound);
+if (!pkmn)
+  return message.channel.send(botspeech.pkmnNotFound);
 
-    else if (!ball)
-      return message.channel.send(botspeech.ballNotFound);
+else if (!ball)
+  return message.channel.send(botspeech.ballNotFound);
 
-    else if (!botspeech.gigaKeywords.includes(args[4].toLowerCase()))
-      return message.channel.send(botspeech.argNotFound);
+else if (!botspeech.gigaKeywords.includes(args[4].toLowerCase()))
+  return message.channel.send(botspeech.argNotFound);
 
-    else
-      return message.channel.send( calc.bestBallMsg(pkmn, ball, true) );
+else
+  return message.channel.send( calc.bestBallMsg(pkmn, ball, true) );
   }
 }
 
@@ -1682,16 +2026,16 @@ exports.run = (client, message, args) => {
   denEmbed.setTitle("Den Finder");
 
   if (args.length == 0 || (args[0] < 1 || args[0] > 93))
-    return message.reply(botspeech.denNoArg);
+return message.reply(botspeech.denNoArg);
 
   else
   {
-    denEmbed.setDescription(`Den ${args[0]} has the following Pokémon:`);
-    denEmbed.file = `./data/dens/den${args[0]}.png`;
+denEmbed.setDescription(`Den ${args[0]} has the following Pokémon:`);
+denEmbed.file = `./data/dens/den${args[0]}.png`;
 
-    return message.channel.send(denEmbed);
+return message.channel.send(denEmbed);
 
   }
-    //return message.reply(`Den ${args[0]} has the following Pokémon: `, {files: [`./data/dens/den${args[0]}.png`]});
+//return message.reply(`Den ${args[0]} has the following Pokémon: `, {files: [`./data/dens/den${args[0]}.png`]});
 };
 */

@@ -1,7 +1,7 @@
 module.exports = {
   name: "Natures Chart Command",
-  cmdName: "natures",
-  aliases: ["nature"],
+  cmdName: "nature",
+  aliases: ["natures"],
   description: "Displays an in-depth Pokémon natures chart from Bulbapedia.",
   args: false,
   usage: "{{prefix}}natures",

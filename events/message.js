@@ -59,6 +59,15 @@ module.exports = async (client, message) => {
     return;
   }
 
+  if (command.args && args.length < command.args)
+  {
+    message.channel.send(botspeech[command.cmdName + "NoArg"])
+      .then()
+      .catch(console.error);
+
+    return;
+  }
+
   if (!cooldowns.has(command.cmdName))
     cooldowns.set(command.cmdName, new Discord.Collection());
 
