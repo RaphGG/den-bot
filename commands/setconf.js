@@ -16,8 +16,8 @@ module.exports = {
 const botspeech = require("../modules/botspeech.js");
 const fs = require("fs");
 
-const run = (client, message, args, settings) => {
-  const guild = client.guilds.get(message.guild.id);
+const run = async (client, message, args, settings) => {
+  const guild = await client.guilds.resolve(message.guild);
   if (!guild.available)
     return console.error(`Guild Not Available.\nGuild ID: ${guild.id}`);
 
@@ -34,7 +34,7 @@ const run = (client, message, args, settings) => {
     const addedChannels = [];
     values.forEach(name => {
 
-      const guildchan = guild.channels.find(channel => (channel.name.toLowerCase() == name.toLowerCase() && channel.type == "text"));
+      const guildchan = guild.channels.cache.find(channel => (channel.name.toLowerCase() == name.toLowerCase() && channel.type == "text"));
 
       if (!guildchan) return;
 

@@ -206,11 +206,11 @@ exports.createEmbed = (flag, client, args) => {
     embed.setImage(imageFinder(args));
 
     // Types (Title)
-    const type1 = client.emojis.find(x => (x.name == `Type${pkmn.type1}`));
+    const type1 = client.emojis.cache.find(x => (x.name == `Type${pkmn.type1}`));
 
-    const type2 = client.emojis.find(x => (x.name == `Type${pkmn.type2}`));
+    const type2 = client.emojis.cache.find(x => (x.name == `Type${pkmn.type2}`));
 
-    const types = type2? type1 + " " + type2 : type1;
+    const types = type2? `${type1} ${type2}`: `${type1}`;
 
     // Title
     let pkmnNoForm = args.cosmetic? pkmn.name : pkmn.name.replace(formsEx, "");
