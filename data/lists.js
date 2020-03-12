@@ -2101,7 +2101,7 @@ exports.excludedBalls = ["Timer Ball", "Quick Ball", "Master Ball", "Level Ball"
 
 exports.ballNames = ["Poke", "Great", "Ultra", "Premier", "Luxury", "Beast", "Cherish", "Dive", "Dream", "Dusk", "Fast", "Friend", "Heal", "Heavy", "Level", "Love", "Lure", "Master", "Moon", "Nest", "Net", "Park", "Quick", "Repeat", "Safari", "Sport", "Timer"];
 
-exports.promoPkmn = ["Milcery", "Kingler", "Morgrem", "Grimmsnarl", "Hattrem", "Hatterene", "Orbeetle", "Toxtricity"];
+exports.promoPkmn = ["Munchlax", "Gastly", "Machop", "Snorlax", "Haunter", "Machoke", "Gengar", "Machamp"];
 
 exports.gmaxPkmn = ["Charizard", "Butterfree", "Pikachu", "Meowth", "Machamp", "Gengar", "Kingler", "Lapras", "Eevee", "Snorlax", "Garbodor", "Melmetal", "Corviknight", "Orbeetle", "Drednaw", "Coalossal", "Flapple", "Appletun", "Sandaconda", "Toxtricity", "Centiskorch", "Hatterene", "Grimmsnarl", "Alcremie", "Copperajah", "Duraludon"];
 
