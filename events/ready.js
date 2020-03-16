@@ -2,8 +2,8 @@ const botspeech = require("../modules/botspeech.js");
 const DBL = require("dblapi.js");
 
 module.exports = (client) => {
-  const dbl = new DBL(client.config.tokenDBL, client);
-  dbl.on("posted", () => (console.log("Server count posted!")));
+  // const dbl = new DBL(client.config.tokenDBL, client);
+  // dbl.on("posted", () => (console.log("Server count posted!")));
 
   let num = -1;
   setPresence(client, 0);
@@ -11,11 +11,12 @@ module.exports = (client) => {
     setPresence(client, ++num%4);
   }, 120 * 1000);
 
-  dbl.postStats(client.guilds.size);
+  // dbl.postStats(client.guilds.size);
+  /*
   setInterval(() => {
     dbl.postStats(client.guilds.size);
   }, 1800 * 1000);
-
+  */
   return console.log("I am ready!");
 };
 
