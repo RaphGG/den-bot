@@ -1,8 +1,8 @@
 module.exports = {
-  name: "Pokèmon Pokèdex Command",
+  name: "Pokémon Pokédex Command",
   cmdName: "pokedex",
   aliases: ["dex", "info"],
-  description: "Shows a detailed summary of a Pokèmon’s latest Statistics (Gen 8 / Gen 7).",
+  description: "Shows a detailed summary of a Pokémon’s latest Statistics (Gen 8 / Gen 7).",
   args: 1,
   usage: "{{prefix}}pokedex [Pokémon Name] (Form)",
   example: "{{prefix}}pokedex eternamax eternatus",

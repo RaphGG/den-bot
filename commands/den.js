@@ -2,7 +2,7 @@ module.exports = {
   name: "Den Information Command",
   cmdName: "den",
   aliases: ["dens"],
-  description: "Shows a list of Pokèmon that belong to a den including their HAs.",
+  description: "Shows a list of Pokémon that belong to a den including their HAs.",
   args: 1,
   usage: "{{prefix}}den [Pokémon Name]\n{{prefix}}den [Den Number]",
   example: "{{prefix}}den charizard\n{{prefix}}den 69",

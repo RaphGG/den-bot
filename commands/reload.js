@@ -34,7 +34,7 @@ const run = (client, message, args) => {
   // Check if the command exists and is valid
   if (!client.commands.has(commandName))
   {
-    message.reply(botspeech.commandNotFound)
+    message.reply(botspeech.cmdNotFound)
       .then()
       .catch(console.error);
     return;

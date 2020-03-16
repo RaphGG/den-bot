@@ -1,5 +1,5 @@
 module.exports = {
-  name: "Pokè-Ball Info Command",
+  name: "Poké-Ball Info Command",
   cmdName: "ball",
   aliases: ["balls"],
   description: "Shows a summary of a Poké-Ball’s statistics",

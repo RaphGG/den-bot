@@ -1,8 +1,8 @@
 module.exports = {
-  name: "Pokèmon Catch Rate Command",
+  name: "Pokémon Catch Rate Command",
   cmdName: "catch",
   aliases: ["rate"],
-  description: "Shows a detailed summary of catch rates for a given Pokèmon & Ball.",
+  description: "Shows a detailed summary of catch rates for a given Pokémon & Ball.",
   args: 1,
   usage: "{{prefix}}catch [Pokémon Name] (Form) (Poké-Ball)",
   example: "{{prefix}}catch zard gmax lux",

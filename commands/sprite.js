@@ -1,5 +1,5 @@
 module.exports = {
-  name: "Pokèmon Game Sprite Command",
+  name: "Pokémon Game Sprite Command",
   cmdName: "sprite",
   aliases: ["sprites", "pic", "s"],
   description: "Displays a Pokémon's Latest In-Game Sprite!",

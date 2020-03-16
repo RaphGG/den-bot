@@ -27,8 +27,8 @@ const formsEx = new RegExp(formsStr, "gi");
 // const ballsEx = new RegExp(ballStr, "gi");
 const starEx = new RegExp(/\*/, "gi");
 
-// Pokè-Data Fetch function for the bot. Utilizes Regex to break down passed
-// arguments and then search for and return a Pokèmon Obj, Den Obj, or Ball Obj.
+// Poké-Data Fetch function for the bot. Utilizes Regex to break down passed
+// arguments and then search for and return a Pokémon Obj, Den Obj, or Ball Obj.
 // Regexs are marked with an Ex at the end of their var names.
 exports.fetch = (flag, args, settings) => {
 

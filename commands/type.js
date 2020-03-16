@@ -1,5 +1,5 @@
 module.exports = {
-  name: "Pokèmon Type Match-Up Command",
+  name: "Pokémon Type Match-Up Command",
   cmdName: "type",
   aliases: ["matchup", "types", "matchups"],
   description: "Shows a detailed summary of type matchups for the given type.",
