@@ -22,6 +22,8 @@ module.exports = (client) => {
 
 const setPresence = async (client, num) => {
 
+  /*
+
   if (num == 0)
   {
     client.shard.fetchClientValues('guilds.cache.size')
@@ -45,21 +47,21 @@ const setPresence = async (client, num) => {
       })
       .catch(console.error);
   }
-  /*
+  */
   switch (num)
   {
     case 0:
-      await client.user.setActivity(botspeech.presenceSmiles.replace(/{{count}}/, client.guilds.size), { type:"PLAYING" })
+      await client.user.setActivity(botspeech.presenceSmiles.replace(/{{count}}/, client.guilds.cache.size), { type:"PLAYING" })
         .then()
         .catch(console.error);
       return;
     case 1:
-      await client.user.setActivity(botspeech.presenceChannels.replace(/{{count}}/, client.channels.size), { type:"WATCHING" })
+      await client.user.setActivity(botspeech.presenceChannels.replace(/{{count}}/, client.channels.cache.size), { type:"WATCHING" })
         .then()
         .catch(console.error);
       return;
     case 2:
-      await client.user.setActivity(botspeech.presenceUsers.replace(/{{count}}/, client.users.size), { type:"PLAYING" })
+      await client.user.setActivity(botspeech.presenceUsers.replace(/{{count}}/, client.users.cache.size), { type:"PLAYING" })
         .then()
         .catch(console.error);
       return;
@@ -69,5 +71,4 @@ const setPresence = async (client, num) => {
         .catch(console.error);
       return;
   }
-  */
 };

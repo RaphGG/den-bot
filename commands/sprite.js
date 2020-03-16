@@ -34,7 +34,7 @@ const run = (client, message, args, settings) => {
   {
     const pkmnSprite = embedHelper.imageFinder(pkmnObj);
     // console.log(pkmnSprite);
-    message.channel.send({ file:pkmnSprite })
+    message.channel.send({ files:[pkmnSprite] })
       .then()
       .catch(console.error);
 

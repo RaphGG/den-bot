@@ -1,27 +1,22 @@
 {
   "name": "den-bot",
   "version": "1.0.0",
-  "description": "Discord Bot (Alcremie-B)",
+  "description": "A Pokèmon statistics Discord bot with the intended purpose of facilitating Max Raid Battles in Pokèmon Sword & Pokèmon Shield.",
   "main": "index.js",
   "dependencies": {
-    "dblapi.js": "^2.3.1",
-<<<<<<< HEAD
-    "discord.js": "^11.6.2",
-=======
     "discord.js": "^12.0.2",
->>>>>>> discord-js-12-update
     "eslint": "^6.8.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "(%help)"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RaphGG/Den-Bot.git"
   },
-  "author": "Raphael Guzman (Droopy)",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/RaphGG/Den-Bot/issues"
   },

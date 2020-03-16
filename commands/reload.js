@@ -7,7 +7,7 @@ module.exports = {
   usage: "{{prefix}}reload (Command)",
   example: "{{prefix}}reload pokedex",
   guildOnly: false,
-  adminOnly: true,
+  adminOnly: false,
   run(client, message, args) {
     run(client, message, args);
   }

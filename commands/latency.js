@@ -14,14 +14,21 @@ module.exports = {
   }
 };
 
-const run = (client, message) => {
-  // This will round the api ping of the client
-  const apiPing = Math.round(client.ping);
+const botspeech = require("../modules/botspeech.js");
 
+const run = (client, message) => {
   // This will round the response time between when the message was received and when the message was sent
+  if (!(message.author.id == client.config.owner))
+  {
+    message.reply(botspeech.permNotFound)
+      .then()
+      .catch(console.error);
+    return;
+  }
+
   const responseTime = Math.round(Date.now() - message.createdTimestamp);
 
-  message.channel.send(`API Ping: \`${apiPing}ms\`\nResponse Time: \`${responseTime}ms\``)
+  message.channel.send(`Last Ready: \`${client.readyAt}ms\`\nResponse Time: \`${responseTime}ms\``)
     .then()
     .catch(console.error);
 };
