@@ -1,5 +1,5 @@
 const botspeech = require("../modules/botspeech.js");
-const DBL = require("dblapi.js");
+// const DBL = require("dblapi.js");
 
 module.exports = (client) => {
   /*
