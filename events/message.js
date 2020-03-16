@@ -13,7 +13,7 @@ module.exports = async (client, message) => {
 
   else
   {
-    const guild = client.guilds.get(message.guild.id);
+    const guild = await client.guilds.resolve(message.guild);
     if (!guild.available)
       return console.error(`Guild Not Available.\nGuild ID: ${guild.id}`);
 
@@ -103,9 +103,12 @@ module.exports = async (client, message) => {
 };
 
 const isOwnerOrAdmin = async (author, guild) => {
-  return guild.fetchMember(author)
+  const guildmember = guild.member(author);
+  /*
     .then(member => (member.hasPermission(0x00000008, false, null, true)))
     .catch(error => (console.error(`No Member Fetched.\nError: ${error}`)));
+    */
+  return guildmember.hasPermission(0x00000008, false, null, true);
 };
 
 const setDefault = (client, guildId) => {

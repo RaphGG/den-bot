@@ -1,5 +1,5 @@
 const botspeech = require("../modules/botspeech.js");
-const DBL = require("dblapi.js");
+// const DBL = require("dblapi.js");
 
 module.exports = (client) => {
   // const dbl = new DBL(client.config.tokenDBL, client);
@@ -21,6 +21,31 @@ module.exports = (client) => {
 };
 
 const setPresence = async (client, num) => {
+
+  if (num == 0)
+  {
+    client.shard.fetchClientValues('guilds.cache.size')
+      .then(results => {
+        results.reduce((prev, guildCount) => prev + guildCount, 0);
+      })
+      .then(result => {
+        return client.user.setActivity(botspeech.presenceSmiles.replace(/{{count}}/, result), { type: "PLAYING" });
+      })
+      .catch(console.error);
+  }
+
+  else if (num == 2)
+  {
+    client.shard.broadcastEval('this.guilds.cache.reduce((prev, guild) => prev + guild.memberCount, 0)')
+      .then(results => {
+        results.reduce((prev, memberCount) => prev + memberCount, 0);
+      })
+      .then(result => {
+        return client.user.setActivity(botspeech.presenceUsers.replace(/{{count}}/, result), { type: "PLAYING" });
+      })
+      .catch(console.error);
+  }
+  /*
   switch (num)
   {
     case 0:
@@ -44,4 +69,5 @@ const setPresence = async (client, num) => {
         .catch(console.error);
       return;
   }
+  */
 };
