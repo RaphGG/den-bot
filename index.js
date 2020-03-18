@@ -39,7 +39,15 @@ fs.readdir("./data/settings/", (err, files) => {
 
   files.forEach(file => {
     const data = fs.readFileSync(`./data/settings/${file}`);
-    const setting = JSON.parse(data);
+    let setting;
+    try
+    {
+      setting = JSON.parse(data);
+    }
+    catch
+    {
+      console.error(`File: ${file} is corrupted.`);
+    }
     const guildId = file.split(".")[0];
     client.settings.set(guildId, setting);
   });
