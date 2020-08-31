@@ -8,6 +8,7 @@ module.exports = async (client, message) => {
 
   let settings;
   let ownerOrAdmin;
+  const isDev = client.config.developers.find(id => id == message.author.id);
   if (message.channel.type == 'dm')
     settings = client.config.settings;
 
@@ -52,6 +53,14 @@ module.exports = async (client, message) => {
   }
 
   if (command.adminOnly && !ownerOrAdmin)
+  {
+    message.reply(botspeech.permNotFound)
+      .then()
+      .catch(console.error);
+    return;
+  }
+
+  if (command.devOnly && !isDev)
   {
     message.reply(botspeech.permNotFound)
       .then()

@@ -8,6 +8,7 @@ module.exports = {
   example: "{{prefix}}natures",
   guildOnly: false,
   adminOnly: false,
+  devOnly: false,
   run(client, message) {
     run(client, message);
   }

@@ -8,6 +8,7 @@ module.exports = {
   example: "{{prefix}}resetconf",
   guildOnly: true,
   adminOnly: true,
+  devOnly: false,
   run(client, message) {
     run(client, message);
   }

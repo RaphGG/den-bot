@@ -8,6 +8,7 @@ module.exports = {
   example: "{{prefix}}den charizard\n{{prefix}}den 69",
   guildOnly: false,
   adminOnly: false,
+  devOnly: false,
   run(client, message, args, settings) {
     run(client, message, args, settings);
   }

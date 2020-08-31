@@ -8,6 +8,7 @@ module.exports = {
   example: "{{prefix}}setconf prefix $\n{{prefix}}set restrictedchannels channel-1, channel-2",
   guildOnly: true,
   adminOnly: true,
+  devOnly: false,
   run(client, message, args, settings) {
     run(client, message, args, settings);
   }

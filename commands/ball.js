@@ -8,6 +8,7 @@ module.exports = {
   example: "{{prefix}}ball beast",
   guildOnly: false,
   adminOnly: false,
+  devOnly: false,
   run(client, message, args) {
     run(client, message, args);
   }

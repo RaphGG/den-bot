@@ -8,6 +8,7 @@ module.exports = {
   example: "{{prefix}}reload pokedex",
   guildOnly: false,
   adminOnly: false,
+  devOnly: true,
   run(client, message, args) {
     run(client, message, args);
   }
@@ -17,17 +18,7 @@ const botspeech = require("../modules/botspeech.js");
 
 // Reload Command Handler: Reloads require caches / map entries
 // for a given command. Useful for dev work without restarting node process.
-// Bot Owner only command.
 const run = (client, message, args) => {
-
-  // isBotOwner
-  if (!(message.author.id == client.config.owner))
-  {
-    message.reply(botspeech.permNotFound)
-      .then()
-      .catch(console.error);
-    return;
-  }
 
   const commandName = args[0];
 

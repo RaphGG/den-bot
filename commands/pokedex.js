@@ -8,6 +8,7 @@ module.exports = {
   example: "{{prefix}}pokedex eternamax eternatus",
   guildOnly: false,
   adminOnly: false,
+  devOnly: false,
   run(client, message, args, settings) {
     run(client, message, args, settings);
   }
