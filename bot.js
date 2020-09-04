@@ -4,6 +4,42 @@
 const Discord = require("discord.js");
 const config = require("./config.json");
 const fs = require("fs");
+const { Pool, Client } = require('pg');
+
+const pool = new Pool({
+  user: config.pgUser,
+  host: config.pgHost,
+  database: config.pgDatabase,
+  password: config.pgPassword,
+  port: config.pgPort
+});
+
+pool.query('SELECT NOW()', (err, res) => {
+  console.log(err, res);
+  pool.end();
+});
+
+const db = new Client({
+  user: config.pgUser,
+  host: config.pgHost,
+  database: config.pgDatabase,
+  password: config.pgPassword,
+  port: config.pgPort
+});
+db.connect();
+
+db.query('SELECT NOW()', (err, res) => {
+  console.log(err, res);
+  db.end();
+});
+
+/*
+(async () => {
+  await db.connect()
+
+  const res = await db.query()
+})
+*/
 
 // Bot Creation
 const client = new Discord.Client();
@@ -63,4 +99,4 @@ fs.readdir("./commands/", (err, files) => {
     client.commands.set(commandName, props);
   });
 });
-client.login(config.token);
+client.login(config.tokentest);
