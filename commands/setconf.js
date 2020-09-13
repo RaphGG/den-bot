@@ -2,15 +2,18 @@ module.exports = {
   name: "Set Guild Configuration Command",
   cmdName: "setconf",
   aliases: ["set"],
-  description: "Sets a server specific bot configuration setting to given value(s).",
+  description:
+    "Sets a server specific bot configuration setting to given value(s).",
   args: 2,
-  usage: "{{prefix}}setconf prefix [New Prefix]\n{{prefix}}setconf restrictedchannels [Channels]",
-  example: "{{prefix}}setconf prefix $\n{{prefix}}set restrictedchannels channel-1, channel-2",
+  usage:
+    "{{prefix}}setconf prefix [New Prefix]\n{{prefix}}setconf restrictedchannels [Channels]",
+  example:
+    "{{prefix}}setconf prefix $\n{{prefix}}set restrictedchannels channel-1, channel-2",
   guildOnly: true,
   adminOnly: true,
   run(client, message, args, settings) {
     run(client, message, args, settings);
-  }
+  },
 };
 
 const botspeech = require("../modules/botspeech.js");
@@ -28,22 +31,23 @@ const run = async (client, message, args, settings) => {
 
   if (prop == "prefix" && isAlpha)
     return message.channel.send(botspeech.requiredPrefix);
-
-  else if (prop == "restrictedchannels")
-  {
+  else if (prop == "restrictedchannels") {
     const addedChannels = [];
-    values.forEach(name => {
-
-      const guildchan = guild.channels.cache.find(channel => (channel.name.toLowerCase() == name.toLowerCase() && channel.type == "text"));
+    values.forEach((name) => {
+      const guildchan = guild.channels.cache.find(
+        (channel) =>
+          channel.name.toLowerCase() == name.toLowerCase() &&
+          channel.type == "text"
+      );
 
       if (!guildchan) return;
 
       const rchan = {
         name: guildchan.name,
-        id: guildchan.id
+        id: guildchan.id,
       };
 
-      if (settings.restrictedchannels.some(chan => (chan.id == rchan.id)))
+      if (settings.restrictedchannels.some((chan) => chan.id == rchan.id))
         return;
 
       settings.restrictedchannels.push(rchan);
@@ -53,36 +57,42 @@ const run = async (client, message, args, settings) => {
     if (addedChannels.length == 0)
       return message.channel.send(botspeech.noChannelsAdded);
 
-    try
-    {
-      fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(settings));
-    }
-    catch(error)
-    {
+    try {
+      fs.writeFileSync(
+        `./data/settings/${message.guild.id}.json`,
+        JSON.stringify(settings)
+      );
+    } catch (error) {
       console.error(error);
     }
 
-    message.channel.send(botspeech.addChannels.replace(/{{channels}}/g, addedChannels.join(", ")))
+    message.channel
+      .send(
+        botspeech.addChannels.replace(/{{channels}}/g, addedChannels.join(", "))
+      )
       .then()
       .catch(console.error);
     return;
-  }
-
-  else if (typeof settings[prop] == 'undefined')
+  } else if (typeof settings[prop] == "undefined")
     return message.channel.send(botspeech.guildConfNotFound);
 
   settings[prop] = value.join(" ");
 
-  try
-  {
-    fs.writeFileSync(`./data/settings/${message.guild.id}.json`, JSON.stringify(settings));
-  }
-  catch(error)
-  {
+  try {
+    fs.writeFileSync(
+      `./data/settings/${message.guild.id}.json`,
+      JSON.stringify(settings)
+    );
+  } catch (error) {
     console.error(error);
   }
 
-  message.channel.send(`Guild configuration item ${prop} has been set to: \n\`${value.join(" ")}\``)
+  message.channel
+    .send(
+      `Guild configuration item ${prop} has been set to: \n\`${value.join(
+        " "
+      )}\``
+    )
     .then()
     .catch(console.error);
   return;

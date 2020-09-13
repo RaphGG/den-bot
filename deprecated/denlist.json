@@ -93,11 +93,11 @@
   },
   {
     "name": "Ponyta-Galar",
-    "dens":  "Shield 13 82"
+    "dens": "Shield 13 82"
   },
   {
     "name": "Rapidash-Galar",
-    "dens":  "Shield 13 34 62 82"
+    "dens": "Shield 13 34 62 82"
   },
   {
     "name": "Farfetch'd-Galar",
@@ -293,7 +293,7 @@
   },
   {
     "name": "Corsola-Galar",
-    "dens":  "Shield 43 47 81"
+    "dens": "Shield 43 47 81"
   },
   {
     "name": "Remoraid",
@@ -321,15 +321,15 @@
   },
   {
     "name": "Larvitar",
-    "dens":  "Shield 51"
+    "dens": "Shield 51"
   },
   {
     "name": "Pupitar",
-    "dens":  "Shield 51"
+    "dens": "Shield 51"
   },
   {
     "name": "Tyranitar",
-    "dens":  "Shield 36 51 63 88"
+    "dens": "Shield 36 51 63 88"
   },
   {
     "name": "Zigzagoon-Galar",
@@ -341,15 +341,15 @@
   },
   {
     "name": "Lotad",
-    "dens":  "Shield 26 58 59 79"
+    "dens": "Shield 26 58 59 79"
   },
   {
     "name": "Lombre",
-    "dens":  "Shield 26 58 59 79"
+    "dens": "Shield 26 58 59 79"
   },
   {
     "name": "Ludicolo",
-    "dens":  "Shield 26 58 59 79"
+    "dens": "Shield 26 58 59 79"
   },
   {
     "name": "Seedot",
@@ -397,7 +397,7 @@
   },
   {
     "name": "Sableye",
-    "dens":  "Shield 35 43 47 81"
+    "dens": "Shield 35 43 47 81"
   },
   {
     "name": "Mawile",
@@ -441,7 +441,7 @@
   },
   {
     "name": "Lunatone",
-    "dens":  "Shield 2"
+    "dens": "Shield 2"
   },
   {
     "name": "Solrock",
@@ -593,11 +593,11 @@
   },
   {
     "name": "Croagunk",
-    "dens":  "Shield 1 48"
+    "dens": "Shield 1 48"
   },
   {
     "name": "Toxicroak",
-    "dens":  "Shield 1 48"
+    "dens": "Shield 1 48"
   },
   {
     "name": "Mantyke",
@@ -733,7 +733,7 @@
   },
   {
     "name": "Throh",
-    "dens":  "Shield 10"
+    "dens": "Shield 10"
   },
   {
     "name": "Sawk",
@@ -817,15 +817,15 @@
   },
   {
     "name": "Solosis",
-    "dens":  "Shield 2"
+    "dens": "Shield 2"
   },
   {
     "name": "Duosion",
-    "dens":  "Shield 2"
+    "dens": "Shield 2"
   },
   {
     "name": "Reuniclus",
-    "dens":  "Shield 2"
+    "dens": "Shield 2"
   },
   {
     "name": "Vanillite",
@@ -925,7 +925,7 @@
   },
   {
     "name": "Accelgor",
-    "dens":  "Shield 46 90 92"
+    "dens": "Shield 46 90 92"
   },
   {
     "name": "Stunfisk-Galar",
@@ -957,11 +957,11 @@
   },
   {
     "name": "Vullaby",
-    "dens":  "Shield 31 36 63 88"
+    "dens": "Shield 31 36 63 88"
   },
   {
     "name": "Mandibuzz",
-    "dens":  "Shield 31 36 63 88"
+    "dens": "Shield 31 36 63 88"
   },
   {
     "name": "Heatmor",
@@ -1021,11 +1021,11 @@
   },
   {
     "name": "Spritzee",
-    "dens":  "Shield 33 74 87"
+    "dens": "Shield 33 74 87"
   },
   {
     "name": "Aromatisse",
-    "dens":  "Shield 33 74 87"
+    "dens": "Shield 33 74 87"
   },
   {
     "name": "Swirlix",
@@ -1069,15 +1069,15 @@
   },
   {
     "name": "Goomy",
-    "dens":  "Shield 37 38 64"
+    "dens": "Shield 37 38 64"
   },
   {
     "name": "Sliggoo",
-    "dens":  "Shield 37 38 64"
+    "dens": "Shield 37 38 64"
   },
   {
     "name": "Goodra",
-    "dens":  "Shield 37 38 64"
+    "dens": "Shield 37 38 64"
   },
   {
     "name": "Phantump",
@@ -1197,7 +1197,7 @@
   },
   {
     "name": "Oranguru",
-    "dens":  "Shield 13 40 65"
+    "dens": "Shield 13 40 65"
   },
   {
     "name": "Passimian",
@@ -1229,7 +1229,7 @@
   },
   {
     "name": "Drampa",
-    "dens":  "Shield 37 64"
+    "dens": "Shield 37 64"
   },
   {
     "name": "Dhelmise",
@@ -1341,7 +1341,7 @@
   },
   {
     "name": "Appletun",
-    "dens":  "Shield 27 38 58 79"
+    "dens": "Shield 27 38 58 79"
   },
   {
     "name": "Silicobra",
@@ -1429,7 +1429,7 @@
   },
   {
     "name": "Cursola",
-    "dens":  "Shield 43 47 81"
+    "dens": "Shield 43 47 81"
   },
   {
     "name": "Sirfetch'd",
@@ -1473,7 +1473,7 @@
   },
   {
     "name": "Eiscue",
-    "dens":  "Shield 23 55 83"
+    "dens": "Shield 23 55 83"
   },
   {
     "name": "Indeedee",
@@ -1507,4 +1507,4 @@
     "name": "Dragapult",
     "dens": "38 64"
   }
- ]
+]

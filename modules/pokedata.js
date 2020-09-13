@@ -12,12 +12,12 @@ const balls = JSON.parse(data);
 data = fs.readFileSync("./data/dens.json");
 const dens = JSON.parse(data);
 
-const denPokemon = pokemon.filter(x => {
+const denPokemon = pokemon.filter((x) => {
   return pokelists.denPokemon.includes(x.name);
 });
 
 let formsStr = "";
-pokelists.forms.forEach(form => (formsStr += "\\b" + form + "\\b|"));
+pokelists.forms.forEach((form) => (formsStr += "\\b" + form + "\\b|"));
 
 /*
 let ballStr = "";
@@ -31,42 +31,40 @@ const starEx = new RegExp(/\*/, "gi");
 // arguments and then search for and return a Pokémon Obj, Den Obj, or Ball Obj.
 // Regexs are marked with an Ex at the end of their var names.
 exports.fetch = (flag, args, settings) => {
-
-  if (flag == "pkmn")
-  {
+  if (flag == "pkmn") {
     // Retrieves the Pkmn Name from the list of passed arguments.
-    const pkmnarg = args.join(" ")
-      .replace(formsEx, "")
-      .replace(/[\W]/gi, "");
+    const pkmnarg = args.join(" ").replace(formsEx, "").replace(/[\W]/gi, "");
 
     // console.log(pkmnarg);
     if (pkmnarg == "") return null;
 
-    const pokemonlist = settings.denpkmnonly == "true"? denPokemon : pokemon;
+    const pokemonlist = settings.denpkmnonly == "true" ? denPokemon : pokemon;
     const shiny = starEx.test(args.join()) || settings.shinypkmnonly == "true";
 
     const pkmnEx = new RegExp(pkmnarg, "gi");
     // console.log(pkmnEx);
 
-    const pkmn = pokemonlist.find(pkmn => (pkmnEx.test(pkmn.name.replace(/[\W]/gi, ""))));
+    const pkmn = pokemonlist.find((pkmn) =>
+      pkmnEx.test(pkmn.name.replace(/[\W]/gi, ""))
+    );
     // console.log(pkmn);
 
     if (!pkmn) return null;
-
     else if (args.length == 1)
       return { pkmn: pkmn, form: null, cosmetic: false, shiny: shiny };
-
-    else
-    {
+    else {
       let noncosStr = "";
       let cosStr = "";
-      const forms = args.join(" ").match(formsEx).filter(match => (match != ''));
+      const forms = args
+        .join(" ")
+        .match(formsEx)
+        .filter((match) => match != "");
 
       if (forms.length == 0)
         return { pkmn: pkmn, form: null, cosmetic: false, shiny: shiny };
       // console.log(forms)
 
-      forms.forEach(form => {
+      forms.forEach((form) => {
         form = form.replace(/galar\b/gi, "Galarian");
         form = form.replace(/alola\b/gi, "Alolan");
         form = form.replace(/gmax\b/gi, "Gigantamax");
@@ -74,19 +72,25 @@ exports.fetch = (flag, args, settings) => {
         cosStr += `\\b${form}\\b|`;
       });
 
-      const cosEx = new RegExp(cosStr.substring(0, cosStr.lastIndexOf("|")), "gi");
+      const cosEx = new RegExp(
+        cosStr.substring(0, cosStr.lastIndexOf("|")),
+        "gi"
+      );
       // console.log(cosEx);
 
-      const form = pkmn.forms.find(form => (cosEx.test(form)));
+      const form = pkmn.forms.find((form) => cosEx.test(form));
       // console.log(form);
 
       if (!form)
-        return { pkmn: pkmn, form: null, cosmetic: false, shiny: shiny }
+        return { pkmn: pkmn, form: null, cosmetic: false, shiny: shiny };
 
-      const noncosEx = new RegExp(noncosStr.substring(0, noncosStr.lastIndexOf("|")), "gi");
+      const noncosEx = new RegExp(
+        noncosStr.substring(0, noncosStr.lastIndexOf("|")),
+        "gi"
+      );
       // console.log(noncosEx);
 
-      const pkmnform = pokemonlist.find(pkmn => (noncosEx.test(pkmn.name)));
+      const pkmnform = pokemonlist.find((pkmn) => noncosEx.test(pkmn.name));
       // console.log(pkmnform);
 
       if (pkmnform)
@@ -94,48 +98,39 @@ exports.fetch = (flag, args, settings) => {
 
       return { pkmn: pkmn, form: form, cosmetic: true, shiny: shiny };
     }
-  }
-
-  else if (flag == "ball")
-  {
+  } else if (flag == "ball") {
     const str = args.join("").replace(/[\W]/g, "").replace(/ball/gi, "");
     if (str.length == 0) return null;
     // console.log(str);
     const ballreg = new RegExp(str, "gi");
-    return balls.find(ball => (ballreg.test(ball.name)));
-  }
-
-  else if (flag == "den")
-  {
+    return balls.find((ball) => ballreg.test(ball.name));
+  } else if (flag == "den") {
     const str = args.join("").replace(/[\W]/g, "");
     if (str.length == 0) return null;
     // console.log(str);
     const denreg = new RegExp(str, "gi");
-    return dens.find(den => (denreg.test(den.den)));
-  }
-
-  else if (flag == "types")
-  {
+    return dens.find((den) => denreg.test(den.den));
+  } else if (flag == "types") {
     const str = args
       .join(" ")
       .replace(/[^A-Za-z0-9 ]/gi, "")
       .toLowerCase()
       .split(" ");
 
-    const type1 = pokelists.types.find(type => (type.name.toLowerCase() == str[0]));
+    const type1 = pokelists.types.find(
+      (type) => type.name.toLowerCase() == str[0]
+    );
     // console.log(`type1: \n${type1}`);
 
     if (!type1) return null;
-
     else if (args.length < 2) return [type1];
-
-    else
-    {
-      const type2 = pokelists.types.find(type => (type.name.toLowerCase() == str[1]));
+    else {
+      const type2 = pokelists.types.find(
+        (type) => type.name.toLowerCase() == str[1]
+      );
       // console.log(`type2: \n${type2}`);
 
       if (!type2) return [type1];
-
       else return [type1, type2];
     }
   }

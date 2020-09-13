@@ -10,15 +10,13 @@ module.exports = {
   adminOnly: false,
   run(client, message) {
     run(client, message);
-  }
+  },
 };
 
 const embedHelper = require("../modules/embedHelper.js");
 
 const run = (client, message) => {
   const embed = embedHelper.createEmbed("credits", client);
-  message.channel.send(embed)
-    .then()
-    .catch(console.error);
+  message.channel.send(embed).then().catch(console.error);
   return;
 };
