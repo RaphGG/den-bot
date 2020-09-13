@@ -17,7 +17,7 @@ const edgecases = ["Mr Mime", "Mr Rime", "Galarian Mr Mime"];
 // Color finder using json pkmn's type.
 const colorFinder = (pkmn) => {
   const type = pokelists.types.find(t => (pkmn.type1 == t.name));
-  if (!type) return 12236497;
+  if (!type) return 12236497; // this looks cool, but very discouraged. Always use { } on if statements.
 
   return type.color;
 };
@@ -172,6 +172,10 @@ const typeValues = (type1, type2) => {
 // Image finder using the shiny & cosmetic form properties of the
 // pkmnObj. Utilizes pkparaiso's & project pokemon's sprites at
 // the moment. Subject to change [TODO].
+//
+// We talked about this one over on discord, but I would add the links to the
+// pokemon.json file instead of building the url dynamically. You don't have to
+// account for weird edge case scenarioes :)
 exports.imageFinder = (pkmnObj) => {
   let name = pkmnObj.pkmn.name.replace(/[^A-Za-z0-9 ]/gi, "").replace(/ /gi, "-").toLowerCase();
   // console.log(name);
@@ -203,6 +207,20 @@ exports.imageFinder = (pkmnObj) => {
 // Exported polymorphic embed creator method. Uses flag to discern
 // what message to create. Args may be [pkmnObj], [pkmnObj, bestBalls].
 // TODO: Finish this method.
+//
+// This is entirely constructive criticism, but this whole function makes it cry.
+// passing in a string flag to control logic is a great recipe for bugs,
+// inconsistencies, and overall is just not a great structure.
+// When we take a look at how this is used, you realize that each flag is called
+// once from a specific command. Since that's the case, I would just create a
+// function for each flag, and have it live and be call where the command using
+// it is.
+//
+// For instance, you can have "createTop4Embed", "createBallEmbed", etc. this
+// this not only makes the code cleaner, but also smaller and more manageable.
+// Breaking code into logical units also reduces the potential for bugs when
+// changing on of the embeds. You could potentially add a bug here that would
+// plague your entire app, instead of just on command.
 exports.createEmbed = (flag, client, args) => {
   const embed = new MessageEmbed();
   embed.setFooter(footerCred, client.user.avatarURL);
@@ -370,6 +388,7 @@ exports.createEmbed = (flag, client, args) => {
       dens = dens + shieldDens;
     }
 
+    // use !== not !=
     if (dens != "")
       embed.addField("Dens", dens, false);
 

@@ -1,3 +1,13 @@
+// I love this, but it would read a little nicer if you just exported one big
+// object instead of just editing the exports directly. Like this:
+/**
+exports = {
+    pkmnNotFound: "```The Pokémon requested was not found.```",
+    ballNotFound: "```The Poké-Ball requested was not found.```",
+    ballOrPkmnNotFound: "```Either the Pokémon, Poké-Ball, or both requested were not found.```",
+};
+*/
+
 // Not Founds
 exports.pkmnNotFound = "```The Pokémon requested was not found.```";
 exports.ballNotFound = "```The Poké-Ball requested was not found.```";
@@ -56,6 +66,9 @@ exports.presenceUsers = "Pokémon Sword and Shield with {{count}} trainers!";
 exports.presenceInvite = "Use %invite to invite me to your server!";
 
 
+// Always remove unused code and commented out code from the master branch.
+// Its good practice to always keep code clean as it makes it easier to read and
+// maintain.
 /*
 Dilapidated
 exports.argNotFound = "```Arguments not found!```";

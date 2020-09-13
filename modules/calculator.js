@@ -2,6 +2,17 @@ const pokedata = require("./pokedata.js");
 const pokelists = require("../data/lists.js");
 // TODO: Finish Comments.
 
+// The structure here is fine, I would create a helper's class instead and add
+// all this functions as members of that class, then export the class. It will
+// keep your module tree a lot cleaner, and code easier to read/maintain.
+// This is an example:
+// https://github.com/caquillo07/telledu_server/blob/master/utils/Helper.js
+// and how its used:
+// https://github.com/caquillo07/telledu_server/blob/master/controllers/AdminController.js#L1
+// https://github.com/caquillo07/telledu_server/blob/master/controllers/AdminController.js#L16
+//
+// The code indentation is inconsistent on this entire file.
+
 // Stat calculator using base stat, iv, and level of a pkmn.
 const baseStat = (stat, iv, level) => {
   const x = (((2 * stat) + iv) * level) / 100;
@@ -22,8 +33,15 @@ const shakeProb = (catchRate) => {
 
 // Final capture probability calculator using a pkmn's shake probability.
 const capProb = (shakeProb) => {
-  if (shakeProb >= 65536)
+  // I know this may seem like a nicer way to do it, since the code looks
+  // "simpler", but in the real world this is incredibly discouraged, and
+  // probably wouldn't get past code review. You should always surround all
+  // if statements with { }. As it is right now, someone could accidentally
+  // remove the spaces before "return 100;" and now you have a bug that's hard
+  // to track.
+  if (shakeProb >= 65536) {
     return 100;
+  }
 
   return (Math.pow((shakeProb/65535), 4) * 100);
 };
@@ -49,9 +67,19 @@ const capProbRange = (pkmn, ball, gFlag, pFlag) => {
   const catchProb0 = capProb(shakeProb0).toFixed(2);
   const catchProb31 = capProb(shakeProb31).toFixed(2);
 
-  if (isNaN(catchProb0) || isNaN(catchProb31))
+  // brackets on if statements
+  if (isNaN(catchProb0) || isNaN(catchProb31)) {
     return [0, 0];
+  }
 
+  // This is a really weird pattern for JavaScript. Some languages support
+  // multiple return statements, or even tuples. Im assuming this is what you
+  // were going for here, but a better approach would be to return an object
+  // instead. Something like:
+  // return {
+  //   catchProb0: catchProb0,
+  //   catchProb31: catchProb31,
+  // };
   return [catchProb0, catchProb31];
 };
 
@@ -66,7 +94,20 @@ const setModifiers = (pkmn) => {
   const loveBall = pkmn.genderRatio != "100% ⚲" && pkmn.genderRatio != "100% ♀" && pkmn.genderRatio != "100% ♂";
   const beastBall = pokelists.ultraBeasts.includes(pkmn.name);
 
+  // brackets on all if/else statements
   if (pkmn.weight >= 300)
+    // never use ==, always use === instead. JavaScript == can lead to weird
+    // and hard to trace bugs. Here is a nice read one it:
+    // https://www.impressivewebs.com/why-use-triple-equals-javascipt/
+    //
+    // Another thing, you are once again dynamically adding fields to an object
+    // that were not previously declared. You should have a default value for
+    // .setmod in your ball object, so it's easier to track and find all
+    // possible fields for the ball object. Better yet, I would create a Ball
+    // class with setters and getters for this properties :).
+    //
+    // One thing to remember, magic in software is bad, dynamically setting
+    // fields on an object is magic, therefore dynamically setting is bad.
     pokedata.balls.find(x => x.name == "Heavy Ball").setmod = 30;
 
   else if (pkmn.weight >= 200)
@@ -76,6 +117,8 @@ const setModifiers = (pkmn) => {
     pokedata.balls.find(x => x.name == "Heavy Ball").setmod = 1;
 
   const nb = pokedata.balls.find(x => x.name == "Net Ball");
+  // Same as above, you are magically adding fields to the pokeball object,
+  // magic is bad.
   nb.setmod = netBall? 3.5 : 1;
   nb.assumption = netBall;
 
@@ -96,10 +139,14 @@ const setModifiers = (pkmn) => {
   bb.assumption = beastBall;
 };
 
+// Having all exports at the end of the file is great, but as with the botspeech,
+// return one object with the fields you want instead of appending the fields
+// directly on the exports object.
 exports.bestBalls = (pkmnObj) => {
   pkmnObj.catchProb = [];
   pkmnObj.promoCatchProb = [];
   const gmax = pkmnObj.form == "Gigantamax";
+  // dead code, should remove.
   // console.log("form: " + pkmnObj.form)
   pkmnObj.promo = (pokelists.promoPkmn.includes(pkmnObj.pkmn.name)) && (gmax);
 
@@ -116,11 +163,15 @@ exports.bestBalls = (pkmnObj) => {
   bestBalls.forEach(ball => {
 
    const catchProbRange = capProbRange(pkmnObj.pkmn, ball, gmax, false);
+
+   // Nothing necessarily wrong here. The ternary operator is a cool feature,
+   // but this is hard to read, so I would use a boring old if statement instead.
    const catchProb = (catchProbRange[0] == catchProbRange[1])? `\`${catchProbRange[0]}%\`` : `\`${catchProbRange[0]}% ~ ${catchProbRange[1]}%\``;
    pkmnObj.catchProb.push(catchProb);
 
-    if (pkmnObj.promo)
-    {
+   // Nice! In javascript you want the opening bracket on this same line as the
+    // if statement.
+    if (pkmnObj.promo) {
       const promoCatchRange = capProbRange(pkmnObj.pkmn, ball, gmax, true);
       const promoCatchProb = (promoCatchRange[0] == promoCatchRange[1])? `\`${promoCatchRange[0]}%\`` : `\`${promoCatchRange[0]}% ~ ${promoCatchRange[1]}%\``;
       pkmnObj.promoCatchProb.push(promoCatchProb);
@@ -141,6 +192,8 @@ exports.bestBall = (pkmnObj, ball) => {
 
   const catchProb = capProbRange(pkmnObj.pkmn, ball, gmax, false);
 
+  // tons of magic here, same with the ball object, I would create a Pokemon
+  // class with getters and setters
   pkmnObj.promo = (pokelists.promoPkmn.includes(pkmnObj.pkmn.name)) && gmax;
 
   pkmnObj.catchProb = (catchProb[0] == catchProb[1])? `${catchProb[0]}%` : `${catchProb[0]}% ~ ${catchProb[1]}%`;
