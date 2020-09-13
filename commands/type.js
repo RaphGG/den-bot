@@ -10,7 +10,7 @@ module.exports = {
   adminOnly: false,
   run(client, message, args, settings) {
     run(client, message, args, settings);
-  }
+  },
 };
 
 const embedHelper = require("../modules/embedHelper.js");
@@ -19,18 +19,13 @@ const botspeech = require("../modules/botspeech.js");
 
 const run = (client, message, args, settings) => {
   const types = pokedata.fetch("types", args, settings);
-  if (!types)
-  {
-    message.channel.send(botspeech.typesNotFound)
-      .then()
-      .catch(console.error);
+  if (!types) {
+    message.channel.send(botspeech.typesNotFound).then().catch(console.error);
     return;
   }
   const embed = embedHelper.createEmbed("types", client, types);
 
-  message.channel.send(embed)
-    .then()
-    .catch(console.error);
+  message.channel.send(embed).then().catch(console.error);
 
   return;
 };

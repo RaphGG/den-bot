@@ -10,7 +10,7 @@ module.exports = {
   adminOnly: false,
   run(client, message, args, settings) {
     run(client, message, args, settings);
-  }
+  },
 };
 
 const pokedata = require("../modules/pokedata.js");
@@ -22,25 +22,19 @@ const run = (client, message, args, settings) => {
 
   // console.log(pkmnObj);
 
-  if (!pkmnObj)
-  {
-    message.channel.send(botspeech.pkmnNotFound)
-      .then()
-      .catch(console.error);
+  if (!pkmnObj) {
+    message.channel.send(botspeech.pkmnNotFound).then().catch(console.error);
     return;
   }
 
-  try
-  {
+  try {
     const pkmnSprite = embedHelper.imageFinder(pkmnObj);
     // console.log(pkmnSprite);
-    message.channel.send({ files:[pkmnSprite] })
+    message.channel
+      .send({ files: [pkmnSprite] })
       .then()
       .catch(console.error);
-
-  }
-  catch (error)
-  {
+  } catch (error) {
     console.error();
   }
 

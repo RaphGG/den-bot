@@ -2,7 +2,8 @@ module.exports = {
   name: "Pokémon Catch Rate Command",
   cmdName: "catch",
   aliases: ["rate"],
-  description: "Shows a detailed summary of catch rates for a given Pokémon & Ball.",
+  description:
+    "Shows a detailed summary of catch rates for a given Pokémon & Ball.",
   args: 1,
   usage: "{{prefix}}catch [Pokémon Name] (Form) (Poké-Ball)",
   example: "{{prefix}}catch zard gmax lux",
@@ -10,7 +11,7 @@ module.exports = {
   adminOnly: false,
   run(client, message, args, settings) {
     run(client, message, args, settings);
-  }
+  },
 };
 
 const calc = require("../modules/calculator.js");
@@ -25,50 +26,39 @@ const embedHelper = require("../modules/embedHelper.js");
 const run = (client, message, args, settings) => {
   // Check and search for ball at end of given arguments.
   const ball = pokedata.fetch("ball", args.slice(args.length - 1));
-  if (ball)
-  {
+  if (ball) {
     // If a ball was found, remove from arguments list and fetch
     // a given pokemon. Return catch rate for specified ball.
     args.pop();
     const pkmnObj = pokedata.fetch("pkmn", args, settings);
-    if (!pkmnObj)
-    {
-      message.channel.send(botspeech.pkmnNotFound)
-        .then()
-        .catch(console.error);
+    if (!pkmnObj) {
+      message.channel.send(botspeech.pkmnNotFound).then().catch(console.error);
       return;
-    }
-
-    else
-    {
+    } else {
       calc.bestBall(pkmnObj, ball);
-      message.channel.send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]))
+      message.channel
+        .send(embedHelper.createEmbed("ball", client, [pkmnObj, ball]))
         .then()
         .catch(console.error);
       return;
     }
-  }
-
-  else
-  {
+  } else {
     // No ball was found, fetch a given pokemon and return Top 4
     // Catch Rate Embed.
     const pkmnObj = pokedata.fetch("pkmn", args, settings);
-    if (!pkmnObj)
-    {
-      message.channel.send(botspeech.ballOrPkmnNotFound)
+    if (!pkmnObj) {
+      message.channel
+        .send(botspeech.ballOrPkmnNotFound)
         .then()
         .catch(console.error);
       return;
-    }
-
-    else
-    {
+    } else {
       const bestBalls = calc.bestBalls(pkmnObj);
-      const embed = embedHelper.createEmbed("top4", client, [pkmnObj, bestBalls]);
-      message.channel.send(embed)
-        .then()
-        .catch(console.error);
+      const embed = embedHelper.createEmbed("top4", client, [
+        pkmnObj,
+        bestBalls,
+      ]);
+      message.channel.send(embed).then().catch(console.error);
       return;
     }
   }

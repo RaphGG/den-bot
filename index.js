@@ -22,7 +22,9 @@ fs.readdir("./events/", (err, files) => {
 
     const event = require(`./events/${file}`);
     const eventName = file.split(".")[0];
-    console.log(`Attempting to load event ${i+1} of ${files.length}: ${eventName}`);
+    console.log(
+      `Attempting to load event ${i + 1} of ${files.length}: ${eventName}`
+    );
     client.on(eventName, event.bind(null, client));
   });
 });
@@ -37,15 +39,12 @@ fs.readdir("./data/settings/", (err, files) => {
 
   console.log(`Loading Guild Settings for ${files.length} Guilds.`);
 
-  files.forEach(file => {
+  files.forEach((file) => {
     const data = fs.readFileSync(`./data/settings/${file}`);
     let setting;
-    try
-    {
+    try {
       setting = JSON.parse(data);
-    }
-    catch
-    {
+    } catch {
       console.error(`File: ${file} is corrupted.`);
     }
     const guildId = file.split(".")[0];
@@ -67,7 +66,9 @@ fs.readdir("./commands/", (err, files) => {
 
     const props = require(`./commands/${file}`);
     const commandName = file.split(".")[0];
-    console.log(`Attempting to load command ${i+1} of ${files.length}: ${commandName}`);
+    console.log(
+      `Attempting to load command ${i + 1} of ${files.length}: ${commandName}`
+    );
     client.commands.set(commandName, props);
   });
 });

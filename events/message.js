@@ -8,11 +8,8 @@ module.exports = async (client, message) => {
 
   let settings;
   let ownerOrAdmin;
-  if (message.channel.type == 'dm')
-    settings = client.config.settings;
-
-  else
-  {
+  if (message.channel.type == "dm") settings = client.config.settings;
+  else {
     const guild = await client.guilds.resolve(message.guild);
     if (!guild.available)
       return console.error(`Guild Not Available.\nGuild ID: ${guild.id}`);
@@ -27,10 +24,10 @@ module.exports = async (client, message) => {
 
   if (!message.content.startsWith(settings.prefix)) return;
 
-  if (settings.restrictedchannels.length > 0)
-  {
-    const restrictedchannel = settings.restrictedchannels
-      .find(channel => (channel.id == message.channel.id));
+  if (settings.restrictedchannels.length > 0) {
+    const restrictedchannel = settings.restrictedchannels.find(
+      (channel) => channel.id == message.channel.id
+    );
 
     if (!restrictedchannel && !ownerOrAdmin) return;
   }
@@ -38,30 +35,27 @@ module.exports = async (client, message) => {
   const args = message.content.slice(settings.prefix.length).trim().split(/ /g);
   const commandName = args.shift().toLowerCase();
 
-  const command = client.commands.get(commandName)
-    || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+  const command =
+    client.commands.get(commandName) ||
+    client.commands.find(
+      (cmd) => cmd.aliases && cmd.aliases.includes(commandName)
+    );
 
   if (!command) return;
 
-  if (command.guildOnly && message.channel.type != "text")
-  {
-    message.channel.send(botspeech.guildOnlyCmd)
-      .then()
-      .catch(console.error);
+  if (command.guildOnly && message.channel.type != "text") {
+    message.channel.send(botspeech.guildOnlyCmd).then().catch(console.error);
     return;
   }
 
-  if (command.adminOnly && !ownerOrAdmin)
-  {
-    message.reply(botspeech.permNotFound)
-      .then()
-      .catch(console.error);
+  if (command.adminOnly && !ownerOrAdmin) {
+    message.reply(botspeech.permNotFound).then().catch(console.error);
     return;
   }
 
-  if (command.args && args.length < command.args)
-  {
-    message.channel.send(botspeech[command.cmdName + "NoArg"])
+  if (command.args && args.length < command.args) {
+    message.channel
+      .send(botspeech[command.cmdName + "NoArg"])
       .then()
       .catch(console.error);
 
@@ -75,14 +69,17 @@ module.exports = async (client, message) => {
   const timestamps = cooldowns.get(command.cmdName);
   const cooldownAmt = (command.cooldown || 3) * 1000;
 
-  if (timestamps.has(message.author.id))
-  {
+  if (timestamps.has(message.author.id)) {
     const expTime = timestamps.get(message.author.id) + cooldownAmt;
 
-    if (now < expTime)
-    {
+    if (now < expTime) {
       const timeLeft = (expTime - now) / 1000;
-      message.reply(`Please wait ${timeLeft.toFixed(1)} more second(s) before re-using the \`${command.cmdName}\` command.`)
+      message
+        .reply(
+          `Please wait ${timeLeft.toFixed(
+            1
+          )} more second(s) before re-using the \`${command.cmdName}\` command.`
+        )
         .then()
         .catch(console.error);
       return;
@@ -92,12 +89,9 @@ module.exports = async (client, message) => {
   timestamps.set(message.author.id, now);
   setTimeout(() => timestamps.delete(message.author.id), cooldownAmt);
 
-  try
-  {
+  try {
     command.run(client, message, args, settings);
-  }
-  catch (error)
-  {
+  } catch (error) {
     console.error(`Command failed to execute.\nError: ${error}`);
   }
 };
@@ -113,21 +107,23 @@ const isOwnerOrAdmin = async (author, guild) => {
 
 const setDefault = (client, guildId) => {
   const defaultSettings = {
-    prefix:"%",
-    denpkmnonly:false,
-    shinypkmnonly:false,
-    restrictedchannels:[],
+    prefix: "%",
+    denpkmnonly: false,
+    shinypkmnonly: false,
+    restrictedchannels: [],
   };
 
   client.settings.set(guildId, defaultSettings);
 
-  try
-  {
-    fs.writeFileSync(`./data/settings/${guildId}.json`, JSON.stringify(defaultSettings));
-  }
-  catch (error)
-  {
-    console.error(`Failed to write guild settings.\nError: ${error}\nGuild ID: ${guildId}`);
+  try {
+    fs.writeFileSync(
+      `./data/settings/${guildId}.json`,
+      JSON.stringify(defaultSettings)
+    );
+  } catch (error) {
+    console.error(
+      `Failed to write guild settings.\nError: ${error}\nGuild ID: ${guildId}`
+    );
   }
 
   return client.settings.get(guildId);
