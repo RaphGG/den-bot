@@ -1,3 +1,6 @@
+// This file is hugeeee and very poorly formatted, I would break it up into
+// smaller logical units, probably based on what the list is about. I would
+// also run this through prettier to make it easier to read.
 // Egg Groups Begin
 exports.Monster = ["Cubone",
 "Marowak",

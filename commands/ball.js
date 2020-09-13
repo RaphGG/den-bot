@@ -1,3 +1,11 @@
+// I made this comment in the index.js file, but I will add it here as well for
+// reference. I would create an index.js file here that can load it from outside,
+// and in it place all the commands to be exported. Follow this pattern here:
+// https://github.com/caquillo07/telledu_server/blob/master/controllers/index.js
+//
+// This will allow you to use the module system instead of having to load all
+// files using the system file read calls.
+
 module.exports = {
   name: "Poké-Ball Info Command",
   cmdName: "ball",

@@ -1,3 +1,22 @@
+# Overall comments
+The code indentation is inconsistent all throughout the codebase, which makes it hard to read. You also
+have a lot of simple mistakes like using "==" instead of "===".
+
+A lot of this can be easily fixed/caught using tooling like prettier to format your code, and es-lint to find common
+javascript mistakes. This two tools is pretty much required on every node app you write.
+https://prettier.io/
+https://eslint.org/
+
+There are tons of magic going on this code, I would create classes for all the object models being used (pokemon, 
+pokeball, etc). I would also add getters and setters to make sure that every field is documented and declared before
+being used. Another benefit of this is that you make it easier for the IDE to help you navigate the code. If you 
+use a lot of magic in your code, it's impossible for your IDE to help you catch mistakes, or simply use 
+jump to code features.
+
+Another thing I noticed is the amount of dead code and files left behind. I understand you wanted to leave a trail of
+the process of building the bot, but in reality all it does is add a lot of confusion as its not immediately clear whats
+being used, and it is not. I would remove the whole `deprecated` folder, and the `pokemonSmogon.json` if its not used.
+
 # Alcremie-B Discord Bot ![Bot PFP](https://raphgg.github.io/den-bot/data/icons/botpfp.png "Lovely Baby")
 A Pokémon statistics Discord bot with the intended purpose of facilitating Max Raid Battles in Pokémon Sword & Pokémon Shield.
 
